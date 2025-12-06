@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日研报 - 金融知识平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Insight Gate</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="daily-news.html" class="nav-link">知识专栏</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research-reports.html" class="nav-link active">研报专区</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">会员登录</a>
+                </li>
+                <li class="nav-item" style="display: none;">
+                    <a href="admin.html" class="nav-link" id="admin-link">👑 管理员</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- PDF上传区域（仅管理员可见） -->
+    <section class="upload-section" id="upload-section" style="display: none;">
+        <div class="container">
+            <div class="upload-area">
+                <h2>上传研究报告</h2>
+                <p>支持PDF格式文件，最大支持50MB</p>
+                <div class="upload-box" id="upload-box">
+                    <div class="upload-icon">📄</div>
+                    <p>拖拽PDF文件到这里或点击上传</p>
+                    <input type="file" id="pdf-upload" accept=".pdf" style="display: none;">
+                    <button class="upload-btn" onclick="document.getElementById('pdf-upload').click()">选择文件</button>
+                </div>
+                <div class="upload-progress" id="upload-progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">上传中...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 批量下载区域 -->
+    <section class="batch-download-section">
+        <div class="container">
+            <div class="batch-download-area">
+                <button class="btn-batch-download" id="btn-batch-download">
+                    📦 一键打包下载所有研报
+                </button>
+                <div class="batch-info" id="batch-info">
+                    包含当前所有PDF文件，打包为ZIP格式
+                </div>
+                <div class="batch-progress" id="batch-progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="batch-progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="batch-progress-text">准备下载...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研报列表 -->
+    <section class="reports-section">
+        <div class="container">
+            <!-- 列表头部 -->
+            <div class="reports-header">
+                <div class="header-item">文件名</div>
+                <div class="header-item">日期</div>
+                <div class="header-item">大小</div>
+                <div class="header-item">操作</div>
+            </div>
+            <div class="reports-list" id="reports-container">
+                <!-- 研报内容将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>金融知识平台</h3>
+                    <p>为金融爱好者提供专业的知识服务</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="finance-basics.html">金融基础</a></li>
+                        <li><a href="daily-news.html">每日资讯</a></li>
+                        <li><a href="#">每日研报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>邮箱: contact@finance-platform.com</p>
+                    <p>电话: 400-123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 金融知识平台. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="membership.js"></script>
+    <script>
+        // 检查管理员权限
+        function checkAdminPermission() {
+            // 从localStorage获取用户信息
+            const userInfo = localStorage.getItem('userInfo');
+            const uploadSection = document.getElementById('upload-section');
+            
+            if (userInfo) {
+                try {
+                    const user = JSON.parse(userInfo);
+                    // 如果用户是管理员，显示上传区域
+                    if (user.role === 'admin') {
+                        uploadSection.style.display = 'block';
+                        // 同时显示导航栏中的管理员链接
+                        const adminLink = document.getElementById('admin-link');
+                        if (adminLink) {
+                            adminLink.parentElement.style.display = 'block';
+                        }
+                    }
+                } catch (e) {
+                    console.log('用户信息解析失败');
+                }
+            }
+        }
+
+        // 每日研报页面功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查用户权限，显示/隐藏上传区域
+            checkAdminPermission();
+            
+            const uploadBox = document.getElementById('upload-box');
+            const pdfUpload = document.getElementById('pdf-upload');
+            const uploadProgress = document.getElementById('upload-progress');
+            const progressFill = document.getElementById('progress-fill');
+
+            // 拖拽上传功能
+            uploadBox.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                uploadBox.style.borderColor = 'var(--accent-green)';
+                uploadBox.style.backgroundColor = 'rgba(74, 124, 89, 0.1)';
+            });
+
+            uploadBox.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                uploadBox.style.borderColor = 'var(--border-color)';
+                uploadBox.style.backgroundColor = 'var(--background-light)';
+            });
+
+            uploadBox.addEventListener('drop', function(e) {
+                e.preventDefault();
+                uploadBox.style.borderColor = 'var(--border-color)';
+                uploadBox.style.backgroundColor = 'var(--background-light)';
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleFileUpload(files[0]);
+                }
+            });
+
+            // 文件选择上传
+            pdfUpload.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    handleFileUpload(e.target.files[0]);
+                }
+            });
+
+
+            async function handleFileUpload(file) {
+                if (file.type !== 'application/pdf') {
+                    alert('请上传PDF格式的文件');
+                    return;
+                }
+
+                if (file.size > 50 * 1024 * 1024) {
+                    alert('文件大小不能超过50MB');
+                    return;
+                }
+
+                // 显示上传进度条（简单版本，真实进度以后再做）
+                uploadProgress.style.display = 'block';
+                progressFill.style.width = '30%';
+
+                // 用 FormData 装 PDF 文件
+                const formData = new FormData();
+                formData.append('file', file);
+
+                try {
+                    // 发送 POST 请求到你的 Node.js 后端
+                    const response = await fetch('http://localhost:3000/api/upload-report', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    progressFill.style.width = '80%';
+
+                    if (!response.ok) {
+                        throw new Error('上传失败');
+                    }
+
+                    const result = await response.json();
+
+                    progressFill.style.width = '100%';
+                    setTimeout(() => {
+                        uploadProgress.style.display = 'none';
+                    }, 500);
+
+                    alert('文件上传成功！');
+
+                    // 显示到页面上
+                    addNewReport(result.file.savedName);
+
+                } catch (err) {
+                    console.error(err);
+                    alert('上传失败，请检查服务器是否已启动');
+                    uploadProgress.style.display = 'none';
+                }
+            }
+
+
+
+            // 研报数据
+            // 从后端返回的真实数据
+            let reportsData = [];
+
+            // 把字节大小转成 MB 文本
+            function formatSize(size) {
+                if (!size && size !== 0) return '';
+                const mb = size / (1024 * 1024);
+                return mb.toFixed(2) + ' MB';
+            }
+
+            // 从文件名里提取日期（你是 _YYYYMMDD 结尾）
+            function extractDateFromFilename(filename) {
+                const noExt = filename.replace(/\.pdf$/i, '');
+                const parts = noExt.split('_');
+                const last = parts[parts.length - 1]; // 20251121
+                if (last && last.length === 8 && /^\d+$/.test(last)) {
+                    const y = last.slice(0, 4);
+                    const m = last.slice(4, 6);
+                    const d = last.slice(6, 8);
+                    return `${y}-${m}-${d}`;
+                }
+                return '';
+            }
+
+            // 调后端 API，获取 uploads 里的文件列表
+            async function loadReportsFromServer() {
+                try {
+                    const res = await fetch('http://localhost:3000/api/reports');
+                    if (!res.ok) {
+                        throw new Error('获取列表失败');
+                    }
+                    const files = await res.json();
+
+                    // 把后端返回的文件信息变成前端用的结构
+                    reportsData = files.map(file => {
+                        const filename = file.filename;
+                        const title = filename.replace(/\.pdf$/i, '');
+                        const date = extractDateFromFilename(filename);
+                        return {
+                            filename,
+                            title,
+                            date,
+                            fileSize: formatSize(file.size),
+                            category: '用户上传',
+                            summary: '上传的研究报告'
+                        };
+                    });
+
+                    loadReports();
+                } catch (err) {
+                    console.error(err);
+                    alert('无法加载研报列表，请检查服务器是否在运行');
+                }
+            }
+
+
+
+
+
+            const reportsContainer = document.getElementById('reports-container');
+
+            function loadReports() {
+                reportsContainer.innerHTML = '';
+
+                reportsData.forEach(report => {
+                    const reportElement = document.createElement('div');
+                    reportElement.className = 'report-row';
+
+                    // 下载链接：指向我们的静态目录
+                    const downloadUrl = `http://localhost:3000/uploads/${encodeURIComponent(report.filename)}`;
+
+                    reportElement.innerHTML = `
+                        <div class="row-item filename">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">${report.title}</span>
+                        </div>
+                        <div class="row-item date">${report.date || '未知'}</div>
+                        <div class="row-item size">${report.fileSize}</div>
+                        <div class="row-item actions">
+                            <button class="btn-download-list" onclick="window.open('${downloadUrl}', '_blank')">下载</button>
+                            <button class="btn-preview-list" onclick="window.open('${downloadUrl}', '_blank')">预览</button>
+                        </div>
+                    `;
+
+                    reportsContainer.appendChild(reportElement);
+                });
+            }
+
+
+            function addNewReport(filename) {
+                const newReport = {
+                    title: filename.replace('.pdf', ''),
+                    author: '用户上传',
+                    date: new Date().toISOString().split('T')[0],
+                    summary: '用户上传的研究报告',
+                    pages: '未知',
+                    fileSize: '待计算',
+                    category: '用户上传'
+                };
+                reportsData.unshift(newReport);
+                loadReports();
+            }
+
+            loadReportsFromServer();
+            
+            // 一键打包下载功能
+            const batchDownloadBtn = document.getElementById('btn-batch-download');
+            const batchProgress = document.getElementById('batch-progress');
+            const batchProgressFill = document.getElementById('batch-progress-fill');
+            const batchProgressText = document.getElementById('batch-progress-text');
+            
+            batchDownloadBtn.addEventListener('click', downloadAllAsZip);
+            
+            async function downloadAllAsZip() {
+                try {
+                    // 显示进度条
+                    batchProgress.style.display = 'block';
+                    batchProgressFill.style.width = '10%';
+                    batchProgressText.textContent = '正在连接服务器...';
+                    
+                    const response = await fetch('http://localhost:3000/api/reports/zip');
+                    
+                    if (!response.ok) {
+                        throw new Error('打包下载失败');
+                    }
+                    
+                    batchProgressFill.style.width = '50%';
+                    batchProgressText.textContent = '正在下载ZIP文件...';
+                    
+                    // 创建下载链接
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `research-reports-${new Date().toISOString().split('T')[0]}.zip`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                    
+                    batchProgressFill.style.width = '100%';
+                    batchProgressText.textContent = '下载完成！';
+                    
+                    // 3秒后隐藏进度条
+                    setTimeout(() => {
+                        batchProgress.style.display = 'none';
+                    }, 3000);
+                    
+                } catch (error) {
+                    console.error('下载失败:', error);
+                    batchProgressText.textContent = '下载失败，请稍后重试';
+                    batchProgressFill.style.width = '0%';
+                    
+                    setTimeout(() => {
+                        batchProgress.style.display = 'none';
+                    }, 3000);
+                    
+                    alert('打包下载失败，请检查服务器是否运行或网络连接');
+                }
+            }
+        });
+
+
+        const batchBtn = document.getElementById('btn-batch-download');
+        const batchProgress = document.getElementById('batch-progress');
+        const batchProgressFill = document.getElementById('batch-progress-fill');
+        const batchProgressText = document.getElementById('batch-progress-text');
+
+        if (batchBtn) {
+        batchBtn.addEventListener('click', () => {
+            // 简单版本：直接打开 ZIP 接口，浏览器会触发下载
+            const url = 'http://localhost:3000/api/reports/zip';
+
+            // 可选：显示“准备下载”的进度条动画（只是视觉效果，不是真实进度）
+            batchProgress.style.display = 'block';
+            batchProgressFill.style.width = '30%';
+            batchProgressText.textContent = '正在打包ZIP文件...';
+
+            // 用 <a> 触发下载
+            const a = document.createElement('a');
+            a.href = url;
+            a.target = '_blank';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            // 过一会儿把进度条隐藏掉（简单处理）
+            setTimeout(() => {
+            batchProgressFill.style.width = '100%';
+            batchProgressText.textContent = '打包完成，浏览器正在下载';
+            setTimeout(() => {
+                batchProgress.style.display = 'none';
+                batchProgressFill.style.width = '0%';
+                batchProgressText.textContent = '准备下载...';
+            }, 1000);
+            }, 1000);
+        });
+        }
+
+
+    </script>
+
+    <style>
+        /* 为页面内容添加顶部内边距，避免被固定导航栏遮挡 */
+        body {
+            padding-top: 80px;
+        }
+
+        /* 批量下载区域样式 */
+        .batch-download-section {
+            padding: 40px 0;
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .batch-download-area {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .btn-batch-download {
+            background: linear-gradient(135deg, var(--accent-green), var(--primary-green));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .btn-batch-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+        }
+
+        .batch-info {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .batch-progress {
+            margin-top: 1rem;
+        }
+
+        .batch-progress .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .batch-progress .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-green), var(--primary-green));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .batch-progress .progress-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-dark-green), var(--primary-green));
+            color: var(--text-light);
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .upload-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .upload-area {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .upload-area h2 {
+            color: var(--primary-dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .upload-box {
+            border: 2px dashed var(--border-color);
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            background: var(--background-light);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .upload-box:hover {
+            border-color: var(--accent-green);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .upload-btn {
+            background: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .upload-btn:hover {
+            background: var(--primary-green);
+        }
+
+        .upload-progress {
+            margin-top: 1rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--accent-green);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .reports-section {
+            padding: 60px 0;
+            background: var(--background-light);
+        }
+
+        /* 列表头部 */
+        .reports-header {
+            display: grid;
+            grid-template-columns: 1fr 150px 100px 200px;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: var(--primary-dark-green);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
+        }
+
+        .header-item {
+            padding: 0.5rem 0;
+        }
+
+        /* 列表内容 */
+        .reports-list {
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            background: white;
+        }
+
+        .report-row {
+            display: grid;
+            grid-template-columns: 1fr 150px 100px 200px;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .report-row:hover {
+            background-color: var(--background-light);
+        }
+
+        .report-row:last-child {
+            border-bottom: none;
+        }
+
+        .row-item {
+            padding: 0.5rem 0;
+        }
+
+        .filename {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .file-icon {
+            font-size: 1.2rem;
+        }
+
+        .file-name {
+            font-weight: 500;
+            color: var(--primary-dark-green);
+            word-break: break-word;
+        }
+
+        .date, .size {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-download-list, .btn-preview-list {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-download-list {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .btn-download-list:hover {
+            background: var(--primary-green);
+        }
+
+        .btn-preview-list {
+            background: transparent;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .btn-preview-list:hover {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .report-category {
+            background: var(--light-green);
+            color: var(--primary-dark-green);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .report-date {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .report-card h3 {
+            color: var(--primary-dark-green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .report-summary {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .report-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .report-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-download, .btn-preview {
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-download {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .btn-download:hover {
+            background: var(--primary-green);
+        }
+
+        .btn-preview {
+            background: transparent;
+            border: 2px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .btn-preview:hover {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .reports-header {
+                display: none;
+            }
+
+            .report-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .filename {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .actions {
+                justify-content: flex-start;
+                margin-top: 0.5rem;
+            }
+
+            .btn-download-list, .btn-preview-list {
+                flex: 0 0 auto;
+                min-width: 80px;
+            }
+
+            .upload-box {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</body>
+</html>

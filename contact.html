@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 金融知识平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>金融知识平台</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="daily-news.html" class="nav-link">知识专栏</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research-reports.html" class="nav-link">研报专区</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">会员登录</a>
+                </li>
+                <li class="nav-item" style="display: none;">
+                    <a href="admin.html" class="nav-link" id="admin-link">👑 管理员</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>我们很乐意听取您的意见和建议</p>
+        </div>
+    </section>
+
+    <!-- 联系信息 -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>邮箱联系</h3>
+                    <p>contact@finance-platform.com</p>
+                    <p>我们会在24小时内回复您的邮件</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>电话咨询</h3>
+                    <p>400-123-4567</p>
+                    <p>工作日 9:00-18:00</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>办公地址</h3>
+                    <p>北京市朝阳区金融街88号</p>
+                    <p>金融大厦A座15层</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系表单 -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>发送消息</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱 *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">主题 *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">请选择主题</option>
+                            <option value="content-suggestion">内容建议</option>
+                            <option value="technical-issue">技术问题</option>
+                            <option value="cooperation">合作咨询</option>
+                            <option value="feedback">用户反馈</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">消息内容 *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="请详细描述您的问题或建议..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>如何获取最新的金融资讯？</h3>
+                    <p>您可以在"每日资讯"页面查看最新的市场动态和财经新闻，我们会实时更新重要信息。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>研究报告如何上传？</h3>
+                    <p>在"每日研报"页面，您可以通过拖拽或点击上传PDF格式的研究报告，最大支持50MB。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>金融基础知识如何分类？</h3>
+                    <p>目前分为基础知识、交易、风险管理三大类，未来会根据用户需求继续扩展分类。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>是否提供个性化投资建议？</h3>
+                    <p>我们提供专业的市场分析和研究报告，但不提供具体的投资建议。投资决策请谨慎。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>金融知识平台</h3>
+                    <p>为金融爱好者提供专业的知识服务</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="finance-basics.html">金融基础</a></li>
+                        <li><a href="daily-news.html">每日资讯</a></li>
+                        <li><a href="research-reports.html">每日研报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>邮箱: contact@finance-platform.com</p>
+                    <p>电话: 400-123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 金融知识平台. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 联系我们页面功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 获取表单数据
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                // 简单的表单验证
+                if (!data.name || !data.email || !data.subject || !data.message) {
+                    alert('请填写所有必填字段');
+                    return;
+                }
+                
+                // 模拟发送消息
+                const submitBtn = contactForm.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = '发送中...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    alert('消息发送成功！我们会尽快回复您。');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+        });
+    </script>
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-dark-green), var(--primary-green));
+            color: var(--text-light);
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--background-light);
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: var(--primary-dark-green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-section {
+            padding: 80px 0;
+            background: var(--background-light);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: var(--primary-dark-green);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-green);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-green);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .faq-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .faq-item h3 {
+            color: var(--primary-dark-green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

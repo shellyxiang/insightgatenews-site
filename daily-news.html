@@ -1,0 +1,2382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识专栏 · 专业阅读平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Markdown解析库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- 使用主页样式保持一致 -->
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(15, 39, 25, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(15, 39, 25, 0.02) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: min(1200px, 95vw);
+            margin: 0 auto;
+            padding: 0 clamp(15px, 3vw, 20px);
+        }
+
+        /* 导航栏 - 与主页一致 */
+        .navbar {
+            background: var(--primary-dark-green);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo h2 {
+            color: var(--gold-medium);
+            font-weight: 700;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 导航栏搜索框样式 */
+        .nav-search {
+            flex: 1;
+            max-width: 400px;
+            margin: 0 2rem;
+        }
+
+        .nav-search .search-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 8px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .nav-search .search-box:focus-within {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--light-green);
+            box-shadow: 0 0 0 2px rgba(118, 184, 139, 0.3);
+        }
+
+        .nav-search .search-input {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            color: white;
+            font-size: 0.9rem;
+            width: 100%;
+            outline: none;
+        }
+
+        .nav-search .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav-search .search-btn {
+            background: var(--light-green);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-dark-green);
+        }
+
+        .nav-search .search-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light-green);
+        }
+
+        /* 页面头部 - 与主页一致 */
+        .page-header {
+            background: 
+                linear-gradient(135deg, var(--primary-dark-green) 0%, var(--primary-green) 50%, var(--primary-dark-green) 100%),
+                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(184, 134, 11, 0.1) 0%, transparent 60%);
+            color: var(--text-light);
+            padding: 180px 0 120px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-header h1 {
+            font-size: 4rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--gold-medium);
+            line-height: 1.1;
+            text-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(212, 175, 55, 0.2),
+                0 0 60px rgba(184, 134, 11, 0.1);
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+            font-style: normal;
+        }
+
+        .page-header p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin: 0;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 点赞按钮样式 */
+        .like-btn {
+            background: var(--light-green);
+            border: 2px solid var(--light-green);
+            border-radius: 25px;
+            padding: 8px 20px;
+            color: var(--primary-dark-green);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+
+        .like-btn:hover {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(118, 184, 139, 0.3);
+        }
+
+        .like-btn.liked {
+            background: var(--gold-medium);
+            border-color: var(--gold-medium);
+            color: var(--primary-dark-green);
+        }
+
+        .like-btn.liked:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+        }
+
+        .like-icon {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .like-btn.liked .like-icon {
+            transform: scale(1.2);
+        }
+
+        /* 搜索框样式 */
+        .search-container {
+            margin-top: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .search-box:focus-within {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: var(--light-green);
+            box-shadow: 0 0 0 3px rgba(118, 184, 139, 0.3);
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 12px 20px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-btn {
+            background: var(--light-green);
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-dark-green);
+        }
+
+        .search-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .search-results-info {
+            margin-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+
+        .search-highlight {
+            background-color: var(--light-green);
+            color: var(--primary-dark-green);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .search-highlight {
+            background-color: var(--light-green);
+            color: var(--primary-dark-green);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        /* 点赞按钮样式 */
+        .like-btn {
+            background: var(--light-green);
+            border: 2px solid var(--light-green);
+            border-radius: 25px;
+            padding: 8px 20px;
+            color: var(--primary-dark-green);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+
+        .like-btn:hover {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(118, 184, 139, 0.3);
+        }
+
+        .like-btn.liked {
+            background: var(--gold-medium);
+            border-color: var(--gold-medium);
+            color: var(--primary-dark-green);
+        }
+
+        .like-btn.liked:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+        }
+
+        .like-icon {
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .like-btn.liked .like-icon {
+            transform: scale(1.2);
+        }
+
+        /* 搜索框样式 */
+        .search-container {
+            margin-top: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .search-box:focus-within {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: var(--light-green);
+            box-shadow: 0 0 0 3px rgba(118, 184, 139, 0.3);
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 12px 20px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-btn {
+            background: var(--light-green);
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-dark-green);
+        }
+
+        .search-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .search-results-info {
+            margin-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+
+        .search-highlight {
+            background-color: var(--light-green);
+            color: var(--primary-dark-green);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .search-highlight {
+            background-color: var(--light-green);
+            color: var(--primary-dark-green);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        /* 分类导航 - 优化版 */
+        .category-nav {
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4e9d4 100%);
+            padding: 0.8rem 0;
+            margin-top: 0;
+            border-bottom: 2px solid #a8d5a8;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 80px;  /* 从78px调整为80px，再增加2像素间距 */
+            z-index: 999;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid #b8e0b8;
+        }
+
+        .category-nav-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-nav-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2d5a2d;
+            background: rgba(168, 213, 168, 0.3);
+            padding: 4px 12px;
+            border-radius: 8px;
+            border-left: 3px solid #4a7c4a;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 100%;
+            overflow-x: auto;
+            padding: 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-tab {
+            padding: 8px 16px;
+            border: 1px solid rgba(74, 124, 74, 0.3);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            color: #2d5a2d;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            letter-spacing: 0.2px;
+        }
+
+        .category-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 124, 74, 0.2), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .category-tab:hover::before {
+            left: 100%;
+        }
+
+        .category-tab:hover {
+            background: linear-gradient(135deg, rgba(118, 184, 139, 0.8) 0%, rgba(74, 124, 89, 0.6) 100%);
+            border-color: #4a7c4a;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 12px rgba(74, 124, 74, 0.3);
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, #4a7c4a 0%, #3a6c3a 100%);
+            border-color: #4a7c4a;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(74, 124, 74, 0.4);
+            font-weight: 600;
+        }
+
+        .category-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 3px;
+            background: linear-gradient(90deg, #a8d5a8, #8ccb8c);
+            border-radius: 2px;
+            box-shadow: 0 1px 4px rgba(168, 213, 168, 0.5);
+        }
+
+        /* 分类导航徽章计数 */
+        .category-tab .badge {
+            display: inline-block;
+            background: rgba(74, 124, 74, 0.2);
+            color: #4a7c4a;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 0.65rem;
+            margin-left: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(74, 124, 74, 0.3);
+        }
+
+        .category-tab:hover .badge {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .category-tab.active .badge {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 主要内容区域 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* 文章列表 - 与主页风格一致 */
+        .articles-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-dark-green), var(--primary-green));
+            color: var(--text-light);
+        }
+
+        .section-header h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gold-medium);
+            margin: 0;
+        }
+
+        .publish-btn {
+            background: var(--light-green);
+            color: var(--primary-dark-green);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .publish-btn:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* 文章卡片 - 与主页风格一致 */
+        .article-card {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+            cursor: pointer;
+            background: var(--background-light);
+        }
+
+        .article-card:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .article-card:last-child {
+            border-bottom: none;
+        }
+
+        .article-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-dark-green);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+        }
+
+        .article-author {
+            font-weight: 500;
+            color: var(--accent-green);
+        }
+
+        .article-date {
+            color: #666;
+        }
+
+        .article-stats {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--light-green);
+        }
+
+        /* 侧边栏 - 与主页风格一致 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark-green);
+            border-bottom: 2px solid var(--accent-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--background-light);
+            color: var(--light-green);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .tag:hover {
+            background: var(--light-green);
+            color: var(--primary-dark-green);
+            transform: translateY(-2px);
+        }
+
+        .hot-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hot-article {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .hot-article:hover {
+            background: var(--background-light);
+            color: var(--accent-green);
+            transform: translateX(5px);
+        }
+
+        .hot-rank {
+            background: var(--background-light);
+            color: var(--light-green);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        .hot-rank.top {
+            background: var(--light-green);
+            color: var(--primary-dark-green);
+        }
+
+        .hot-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        /* 阅读器 - 与主页风格一致 */
+        .reader-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            display: none;
+            border: 1px solid var(--border-color);
+        }
+
+        .reader-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .reader-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--primary-dark-green);
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        .reader-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .reader-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .reader-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .reader-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--primary-dark-green);
+            border-left: 4px solid var(--accent-green);
+            padding-left: 1rem;
+        }
+
+        .reader-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--primary-green);
+        }
+
+        .back-btn {
+            background: var(--background-light);
+            color: var(--light-green);
+            border: 2px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            background: var(--light-green);
+            color: var(--primary-dark-green);
+            transform: translateY(-2px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .sidebar {
+                order: -1;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .reader-title {
+                font-size: 1.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+
+        /* 无内容提示 */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #8590a6;
+        }
+
+        .empty-state h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state p {
+            font-size: 0.95rem;
+        }
+
+        /* 发布表单样式 */
+        .publish-form-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin: 2rem 0;
+            display: none;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark-green);
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-dark-green);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--background-light);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--light-green);
+            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 200px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .markdown-editor {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .editor-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .editor-tab {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-weight: 500;
+            color: #666;
+            transition: var(--transition);
+        }
+
+        .editor-tab.active {
+            color: var(--light-green);
+            border-bottom-color: var(--light-green);
+        }
+
+        .editor-panels {
+            display: flex;
+            gap: 1rem;
+            height: 400px;
+        }
+
+        .editor-panel {
+            flex: 1;
+            display: none;
+            flex-direction: column;
+        }
+
+        .editor-panel.active {
+            display: flex;
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .editor-label {
+            font-weight: 600;
+            color: var(--primary-dark-green);
+        }
+
+        .editor-hint {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .markdown-input {
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            resize: none;
+            background: var(--background-light);
+        }
+
+        .markdown-preview {
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow-y: auto;
+            background: white;
+        }
+
+        .markdown-preview h1,
+        .markdown-preview h2,
+        .markdown-preview h3 {
+            color: var(--primary-dark-green);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .markdown-preview h1 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .markdown-preview h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 1rem;
+        }
+
+        .markdown-preview h3 {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+        }
+
+        .markdown-preview p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .markdown-preview code {
+            background: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .markdown-preview pre {
+            background: #f6f8fa;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .markdown-preview pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .markdown-preview blockquote {
+            border-left: 4px solid var(--light-green);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        .markdown-preview ul,
+        .markdown-preview ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .markdown-preview li {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--light-green);
+            color: var(--primary-dark-green);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--background-light);
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Insight Gate</h2>
+            </div>
+            
+            <!-- 搜索框 - 移到导航栏中 -->
+            <div class="nav-search">
+                <div class="search-box">
+                    <input type="text" id="search-input" class="search-input" placeholder="搜索文章标题、内容或作者...">
+                    <button id="search-btn" class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-results-info" id="search-results-info" style="display: none;"></div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="daily-news.html" class="nav-link">知识专栏</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research-reports.html" class="nav-link">研报专区</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">会员登录</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 分类导航 - 放在导航栏下方 -->
+    <section class="category-nav" style="margin-top: 60px; border-top: none;">
+        <div class="container">
+            <div class="category-nav-container">
+                <span class="category-nav-label">分类导航</span>
+                <div class="category-tabs" id="category-tabs">
+                    <button class="category-tab active" data-category="all">
+                        全部
+                        <span class="badge" id="all-count">0</span>
+                    </button>
+                    <button class="category-tab" data-category="finance">
+                        金融财经
+                        <span class="badge" id="finance-count">0</span>
+                    </button>
+                    <button class="category-tab" data-category="tech">
+                        科技前沿
+                        <span class="badge" id="tech-count">0</span>
+                    </button>
+                    <button class="category-tab" data-category="investment">
+                        投资策略
+                        <span class="badge" id="investment-count">0</span>
+                    </button>
+                    <button class="category-tab" data-category="market">
+                        市场分析
+                        <span class="badge" id="market-count">0</span>
+                    </button>
+                    <button class="category-tab" data-category="education">
+                        金融教育
+                        <span class="badge" id="education-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 移除标题栏，直接显示内容 -->
+
+    <!-- 主要内容区域 -->
+    <div class="container" style="margin-top: 60px;">
+        <div class="main-content">
+            <!-- 文章列表/阅读器 -->
+            <div>
+                <!-- 发布文章表单 -->
+                <section class="publish-form-section" id="publish-form-section">
+                    <div class="form-header">
+                        <h3>发布新文章</h3>
+                    </div>
+                    <div id="alert-message" class="alert"></div>
+                    <form id="publish-form">
+                        <div class="form-group">
+                            <label for="article-title" class="form-label">文章标题</label>
+                            <input type="text" id="article-title" class="form-input" placeholder="请输入文章标题" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-author" class="form-label">作者</label>
+                            <input type="text" id="article-author" class="form-input" placeholder="请输入作者名称" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-category" class="form-label">分类</label>
+                            <select id="article-category" class="form-select" required>
+                                <option value="">请选择分类</option>
+                                <option value="finance">金融财经</option>
+                                <option value="tech">科技前沿</option>
+                                <option value="investment">投资策略</option>
+                                <option value="market">市场分析</option>
+                                <option value="education">金融教育</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-content" class="form-label">文章内容（Markdown格式）</label>
+                            <div class="markdown-editor">
+                                <div class="editor-tabs">
+                                    <button type="button" class="editor-tab active" data-tab="edit">编辑</button>
+                                    <button type="button" class="editor-tab" data-tab="preview">预览</button>
+                                </div>
+                                <div class="editor-panels">
+                                    <div class="editor-panel active" id="edit-panel">
+                                        <div class="editor-header">
+                                            <span class="editor-label">Markdown编辑器</span>
+                                            <span class="editor-hint">支持标题、列表、代码块等格式</span>
+                                        </div>
+                                        <textarea id="article-content" class="markdown-input" placeholder="请输入Markdown格式的文章内容...
+
+# 一级标题
+## 二级标题
+
+- 列表项
+- 另一个列表项
+
+**粗体** *斜体*
+
+```javascript
+// 代码块
+console.log('Hello World');
+```" required></textarea>
+                                    </div>
+                                    <div class="editor-panel" id="preview-panel">
+                                        <div class="editor-header">
+                                            <span class="editor-label">实时预览</span>
+                                            <span class="editor-hint">基于Markdown渲染的预览效果</span>
+                                        </div>
+                                        <div class="markdown-preview" id="markdown-preview">
+                                            <p style="color: #8590a6; text-align: center; margin-top: 50%;">输入内容后预览效果将显示在这里</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-excerpt" class="form-label">文章摘要（可选）</label>
+                            <textarea id="article-excerpt" class="form-textarea" placeholder="请输入文章摘要，如不填写将自动生成" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="hideUploadForm()">取消</button>
+                            <button type="submit" class="btn btn-primary">发布文章</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- 文章列表 -->
+                <section class="articles-section" id="articles-section">
+                    <div class="section-header">
+                        <h2>最新文章</h2>
+                        <button class="publish-btn" onclick="showUploadForm()">发布文章</button>
+                    </div>
+                    
+                    <!-- 文章列表内容 -->
+                    <div id="articles-list">
+                        <!-- 示例文章 -->
+                        <div class="article-card" data-id="1" data-category="finance">
+                            <h3 class="article-title">全球宏观经济趋势分析与投资机会</h3>
+                            <p class="article-excerpt">本文深入分析当前全球经济形势，探讨主要经济体的货币政策走向，以及在这种环境下投资者应该如何布局资产配置...</p>
+                            <div class="article-meta">
+                                <span class="article-author">金融分析师</span>
+                                <span class="article-date">2024-01-15</span>
+                                <div class="article-stats">
+                                    <span class="stat">📖 1.2k</span>
+                                    <span class="stat">💬 86</span>
+                                    <span class="stat">👍 245</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-id="2" data-category="tech">
+                            <h3 class="article-title">人工智能在金融领域的应用与前景</h3>
+                            <p class="article-excerpt">AI技术正在深刻改变金融行业的运作方式，从智能投顾到风险控制，本文将探讨AI在金融领域的最新应用...</p>
+                            <div class="article-meta">
+                                <span class="article-author">科技观察员</span>
+                                <span class="article-date">2024-01-14</span>
+                                <div class="article-stats">
+                                    <span class="stat">📖 890</span>
+                                    <span class="stat">💬 42</span>
+                                    <span class="stat">👍 156</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-id="3" data-category="investment">
+                            <h3 class="article-title">2024年投资策略：如何在不确定性中寻找机会</h3>
+                            <p class="article-excerpt">面对复杂多变的市场环境，投资者需要制定灵活的投资策略。本文提供实用的投资建议和风险管理方法...</p>
+                            <div class="article-meta">
+                                <span class="article-author">投资顾问</span>
+                                <span class="article-date">2024-01-13</span>
+                                <div class="article-stats">
+                                    <span class="stat">📖 1.5k</span>
+                                    <span class="stat">💬 123</span>
+                                    <span class="stat">👍 312</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 阅读器 -->
+                <section class="reader-section" id="reader-section">
+                    <button class="back-btn" onclick="backToList()">← 返回列表</button>
+                    <div class="reader-header">
+                        <h1 class="reader-title" id="reader-title">文章标题</h1>
+                        <div class="reader-meta">
+                            <span class="article-author" id="reader-author">作者</span>
+                            <span class="article-date" id="reader-date">日期</span>
+                            <div class="article-stats">
+                                <span class="stat">📖 <span id="reader-views">0</span></span>
+                                <span class="stat">👍 <span id="reader-likes">0</span></span>
+                            </div>
+                            <button class="like-btn" id="like-btn">
+                                <span class="like-icon">👍</span>
+                                <span class="like-text">点赞</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="reader-content" id="reader-content">
+                        <!-- 文章内容将通过JavaScript动态加载 -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- 侧边栏 -->
+            <div class="sidebar">
+                <!-- 热门标签 -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div class="tag-list">
+                        <span class="tag">#投资策略</span>
+                        <span class="tag">#宏观经济</span>
+                        <span class="tag">#AI金融</span>
+                        <span class="tag">#风险管理</span>
+                        <span class="tag">#资产配置</span>
+                        <span class="tag">#市场分析</span>
+                        <span class="tag">#科技趋势</span>
+                        <span class="tag">#投资教育</span>
+                    </div>
+                </div>
+
+                <!-- 热门文章 -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门文章</h3>
+                    <div class="hot-articles">
+                        <div class="hot-article">
+                            <span class="hot-rank top">1</span>
+                            <span class="hot-title">全球宏观经济趋势分析与投资机会</span>
+                        </div>
+                        <div class="hot-article">
+                            <span class="hot-rank top">2</span>
+                            <span class="hot-title">2024年投资策略：如何在不确定性中寻找机会</span>
+                        </div>
+                        <div class="hot-article">
+                            <span class="hot-rank">3</span>
+                            <span class="hot-title">人工智能在金融领域的应用与前景</span>
+                        </div>
+                        <div class="hot-article">
+                            <span class="hot-rank">4</span>
+                            <span class="hot-title">区块链技术对金融行业的影响</span>
+                        </div>
+                        <div class="hot-article">
+                            <span class="hot-rank">5</span>
+                            <span class="hot-title">个人理财规划：从入门到精通</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 关于我们 -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">关于平台</h3>
+                    <p style="color: #646464; font-size: 0.9rem; line-height: 1.6;">
+                        专业金融知识分享平台，汇聚行业专家深度分析，为投资者提供有价值的见解和策略。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer" style="background: #f6f6f6; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid #e8e8e8;">
+        <div class="container">
+            <div style="text-align: center; color: #8590a6;">
+                <p>&copy; 2024 Insight Gate. 保留所有权利.</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">专业金融知识平台</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 文章发布功能 -->
+    <script>
+        // 文章数据存储和加载
+        let articlesData = {};
+        let nextArticleId = 1;
+
+        // 从本地存储加载文章数据
+        function loadArticlesFromStorage() {
+            const savedData = localStorage.getItem('knowledgeArticles');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                articlesData = data.articles || {};
+                nextArticleId = data.nextId || 1;
+            }
+            
+            // 如果没有文章，添加示例文章
+            if (Object.keys(articlesData).length === 0) {
+                addSampleArticles();
+            }
+            
+            renderArticles();
+            
+            // 强制更新分类计数
+            setTimeout(() => {
+                updateCategoryCounts();
+            }, 100);
+        }
+
+        // 添加示例文章
+        function addSampleArticles() {
+            articlesData = {
+                1: {
+                    title: "全球宏观经济趋势分析与投资机会",
+                    author: "金融分析师",
+                    date: new Date().toISOString().split('T')[0],
+                    category: "finance",
+                    views: 1200,
+                    comments: 86,
+                    likes: 245,
+                    content: `
+                        <h2>全球经济形势概览</h2>
+                        <p>当前全球经济正处于重要的转折点。主要经济体面临着通货膨胀、利率上升和经济增长放缓等多重挑战。美国联邦储备系统持续加息以应对通胀，而欧洲央行也在跟随这一趋势。</p>
+                        
+                        <h2>主要经济体分析</h2>
+                        <p><strong>美国经济：</strong>尽管面临通胀压力，但劳动力市场依然强劲，消费支出保持稳定。美联储的货币政策将继续影响全球资本流动。</p>
+                        
+                        <p><strong>欧洲经济：</strong>能源危机和地缘政治风险给欧洲经济带来不确定性，但绿色转型和数字化投资为长期增长提供动力。</p>
+                        
+                        <p><strong>亚洲市场：</strong>中国经济的复苏进程和东南亚国家的制造业转移趋势值得关注。</p>
+                        
+                        <h2>投资机会与风险</h2>
+                        <p>在当前的宏观经济环境下，投资者应该关注以下几个领域：</p>
+                        
+                        <h3>1. 科技与创新</h3>
+                        <p>人工智能、云计算和生物技术等创新领域将继续引领增长。尽管估值较高，但长期增长潜力巨大。</p>
+                        
+                        <h3>2. 绿色能源</h3>
+                        <p>全球向清洁能源转型的趋势不可逆转，相关产业链投资机会丰富。</p>
+                        
+                        <h3>3. 防御性资产</h3>
+                        <p>在高利率环境下，高质量债券和防御性股票可以提供稳定的收益。</p>
+                        
+                        <h2>投资策略建议</h2>
+                        <p>建议投资者采取多元化的投资策略，平衡风险与收益。定期调整投资组合，密切关注宏观经济指标的变化。</p>
+                    `
+                },
+                2: {
+                    title: "人工智能在金融领域的应用与前景",
+                    author: "科技观察员", 
+                    date: new Date(Date.now() - 86400000).toISOString().split('T')[0],
+                    category: "tech",
+                    views: 890,
+                    comments: 42,
+                    likes: 156,
+                    content: `
+                        <h2>AI技术概述</h2>
+                        <p>人工智能技术正在以前所未有的速度改变金融行业的各个层面。从算法交易到风险管理，从客户服务到欺诈检测，AI的应用范围日益扩大。</p>
+                        
+                        <h2>主要应用领域</h2>
+                        <h3>智能投顾</h3>
+                        <p>基于机器学习算法的智能投顾平台能够为投资者提供个性化的投资建议，降低投资门槛，提高服务效率。</p>
+                        
+                        <h3>风险管理</h3>
+                        <p>AI系统可以分析大量数据，识别潜在的风险模式，帮助金融机构更好地管理信用风险和市场风险。</p>
+                        
+                        <h3>欺诈检测</h3>
+                        <p>实时监控交易行为，利用模式识别技术及时发现可疑活动，保护客户资产安全。</p>
+                        
+                        <h2>未来发展趋势</h2>
+                        <p>随着技术的不断进步，AI在金融领域的应用将更加深入。预计未来几年将出现以下趋势...</p>
+                    `
+                }
+            };
+            nextArticleId = 3;
+        }
+
+        // 保存文章数据到本地存储
+        function saveArticlesToStorage() {
+            const data = {
+                articles: articlesData,
+                nextId: nextArticleId
+            };
+            localStorage.setItem('knowledgeArticles', JSON.stringify(data));
+        }
+
+        // 渲染文章列表
+        function renderArticles(category = 'all') {
+            const articlesList = document.getElementById('articles-list');
+            let articles = Object.values(articlesData).sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            // 根据分类筛选文章
+            if (category !== 'all') {
+                articles = articles.filter(article => article.category === category);
+            }
+            
+            if (articles.length === 0) {
+                const categoryNames = {
+                    'all': '全部',
+                    'finance': '金融财经',
+                    'tech': '科技前沿', 
+                    'investment': '投资策略',
+                    'market': '市场分析',
+                    'education': '金融教育'
+                };
+                
+                articlesList.innerHTML = `
+                    <div class="empty-state">
+                        <h3>暂无${categoryNames[category] || category}类文章</h3>
+                        <p>点击"发布文章"按钮创建该分类的第一篇文章</p>
+                    </div>
+                `;
+                // 更新分类计数
+                updateCategoryCounts();
+                return;
+            }
+            
+            articlesList.innerHTML = articles.map((article, index) => {
+                const articleId = Object.keys(articlesData).find(key => articlesData[key] === article);
+                const categoryNames = {
+                    'finance': '金融财经',
+                    'tech': '科技前沿', 
+                    'investment': '投资策略',
+                    'market': '市场分析',
+                    'education': '金融教育'
+                };
+                
+                return `
+                    <div class="article-card" data-id="${articleId}" data-category="${article.category}">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <h3 class="article-title" style="margin: 0; flex: 1;">${article.title}</h3>
+                            <span class="category-tag" style="background: var(--light-green); color: var(--primary-dark-green); padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; margin-left: 1rem;">
+                                ${categoryNames[article.category] || article.category}
+                            </span>
+                        </div>
+                        <p class="article-excerpt">${article.excerpt || generateExcerpt(article.content)}</p>
+                        <div class="article-meta">
+                            <span class="article-author">${article.author}</span>
+                            <span class="article-date">${article.date}</span>
+                            <div class="article-stats">
+                                <span class="stat">📖 ${article.views}</span>
+                                <span class="stat">👍 ${article.likes}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // 重新绑定点击事件
+            const articleCards = document.querySelectorAll('.article-card');
+            articleCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const articleId = this.dataset.id;
+                    openArticle(articleId);
+                });
+            });
+            
+            // 更新分类计数
+            updateCategoryCounts();
+        }
+
+        // 生成文章摘要
+        function generateExcerpt(content) {
+            // 移除HTML标签并截取前150个字符
+            const text = content.replace(/<[^>]*>/g, '').trim();
+            return text.length > 150 ? text.substring(0, 150) + '...' : text;
+        }
+
+        // Markdown编辑器功能
+        function initMarkdownEditor() {
+            const editorTabs = document.querySelectorAll('.editor-tab');
+            const editorPanels = document.querySelectorAll('.editor-panel');
+            const markdownInput = document.getElementById('article-content');
+            const previewPanel = document.getElementById('markdown-preview');
+            
+            // 标签切换
+            editorTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.dataset.tab;
+                    
+                    // 更新标签状态
+                    editorTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 更新面板显示
+                    editorPanels.forEach(panel => panel.classList.remove('active'));
+                    document.getElementById(`${tabName}-panel`).classList.add('active');
+                    
+                    // 如果是预览模式，更新预览内容
+                    if (tabName === 'preview') {
+                        updateMarkdownPreview();
+                    }
+                });
+            });
+            
+            // 实时预览
+            markdownInput.addEventListener('input', function() {
+                if (document.getElementById('preview-panel').classList.contains('active')) {
+                    updateMarkdownPreview();
+                }
+            });
+            
+            // 初始预览
+            updateMarkdownPreview();
+        }
+        
+        // 更新Markdown预览
+        function updateMarkdownPreview() {
+            const markdownInput = document.getElementById('article-content');
+            const previewPanel = document.getElementById('markdown-preview');
+            
+            if (markdownInput.value.trim()) {
+                previewPanel.innerHTML = marked.parse(markdownInput.value);
+            } else {
+                previewPanel.innerHTML = '<p style="color: #8590a6; text-align: center; margin-top: 50%;">输入内容后预览效果将显示在这里</p>';
+            }
+        }
+        
+        // 页面交互功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载文章数据
+            loadArticlesFromStorage();
+            
+            // 初始化Markdown编辑器
+            initMarkdownEditor();
+            
+            // 表单提交事件
+            document.getElementById('publish-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                publishArticle();
+            });
+
+            // 分类筛选
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有active类
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    // 添加当前active类
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    filterArticles(category);
+                    
+                    // 清空搜索
+                    clearSearch();
+                });
+            });
+
+            // 热门文章点击
+            const hotArticles = document.querySelectorAll('.hot-article');
+            hotArticles.forEach((article, index) => {
+                article.addEventListener('click', function() {
+                    // 获取热门文章对应的ID
+                    const articles = Object.values(articlesData).sort((a, b) => b.views - a.views);
+                    if (articles[index]) {
+                        const articleId = Object.keys(articlesData).find(key => articlesData[key] === articles[index]);
+                        openArticle(articleId);
+                    }
+                });
+            });
+
+            // 搜索功能
+            initSearch();
+            
+            // 初始化分类筛选和计数功能
+            initCategoryFilter();
+        });
+
+        // 发布文章功能
+        function publishArticle() {
+            const title = document.getElementById('article-title').value.trim();
+            const author = document.getElementById('article-author').value.trim();
+            const category = document.getElementById('article-category').value;
+            const markdownContent = document.getElementById('article-content').value.trim();
+            const excerpt = document.getElementById('article-excerpt').value.trim();
+            
+            // 验证表单
+            if (!title || !author || !category || !markdownContent) {
+                showAlert('请填写所有必填字段', 'error');
+                return;
+            }
+            
+            // 将Markdown转换为HTML
+            const htmlContent = marked.parse(markdownContent);
+            
+            // 创建新文章
+            const articleId = nextArticleId++;
+            const newArticle = {
+                title: title,
+                author: author,
+                date: new Date().toISOString().split('T')[0],
+                category: category,
+                views: 0,
+                comments: 0,
+                likes: 0,
+                content: htmlContent,
+                content_markdown: markdownContent, // 保存Markdown原文
+                excerpt: excerpt || ''
+            };
+            
+            articlesData[articleId] = newArticle;
+            saveArticlesToStorage();
+            
+            // 清空表单
+            document.getElementById('publish-form').reset();
+            
+            // 隐藏表单，显示文章列表
+            hideUploadForm();
+            
+            // 重新渲染文章列表
+            renderArticles();
+            
+            // 显示成功消息
+            showAlert('文章发布成功！', 'success');
+        }
+
+        // 显示/隐藏发布表单
+        function showUploadForm() {
+            document.getElementById('publish-form-section').style.display = 'block';
+            document.getElementById('articles-section').style.display = 'none';
+            document.getElementById('reader-section').style.display = 'none';
+            
+            // 滚动到表单顶部
+            window.scrollTo(0, 0);
+        }
+
+        function hideUploadForm() {
+            document.getElementById('publish-form-section').style.display = 'none';
+            document.getElementById('articles-section').style.display = 'block';
+            document.getElementById('reader-section').style.display = 'none';
+            
+            // 清空表单
+            document.getElementById('publish-form').reset();
+            hideAlert();
+        }
+
+        // 显示提示消息
+        function showAlert(message, type) {
+            const alert = document.getElementById('alert-message');
+            alert.textContent = message;
+            alert.className = `alert alert-${type}`;
+            alert.style.display = 'block';
+            
+            // 5秒后自动隐藏
+            setTimeout(() => {
+                hideAlert();
+            }, 5000);
+        }
+
+        function hideAlert() {
+            const alert = document.getElementById('alert-message');
+            alert.style.display = 'none';
+        }
+
+        // 分类筛选
+        function filterArticles(category) {
+            console.log('筛选分类:', category);
+            
+            // 移除所有分类按钮的active类
+            const tabs = document.querySelectorAll('.category-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // 给当前点击的分类按钮添加active类
+            const currentTab = document.querySelector(`[data-category="${category}"]`);
+            if (currentTab) {
+                currentTab.classList.add('active');
+            }
+            
+            // 直接重新渲染文章列表，使用分类筛选
+            renderArticles(category);
+            
+            // 滚动到文章列表顶部
+            document.getElementById('articles-section').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+
+        // 初始化分类筛选功能
+        function initCategoryFilter() {
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    filterArticles(category);
+                });
+            });
+            
+            // 更新分类计数
+            updateCategoryCounts();
+        }
+
+        // 更新分类文章计数
+        function updateCategoryCounts() {
+            const categoryCounts = {
+                'all': Object.keys(articlesData).length,
+                'finance': 0,
+                'tech': 0,
+                'investment': 0,
+                'market': 0,
+                'education': 0
+            };
+
+            // 统计各分类文章数量
+            Object.values(articlesData).forEach(article => {
+                if (categoryCounts.hasOwnProperty(article.category)) {
+                    categoryCounts[article.category]++;
+                }
+            });
+
+            // 更新显示
+            for (const [category, count] of Object.entries(categoryCounts)) {
+                const badge = document.getElementById(`${category}-count`);
+                if (badge) {
+                    badge.textContent = count;
+                    // 如果该分类没有文章，显示特殊样式
+                    if (count === 0 && category !== 'all') {
+                        badge.style.background = 'rgba(255, 255, 255, 0.2)';
+                        badge.style.color = 'rgba(255, 255, 255, 0.6)';
+                    }
+                }
+            }
+        }
+
+        // 打开文章阅读
+        function openArticle(articleId) {
+            const article = articlesData[articleId];
+            if (!article) return;
+
+            // 增加阅读量
+            article.views++;
+            saveArticlesToStorage();
+
+            // 更新阅读器内容
+            document.getElementById('reader-title').textContent = article.title;
+            document.getElementById('reader-author').textContent = article.author;
+            document.getElementById('reader-date').textContent = article.date;
+            document.getElementById('reader-views').textContent = article.views;
+            document.getElementById('reader-likes').textContent = article.likes;
+            document.getElementById('reader-content').innerHTML = article.content;
+
+            // 初始化点赞按钮状态
+            initLikeButton(articleId);
+
+            // 切换显示
+            document.getElementById('articles-section').style.display = 'none';
+            document.getElementById('reader-section').style.display = 'block';
+
+            // 滚动到顶部
+            window.scrollTo(0, 0);
+        }
+
+        // 初始化点赞按钮
+        function initLikeButton(articleId) {
+            const likeBtn = document.getElementById('like-btn');
+            const article = articlesData[articleId];
+            
+            if (!likeBtn || !article) return;
+
+            // 检查用户是否已经点赞过（简单的本地存储实现）
+            const likedArticles = JSON.parse(localStorage.getItem('likedArticles') || '{}');
+            const isLiked = likedArticles[articleId] || false;
+
+            // 更新按钮状态
+            if (isLiked) {
+                likeBtn.classList.add('liked');
+                likeBtn.querySelector('.like-text').textContent = '已点赞';
+            } else {
+                likeBtn.classList.remove('liked');
+                likeBtn.querySelector('.like-text').textContent = '点赞';
+            }
+
+            // 移除旧的事件监听器（防止重复绑定）
+            const newLikeBtn = likeBtn.cloneNode(true);
+            likeBtn.parentNode.replaceChild(newLikeBtn, likeBtn);
+
+            // 添加新的点赞事件
+            newLikeBtn.addEventListener('click', function() {
+                likeArticle(articleId);
+            });
+        }
+
+        // 点赞文章
+        function likeArticle(articleId) {
+            const article = articlesData[articleId];
+            if (!article) return;
+
+            // 获取用户点赞记录
+            const likedArticles = JSON.parse(localStorage.getItem('likedArticles') || '{}');
+            const isLiked = likedArticles[articleId] || false;
+
+            if (isLiked) {
+                // 取消点赞
+                article.likes = Math.max(0, article.likes - 1);
+                likedArticles[articleId] = false;
+                showAlert('已取消点赞', 'info');
+            } else {
+                // 点赞
+                article.likes++;
+                likedArticles[articleId] = true;
+                showAlert('点赞成功！', 'success');
+            }
+
+            // 保存点赞记录
+            localStorage.setItem('likedArticles', JSON.stringify(likedArticles));
+            
+            // 保存文章数据
+            saveArticlesToStorage();
+
+            // 更新界面显示
+            document.getElementById('reader-likes').textContent = article.likes;
+            
+            // 更新点赞按钮状态
+            initLikeButton(articleId);
+            
+            // 重新渲染文章列表（更新点赞数显示）
+            renderArticles();
+            
+            // 更新热门文章（点赞数变化会影响热门排名）
+            updateHotArticles();
+        }
+
+        function backToList() {
+            document.getElementById('reader-section').style.display = 'none';
+            document.getElementById('articles-section').style.display = 'block';
+            
+            // 重新渲染以更新阅读量
+            renderArticles();
+        }
+
+        // 搜索功能初始化
+        function initSearch() {
+            const searchInput = document.getElementById('search-input');
+            const searchBtn = document.getElementById('search-btn');
+            
+            // 搜索按钮点击事件
+            searchBtn.addEventListener('click', function() {
+                performSearch();
+            });
+            
+            // 回车键搜索
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // 实时搜索（输入时延迟搜索）
+            let searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                
+                if (this.value.trim() === '') {
+                    clearSearch();
+                    return;
+                }
+                
+                searchTimeout = setTimeout(() => {
+                    performSearch();
+                }, 500);
+            });
+        }
+
+        // 执行搜索
+        function performSearch() {
+            const searchTerm = document.getElementById('search-input').value.trim();
+            const resultsInfo = document.getElementById('search-results-info');
+            
+            if (!searchTerm) {
+                clearSearch();
+                return;
+            }
+            
+            // 获取当前选中的分类
+            const activeCategory = document.querySelector('.category-tab.active').dataset.category;
+            
+            // 搜索文章
+            const searchResults = searchArticles(searchTerm, activeCategory);
+            
+            // 显示搜索结果信息
+            if (searchResults.length > 0) {
+                resultsInfo.innerHTML = `找到 <strong>${searchResults.length}</strong> 篇与 "<strong>${searchTerm}</strong>" 相关的文章`;
+                resultsInfo.style.display = 'block';
+            } else {
+                resultsInfo.innerHTML = `没有找到与 "<strong>${searchTerm}</strong>" 相关的文章`;
+                resultsInfo.style.display = 'block';
+            }
+            
+            // 渲染搜索结果
+            renderSearchResults(searchResults, searchTerm);
+        }
+
+        // 搜索文章
+        function searchArticles(searchTerm, category = 'all') {
+            const searchResults = [];
+            const lowerSearchTerm = searchTerm.toLowerCase();
+            
+            Object.keys(articlesData).forEach(articleId => {
+                const article = articlesData[articleId];
+                
+                // 检查分类筛选
+                if (category !== 'all' && article.category !== category) {
+                    return;
+                }
+                
+                // 搜索标题、作者、内容、摘要
+                const searchFields = [
+                    article.title,           // 标题
+                    article.author,          // 作者
+                    article.excerpt,         // 摘要
+                    article.content_markdown || '' // Markdown原文
+                ];
+                
+                // 检查是否匹配搜索关键词
+                const matches = searchFields.some(field => 
+                    field && field.toLowerCase().includes(lowerSearchTerm)
+                );
+                
+                if (matches) {
+                    searchResults.push({
+                        ...article,
+                        id: articleId
+                    });
+                }
+            });
+            
+            // 按相关性排序（标题匹配 > 作者匹配 > 内容匹配）
+            searchResults.sort((a, b) => {
+                const aTitleMatch = a.title.toLowerCase().includes(lowerSearchTerm) ? 1 : 0;
+                const bTitleMatch = b.title.toLowerCase().includes(lowerSearchTerm) ? 1 : 0;
+                
+                const aAuthorMatch = a.author.toLowerCase().includes(lowerSearchTerm) ? 1 : 0;
+                const bAuthorMatch = b.author.toLowerCase().includes(lowerSearchTerm) ? 1 : 0;
+                
+                const aContentMatch = a.content_markdown && a.content_markdown.toLowerCase().includes(lowerSearchTerm) ? 1 : 0;
+                const bContentMatch = b.content_markdown && b.content_markdown.toLowerCase().includes(lowerSearchTerm) ? 1 : 0;
+                
+                // 标题匹配优先级最高
+                if (aTitleMatch !== bTitleMatch) {
+                    return bTitleMatch - aTitleMatch;
+                }
+                
+                // 作者匹配次之
+                if (aAuthorMatch !== bAuthorMatch) {
+                    return bAuthorMatch - aAuthorMatch;
+                }
+                
+                // 内容匹配最后
+                if (aContentMatch !== bContentMatch) {
+                    return bContentMatch - aContentMatch;
+                }
+                
+                // 按日期倒序
+                return new Date(b.date) - new Date(a.date);
+            });
+            
+            return searchResults;
+        }
+
+        // 渲染搜索结果
+        function renderSearchResults(results, searchTerm) {
+            const articlesList = document.getElementById('articles-list');
+            
+            if (results.length === 0) {
+                articlesList.innerHTML = `
+                    <div class="empty-state">
+                        <h3>没有找到相关文章</h3>
+                        <p>尝试使用其他关键词搜索，或查看其他分类</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            articlesList.innerHTML = results.map(article => {
+                const categoryNames = {
+                    'finance': '金融财经',
+                    'tech': '科技前沿', 
+                    'investment': '投资策略',
+                    'market': '市场分析',
+                    'education': '金融教育'
+                };
+                
+                // 高亮显示匹配的关键词
+                const highlightText = (text) => {
+                    if (!text) return '';
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+                };
+                
+                return `
+                    <div class="article-card" data-id="${article.id}" data-category="${article.category}">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <h3 class="article-title" style="margin: 0; flex: 1;">${highlightText(article.title)}</h3>
+                            <span class="category-tag" style="background: var(--light-green); color: var(--primary-dark-green); padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; margin-left: 1rem;">
+                                ${categoryNames[article.category] || article.category}
+                            </span>
+                        </div>
+                        <p class="article-excerpt">${highlightText(article.excerpt || generateExcerpt(article.content))}</p>
+                        <div class="article-meta">
+                            <span class="article-author">${highlightText(article.author)}</span>
+                            <span class="article-date">${article.date}</span>
+                            <div class="article-stats">
+                                <span class="stat">📖 ${article.views}</span>
+                                <span class="stat">👍 ${article.likes}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // 重新绑定点击事件
+            const articleCards = document.querySelectorAll('.article-card');
+            articleCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const articleId = this.dataset.id;
+                    openArticle(articleId);
+                });
+            });
+        }
+
+        // 清空搜索
+        function clearSearch() {
+            const searchInput = document.getElementById('search-input');
+            const resultsInfo = document.getElementById('search-results-info');
+            
+            searchInput.value = '';
+            resultsInfo.style.display = 'none';
+            
+            // 重新渲染所有文章
+            renderArticles();
+        }
+
+        // 动态生成热门标签
+        function generateHotTags() {
+            const tagList = document.querySelector('.tag-list');
+            
+            // 统计所有分类频率
+            const categoryCounts = {};
+            Object.values(articlesData).forEach(article => {
+                categoryCounts[article.category] = (categoryCounts[article.category] || 0) + 1;
+            });
+            
+            // 转换为标签数组并排序
+            const hotTags = Object.entries(categoryCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 8);
+            
+            // 分类名称映射
+            const categoryNames = {
+                'finance': '金融财经',
+                'tech': '科技前沿', 
+                'investment': '投资策略',
+                'market': '市场分析',
+                'education': '金融教育'
+            };
+            
+            // 生成标签HTML
+            const tagsHTML = hotTags.map(([category, count]) => {
+                const name = categoryNames[category] || category;
+                return `<span class="tag" data-category="${category}">#${name} <span style="font-size: 0.7rem; opacity: 0.8;">${count}</span></span>`;
+            }).join('');
+            
+            tagList.innerHTML = tagsHTML;
+            
+            // 绑定标签点击事件
+            const tags = document.querySelectorAll('.tag');
+            tags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    filterArticles(category);
+                });
+            });
+        }
+
+        // 动态计算热门文章
+        function calculateHotArticles() {
+            // 计算热门分数：阅读量 * 0.4 + 点赞数 * 0.3 + 评论数 * 0.2 + 时间衰减因子
+            const hotArticles = Object.values(articlesData)
+                .map(article => {
+                    // 时间衰减因子：新文章有加成
+                    const articleDate = new Date(article.date);
+                    const daysDiff = Math.floor((new Date() - articleDate) / (1000 * 60 * 60 * 24));
+                    let timeBonus = 0;
+                    
+                    if (daysDiff <= 1) {
+                        timeBonus = 0.2; // 24小时内+20%
+                    } else if (daysDiff <= 3) {
+                        timeBonus = 0.1; // 3天内+10%
+                    } else if (daysDiff > 30) {
+                        timeBonus = -0.1; // 超过30天-10%
+                    }
+                    
+                    const hotScore = article.views * 0.4 + article.likes * 0.3 + article.comments * 0.2 + timeBonus;
+                    return {
+                        ...article,
+                        hotScore: hotScore
+                    };
+                })
+                .sort((a, b) => b.hotScore - a.hotScore)
+                .slice(0, 5);
+            
+            return hotArticles;
+        }
+
+        // 更新热门文章显示
+        function updateHotArticles() {
+            const hotArticlesContainer = document.querySelector('.hot-articles');
+            const hotArticles = calculateHotArticles();
+            
+            if (hotArticles.length === 0) {
+                hotArticlesContainer.innerHTML = '<p style="color: #8590a6; text-align: center; padding: 2rem;">暂无热门文章</p>';
+                return;
+            }
+            
+            const hotArticlesHTML = hotArticles.map((article, index) => {
+                const articleId = Object.keys(articlesData).find(key => articlesData[key] === article);
+                const rankClass = index < 3 ? 'top' : '';
+                
+                return `
+                    <div class="hot-article" data-id="${articleId}">
+                        <span class="hot-rank ${rankClass}">${index + 1}</span>
+                        <span class="hot-title">${article.title}</span>
+                    </div>
+                `;
+            }).join('');
+            
+            hotArticlesContainer.innerHTML = hotArticlesHTML;
+            
+            // 重新绑定热门文章点击事件
+            const hotArticleElements = document.querySelectorAll('.hot-article');
+            hotArticleElements.forEach(article => {
+                article.addEventListener('click', function() {
+                    const articleId = this.dataset.id;
+                    openArticle(articleId);
+                });
+            });
+        }
+
+        // 初始化热门内容
+        function initHotContent() {
+            generateHotTags();
+            updateHotArticles();
+        }
+
+        // 在页面加载时调用
+        document.addEventListener('DOMContentLoaded', function() {
+            // 原有代码...
+            
+            // 新增：初始化热门内容
+            setTimeout(() => {
+                initHotContent();
+            }, 200);
+            
+            // 保存原始publishArticle函数引用
+            const originalPublishArticle = window.publishArticle;
+            
+            // 重写publishArticle函数以包含热门内容更新
+            window.publishArticle = function() {
+                // 调用原始函数
+                if (originalPublishArticle) {
+                    originalPublishArticle();
+                }
+                // 更新热门内容
+                initHotContent();
+            };
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

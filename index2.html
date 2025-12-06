@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>全球指数 · 商品 · 汇率（Stooq + Exchangerate）</title>
+<style>
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'PingFang SC','Noto Sans SC',sans-serif;margin:24px;background:#fafafa;color:#111}
+  h1{font-size:24px;margin:0 0 16px}
+  .section{margin-top:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .card{background:#fff;border-radius:14px;padding:18px;border:1px solid #eee;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+  .title{font-weight:700;margin-bottom:8px}
+  .price{font-size:28px;font-weight:700;margin:6px 0}
+  .meta{font-size:12px;color:#666}
+  .error{color:#c0392b}
+  pre#log{padding:12px;background:#f6f8fa;border:1px solid #eee;border-radius:10px;white-space:pre-wrap}
+</style>
+</head>
+<body>
+  <h1>全球指数 · 商品 · 汇率（Stooq + Exchangerate）</h1>
+
+  <div class="section">
+    <h2>美股三大指数（最近收盘 / 若有当日CSV则显示当日）</h2>
+    <div id="us-index-cards" class="grid"></div>
+  </div>
+
+  <div class="section">
+    <h2>大宗商品（最近收盘）</h2>
+    <div id="cmdty-cards" class="grid"></div>
+  </div>
+
+  <div class="section">
+    <h2>主要汇率（最新值）</h2>
+    <div id="fx-cards" class="grid"></div>
+  </div>
+
+  <div class="section">
+    <h3>日志</h3>
+    <pre id="log"></pre>
+  </div>
+
+<script>
+/** 1) 改成你的 Worker 域名 */
+const PROXY_ORIGIN = 'https://snowy-fog-3586.xiangxuetingum.workers.dev';
+
+/** 简单日志 */
+function log(...a){
+  const el = document.getElementById('log');
+  if(el) el.textContent += a.join(' ') + '\n';
+}
+
+/** 统一代理 GET */
+async function proxyGet(url){
+  const res = await fetch(`${PROXY_ORIGIN}/?url=${encodeURIComponent(url)}`, { cache: 'no-store' });
+  if(!res.ok) throw new Error(`proxy ${res.status} ${url}`);
+  return res;
+}
+
+/** ====== Stooq：尝试"当日 CSV"→再尝试"历史日线"，谁拿到就用谁 ====== */
+async function fetchStooqLatestOrHistory(symbolCandidates){
+  // 1) 当日 CSV（含时间），源：/q/l/? ... f=sd2t2ohlcvn&h&e=csv
+  const dayBases = ['https://stooq.pl','https://stooq.com'];
+  for(const base of dayBases){
+    for(const sym of symbolCandidates){
+      const url = `${base}/q/l/?s=${encodeURIComponent(sym)}&f=sd2t2ohlcvn&h&e=csv`;
+      try{
+        const txt = await (await proxyGet(url)).text();
+        log('try day', url, '->', txt.slice(0,80).replace(/\n/g,'⏎'));
+        const lines = txt.trim().split(/\r?\n/);
+        if(lines.length >= 2){
+          const sep = lines[1].includes(';') ? ';' : ',';
+          const cols = lines[1].split(sep);
+          // Stooq 当日 CSV：Symbol,Date,Time,Open,High,Low,Close,Volume,Name
+          const date = cols[1], time = cols[2], close = cols[6];
+          const v = parseFloat(close);
+          if(Number.isFinite(v)){
+            return { value: v.toFixed(2), dateLabel: `${date} ${time}`, source: 'Stooq' };
+          }
+        }
+      }catch(e){}
+    }
+  }
+
+  // 2) 历史日线（仅日期），源：/q/d/l/? ... &i=d
+  const histSchemes = ['https','http'];
+  const histHosts = ['stooq.pl','stooq.com'];
+  for(const sch of histSchemes){
+    for(const host of histHosts){
+      for(const sym of symbolCandidates){
+        const url = `${sch}://${host}/q/d/l/?s=${encodeURIComponent(sym)}&i=d`;
+        try{
+          const txt = await (await proxyGet(url)).text();
+          log('try hist', url, '->', txt.slice(0,80).replace(/\n/g,'⏎'));
+          const lines = txt.trim().split(/\r?\n/);
+          if(lines.length >= 2){
+            const sep = lines[1].includes(';') ? ';' : ',';
+            // 从最后一行往回找最近有 close 的
+            for(let i = lines.length - 1; i >= 1; i--){
+              const cols = lines[i].split(sep);
+              const d = cols[0];
+              const close = parseFloat(cols[4]);
+              if(Number.isFinite(close)){
+                return { value: close.toFixed(2), dateLabel: d, source: 'Stooq(历史)' };
+              }
+            }
+          }
+        }catch(e){}
+      }
+    }
+  }
+
+  return null;
+}
+
+/** ====== 指数与商品配置 ======
+  写多个候选符号，程序会逐一尝试；
+  规则：加入原符号、去掉^的版本、以及 .us 版本，最大化命中概率 */
+const US_INDEX_ITEMS = [
+  { name: 'S&P 500',    cands: ['spx','^spx','spx.us','^gspc','gspc','gspc.us'] },
+  { name: 'NASDAQ 100', cands: ['ndx','^ndx','ndx.us','qqq','^qqq'] },
+  { name: 'Dow Jones',  cands: ['dji','^dji','dji.us','^djia'] }
+];
+
+const CMDTY_ITEMS = [
+  { name: 'WTI 原油',    cands: ['cl.f','^cl','wti','wti.us','oil','oil.us'] },
+  { name: 'Brent 原油',  cands: ['brn.f','brent','brent.us'] },
+  { name: 'COMEX 黄金',  cands: ['gc.f','gold','xauusd'] },
+  { name: 'COMEX 白银',  cands: ['si.f','silver','xagusd'] }
+];
+
+/** ====== 汇率（exchangerate.host）======
+  这个源支持 CORS，其实不用走 Worker，也可以走；为了统一仍通过 Worker。
+  这里给出 USD/CNY、USD/JPY、EUR/USD（会自动反转显示 CNY/USD 等也很容易扩展） */
+// ======= 汇率（Yahoo 实时 + Frankfurter + exchangerate.host） =======
+async function fetchFX(pair){
+  const [base, quote] = pair.split('/');
+
+  // ① Yahoo Finance 实时汇率
+  const yahooSymbol = `${base}${quote}=X`;
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol)}?range=1d&interval=1d`;
+    const res = await proxyGet(url);
+    const j = await res.json();
+    const meta = j?.chart?.result?.[0]?.meta;
+    const price = meta?.regularMarketPrice ?? meta?.previousClose;
+    if (Number.isFinite(price)) {
+      const ts = new Date(meta?.regularMarketTime * 1000 || Date.now());
+      return {
+        value: price.toFixed(4),
+        dateLabel: ts.toISOString().slice(0, 19).replace('T', ' '),
+        source: 'Yahoo Finance'
+      };
+    }
+  } catch (e) {
+    log('fx yahoo fail', pair, e);
+  }
+
+  // ② Frankfurter API（每日欧洲央行汇率）
+  try {
+    const r2 = await proxyGet(`https://api.frankfurter.app/latest?from=${encodeURIComponent(base)}&to=${encodeURIComponent(quote)}`);
+    const j2 = await r2.json();
+    const val = j2?.rates?.[quote];
+    if (Number.isFinite(val)) {
+      return {
+        value: val.toFixed(4),
+        dateLabel: j2.date || new Date().toISOString().slice(0, 10),
+        source: 'Frankfurter (ECB daily)'
+      };
+    }
+  } catch (e) {
+    log('fx frankfurter fail', pair, e);
+  }
+
+  // ③ exchangerate.host（备用）
+  try {
+    const r3 = await fetch(`https://api.exchangerate.host/latest?base=${encodeURIComponent(base)}&symbols=${encodeURIComponent(quote)}`, { cache: 'no-store' });
+    if (r3.ok) {
+      const j3 = await r3.json();
+      const val = j3?.rates?.[quote];
+      if (Number.isFinite(val)) {
+        return {
+          value: val.toFixed(4),
+          dateLabel: j3.date || new Date().toISOString().slice(0, 10),
+          source: 'exchangerate.host'
+        };
+      }
+    }
+  } catch (e) {
+    log('fx exchangerate.host fail', pair, e);
+  }
+
+  throw new Error('fx empty');
+}
+
+const FX_ITEMS = [
+  { name: 'USD/CNY', pair: 'USD/CNY' },
+  { name: 'USD/JPY', pair: 'USD/JPY' },
+  { name: 'EUR/USD', pair: 'EUR/USD' }
+];
+
+/** ====== 渲染通用：生成卡片并填数据 ====== */
+function makeCard(name, parent){
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="title">${name}</div>
+    <div class="price" id="p_${name}">—</div>
+    <div class="meta" id="m_${name}">获取中…</div>
+  `;
+  parent.appendChild(card);
+}
+
+async function renderSection(items, fetcher, mountId){
+  const box = document.getElementById(mountId);
+  box.innerHTML = '';
+  for(const it of items){
+    makeCard(it.name, box);
+    const pEl = document.getElementById(`p_${it.name}`);
+    const mEl = document.getElementById(`m_${it.name}`);
+    try{
+      const row = await fetcher(it);
+      if(row){
+        pEl.textContent = row.value;
+        mEl.textContent = `来源：${row.source} · 日期：${row.dateLabel}`;
+      }else{
+        pEl.textContent = '无法获取数据';
+        mEl.textContent = '请稍后再试';
+        pEl.classList.add('error');
+      }
+    }catch(e){
+      log('error', it.name, e);
+      pEl.textContent = '无法获取数据';
+      mEl.textContent = '请稍后再试';
+      pEl.classList.add('error');
+    }
+  }
+}
+
+/** 具体取数 */
+async function fetchUSIndex(it){
+  // 扩展候选（去 ^、加 .us）
+  const cands = Array.from(new Set([
+    ...it.cands,
+    ...it.cands.map(s => s.replace(/^\^/, '')),
+    ...it.cands.map(s => s.replace(/^\^/, '') + '.us'),
+  ]));
+  const row = await fetchStooqLatestOrHistory(cands);
+  return row && { ...row };
+}
+
+// 通过 Worker 取 Yahoo 单日/历史（优先用 meta.regularMarketPrice / previousClose）
+async function fetchYahooClose(ySymbol){ 
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ySymbol)}?range=1d&interval=1d`;
+  const j = await (await proxyGet(url)).json();
+  if(!j || !j.chart || !j.chart.result || !j.chart.result[0]) throw new Error('yahoo empty');
+  const r = j.chart.result[0];
+  const meta = r.meta || {};
+  const close = (meta.regularMarketPrice ?? meta.previousClose ?? (r.indicators?.quote?.[0]?.close?.slice(-1)[0]));
+  const ts = (r.timestamp && r.timestamp.slice(-1)[0]) ? new Date(r.timestamp.slice(-1)[0]*1000) : new Date();
+  if(!Number.isFinite(close)) throw new Error('yahoo no close');
+  return { value: Number(close).toFixed(2), dateLabel: ts.toISOString().slice(0,19).replace('T',' '), source: 'Yahoo' };
+}
+
+// 修改原来的 fetchCommodity：先试 Stooq，失败再用 Yahoo 符号兜底
+async function fetchCommodity(it){
+  const cands = Array.from(new Set([
+    ...it.cands,
+    ...it.cands.map(s => s.replace(/^\^/, '')),
+    ...it.cands.map(s => s.replace(/^\^/, '') + '.us'),
+  ]));
+  const row = await fetchStooqLatestOrHistory(cands);
+  if (row) return row;
+
+  // 兜底映射（可按需扩展）
+  const yahooMap = {
+    'WTI 原油': 'CL=F',
+    'Brent 原油': 'BZ=F',
+    'COMEX 黄金': 'GC=F',
+    'COMEX 白银': 'SI=F',
+  };
+  const y = yahooMap[it.name];
+  if (y) {
+    try { return await fetchYahooClose(y); } catch(e){ log('yahoo fail', it.name, e); }
+  }
+  return null;
+}
+
+async function fetchFxItem(it){
+  const row = await fetchFX(it.pair);
+  return row && { ...row };
+}
+
+/** 入口 */
+document.addEventListener('DOMContentLoaded', async () => {
+  await renderSection(US_INDEX_ITEMS, fetchUSIndex, 'us-index-cards');
+  await renderSection(CMDTY_ITEMS,    fetchCommodity, 'cmdty-cards');
+  await renderSection(FX_ITEMS,       fetchFxItem,    'fx-cards');
+
+  // 可选：每15分钟自动刷新一次（指数/商品用历史也OK）
+  setInterval(async () => {
+    await renderSection(US_INDEX_ITEMS, fetchUSIndex, 'us-index-cards');
+    await renderSection(CMDTY_ITEMS,    fetchCommodity, 'cmdty-cards');
+    await renderSection(FX_ITEMS,       fetchFxItem,    'fx-cards');
+  }, 15 * 60 * 1000);
+});
+</script>
+</body>
+</html>
