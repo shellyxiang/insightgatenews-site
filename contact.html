@@ -169,6 +169,37 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        async function testBackend() {
+            try {
+                const resp = await fetch('/api/hello');
+                const data = await resp.json();
+                console.log('后端返回信息：', data);
+
+                const el = document.getElementById('backend-test');
+                if (el) {
+                    el.textContent = '后端时间：' + data.time;
+                }
+            } catch (error) {
+                console.error('后端连接失败：', error);
+            }
+        }
+
+        // 页面加载后执行一次测试
+        window.addEventListener('DOMContentLoaded', testBackend);
+    </script>
+
+    <!-- 用于显示后端返回的数据 -->
+    <div id="backend-test" style="text-align:center; margin:20px; font-weight:600; color:#1A774A;">
+        正在连接后端 API...
+    </div>
+
+
+
+
+
+
     <script>
         // 联系我们页面功能
         document.addEventListener('DOMContentLoaded', function() {
