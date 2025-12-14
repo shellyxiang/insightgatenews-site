@@ -5,18 +5,11 @@ const supabaseAdmin = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
-const PUBLIC_DOWNLOAD_ENABLED = String(process.env.PUBLIC_DOWNLOAD).toLowerCase() === "true";
-
 async function verifyUser(req) {
-  const authHeader = req.headers.authorization || req.headers.Authorization || "";
+  const authHeader = req.headers.authorization || "";
   if (!authHeader.startsWith("Bearer ")) return null;
-
   const token = authHeader.slice("Bearer ".length).trim();
-  if (!token) return null;
-
-  const { data, error } = await supabaseAdmin.auth.getUser(token);
-  if (error) return null;
-
+  const { data } = await supabaseAdmin.auth.getUser(token);
   return data?.user ?? null;
 }
 
@@ -28,31 +21,36 @@ async function requireMember(userId) {
     .single();
 
   if (error || !data) return { ok: false, reason: "无法读取会员信息" };
-
   const ok = data.membership === "member" || data.role === "admin";
   return { ok, profile: data, reason: ok ? "" : "需要会员权限" };
 }
 
-export default async function handler(req, res) {
-  // CORS（可选：如果你本地 127.0.0.1 调试会更顺）
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  if (req.method === "OPTIONS") return res.status(200).end();
+function normalizeFilename(filename, bucket) {
+  let key = String(filename || "").trim();
+  if (!key) return "";
 
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  // 去掉开头的 /
+  key = key.replace(/^\/+/, "");
+
+  // 兼容你现在表里 file_key 可能是 "reports/xxx.pdf"
+  // 如果 bucket 也是 "reports"，那真实 object key 应该是 "xxx.pdf"
+  if (bucket && key.startsWith(bucket + "/")) {
+    key = key.slice(bucket.length + 1);
   }
+  return key;
+}
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   try {
     const bucket = process.env.SUPABASE_REPORTS_BUCKET;
-    const { filename } = req.body || {};
+    const publicDownload = String(process.env.PUBLIC_DOWNLOAD || "").toLowerCase() === "true";
 
-    if (!bucket) return res.status(500).json({ error: "Bucket not configured" });
-    if (!filename) return res.status(400).json({ error: "filename is required" });
+    if (!bucket) return res.status(500).json({ error: "SUPABASE_REPORTS_BUCKET not configured" });
 
-    // ✅ 开关：PUBLIC_DOWNLOAD=true 时跳过登录/会员校验
-    if (!PUBLIC_DOWNLOAD_ENABLED) {
+    // ✅ 临时开放：PUBLIC_DOWNLOAD=true 时不校验登录/会员
+    if (!publicDownload) {
       const user = await verifyUser(req);
       if (!user) return res.status(401).json({ error: "未登录（缺少或无效 token）" });
 
@@ -60,12 +58,21 @@ export default async function handler(req, res) {
       if (!check.ok) return res.status(403).json({ error: check.reason });
     }
 
+    const { filename } = req.body || {};
+    const key = normalizeFilename(filename, bucket);
+    if (!key) return res.status(400).json({ error: "filename is required" });
+
     const { data, error } = await supabaseAdmin.storage
       .from(bucket)
-      .createSignedUrl(filename, 60 * 5);
+      .createSignedUrl(key, 60 * 5);
 
-    if (error || !data?.signedUrl) {
-      return res.status(500).json({ error: "Failed to create signed URL", detail: String(error?.message || error) });
+    if (error) {
+      return res.status(500).json({
+        error: "Failed to create signed URL",
+        detail: error.message || String(error),
+        bucket,
+        key,
+      });
     }
 
     return res.status(200).json({ url: data.signedUrl });
