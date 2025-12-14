@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全球金融数据 · 加密货币 · 热门八卦</title>
+    <title>Insight Gate | 全球金融数据平台 · 加密货币 · 市场分析</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -329,7 +329,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Insight Gate</h2>
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h2>Insight Gate</h2>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -359,149 +361,126 @@
         </div>
     </nav>
 
-    <!-- 页面标题 -->
-    <section class="page-header">
-        <div class="container">
-            <h1>全球金融数据实时监控</h1>
-            <p>专业金融数据平台 - 实时追踪全球市场动态</p>
-        </div>
-    </section>
-
-    <!-- 分类导航 -->
-    <section class="category-nav">
-        <div class="container">
-            <div class="category-tabs" id="category-tabs">
-                <!-- 分类标签通过 JavaScript 动态加载 -->
+    <!-- 页面主体 -->
+    <main>
+        <!-- 页面标题 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>财经洞察与市场分析的集合点</h1>
+                <p>深度研报 · 实用科普 · 全球金融数据增强你的分析视野</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 金融数据仪表板 -->
-    <section class="finance-dashboard-section">
-        <div class="container">
-            <div class="dashboard-header">
-                <h2>📊 全球金融数据仪表板</h2>
-                <p>全球市场行情 · 实时数据追踪 · 热门八卦</p>
-            </div>
-            
-            <!-- 数据统计卡片 -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value" id="total-markets">6</div>
-                    <div class="stat-label">市场类别</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="total-assets">20+</div>
-                    <div class="stat-label">跟踪资产</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="update-frequency">实时</div>
-                    <div class="stat-label">数据更新</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="data-sources">多源</div>
-                    <div class="stat-label">数据来源</div>
+        <!-- 分类导航 -->
+        <section class="category-nav">
+            <div class="container">
+                <div class="category-tabs" id="category-tabs">
+                    <!-- 分类标签通过 JavaScript 动态加载 -->
                 </div>
             </div>
+        </section>
 
-            <!-- 数据展示区域 -->
-            <div class="dashboard-grid">
-                <!-- A股指数 -->
-                <div class="dashboard-section">
-                    <div class="section-header">
-                        <h3>📈 A股与恒生指数</h3>
-                        <span class="section-icon">🇨🇳</span>
-                    </div>
-                    <div id="china-index-cards" class="data-cards"></div>
+        <!-- 金融数据仪表板 -->
+        <section class="finance-dashboard-section">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>市场数据中心</h2>
+                    <p>全球指数 · 商品 · 汇率 · 加密 · 实时更新</p>
                 </div>
 
-                <!-- 美股及全球主要指数 -->
-                <div class="dashboard-section">
-                    <div class="section-header">
-                        <h3>🌎 美股三大指数</h3>
-                        <span class="section-icon">🇺🇸</span>
-                    </div>
-                    <div id="us-index-cards" class="data-cards"></div>
-                </div>
-
-                <!-- 大宗商品 -->
-                <div class="dashboard-section">
-                    <div class="section-header">
-                        <h3>⛽ 大宗商品</h3>
-                        <span class="section-icon">🛢️</span>
-                    </div>
-                    <div id="cmdty-cards" class="data-cards"></div>
-                </div>
-
-                <!-- 汇率 -->
-                <div class="dashboard-section">
-                    <div class="section-header">
-                        <h3>💱 主要汇率</h3>
-                        <span class="section-icon">💹</span>
-                    </div>
-                    <div id="fx-cards" class="data-cards"></div>
-                </div>
-
-                <!-- 加密货币 -->
-                <div class="dashboard-section">
-                    <div class="section-header">
-                        <h3>₿ 加密货币</h3>
-                        <span class="section-icon">🚀</span>
-                    </div>
-                    <div id="crypto-cards" class="data-cards"></div>
-                </div>
-
-                <!-- 热点新闻 -->
-                <div class="dashboard-section">
-                    <div class="section-header">
-                        <h3>🔥 今日热点</h3>
-                        <span class="section-icon">📰</span>
-                    </div>
-                    <div class="news-cards">
-                        <div class="news-card">
-                            <h4>🔗 BTC 热门八卦</h4>
-                            <div id="btc-gossip" class="news-content">加载中...</div>
+                <!-- 数据展示区域 -->
+                <div class="dashboard-grid">
+                    <!-- A股指数 -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>📈 A股与恒生指数</h3>
+                            <span class="section-icon">🇨🇳</span>
                         </div>
-                        <div class="news-card">
-                            <h4>🤖 AI 热门八卦</h4>
-                            <div id="ai-gossip" class="news-content">加载中...</div>
+                        <div id="china-index-cards" class="data-cards"></div>
+                    </div>
+
+                    <!-- 美股及全球主要指数 -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>🌎 美股三大指数</h3>
+                            <span class="section-icon">🇺🇸</span>
+                        </div>
+                        <div id="us-index-cards" class="data-cards"></div>
+                    </div>
+
+                    <!-- 大宗商品 -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>⛽ 大宗商品</h3>
+                            <span class="section-icon">🛢️</span>
+                        </div>
+                        <div id="cmdty-cards" class="data-cards"></div>
+                    </div>
+
+                    <!-- 汇率 -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>💱 主要汇率</h3>
+                            <span class="section-icon">💹</span>
+                        </div>
+                        <div id="fx-cards" class="data-cards"></div>
+                    </div>
+
+                    <!-- 加密货币 -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>₿ 加密货币</h3>
+                            <span class="section-icon">🚀</span>
+                        </div>
+                        <div id="crypto-cards" class="data-cards"></div>
+                    </div>
+
+                    <!-- 热点新闻 -->
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>🔥 今日热点</h3>
+                            <span class="section-icon">📰</span>
+                        </div>
+                        <div class="news-cards">
+                            <div class="news-card">
+                                <h4>🔗 BTC 热门八卦</h4>
+                                <div id="btc-gossip" class="news-content">加载中...</div>
+                            </div>
+                            <div class="news-card">
+                                <h4>🤖 AI 热门八卦</h4>
+                                <div id="ai-gossip" class="news-content">加载中...</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 底部信息 -->
-            <div class="dashboard-footer">
-                <p>数据实时更新 · 最后刷新: <span id="last-update">--:--:--</span></p>
+                <!-- 底部信息 -->
+                <div class="dashboard-footer">
+                    <p>数据实时更新 · 最后刷新: <span id="last-update">--:--:--</span></p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer class="footer" style="background:#f6f6f6; padding:2rem 0; border-top:1px solid #e8e8e8;">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>金融知识平台</h3>
-                    <p>为金融爱好者提供专业的知识服务</p>
+            <div style="text-align:center; color:#8590a6;">
+                <p>&copy; Insight Gate. 保留所有权利.</p>
+                <p style="font-size:0.9rem; margin-top:0.5rem;">专业金融知识平台</p>
+                <div style="margin-top:1rem;">
+                    <a href="index.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">首页</a>
+                    <span style="color:#ccc;">|</span>
+                    <a href="privacy.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">隐私政策</a>
+                    <span style="color:#ccc;">|</span>
+                    <a href="terms.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">服务条款</a>
+                    <span style="color:#ccc;">|</span>
+                    <a href="contact.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">联系我们</a>
                 </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="finance-basics.html">金融基础</a></li>
-                        <li><a href="daily-news.html">每日资讯</a></li>
-                        <li><a href="research-reports.html">每日研报</a></li>
-                    </ul>
+                <p style="margin-top:1rem;">Email: support@insightgatenews.com</p>
+                <div style="margin-top:1rem; padding:1rem; background:rgba(0,0,0,0.05); border-radius:8px;">
+                    <p style="font-size:0.8rem; line-height:1.4; margin:0;"><strong>免责声明：</strong>Insight Gate provides educational content for informational purposes only. We do not provide financial, investment, trading, or legal advice. All research reports and articles are general information and should not be considered as recommendations. Insight Gate is not a licensed financial service provider.Insight Gate 提供的所有内容仅用于教育与信息目的，不构成投资、交易或法律建议。我们不是持牌金融服务提供者。</p>
                 </div>
-                <div class="footer-section">
-                    <h4>联系我们</h4>
-                    <p>邮箱: contact@finance-platform.com</p>
-                    <p>电话: 400-123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 金融知识平台. 保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -532,17 +511,17 @@
 
         /** 大宗商品配置 */
         const CMDTY_ITEMS = [
-            { name: 'WTI 原油',    cands: ['cl.f','^cl','wti','wti.us','oil','oil.us'] },
-            { name: 'Brent 原油',  cands: ['brn.f','brent','brent.us'] },
-            { name: 'COMEX 黄金',  cands: ['gc.f','gold','xauusd'] },
-            { name: 'COMEX 白银',  cands: ['si.f','silver','xagusd'] }
+            { name: 'WTI 原油',    cands: ['cl.f','^cl','wti','wti.us','oil','oil.us'], type: 'commodity' },
+            { name: 'Brent 原油',  cands: ['brn.f','brent','brent.us'],                  type: 'commodity' },
+            { name: 'COMEX 黄金',  cands: ['gc.f','gold','xauusd'],                      type: 'commodity' },
+            { name: 'COMEX 白银',  cands: ['si.f','silver','xagusd'],                    type: 'commodity' }
         ];
 
         /** 汇率配置 */
         const FX_ITEMS = [
-            { name: 'USD/CNY', pair: 'USD/CNY' },
-            { name: 'USD/JPY', pair: 'USD/JPY' },
-            { name: 'EUR/USD', pair: 'EUR/USD' }
+            { name: 'USD/CNY', pair: 'USD/CNY', type: 'fx' },
+            { name: 'USD/JPY', pair: 'USD/JPY', type: 'fx' },
+            { name: 'EUR/USD', pair: 'EUR/USD', type: 'fx' }
         ];
 
         /** 加密货币配置 */
@@ -598,28 +577,27 @@
         function createDataCard(it, row) {
             const card = document.createElement('div');
             card.className = 'data-card';
-            
-            // 判断是否为大宗商品或汇率数据（不需要显示实时/闭市图标和涨跌幅）
-            const isCommodity = ['WTI 原油', 'Brent 原油', 'COMEX 黄金', 'COMEX 白银'].includes(it.name);
-            const isFx = ['USD/CNY', 'USD/JPY', 'EUR/USD'].includes(it.name);
-            const showSimpleFormat = isCommodity || isFx;
-            
+
+            // 根据配置里的 type 判断展示样式
+            const type = it.type || 'index';  // 默认当指数
+            const showSimpleFormat = (type === 'commodity' || type === 'fx');
+
             if (row) {
                 let cardHTML = '';
-                
+
                 if (showSimpleFormat) {
-                    // 大宗商品和汇率只显示名称、价格和时间
+                    // 大宗商品和汇率：只显示名称、价格和时间
                     cardHTML = `
                         <div class="data-title">${it.name}</div>
                         <div class="data-value">${row.value}</div>
                         <div class="data-meta">${row.dateLabel}</div>
                     `;
                 } else {
-                    // 非大宗商品和汇率显示完整信息（包括涨跌幅）
-                    const chgStr = row.chgStr || (row.change ? `${row.change >= 0 ? '+' : ''}${row.change}` : '—');
-                    const pctStr = row.pctStr || (row.changePercent ? `${row.changePercent >= 0 ? '+' : ''}${row.changePercent}%` : '—');
-                    const badge = row.closed ? '（已闭市）' : '实时';
-                    
+                    // 指数/加密等：显示涨跌幅、实时/闭市
+                    const chgStr = row.chgStr || row.change || '—';
+                    const pctStr = row.pctStr || row.changePercent || '—';
+                    const badge = row.closed ? '已闭市' : '实时';
+
                     cardHTML = `
                         <div class="data-badge">${badge}</div>
                         <div class="data-title">${it.name}</div>
@@ -630,20 +608,19 @@
                         <div class="data-meta">${row.dateLabel}</div>
                     `;
                 }
-                
+
                 card.innerHTML = cardHTML;
             } else {
+                // 加载中 / 数据失败
                 let cardHTML = '';
-                
+
                 if (showSimpleFormat) {
-                    // 大宗商品和汇率加载状态
                     cardHTML = `
                         <div class="data-title">${it.name}</div>
                         <div class="data-value error">—</div>
                         <div class="data-meta">数据获取中...</div>
                     `;
                 } else {
-                    // 非大宗商品和汇率加载状态
                     cardHTML = `
                         <div class="data-badge">—</div>
                         <div class="data-title">${it.name}</div>
@@ -652,7 +629,7 @@
                         <div class="data-meta">数据获取中...</div>
                     `;
                 }
-                
+
                 card.innerHTML = cardHTML;
             }
             return card;
@@ -1075,7 +1052,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // 初始化分类导航（简化版）
             const categoryTabs = document.getElementById('category-tabs');
-            const categories = ['财经数据', '市场动态', '投资策略', '行业分析'];
+            const categories = ['实用科普', '深度洞察', '研究报告', '市场数据'];
             
             categoryTabs.innerHTML = categories.map(cat => 
                 `<button class="category-tab" data-category="${cat}">${cat}</button>`
@@ -1100,6 +1077,8 @@
             initFinanceData();
             setupFinanceDataRefresh();
         });
+
+        
     </script>
 </body>
 </html>
