@@ -797,17 +797,19 @@
 
         const text = await res.text();
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
-        const data = JSON.parse(text);
-        console.log('后端返回的签名URL数据:', data);
+        const raw = JSON.parse(text);
 
-        if (data.url) {
+        console.log('后端返回的签名URL数据:', raw);
+
+        if (raw.url) {
           const link = document.createElement('a');
-          link.href = data.url;
+          link.href = raw.url;
           link.download = `${report.title || "report"}.pdf`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
         }
+
 
       } catch (err) {
         console.error('下载失败:', err);
@@ -841,7 +843,7 @@
         const text = await res.text();
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
         const data = JSON.parse(text);
-        console.log('预览签名URL数据:', data);
+        console.log('预览签名URL数据:', raw);
 
         if (data.url) window.open(data.url, "_blank");
 
