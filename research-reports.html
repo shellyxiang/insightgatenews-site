@@ -662,7 +662,7 @@
       formData.append("file", file);
 
       try {
-        const resp = await fetch(`${API_BASE}/api/upload-report`, {
+        const resp = await fetch(`/api/upload-report`, {
           method: "POST",
           body: formData
         });
@@ -706,10 +706,13 @@
     async function fetchReports() {
       try {
         console.log('开始请求研报列表...');
-        const res = await fetch(`${API_BASE}/api/reports`);
+        const res = await fetch(`/api/reports`);
         console.log('响应状态:', res.status);
 
-        const raw = await res.json();
+        const text = await res.text();
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
+        const raw = JSON.parse(text);
+
         console.log('接收到的数据(后端原始):', raw);
 
         // ⭐ 统一字段：前端用 date / fileSize / fileKey
@@ -781,7 +784,7 @@
           throw new Error('未找到报告文件路径');
         }
 
-        const res = await fetch(`${API_BASE}/api/reports/download`, {
+        const res = await fetch(`/api/reports/download`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -793,7 +796,10 @@
           throw new Error('获取下载链接失败');
         }
 
-        const data = await res.json();
+        const text = await res.text();
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
+        const raw = JSON.parse(text);
+
         console.log('后端返回的签名URL数据:', data);
 
         if (data.url) {
@@ -819,7 +825,7 @@
           throw new Error('未找到报告文件路径');
         }
 
-        const res = await fetch(`${API_BASE}/api/reports/download`, {
+        const res = await fetch(`/api/reports/download`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -833,7 +839,10 @@
           throw new Error('获取预览链接失败');
         }
 
-        const data = await res.json();
+        const text = await res.text();
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
+        const raw = JSON.parse(text);
+
         console.log('预览签名URL数据:', data);
 
         if (data.url) {
