@@ -546,8 +546,7 @@
 
   <!-- 本页专用脚本：上传 + 列表 + 下载 -->
   <script>
-    // 如果以后需要改成别的域名，可以把 API_BASE 改成 'https://你的域名'
-    const API_BASE = 'https://www.insightgatenews.com/api';
+    
 
     let reportsData = [];
 
@@ -798,8 +797,7 @@
 
         const text = await res.text();
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
-        const raw = JSON.parse(text);
-
+        const data = JSON.parse(text);
         console.log('后端返回的签名URL数据:', data);
 
         if (data.url) {
@@ -810,6 +808,7 @@
           link.click();
           document.body.removeChild(link);
         }
+
       } catch (err) {
         console.error('下载失败:', err);
         alert('下载失败，请稍后重试');
@@ -841,13 +840,11 @@
 
         const text = await res.text();
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0,120)}`);
-        const raw = JSON.parse(text);
-
+        const data = JSON.parse(text);
         console.log('预览签名URL数据:', data);
 
-        if (data.url) {
-          window.open(data.url, "_blank");
-        }
+        if (data.url) window.open(data.url, "_blank");
+
       } catch (err) {
         console.error('预览失败:', err);
         alert('预览失败，请稍后重试');
