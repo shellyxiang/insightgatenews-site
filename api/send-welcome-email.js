@@ -1,29 +1,41 @@
 import { Resend } from "resend";
 
-export default async function handler(req, res) {
-  console.log("send-welcome-email start", { method: req.method });
+const resend = new Resend(process.env.RESEND_API_KEY);
 
+export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  const secret = req.headers["x-internal-secret"];
+  if (!secret || secret !== process.env.INTERNAL_EMAIL_SECRET) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+
   try {
-    console.log("env check", {
-      hasKey: !!process.env.RESEND_API_KEY,
-    });
-
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
     const { to, name } = req.body || {};
-    console.log("payload", { to, name });
-
     if (!to) return res.status(400).json({ error: "to is required" });
 
+    // ⚠️ from 必须是你在 Resend 里“已验证域名”的邮箱
+    // 如果你还没验证域名，先用 Resend 提供的测试 from（你 Resend 后台会提示）
     const from = "Insight Gate <support@insightgatenews.com>";
-    console.log("from =", from);
 
     const subject = "Welcome to Insight Gate";
-    const html = `<div>Welcome${name ? `, ${name}` : ""} 👋</div>`;
+    const html = `
+      <div style="font-family:Inter,Arial,sans-serif; line-height:1.6;">
+        <h2 style="margin:0 0 12px;">Welcome${name ? `, ${name}` : ""} 👋</h2>
+        <p style="margin:0 0 12px;">
+          Thanks for signing up for <b>Insight Gate</b>.
+        </p>
+        <p style="margin:0 0 12px;">
+          You can now explore the site and access free resources.
+        </p>
+        <p style="margin:18px 0 0; color:#666; font-size:12px;">
+          If you didn’t sign up, you can ignore this email.
+        </p>
+      </div>
+    `;
 
     const { data, error } = await resend.emails.send({
       from,
@@ -32,15 +44,12 @@ export default async function handler(req, res) {
       html,
     });
 
-    console.log("resend result", { data, error });
-
     if (error) {
       return res.status(500).json({ error: "Failed to send email", detail: error });
     }
 
     return res.status(200).json({ status: "ok", data });
   } catch (e) {
-    console.error("send-welcome-email crash", e);
     return res.status(500).json({ error: "Server error", detail: String(e) });
   }
 }
