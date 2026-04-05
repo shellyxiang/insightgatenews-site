@@ -348,10 +348,10 @@
     <div class="nav-inner">
       <a href="index.html" class="brand">Insight Gate</a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">全球地图</a></li>
-        <li><a href="contact.html">关于我们</a></li>
+        <li><a href="index.html" class="active">World Map</a></li>
+        <li><a href="contact.html">About</a></li>
       </ul>
-      <div class="nav-login"><a href="login.html" id="nav-join-link">加入我们</a></div>
+      <div class="nav-login"><a href="login.html" id="nav-join-link">Join Us</a></div>
     </div>
   </nav>
 
@@ -367,13 +367,13 @@
   <aside>
     <div class="search">
       <input id="search" placeholder="搜索国家：例如 美国 / Malaysia / JPN" />
-      <button id="resetBtn">重置</button>
+      <button id="resetBtn">Reset</button>
       <button id="langToggleBtn">中文</button>
     </div>
 
     <div class="sideHeader">
-      <h1 id="headerTitle">全球经济角色图谱</h1>
-      <p id="headerDesc">各国在全球经济体系中的核心支撑机制（金融理性层）与全球认知名片（直觉层）。点击国家查看国家卡片。</p>
+      <h1 id="headerTitle">Global Economic Role Map</h1>
+      <p id="headerDesc">Each country's structural role in the global economy — financial pillars and global identity. Click a country to view its card.</p>
     </div>
 
     <div class="card" id="panel">
@@ -403,6 +403,22 @@
     const panel = document.getElementById("panel");
     const searchInput = document.getElementById("search");
     const resetBtn = document.getElementById("resetBtn");
+
+    // 立即更新静态文字，不等地图数据加载
+    (function initStaticText() {
+      const zh = lang === "zh";
+      document.getElementById("headerTitle").textContent = zh ? "全球经济角色图谱" : "Global Economic Role Map";
+      document.getElementById("headerDesc").textContent = zh
+        ? "各国在全球经济体系中的核心支撑机制（金融理性层）与全球认知名片（直觉层）。点击国家查看国家卡片。"
+        : "Each country's structural role in the global economy — financial pillars and global identity. Click a country to view its card.";
+      resetBtn.textContent = zh ? "重置" : "Reset";
+      langToggleBtn.textContent = zh ? "EN" : "中文";
+      searchInput.placeholder = zh ? "搜索国家：例如 美国 / Malaysia / JPN" : "Search: e.g. USA / 中国 / JPN";
+      const navLinks = document.querySelectorAll(".site-nav .nav-links a");
+      const navTexts = zh ? ["全球地图", "关于我们"] : ["World Map", "About"];
+      navLinks.forEach((a, i) => { if (navTexts[i]) a.textContent = navTexts[i]; });
+      document.querySelector(".site-nav .nav-login a").textContent = zh ? "加入我们" : "Join Us";
+    })();
 
     const width = () => document.getElementById("mapWrap").clientWidth;
     const height = () => document.getElementById("mapWrap").clientHeight;
@@ -1450,16 +1466,16 @@ function scanCoreCountriesMapping() {
   <!-- 页脚 -->
   <footer class="site-footer">
     <div>
-      <a href="index.html">全球地图</a><span class="sep">|</span>
-      <a href="privacy.html">隐私政策</a><span class="sep">|</span>
-      <a href="terms.html">服务条款</a><span class="sep">|</span>
-      <a href="contact.html">联系我们</a>
+      <a href="index.html">World Map</a><span class="sep">|</span>
+      <a href="privacy.html">Privacy Policy</a><span class="sep">|</span>
+      <a href="terms.html">Terms of Service</a><span class="sep">|</span>
+      <a href="contact.html">About</a>
     </div>
     <div style="margin-top:0.4rem;">
-      Email: support@insightgatenews.com &nbsp;·&nbsp; <span class="copyright">© Insight Gate. 保留所有权利.</span>
+      Email: support@insightgatenews.com &nbsp;·&nbsp; <span class="copyright">© Insight Gate. All rights reserved.</span>
     </div>
     <div class="disclaimer">
-      <strong>免责声明：</strong><span>Insight Gate 提供的所有内容仅用于教育与信息目的，不构成投资、交易或法律建议。我们不是持牌金融服务提供者。</span>
+      <strong>Disclaimer: </strong><span>All content on Insight Gate is for informational and educational purposes only. It does not constitute financial, investment, or legal advice. We are not a licensed financial service provider.</span>
     </div>
   </footer>
 
