@@ -1,0 +1,5397 @@
+{
+  "USA": {
+    "name_cn": "美国",
+    "name_en": "United States",
+    "role": "system_core",
+    "tier": 1,
+    "color": "#1a3a6b",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "技术创新中心",
+          "en": "Technology and Innovation Hub"
+        },
+        "desc": {
+          "zh": "依托顶尖大学、科研机构与风险投资体系，美国持续创造新的高附加值产业并主导全球科技创新。",
+          "en": "Technology and Innovation Hub"
+        }
+      },
+      {
+        "title": {
+          "zh": "全球金融定价中心",
+          "en": "Global Financial Pricing Center"
+        },
+        "desc": {
+          "zh": "以华尔街与美元体系为核心，美国金融市场决定全球资本成本、风险定价与资金流向。",
+          "en": "With Wall Street and the dollar system at its core, the U.S. financial market determines global capital costs, risk pricing, and investment flows."
+        }
+      },
+      {
+        "title": {
+          "zh": "规则与制度制定能力",
+          "en": "Rule and Institutional Setter"
+        },
+        "desc": {
+          "zh": "通过金融、法律与技术标准，美国在多个领域形成全球默认规则，并影响国际经济秩序。",
+          "en": "Rule and Institutional Setter"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "Silicon Valley",
+          "en": ""
+        },
+        "desc": {
+          "zh": "全球科技创新与创业生态中心",
+          "en": "Global Science and Technology Innovation and Entrepreneurship Ecosystem Center"
+        }
+      },
+      {
+        "title": {
+          "zh": "华尔街",
+          "en": "Wall Street"
+        },
+        "desc": {
+          "zh": "全球科技创新与创业生态中心",
+          "en": "Global Science and Technology Innovation and Entrepreneurship Ecosystem Center"
+        }
+      }
+    ],
+    "region": "north_america"
+  },
+  "GBR": {
+    "name_cn": "英国",
+    "name_en": "United Kingdom",
+    "role": "system_core",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "金融与法律规则中心",
+          "en": "Global Financial Intermediation Hub"
+        },
+        "desc": {
+          "zh": "通过伦敦金融体系连接全球资本流动，在跨境融资、外汇交易、资产管理和金融服务中发挥关键中介作用。",
+          "en": "It connects global capital flows through the London financial system and plays a key intermediary role in cross-border financing, foreign exchange transactions, asset management, and financial services."
+        }
+      },
+      {
+        "title": {
+          "zh": "金融和法律基础设施",
+          "en": "Financial and Legal Infrastructure"
+        },
+        "desc": {
+          "zh": "以普通法体系、国际金融法律服务和合约执行体系为基础，为全球资本与商业活动提供制度性基础设施。",
+          "en": "Based on the common law system, international financial legal services, and contract enforcement system, it provides institutional infrastructure for global capital and business activities."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "伦敦金融城",
+          "en": "City of London"
+        },
+        "desc": {
+          "zh": "全球最重要的国际金融服务中心之一",
+          "en": "One of the world's most important international financial service centers"
+        }
+      }
+    ],
+    "color": "#8B1E1E",
+    "eu_layer": 1
+  },
+  "CHE": {
+    "name_cn": "瑞士",
+    "name_en": "Switzerland",
+    "role": "system_core",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "全球财富管理",
+          "en": "Global Wealth Management"
+        },
+        "desc": {
+          "zh": "专门从事跨境私人银行和资产管理的金融机构。",
+          "en": "Financial institutions specializing in cross-border private banking and asset management."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "瑞士私人银行",
+          "en": "Swiss Private Banking"
+        },
+        "desc": {
+          "zh": "在全球范围内享有金融稳定性、谨慎性和财富保值方面的声誉。",
+          "en": "global reputation for financial stability, discretion, and wealth preservation."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "DEU": {
+    "name_cn": "德国",
+    "name_en": "Germany",
+    "role": "industrial_core",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "高端制造标准中心",
+          "en": ""
+        },
+        "desc": {
+          "zh": "以工程能力与质量标准定义全球制造业上限。",
+          "en": ""
+        }
+      },
+      {
+        "title": {
+          "zh": "工业体系深度",
+          "en": ""
+        },
+        "desc": {
+          "zh": "完整工业配套与长期积累的制造能力。",
+          "en": ""
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "汽车与机械",
+          "en": ""
+        },
+        "desc": {
+          "zh": "工业制造象征",
+          "en": ""
+        }
+      }
+    ],
+    "color": "#8B1E1E",
+    "eu_layer": 1
+  },
+  "JPN": {
+    "name_cn": "日本",
+    "name_en": "Japan",
+    "role": "industrial_core",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Advanced manufacturing, capital depth, and mature high-income economy",
+          "zh": "先进制造、资本厚度与成熟高收入经济体"
+        },
+        "desc": {
+          "en": "Japan relies on sophisticated industry, technology, and external capital strength, while aging and slow potential growth remain its central structural constraints.",
+          "zh": "日本依靠高端工业、技术能力和对外资本实力运转，而老龄化和潜在增长偏慢仍然是其核心结构约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A mature industrial and capital-exporting power",
+          "zh": "一个成熟的工业与资本输出强国"
+        },
+        "desc": {
+          "en": "Japan is one of the world's leading high-income industrial economies, defined by manufacturing quality, technological depth, and long-accumulated capital strength.",
+          "zh": "日本是全球最重要的高收入工业经济体之一，其角色由制造质量、技术厚度和长期积累的资本实力定义。"
+        }
+      }
+    ],
+    "region": "east_asia"
+  },
+  "KOR": {
+    "name_cn": "韩国",
+    "name_en": "South Korea",
+    "role": "industrial_core",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Semiconductors, export manufacturing, and high-density technology economy",
+          "zh": "半导体、出口制造与高密度技术经济体"
+        },
+        "desc": {
+          "en": "South Korea relies on semiconductors, autos, shipbuilding, and tightly organized corporate-industrial networks, while its export intensity makes it highly sensitive to global trade and technology cycles.",
+          "zh": "韩国依靠半导体、汽车、造船和高度组织化的企业工业网络运转，而高度出口化也使它对全球贸易和技术周期非常敏感。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "An advanced export-manufacturing and semiconductor power",
+          "zh": "一个先进的出口制造与半导体强国"
+        },
+        "desc": {
+          "en": "South Korea is one of the world's most competitive high-end industrial exporters, shaped by semiconductors, manufacturing strength, and concentrated industrial organization.",
+          "zh": "韩国是全球最具竞争力的高端工业出口国之一，其角色由半导体、制造业强度和高度集中的产业组织共同塑造。"
+        }
+      }
+    ],
+    "region": "east_asia"
+  },
+  "FRA": {
+    "name_cn": "法国",
+    "name_en": "France",
+    "role": "industrial_core",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "国家协调型金融体系",
+          "en": "Nationally coordinated financial system"
+        },
+        "desc": {
+          "zh": "政府在金融体系中长期发挥协调作用，通过金融机构与公共政策支持国家经济与产业发展。",
+          "en": "The government has long played a coordinating role in the financial system, supporting national economic and industrial development through financial institutions and public policies."
+        }
+      },
+      {
+        "title": {
+          "zh": "公共金融与制度稳定",
+          "en": "Public Finance and Institutional Stability"
+        },
+        "desc": {
+          "zh": "中央银行、财政体系与金融监管共同构成稳定的制度框架，为经济发展提供制度基础。",
+          "en": "Central banks, the fiscal system, and financial regulation together constitute a stable institutional framework, providing an institutional foundation for economic development."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "奢侈品",
+          "en": "Luxury goods"
+        },
+        "desc": {
+          "zh": "高端品牌象征",
+          "en": "Symbol of high-end brands"
+        }
+      }
+    ],
+    "color": "#8B1E1E",
+    "eu_layer": 1
+  },
+  "CHN": {
+    "name_cn": "中国",
+    "name_en": "China",
+    "role": "systemic_scale",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Manufacturing scale, state capacity, and deep domestic-market economy",
+          "zh": "制造规模、国家能力与深度内需经济体"
+        },
+        "desc": {
+          "en": "China relies on industrial scale, state-led investment capacity, infrastructure, and a vast internal market, while rebalancing toward stronger household demand remains the central long-term challenge.",
+          "zh": "中国依靠工业规模、国家主导的投资能力、基础设施和庞大的内部市场运转，而向更强家庭需求再平衡仍然是长期核心挑战。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "East Asia's core industrial economy",
+          "zh": "东亚的核心工业经济体"
+        },
+        "desc": {
+          "en": "China is the central production economy of East Asia, shaped by manufacturing depth, state capacity, and one of the world's largest domestic markets.",
+          "zh": "中国是东亚最核心的生产经济体，其角色由制造业厚度、国家能力和全球最大的国内市场之一共同塑造。"
+        }
+      }
+    ],
+    "region": "east_asia"
+  },
+  "IND": {
+    "name_cn": "印度",
+    "name_en": "India",
+    "role": "systemic_scale",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Scale, services, and domestic-market transition economy",
+          "zh": "体量、服务业与内需转型经济体"
+        },
+        "desc": {
+          "en": "India relies on a vast internal market, strong services exports, rising infrastructure investment, and a gradual expansion of manufacturing capacity.",
+          "zh": "印度依靠庞大的国内市场、强劲的服务出口、上升的基础设施投资以及逐步扩张的制造能力运转。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "South Asia's core large-market economy",
+          "zh": "南亚的核心大市场经济体"
+        },
+        "desc": {
+          "en": "India is a major emerging economy whose role is shaped more by domestic scale, services, and long-run industrial transition than by a narrow export model.",
+          "zh": "印度是一个重要的新兴经济体，其角色更多由国内体量、服务业和长期工业转型塑造，而不是由狭窄的出口模式定义。"
+        }
+      }
+    ],
+    "region": "india"
+  },
+  "SAU": {
+    "name_cn": "沙特阿拉伯",
+    "name_en": "Saudi Arabia",
+    "role": "resource_energy",
+    "tier": 1,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "大规模石油财政核心",
+          "en": "Large-scale oil fiscal core"
+        },
+        "desc": {
+          "zh": "超大规模原油生产带来强财政能力，而这份能力进一步被用于通过投资、基础设施和战略行业推动国家主导的国内转型。",
+          "en": "Massive crude oil production creates strong fiscal capacity, and that capacity is used to fund state-led domestic transformation through investment, infrastructure, and strategic sectors."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "海湾最核心的石油强国",
+          "en": "The Gulf's central oil power"
+        },
+        "desc": {
+          "zh": "沙特的外部角色，首先由石油规模、财政分量，以及把能源收入转化为国内重塑能力的国家力量所决定。",
+          "en": "Saudi Arabia's external role is defined above all by oil scale, fiscal weight, and the ability to use energy income to reshape its domestic economy."
+        }
+      }
+    ]
+  },
+  "RUS": {
+    "name_cn": "俄罗斯",
+    "name_en": "Russia",
+    "role": "resource_energy",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Energy, state power, and post-Soviet industrial economy",
+          "zh": "能源、国家力量与后苏联工业经济体"
+        },
+        "desc": {
+          "en": "Russia relies on oil, gas, state-directed strategic sectors, and inherited industrial depth, while sanctions and war are reshaping long-term growth.",
+          "zh": "俄罗斯依靠石油、天然气、国家主导的战略部门和继承下来的工业厚度运转，而制裁与战争正在重塑其长期增长路径。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large sanctioned post-Soviet energy power",
+          "zh": "一个受到制裁的大型后苏联能源强国"
+        },
+        "desc": {
+          "en": "Russia is a major Eurasian economy whose role is shaped by hydrocarbons, state capacity, and geopolitical confrontation.",
+          "zh": "俄罗斯是一个重要的欧亚经济体，其角色由油气、国家能力和地缘对抗共同塑造。"
+        }
+      }
+    ],
+    "region": "post_soviet"
+  },
+  "AUS": {
+    "name_cn": "澳大利亚",
+    "name_en": "Australia",
+    "region": "oceania",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Resources, services, and high-income continental economy",
+          "zh": "资源、服务业与高收入大陆型经济体"
+        },
+        "desc": {
+          "en": "Australia relies on commodities, a large service base, immigration-supported demand, and strong institutions, while productivity remains the central long-term challenge.",
+          "zh": "澳大利亚依靠大宗商品、庞大服务业、移民支撑的需求和较强制度运转，而生产率仍然是长期核心挑战。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "Oceania's core advanced resource economy",
+          "zh": "大洋洲的核心发达资源经济体"
+        },
+        "desc": {
+          "en": "Australia is the central advanced economy of Oceania, shaped by resource exports, services, and deep integration with Asia-Pacific trade.",
+          "zh": "澳大利亚是大洋洲最核心的发达经济体，其角色由资源出口、服务业和对亚太贸易的深度整合共同塑造。"
+        }
+      }
+    ]
+  },
+  "CAN": {
+    "name_cn": "加拿大",
+    "name_en": "Canada",
+    "role": "resource_energy",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Resources, services, and deeply U.S.-integrated high-income economy",
+          "zh": "资源、服务业与深度嵌入美国体系的高收入经济体"
+        },
+        "desc": {
+          "en": "Canada relies on natural resources, a large service base, strong institutions, and continental integration with the United States, while productivity and trade exposure remain central long-term issues.",
+          "zh": "加拿大依靠自然资源、庞大服务业、稳健制度以及与美国的大陆整合运转，而生产率和贸易暴露仍然是长期核心问题。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A stable North American resource-and-services economy",
+          "zh": "一个稳定的北美资源与服务经济体"
+        },
+        "desc": {
+          "en": "Canada is a high-income developed economy whose role is shaped by resource wealth, institutional stability, and unusually deep economic linkage with the United States.",
+          "zh": "加拿大是一个高收入发达经济体，其角色由资源财富、制度稳定性以及与美国异常紧密的经济联系共同塑造。"
+        }
+      }
+    ],
+    "region": "north_america"
+  },
+  "NOR": {
+    "name_cn": "挪威",
+    "name_en": "Norway",
+    "role": "resource_energy",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "能源经济与主权财富投资",
+          "en": "Energy Economy and Sovereign Wealth Investment"
+        },
+        "desc": {
+          "zh": "通过石油天然气产业创造财富，并通过国家主权基金进行全球投资。",
+          "en": "Oil and gas production combined with global financial investment through a national sovereign wealth fund."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "能源强国与全球主权投资者",
+          "en": "Energy Power and Global Sovereign Investor"
+        },
+        "desc": {
+          "zh": "一个重要的能源出口国，同时也是全球金融市场的重要长期投资者。",
+          "en": "A major energy exporter that invests resource wealth across global financial markets."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "SGP": {
+    "name_cn": "新加坡",
+    "name_en": "Singapore",
+    "role": "global_hub",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Finance, trade, and global city gateway economy",
+          "zh": "金融、贸易与全球城市门户经济体"
+        },
+        "desc": {
+          "en": "Singapore relies on finance, logistics, advanced services, and maritime connectivity, while its extreme openness makes it highly sensitive to global trade conditions.",
+          "zh": "新加坡依靠金融、物流、先进服务业和海运连接性运转，而极高开放度也使其对全球贸易环境非常敏感。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "Southeast Asia's clearest global city economy",
+          "zh": "东南亚最典型的全球城市经济体"
+        },
+        "desc": {
+          "en": "Singapore is the region's most advanced gateway economy, shaped by finance, commercial coordination, and one of the world's most strategic maritime positions.",
+          "zh": "新加坡是本区域最成熟的门户型经济体，其角色由金融、商业协调能力和全球最关键的海运位置之一共同塑造。"
+        }
+      }
+    ],
+    "region": "sea"
+  },
+  "NLD": {
+    "name_cn": "荷兰",
+    "name_en": "Netherlands",
+    "role": "global_hub",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "全贸易与物流金融体系",
+          "en": "Trade and Logistics Finance"
+        },
+        "desc": {
+          "zh": "围绕全球贸易、航运与跨国商业活动发展的金融服务体系。",
+          "en": "Financial institutions supporting global trade, shipping, and multinational commercial activity."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "港欧洲贸易门户",
+          "en": "European Trade Gateway"
+        },
+        "desc": {
+          "zh": "连接全球贸易网络与欧洲市场的重要物流与商业枢纽。",
+          "en": "A major logistics and commerce hub linking global trade flows to European markets"
+        }
+      }
+    ],
+    "color": "#8B1E1E",
+    "eu_layer": 1
+  },
+  "BEL": {
+    "name_cn": "比利时",
+    "name_en": "Belgium",
+    "role": "global_hub",
+    "tier": 2,
+    "core_pillars": [],
+    "global_image": [],
+    "eu_layer": 2
+  },
+  "ARE": {
+    "name_cn": "阿联酋",
+    "name_en": "United Arab Emirates",
+    "role": "global_hub",
+    "tier": 1,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "由资源托底的区域枢纽",
+          "en": "Resource-backed regional hub"
+        },
+        "desc": {
+          "zh": "油气提供财政与资产实力，物流、金融和区域商业服务再把这份实力转化为更广泛的外部收入。",
+          "en": "Oil and gas provide fiscal and asset strength, while logistics, finance, and regional business services turn that strength into broader external income."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "海湾重要的贸易与服务平台",
+          "en": "A major Gulf trade and service platform"
+        },
+        "desc": {
+          "zh": "阿联酋把能源带来的财政实力，与港口、航空、金融和区域商业功能结合起来，使其在海湾的连接与跨境活动中占据重要位置。",
+          "en": "The UAE combines energy-based fiscal strength with ports, aviation, finance, and regional business functions, giving it a central role in Gulf connectivity and cross-border activity."
+        }
+      }
+    ]
+  },
+  "ITA": {
+    "name_cn": "意大利",
+    "name_en": "Italy",
+    "role": "regional_pillar",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "区域化产业集群网络 & 设计驱动型制造体系",
+          "en": "Industrial Clusters & Design-Driven Manufacturing"
+        },
+        "desc": {
+          "zh": "在设计与制造结合领域形成优势。",
+          "en": "Regional networks of specialized firms create flexible and design-driven production."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "意大利设计",
+          "en": "Italian Design"
+        },
+        "desc": {
+          "zh": "以设计、工艺和品牌文化驱动的全球高端制造中心。",
+          "en": "Global reputation for fashion, craftsmanship, and high-end consumer goods."
+        }
+      }
+    ],
+    "color": "#8B1E1E",
+    "eu_layer": 2
+  },
+  "ESP": {
+    "name_cn": "西班牙",
+    "name_en": "Spain",
+    "role": "regional_pillar",
+    "tier": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "基础设施体系与旅游经济",
+          "en": "Infrastructure Systems and Tourism Economy"
+        },
+        "desc": {
+          "zh": "由全球基础设施运营企业、可再生能源产业以及旅游服务业构成的经济结构。",
+          "en": "Large infrastructure operators, renewable energy companies, and global tourism services."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "旅游服全球基础设施建设者与旅游中心务",
+          "en": "Global Infrastructure Builder and Tourism Hub"
+        },
+        "desc": {
+          "zh": "以大型基础设施运营能力和世界领先的旅游产业而闻名。",
+          "en": "A major developer of transportation systems and one of the world’s leading tourism destinations."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "MEX": {
+    "name_cn": "墨西哥",
+    "name_en": "Mexico",
+    "role": "systemic_scale",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Manufacturing, North American integration, and large middle-income market economy",
+          "zh": "制造业、北美整合与大型中等收入市场经济体"
+        },
+        "desc": {
+          "en": "Mexico relies on industrial exports, deep U.S. supply-chain integration, and a large domestic market, while productivity and external dependence remain central structural constraints.",
+          "zh": "墨西哥依靠工业出口、与美国深度整合的供应链以及庞大的国内市场运转，而生产率和外部依赖仍然是核心结构约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "North America's manufacturing bridge economy",
+          "zh": "北美的制造桥梁型经济体"
+        },
+        "desc": {
+          "en": "Mexico is one of the Americas' most important industrial economies, shaped by manufacturing, regional trade integration, and its bridge role between the United States and the developing world.",
+          "zh": "墨西哥是美洲最重要的工业经济体之一，其角色由制造业、区域贸易整合以及它在美国与发展中世界之间的桥梁位置共同塑造。"
+        }
+      }
+    ],
+    "region": "north_america"
+  },
+  "BRA": {
+    "name_cn": "巴西",
+    "name_en": "Brazil",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Scale, agriculture, and broad South American mixed economy",
+          "zh": "体量、农业与宽广的南美混合经济体"
+        },
+        "desc": {
+          "en": "Brazil relies on domestic market scale, agriculture, resources, manufacturing, and services, while productivity and fiscal constraints remain central long-term issues.",
+          "zh": "巴西依靠国内市场体量、农业、资源、制造业和服务业运转，而生产率和财政约束仍然是长期核心问题。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "South America's core large-market economy",
+          "zh": "南美的核心大市场经济体"
+        },
+        "desc": {
+          "en": "Brazil is the region's central large economy, shaped by agricultural power, resource depth, and one of the broadest internal markets in the developing world.",
+          "zh": "巴西是本区域最核心的大型经济体，其角色由农业实力、资源厚度和发展中世界最宽广的内部市场之一共同塑造。"
+        }
+      }
+    ],
+    "region": "south_america"
+  },
+  "TUR": {
+    "name_cn": "土耳其",
+    "name_en": "Türkiye",
+    "role": "regional_pillar",
+    "tier": 2,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "工业—贸易混合型经济体",
+          "en": "Industrial–trade hybrid economy"
+        },
+        "desc": {
+          "zh": "土耳其把制造业能力、大型国内市场和与欧洲的深度贸易联系结合起来，使其经济角色建立在生产和跨区域商业之上，而不是资源租金之上。",
+          "en": "Turkey combines manufacturing capacity, a large domestic market, and deep European trade linkages, giving it a role built on production and cross-regional commerce rather than resource rent."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "连接欧洲及周边区域的制造业桥梁",
+          "en": "A manufacturing bridge between Europe and its surrounding regions"
+        },
+        "desc": {
+          "zh": "土耳其的外部角色，来自它同时扮演生产者和通道的双重身份，把欧洲市场与中东及更广泛的欧亚地区连接起来。",
+          "en": "Turkey's external role is shaped by being both a producer and a corridor, linking European markets with the Middle East and wider Eurasia."
+        }
+      }
+    ]
+  },
+  "IDN": {
+    "tier": 3,
+    "role": "systemic_scale",
+    "name_cn": "印度尼西亚",
+    "name_en": "Indonesia",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "大型内需型混合经济体",
+          "en": "Large domestic-market mixed economy"
+        },
+        "desc": {
+          "zh": "印尼把人口规模、国内需求、自然资源和制造业结合在一起，使其经济角色既建立在贸易上，也建立在体量本身之上。",
+          "en": "Indonesia combines population scale, domestic demand, natural resources, and manufacturing, giving it an economic role built on size as much as on trade."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "世界最大的穆斯林人口市场型国家",
+          "en": "The world's largest Muslim-majority market state"
+        },
+        "desc": {
+          "zh": "印尼的外部形象，来自它既是穆斯林人口最多的国家之一，也是一个以市场规模、资源和群岛地理为基础的大型经济体。",
+          "en": "Indonesia's external identity comes from being both the largest Muslim-majority country by population and a large archipelagic economy whose weight is rooted in market scale and resources."
+        }
+      }
+    ],
+    "region": "muslim"
+  },
+  "MYS": {
+    "tier": 3,
+    "role": "global_hub",
+    "name_cn": "马来西亚",
+    "name_en": "Malaysia",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "外向型制造业与商品经济体",
+          "en": "Export-oriented manufacturing and commodity economy"
+        },
+        "desc": {
+          "zh": "马来西亚把电子出口、棕榈油、油气产业和广泛的贸易整合结合起来，形成一个由外部需求和供应链参与推动的经济体。",
+          "en": "Malaysia combines electronics exports, palm oil, oil and gas, and broad trade integration to build an economy driven by external demand and supply-chain participation."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "东南亚连接贸易网络的电子制造与清真经济国家",
+          "en": "Southeast Asia's trade-linked electronics and halal economy"
+        },
+        "desc": {
+          "zh": "马来西亚的外部角色，来自它在亚洲制造网络中的位置、商品出口能力，以及较成熟的清真与伊斯兰金融生态。",
+          "en": "Malaysia's external role is shaped by its place in Asian manufacturing networks, commodity exports, and a developed halal and Islamic-finance ecosystem."
+        }
+      }
+    ],
+    "region": "muslim"
+  },
+  "ARG": {
+    "name_cn": "阿根廷",
+    "name_en": "Argentina",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, energy potential, and macro-adjustment economy",
+          "zh": "农业、能源潜力与宏观调整型经济体"
+        },
+        "desc": {
+          "en": "Argentina relies on agricultural exports, growing energy potential, and an existing industrial base, while inflation, fiscal adjustment, and credibility remain central structural issues.",
+          "zh": "阿根廷依靠农业出口、不断上升的能源潜力和既有工业基础运转，而通胀、财政调整和可信度仍然是核心结构问题。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A major South American agricultural economy under recurrent adjustment",
+          "zh": "一个反复处于调整中的南美大型农业经济体"
+        },
+        "desc": {
+          "en": "Argentina is a large South American economy whose role is shaped by agricultural strength, shale-energy potential, and repeated macroeconomic stabilization efforts.",
+          "zh": "阿根廷是一个南美大型经济体，其角色由农业实力、页岩能源潜力和反复出现的宏观稳定化努力共同塑造。"
+        }
+      }
+    ],
+    "region": "south_america"
+  },
+  "CHL": {
+    "name_cn": "智利",
+    "name_en": "Chile",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Copper, openness, and stable high-income export economy",
+          "zh": "铜、开放性与稳定型高收入出口经济体"
+        },
+        "desc": {
+          "en": "Chile relies on copper exports, institutional stability, and external openness, while diversification and medium-term resilience remain the key long-run questions.",
+          "zh": "智利依靠铜出口、制度稳定性和外部开放运转，而多元化与中期韧性仍然是长期关键问题。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "South America's open copper economy",
+          "zh": "南美的开放型铜经济体"
+        },
+        "desc": {
+          "en": "Chile is a high-income export economy whose role is shaped by copper, macroeconomic credibility, and deep global market integration.",
+          "zh": "智利是一个高收入出口经济体，其角色由铜、宏观可信度和深度全球市场整合共同塑造。"
+        }
+      }
+    ],
+    "region": "south_america"
+  },
+  "COL": {
+    "name_cn": "哥伦比亚",
+    "name_en": "Colombia",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Energy, services, and large mixed Andean economy",
+          "zh": "能源、服务业与大型混合型安第斯经济体"
+        },
+        "desc": {
+          "en": "Colombia relies on oil and coal exports, services, domestic demand, and broad geographic connectivity, while fiscal credibility and private investment remain key structural questions.",
+          "zh": "哥伦比亚依靠石油和煤炭出口、服务业、内需以及较宽的地理连接运转，而财政可信度和私人投资仍然是关键结构问题。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A mixed large economy on South America's northern edge",
+          "zh": "一个位于南美北缘的混合型大经济体"
+        },
+        "desc": {
+          "en": "Colombia is one of South America's broader mixed economies, shaped by commodity exports, services, and a more diversified national profile than many regional peers.",
+          "zh": "哥伦比亚是南美轮廓更宽的混合型大经济体之一，其角色由商品出口、服务业以及比许多区域同类国家更多元的国家结构共同塑造。"
+        }
+      }
+    ],
+    "region": "south_america"
+  },
+  "URY": {
+    "name_cn": "乌拉圭",
+    "name_en": "Uruguay",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, services, and stable small high-income economy",
+          "zh": "农业、服务业与稳定的小型高收入经济"
+        },
+        "desc": {
+          "en": "Uruguay's economy is built on agricultural exports, a developed services sector, and strong institutional quality. It has maintained macroeconomic stability and relatively high income levels by South American standards.",
+          "zh": "乌拉圭经济建立在农产品出口、发达的服务业和较高制度质量之上，以南美标准衡量保持了宏观稳定和相对较高的收入水平。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A stable Southern Cone agricultural economy",
+          "zh": "南锥体一个稳定的农业经济体"
+        },
+        "desc": {
+          "en": "Uruguay is best understood as a small, stable, high-quality South American economy anchored in agriculture, services, and strong institutions, with a track record of consistent macroeconomic management.",
+          "zh": "乌拉圭最准确的定位是一个以农业、服务业和强制度为支撑的南美小型高质量稳定经济体，有着持续宏观管理的良好记录。"
+        }
+      }
+    ]
+  },
+  "VEN": {
+    "name_cn": "委内瑞拉",
+    "name_en": "Venezuela",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, state control, and fragmented low-transparency economy",
+          "zh": "石油、国家控制与碎裂的低透明度经济"
+        },
+        "desc": {
+          "en": "Venezuela's economy is defined by vast hydrocarbon endowments and strong state control, combined with repeated macroeconomic breakdown, weak institutions, and limited official transparency.",
+          "zh": "委内瑞拉经济由巨大的油气资源和强国家控制定义，同时伴随着反复的宏观崩坏、薄弱的制度和有限的官方透明度。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A fragmented South American oil economy",
+          "zh": "南美洲一个碎裂运转的石油经济体"
+        },
+        "desc": {
+          "en": "Venezuela is best understood as a state-heavy South American oil economy marked by fragmentation, low transparency, and repeated macroeconomic disruption rather than by stable resource-led prosperity.",
+          "zh": "委内瑞拉最准确的定位是一个以碎裂运转、低透明度和反复宏观失稳为特征的南美国家主导石油经济体，而非稳定的资源繁荣。"
+        }
+      }
+    ]
+  },
+  "GUY": {
+    "name_cn": "圭亚那",
+    "name_en": "Guyana",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Offshore oil, public investment, and fast-transforming small economy",
+          "zh": "离岸石油、公共投资与高速转型中的小型经济体"
+        },
+        "desc": {
+          "en": "Guyana relies on rapidly expanding offshore oil, large infrastructure spending, and rising non-oil activity, while the narrowness of the underlying economy remains a central structural issue.",
+          "zh": "圭亚那依靠迅速扩张的离岸石油、大规模基础设施支出和上升中的非油活动运转，而底层经济结构仍然偏窄是其核心结构问题。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A rapidly transforming new oil economy in South America",
+          "zh": "一个正在快速转型的南美新兴石油经济体"
+        },
+        "desc": {
+          "en": "Guyana is one of the world's fastest-changing oil economies, shaped by offshore petroleum, state-led infrastructure expansion, and a still-small domestic base.",
+          "zh": "圭亚那是全球变化速度最快的新兴石油经济体之一，其角色由离岸石油、国家主导的基建扩张和仍然偏小的国内基础共同塑造。"
+        }
+      }
+    ]
+  },
+  "SUR": {
+    "name_cn": "苏里南",
+    "name_en": "Suriname",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Gold, stabilization, and emerging offshore oil potential",
+          "zh": "黄金、稳定化与新兴离岸石油潜力"
+        },
+        "desc": {
+          "en": "Suriname relies on gold and macroeconomic adjustment today, while future offshore oil potential is increasingly shaping expectations about the economy.",
+          "zh": "苏里南当前依靠黄金和宏观稳定化维持运转，而未来的离岸石油潜力正越来越多地塑造人们对这个经济体的预期。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small South American resource economy preparing for an oil future",
+          "zh": "一个正在为石油未来做准备的南美小型资源经济体"
+        },
+        "desc": {
+          "en": "Suriname is a narrow mining economy whose role is currently shaped by gold and adjustment, but increasingly defined by the possibility of offshore oil.",
+          "zh": "苏里南是一个狭窄的矿业经济体，其当前角色由黄金和稳定化塑造，但未来越来越可能由离岸石油定义。"
+        }
+      }
+    ]
+  },
+  "GUF": {
+    "name_cn": "法属圭亚那",
+    "name_en": "French Guiana",
+    "eu_layer": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Public sector, space center, and French-supported territorial economy",
+          "zh": "公共部门、航天中心与法国支持下的属地经济体"
+        },
+        "desc": {
+          "en": "French Guiana relies on public services, French fiscal support, and the Guiana Space Centre, while its private sector and domestic market remain relatively narrow.",
+          "zh": "法属圭亚那依靠公共服务、法国财政支持和库鲁航天中心运转，而私人部门和国内市场整体仍然较窄。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A French territorial economy in South America",
+          "zh": "一个位于南美的法国属地经济体"
+        },
+        "desc": {
+          "en": "French Guiana is a South American territory whose role is shaped by French sovereignty, European institutional links, and the Guiana Space Centre more than by an independent national export model.",
+          "zh": "法属圭亚那是一个位于南美的法国属地，其角色更多由法国主权、欧洲制度联系和库鲁航天中心塑造，而不是由独立国家式的出口模式定义。"
+        }
+      }
+    ]
+  },
+  "PNG": {
+    "name_cn": "巴布亚新几内亚",
+    "name_en": "Papua New Guinea",
+    "region": "island_pacific",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Mining, energy, agriculture, and fragmented Pacific-edge economy",
+          "zh": "矿业、能源、农业与碎裂型太平洋边缘经济体"
+        },
+        "desc": {
+          "en": "Papua New Guinea relies on gold, copper, LNG, and agriculture, while geography, weak integration, and governance constraints remain central structural barriers.",
+          "zh": "巴布亚新几内亚依靠黄金、铜、LNG 和农业运转，而地理、整合不足和治理约束仍然是核心结构障碍。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "Oceania's resource-heavy Pacific-edge economy",
+          "zh": "大洋洲资源很重的太平洋边缘经济体"
+        },
+        "desc": {
+          "en": "Papua New Guinea is a resource-dependent economy whose role is shaped by mining, energy, and one of the most geographically fragmented national spaces in Oceania.",
+          "zh": "巴布亚新几内亚是一个资源依赖型经济体，其角色由矿业、能源以及大洋洲最地理碎裂的国家空间之一共同塑造。"
+        }
+      }
+    ]
+  },
+  "FJI": {
+    "name_cn": "斐济",
+    "name_en": "Fiji",
+    "region": "island_pacific",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, services, and Pacific island hub economy",
+          "zh": "旅游、服务业与太平洋岛国枢纽经济体"
+        },
+        "desc": {
+          "en": "Fiji relies on tourism, services, transport, and regional hub functions, while strengthening productivity and fiscal resilience remains the central long-term challenge.",
+          "zh": "斐济依靠旅游、服务业、运输和区域枢纽功能运转，而提高生产率和财政韧性仍然是长期核心挑战。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "The Pacific's leading island services economy",
+          "zh": "太平洋领先的岛国服务经济体"
+        },
+        "desc": {
+          "en": "Fiji is the most important Pacific island service economy outside Australia and New Zealand, shaped by tourism and regional connectivity.",
+          "zh": "斐济是澳大利亚和新西兰之外最重要的太平洋岛国服务经济体，其角色由旅游和区域连接共同塑造。"
+        }
+      }
+    ]
+  },
+  "SLB": {
+    "name_cn": "所罗门群岛",
+    "name_en": "Solomon Islands",
+    "region": "island_pacific",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, gold, and narrow vulnerable Pacific economy",
+          "zh": "农业、黄金与狭窄脆弱的太平洋经济体"
+        },
+        "desc": {
+          "en": "Solomon Islands relies on agriculture, some gold production, and aid-linked public spending, while weak buffers and external vulnerability remain defining constraints.",
+          "zh": "所罗门群岛依靠农业、一定黄金产出和援助相关公共支出运转，而缓冲不足和外部脆弱性仍然是最关键的约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A vulnerable primary-sector Pacific island economy",
+          "zh": "一个脆弱的初级部门太平洋岛国经济体"
+        },
+        "desc": {
+          "en": "Solomon Islands is a small Pacific economy whose role is shaped by agriculture, limited resources, and high sensitivity to external shocks.",
+          "zh": "所罗门群岛是一个小型太平洋经济体，其角色由农业、有限资源和对外部冲击的高度敏感共同塑造。"
+        }
+      }
+    ]
+  },
+  "VUT": {
+    "name_cn": "瓦努阿图",
+    "name_en": "Vanuatu",
+    "region": "island_pacific",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, reconstruction, and fragile Pacific island economy",
+          "zh": "旅游、重建与脆弱型太平洋岛国经济体"
+        },
+        "desc": {
+          "en": "Vanuatu relies on tourism, aid-linked reconstruction, and services, while governance weaknesses and natural-disaster exposure remain central structural constraints.",
+          "zh": "瓦努阿图依靠旅游、援助相关重建和服务业运转，而治理薄弱和自然灾害暴露仍然是核心结构约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A fragile tourism-and-recovery economy in the Pacific",
+          "zh": "一个脆弱的太平洋旅游与恢复型经济体"
+        },
+        "desc": {
+          "en": "Vanuatu is a small Pacific island economy whose role is shaped by tourism potential, donor support, and repeated disruption from natural shocks.",
+          "zh": "瓦努阿图是一个小型太平洋岛国经济体，其角色由旅游潜力、援助支持和反复自然冲击共同塑造。"
+        }
+      }
+    ]
+  },
+  "NCL": {
+    "name_cn": "新喀里多尼亚",
+    "name_en": "New Caledonia",
+    "eu_layer": 1,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Nickel, French transfers, and territorial Pacific economy",
+          "zh": "镍、法国转移与属地型太平洋经济体"
+        },
+        "desc": {
+          "en": "New Caledonia relies on nickel, public-sector support, and institutional links to France, while global nickel weakness has put the old model under heavy pressure.",
+          "zh": "新喀里多尼亚依靠镍、公共部门支持以及与法国的制度联系运转，而全球镍行业疲弱正让旧有模型承受巨大压力。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A French territorial nickel economy in the Pacific",
+          "zh": "一个法国在太平洋的属地镍经济体"
+        },
+        "desc": {
+          "en": "New Caledonia is a Pacific territorial economy whose role is shaped by mining and French institutional support rather than by sovereign island-state development.",
+          "zh": "新喀里多尼亚是一个太平洋属地经济体，其角色更多由矿业和法国制度支持塑造，而不是由主权岛国式发展模式塑造。"
+        }
+      }
+    ]
+  },
+  "IRL": {
+    "name_cn": "爱尔兰",
+    "name_en": "Ireland",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "跨国企业枢纽与国际投资服务",
+          "en": "Multinational Corporate Hub and International Investment Services"
+        },
+        "desc": {
+          "zh": "跨国企业总部、国际金融服务以及全球科技产业运营中心。",
+          "en": "Foreign multinational headquarters, international financial services, and global technology firms."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "全球企业的欧洲基地",
+          "en": "European Base for Global Corporations"
+        },
+        "desc": {
+          "zh": "众多跨国公司在欧洲管理业务的重要地点。",
+          "en": "A major location for multinational companies managing European operations."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "POL": {
+    "name_cn": "波兰",
+    "name_en": "Poland",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "欧盟制造业融合型经济",
+          "en": "EU Manufacturing Integration Economy"
+        },
+        "desc": {
+          "zh": "通过外商直接投资、熟练劳动力与欧洲供应链嵌入实现增长。",
+          "en": "Growth driven by FDI, skilled labor, and production embedded in European supply chains."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "中欧制造与物流枢纽",
+          "en": "Central European Manufacturing Hub"
+        },
+        "desc": {
+          "zh": "欧盟内部重要的生产与供应链平台，连接西欧资本与规模化工业产能。",
+          "en": "A major EU-based production and logistics platform linking Western European capital with large-scale industrial capacity."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "AUT": {
+    "name_cn": "奥地利",
+    "name_en": "Austria",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "中东欧金融与企业桥梁",
+          "en": "Central–Eastern Europe Financial Bridge"
+        },
+        "desc": {
+          "zh": "通过银行网络与企业服务体系连接西欧资本与中东欧市场。",
+          "en": "Banking networks and corporate services linking Western European capital with CEE markets."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "维也纳区域枢纽",
+          "en": "Vienna Regional Hub"
+        },
+        "desc": {
+          "zh": "中东欧跨境金融、企业总部与专业服务的重要协调中心。",
+          "en": "A key coordination city for business, finance, and regional headquarters across Central and Eastern Europe."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "DNK": {
+    "name_cn": "丹麦",
+    "name_en": "Denmark",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "航运物流与绿色能源产业",
+          "en": "Maritime Logistics and Renewable Energy"
+        },
+        "desc": {
+          "zh": "围绕全球航运网络和可再生能源技术形成的产业体系。",
+          "en": "Industries supporting global shipping networks and sustainable energy technologies."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "全球航运与绿色能源中心",
+          "en": "Global Shipping and Green Energy"
+        },
+        "desc": {
+          "zh": "以国际航运网络和风能技术创新闻名的经济体。",
+          "en": "A leading center for international maritime transport and renewable energy innovation."
+        }
+      }
+    ],
+    "color": "#8B1E1E",
+    "eu_layer": 2
+  },
+  "FIN": {
+    "name_cn": "芬兰",
+    "name_en": "Finland",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "人力资本 + 创新体系经济",
+          "en": "Human Capital + Innovation System Economy"
+        },
+        "desc": {
+          "zh": "通过教育、研发能力与制度可靠性支撑长期投资与高附加值出口竞争力。",
+          "en": "Competitiveness built through education, R&D capacity, and institutional reliability that supports long-term investment and high-value exports."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "北欧创新与教育模型",
+          "en": "Nordic Innovation and Education Model"
+        },
+        "desc": {
+          "zh": "以高信任治理、强教育产出与技术导向的经济专业化为主要外部认知。",
+          "en": "Known for high-trust governance, strong education outcomes, and technology-oriented economic specialization."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "CZE": {
+    "name_cn": "捷克",
+    "name_en": "Czechia",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "*精密制造融合型经济",
+          "en": "Precision Manufacturing Integration Economy"
+        },
+        "desc": {
+          "zh": "以出口制造为核心，深度嵌入德欧供应链网络，主要依赖银行融资支持产业运作。",
+          "en": "Export-oriented industrial production embedded in German/EU supply chains, supported primarily by bank-based finance."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "中欧精密工业枢纽",
+          "en": "Central Europe Precision Industry Hub"
+        },
+        "desc": {
+          "zh": "以高质量制造、密集供应商网络与欧洲工业体系高度融合而闻名。",
+          "en": "Known for high-quality manufacturing, dense supplier networks, and deep integration into Europe’s industrial core."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "PRT": {
+    "name_cn": "葡萄牙",
+    "name_en": "Portugal",
+    "role": "regional_pillar",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "旅游、海洋服务与葡语贸易网络",
+          "en": "Tourism, Maritime Services, and Lusophone Trade Networks"
+        },
+        "desc": {
+          "zh": "围绕旅游业、海洋运输以及与葡语国家的贸易联系形成的经济结构。",
+          "en": "Economic activity centered on tourism, ocean trade, and connections with Portuguese-speaking economies."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "大西洋海洋门户",
+          "en": "GAtlantic Maritime Gateway"
+        },
+        "desc": {
+          "zh": "一个历史上重要的海洋贸易国家，连接欧洲与大西洋世界。",
+          "en": "A historic ocean trading nation connecting Europe with the Atlantic world."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "IRN": {
+    "name_en": "Iran",
+    "name_cn": "伊朗",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Sanction-constrained hydrocarbon and state-led economy",
+          "zh": "受制裁约束的油气—国家主导型经济体"
+        },
+        "desc": {
+          "en": "Iran combines major oil and gas resources with a broad domestic base, while sanctions and strong state influence shape how the economy functions.",
+          "zh": "伊朗把重要油气资源与较大的国内经济基础结合在一起，但制裁和强国家作用深刻塑造了其运行方式。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large Middle Eastern economy shaped by oil and sanctions",
+          "zh": "一个受油气与制裁共同塑造的大型中东经济体"
+        },
+        "desc": {
+          "en": "Iran's external identity is defined less by open trade integration and more by the interaction between hydrocarbon exports, state power, and long-term sanctions pressure.",
+          "zh": "伊朗的外部形象，并不是由开放贸易整合定义，而更多来自油气出口、国家力量和长期制裁压力之间的相互作用。"
+        }
+      }
+    ]
+  },
+  "ISR": {
+    "name_cn": "以色列",
+    "name_en": "Israel",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "High-tech, services, and innovation economy",
+          "zh": "高科技、服务业和创新型经济"
+        },
+        "desc": {
+          "en": "Israel relies on high technology, knowledge-intensive services, advanced manufacturing, and a strong innovation system rather than on natural resources.",
+          "zh": "以色列依靠高科技、知识密集型服务业、先进制造业和强大的创新体系，而非自然资源。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A high-income innovation economy in the Middle East",
+          "zh": "中东高收入创新型经济体"
+        },
+        "desc": {
+          "en": "Israel is one of the region's few advanced economies, with its role shaped by technology, finance, human capital, and external security pressures.",
+          "zh": "以色列是该地区为数不多的发达经济体之一，其地位受到技术、金融、人力资本和外部安全压力的影响。"
+        }
+      }
+    ],
+    "region": "israel"
+  },
+  "EGY": {
+    "name_cn": "埃及",
+    "name_en": "Egypt",
+    "role": "regional_pillar",
+    "tier": 2,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "外部约束下的战略通道型经济体",
+          "en": "Strategic transit economy under external constraint"
+        },
+        "desc": {
+          "zh": "苏伊士运河、侨汇和旅游带来外汇，但较大的融资需求和进口依赖，使埃及长期处在外部压力之下。",
+          "en": "The Suez Canal, remittances, and tourism bring in foreign currency, but Egypt's large financing needs and import dependence keep the economy under constant external pressure."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "依托苏伊士运河的人口大国",
+          "en": "The Arab world's Suez-linked population giant"
+        },
+        "desc": {
+          "zh": "埃及的区域分量，来自人口规模与全球关键航运通道的结合，但它的外部收支长期仍然偏紧。",
+          "en": "Egypt's regional weight comes from combining population scale with control of a major global shipping route, even though its external position remains financially tight."
+        }
+      }
+    ]
+  },
+  "ZAF": {
+    "name_en": "South Africa",
+    "name_cn": "南非",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Industry, finance, and regional organizing economy",
+          "zh": "工业、金融与区域组织型经济体"
+        },
+        "desc": {
+          "en": "South Africa relies on industry, finance, services, and regional corporate reach to anchor Southern Africa's wider economic system.",
+          "zh": "南非依靠工业、金融、服务业以及区域企业外溢能力，来锚定整个南部非洲更广的经济体系。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "Southern Africa's industrial and financial anchor",
+          "zh": "南部非洲的工业与金融锚点"
+        },
+        "desc": {
+          "en": "South Africa is the region's main organizing economy, shaped by industrial depth, financial sophistication, and regional commercial reach.",
+          "zh": "南非是本区域最核心的组织型经济体，其角色由工业深度、金融成熟度和区域商业辐射共同塑造。"
+        }
+      }
+    ]
+  },
+  "NGA": {
+    "name_cn": "尼日利亚",
+    "name_en": "Nigeria",
+    "role": "systemic_scale",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Large-market oil and services economy",
+          "zh": "大型市场石油和服务业经济"
+        },
+        "desc": {
+          "en": "Oil still anchors fiscal revenues and foreign exchange, but the wider economy depends far more on services, trade, agriculture, and a very large domestic market.",
+          "zh": "石油仍然是财政收入和外汇收入的支柱，但更广泛的经济更加依赖服务业、贸易、农业和庞大的国内市场。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "West Africa's demographic and economic heavyweight",
+          "zh": "西非人口和经济强国"
+        },
+        "desc": {
+          "en": "Nigeria is the region's largest market and one of its most consequential economies, with its role shaped by oil, scale, and the uneven expansion of non-oil sectors.",
+          "zh": "尼日利亚是该地区最大的市场，也是最重要的经济体之一，其地位由石油、经济规模以及非石油部门不平衡的发展所塑造。"
+        }
+      }
+    ],
+    "region": "africa"
+  },
+  "MAR": {
+    "name_cn": "摩洛哥",
+    "name_en": "Morocco",
+    "role": "industrial_core",
+    "tier": 2,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "连接欧洲的出口门户型经济体",
+          "en": "Europe-linked export gateway"
+        },
+        "desc": {
+          "zh": "摩洛哥把制造业出口、磷酸盐相关产品、旅游和贸易连接能力结合起来，形成了一个与欧洲需求高度相连的外向型经济。",
+          "en": "Morocco combines manufacturing exports, phosphate-related products, tourism, and trade connectivity to build an outward-facing economy tied closely to European demand."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "北非面向欧洲的制造业门户",
+          "en": "North Africa's Europe-facing manufacturing gateway"
+        },
+        "desc": {
+          "zh": "摩洛哥的外部角色，来自它作为靠近欧洲的生产与出口基地，同时又向全球市场提供磷酸盐和旅游服务。",
+          "en": "Its external role is shaped by acting as a production and export base close to Europe, while also supplying phosphates and tourism services to global markets."
+        }
+      }
+    ]
+  },
+  "PHL": {
+    "tier": 3,
+    "role": "regional_pillar",
+    "name_cn": "菲律宾",
+    "name_en": "Philippines",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Services, remittances, and large domestic-market economy",
+          "zh": "服务业、侨汇与大型内需经济体"
+        },
+        "desc": {
+          "en": "The Philippines relies on services exports, remittances, and strong household consumption, while investment and productivity upgrading remain central long-term tasks.",
+          "zh": "菲律宾依靠服务出口、侨汇和强劲的家庭消费运转，而投资与生产率升级仍然是长期核心任务。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A major Southeast Asian services-and-remittances economy",
+          "zh": "一个重要的东南亚服务与侨汇经济体"
+        },
+        "desc": {
+          "en": "The Philippines is one of the region's most important mixed economies, with its role shaped more by services, migration-linked income, and domestic demand than by manufacturing alone.",
+          "zh": "菲律宾是本区域最重要的混合型经济体之一，其角色更多由服务业、迁移收入和内需塑造，而不是单纯由制造业定义。"
+        }
+      }
+    ],
+    "region": "sea"
+  },
+  "BGD": {
+    "tier": 3,
+    "role": "industrial_core",
+    "name_cn": "孟加拉国",
+    "name_en": "Bangladesh",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "劳动密集型出口与侨汇经济体",
+          "en": "Labor-intensive export and remittance economy"
+        },
+        "desc": {
+          "zh": "孟加拉国依靠大规模成衣制造和持续侨汇流入，使外部需求和海外劳工收入成为其增长模式的核心。",
+          "en": "Bangladesh relies on large-scale garment manufacturing and strong remittance inflows, making external demand and overseas labor income central to its growth model."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "全球重要的成衣出口经济体之一",
+          "en": "One of the world's major garment-export economies"
+        },
+        "desc": {
+          "zh": "孟加拉国的外部形象，主要由工厂型出口尤其是成衣制造，以及侨汇支撑的家庭收入和外汇流入所塑造。",
+          "en": "Bangladesh's external identity is shaped by factory-based exports, especially garments, together with remittance-supported households and foreign-exchange inflows."
+        }
+      }
+    ],
+    "region": "muslim"
+  },
+  "PAK": {
+    "tier": 3,
+    "role": "systemic_scale",
+    "name_cn": "巴基斯坦",
+    "name_en": "Pakistan",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "外部约束下的大型国内市场经济体",
+          "en": "Large domestic-market economy under external constraint"
+        },
+        "desc": {
+          "zh": "巴基斯坦把人口规模和侨汇支撑结合在一起，但出口基础相对偏弱，因此稳定化和外部融资成为其经济模式的核心。",
+          "en": "Pakistan combines population scale and remittance support with a relatively weak export base, making stabilization and external financing central to its economic model."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "依靠侨汇与稳定化维持运转的南亚大国经济体",
+          "en": "A large South Asian economy sustained by remittances and stabilization efforts"
+        },
+        "desc": {
+          "zh": "巴基斯坦的外部形象，不是由强出口能力来定义，而更多来自它的体量、侨汇流入，以及反复推进宏观平衡修复的努力。",
+          "en": "Pakistan's external identity is shaped less by export strength and more by its scale, remittance inflows, and repeated efforts to restore macroeconomic balance."
+        }
+      }
+    ],
+    "region": "muslim"
+  },
+  "LKA": {
+    "name_en": "Sri Lanka",
+    "name_cn": "斯里兰卡",
+    "region": "india",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Services, tourism, ports, and post-crisis island economy",
+          "zh": "服务业、旅游、港口与危机后岛屿经济体"
+        },
+        "desc": {
+          "en": "Sri Lanka relies on tourism, trade, services, and port location, while crisis recovery and debt-era adjustment still shape the economy.",
+          "zh": "斯里兰卡依靠旅游、贸易、服务业和港口位置运转，而危机后的恢复和债务时代调整仍然深刻塑造着这个经济体。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A recovering strategic island economy in South Asia",
+          "zh": "一个正在复苏的南亚战略岛屿经济体"
+        },
+        "desc": {
+          "en": "Sri Lanka is a small but important South Asian economy whose role is shaped by location, services, and recovery from a major financial crisis.",
+          "zh": "斯里兰卡是一个体量不大但很重要的南亚经济体，其角色由地理位置、服务业和从重大金融危机中复苏的过程共同塑造。"
+        }
+      }
+    ]
+  },
+  "KHM": {
+    "tier": 3,
+    "role": "industrial_core",
+    "name_cn": "柬埔寨",
+    "name_en": "Cambodia",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Garments, tourism, and narrow open-economy growth model",
+          "zh": "服装、旅游与狭窄开放型增长模型"
+        },
+        "desc": {
+          "en": "Cambodia relies on garments, tourism, construction, and external demand, while diversification and financial stability remain weak.",
+          "zh": "柬埔寨依靠服装、旅游、建筑和外部需求运转，而多元化和金融稳定性仍然偏弱。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A labor-intensive export economy in Southeast Asia",
+          "zh": "一个东南亚劳动密集型出口经济体"
+        },
+        "desc": {
+          "en": "Cambodia is one of the region's clearest light-manufacturing export economies, shaped by garments, tourism, and a fragile domestic financial base.",
+          "zh": "柬埔寨是本区域最典型的轻工业出口经济体之一，其角色由服装、旅游和较脆弱的国内金融基础共同塑造。"
+        }
+      }
+    ],
+    "region": "sea"
+  },
+  "MMR": {
+    "name_cn": "缅甸",
+    "name_en": "Myanmar",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Conflict, agriculture, and fragmented survival economy",
+          "zh": "冲突、农业与碎裂型生存经济体"
+        },
+        "desc": {
+          "en": "Myanmar relies on agriculture, residual trade, and weakened productive activity, while conflict, outages, and restrictions keep the economy fragmented.",
+          "zh": "缅甸依靠农业、残存贸易和被削弱的生产活动维持运转，而冲突、停电和各种限制使整体经济持续碎裂。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A conflict-fragmented Southeast Asian economy",
+          "zh": "一个被冲突撕裂的东南亚经济体"
+        },
+        "desc": {
+          "en": "Myanmar is a severely constrained economy whose current role is defined more by instability and survival than by its earlier manufacturing promise.",
+          "zh": "缅甸是一个受到严重约束的经济体，其当前角色更多由不稳定和生存压力定义，而不是由早先的制造潜力定义。"
+        }
+      }
+    ],
+    "region": "sea"
+  },
+  "TWN": {
+    "name_cn": "中国台湾",
+    "name_en": "Taiwan",
+    "role": "industrial_core",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Semiconductors, high-end manufacturing, and export-driven technology economy",
+          "zh": "半导体、高端制造与出口驱动型技术经济体"
+        },
+        "desc": {
+          "en": "Taiwan relies on semiconductors, advanced electronics manufacturing, and strong export competitiveness, while concentration in the global tech cycle remains its central structural exposure.",
+          "zh": "台湾依靠半导体、先进电子制造和很强的出口竞争力运转，而对全球科技周期的高度集中仍然是其最核心的结构暴露点。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A critical semiconductor and technology node in East Asia",
+          "zh": "东亚关键的半导体与技术节点经济体"
+        },
+        "desc": {
+          "en": "Taiwan is one of the world's most strategically important technology production economies, shaped by semiconductor leadership and tightly integrated export manufacturing.",
+          "zh": "台湾是全球最具战略意义的技术生产经济体之一，其角色由半导体领先地位和高度整合的出口制造共同塑造。"
+        }
+      }
+    ],
+    "region": "east_asia"
+  },
+  "NZL": {
+    "name_cn": "新西兰",
+    "name_en": "New Zealand",
+    "region": "oceania",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, services, and small high-income open economy",
+          "zh": "农业、服务业与小型高收入开放经济体"
+        },
+        "desc": {
+          "en": "New Zealand relies on food exports, services, and strong institutions, while productivity and long-term competitiveness remain its core structural challenges.",
+          "zh": "新西兰依靠食品出口、服务业和较强制度运转，而生产率和长期竞争力仍然是其核心结构挑战。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A high-income agricultural exporter in Oceania",
+          "zh": "一个高收入的大洋洲农业出口经济体"
+        },
+        "desc": {
+          "en": "New Zealand is a small advanced economy whose role is shaped by agricultural exports, services, and institutional credibility.",
+          "zh": "新西兰是一个小型发达经济体，其角色由农业出口、服务业和制度可信度共同塑造。"
+        }
+      }
+    ]
+  },
+  "MNG": {
+    "tier": 3,
+    "role": "resource_energy",
+    "name_cn": "蒙古国",
+    "name_en": "Mongolia",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Mining, inland geography, and resource-dependent economy",
+          "zh": "矿业、内陆地理与资源依赖型经济体"
+        },
+        "desc": {
+          "en": "Mongolia relies on copper and coal exports, livestock, and external demand from neighboring markets, while geography and commodity cycles remain its central constraints.",
+          "zh": "蒙古依靠铜煤出口、畜牧业和邻国外部需求运转，而地理条件和大宗商品周期仍然是其核心约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A resource-dependent inland economy on the edge of East Asia",
+          "zh": "一个位于东亚边缘的资源依赖型内陆经济体"
+        },
+        "desc": {
+          "en": "Mongolia is a small landlocked economy whose role is shaped by mineral exports, difficult geography, and high exposure to external demand from larger neighbors.",
+          "zh": "蒙古是一个小型内陆经济体，其角色由矿产出口、困难地理条件以及对更大邻国外部需求的高度暴露共同塑造。"
+        }
+      }
+    ],
+    "region": "steppe"
+  },
+  "KAZ": {
+    "name_cn": "哈萨克斯坦",
+    "name_en": "Kazakhstan",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, metals, and state-led post-Soviet resource economy",
+          "zh": "石油、金属与国家主导的后苏联资源经济体"
+        },
+        "desc": {
+          "en": "Kazakhstan relies on oil, metals, public spending, and inherited industrial depth, while diversification remains incomplete.",
+          "zh": "哈萨克斯坦依靠石油、金属、公共支出和继承下来的工业厚度运转，但多元化仍未完成。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large post-Soviet energy and metals economy",
+          "zh": "一个大型后苏联能源与金属经济体"
+        },
+        "desc": {
+          "en": "Kazakhstan is a major Eurasian resource economy whose role is shaped by hydrocarbons, mining, and relatively strong state capacity.",
+          "zh": "哈萨克斯坦是一个重要的欧亚资源经济体，其角色由油气、矿业和相对较强的国家能力共同塑造。"
+        }
+      }
+    ],
+    "region": "post_soviet"
+  },
+  "VNM": {
+    "tier": 3,
+    "role": "industrial_core",
+    "name_cn": "越南",
+    "name_en": "Vietnam",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Export manufacturing, FDI, and rising production-network economy",
+          "zh": "出口制造、外资与上升型生产网络经济体"
+        },
+        "desc": {
+          "en": "Vietnam relies on export manufacturing, foreign investment, and deep trade integration, while external trade shocks remain a major source of vulnerability.",
+          "zh": "越南依靠出口制造、外国投资和深度贸易整合运转，而外部贸易冲击仍然是主要脆弱性来源。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A rising Southeast Asian manufacturing state",
+          "zh": "一个正在上升的东南亚制造国家"
+        },
+        "desc": {
+          "en": "Vietnam is one of Asia's most important upward-moving production economies, shaped by supply-chain integration and industrial expansion.",
+          "zh": "越南是亚洲最重要的上升型生产经济体之一，其角色由供应链整合和工业扩张共同塑造。"
+        }
+      }
+    ],
+    "region": "sea"
+  },
+  "THA": {
+    "tier": 3,
+    "role": "industrial_core",
+    "name_cn": "泰国",
+    "name_en": "Thailand",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Manufacturing, tourism, and mature export-platform economy",
+          "zh": "制造业、旅游业与成熟型出口平台经济体"
+        },
+        "desc": {
+          "en": "Thailand relies on industrial exports, tourism, and supply-chain integration, while slower growth and structural aging are becoming more important constraints.",
+          "zh": "泰国依靠工业出口、旅游业和供应链整合运转，而增长放缓和结构老化正变成更重要的约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A mature Southeast Asian manufacturing-and-tourism economy",
+          "zh": "一个成熟的东南亚制造与旅游经济体"
+        },
+        "desc": {
+          "en": "Thailand is one of Southeast Asia's most established industrial platforms, shaped by exports, tourism, and regional production networks.",
+          "zh": "泰国是东南亚最成熟的工业平台之一，其角色由出口、旅游和区域生产网络共同塑造。"
+        }
+      }
+    ],
+    "region": "sea"
+  },
+  "HUN": {
+    "name_cn": "匈牙利",
+    "name_en": "Hungary",
+    "tier": 3,
+    "role": "regional_pillar",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "外资驱动出口制造 + 福林本币宏观金融体系",
+          "en": "FDI-Led Export Manufacturing + Forint-Based Macro Finance"
+        },
+        "desc": {
+          "zh": "依托跨国企业生产网络与银行融资体系，在非欧元区框架下通过货币与财政政策维持宏观稳定。",
+          "en": "Industrial growth driven by multinational production networks, supported by bank finance and domestic macro policy outside the euro area. "
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "欧制造业承接地（汽车 + 电池）",
+          "en": "Central European Manufacturing Base (Auto + EV Batteries)"
+        },
+        "desc": {
+          "zh": "以汽车相关制造与新能源/电池产业布局参与欧盟供应链网络。 ([",
+          "en": "Known for automotive-linked production and growing battery-industry positioning within EU supply chains."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "ROU": {
+    "name_cn": "罗马尼亚",
+    "name_en": "Romania",
+    "tier": 3,
+    "role": "regional_pillar",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "欧盟供应链制造 + 黑海—多瑙河通道经济",
+          "en": "EU Supply-Chain Manufacturing + Black Sea–Danube Gateway"
+        },
+        "desc": {
+          "zh": "欧盟一体化下的生产与服务承接体系，以银行融资为主，并叠加黑海出海口与多瑙河通道带来的区域门户功能。",
+          "en": "An EU-integrated production and services economy supported by bank-based finance, with added corridor value from Black Sea access and the Danube transport route."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "欧盟边缘东南欧门户型经济体",
+          "en": "Southeast Europe Gateway Economy"
+        },
+        "desc": {
+          "zh": "以黑海与多瑙河连接的地理通道优势，以及欧盟供应链制造承接地身份被外界识别。",
+          "en": "A Black Sea and Danube-linked EU member known for supply-chain manufacturing and a strategic corridor position between maritime routes and inland Europe."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "SVK": {
+    "name_cn": "斯洛伐克",
+    "name_en": "Slovakia",
+    "tier": 3,
+    "role": "regional_pillar",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "欧元区汽车制造枢纽",
+          "en": "Euro-Area Automotive Manufacturing Hub"
+        },
+        "desc": {
+          "zh": "在欧元区货币环境下，以汽车为核心的出口制造平台，深度嵌入欧盟供应链网络。",
+          "en": "Export manufacturing driven by automotive production and deep integration into EU supply chains under euro-area monetary conditions."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "中欧汽车制造经济体",
+          "en": "Central Europe Automotive Economy"
+        },
+        "desc": {
+          "zh": "以汽车产能集中与供应链配套网络服务欧洲工业核心而闻名。",
+          "en": "Known for high concentration of car production and supplier networks serving Europe’s industrial core."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "BGR": {
+    "name_cn": "保加利亚",
+    "name_en": "Bulgaria",
+    "tier": 3,
+    "role": "regional_pillar",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "硬锚定货币传统（欧元）",
+          "en": "Currency-Anchor Stability (Euro)"
+        },
+        "desc": {
+          "zh": "长期维持固定汇率锚定框架，2026年正式加入欧元区，汇率固定为1欧元=1.95583列弗。",
+          "en": "Maintained a hard currency peg for decades; joined the euro area on 1 January 2026 at 1 EUR = 1.95583 BGN."
+        }
+      },
+      {
+        "title": {
+          "zh": "欧盟融合型生产经济",
+          "en": "EU Integration Economy"
+        },
+        "desc": {
+          "zh": "以供应链位置、技能升级与投资环境为竞争力来源，深度嵌入欧盟产业与贸易网络。",
+          "en": "Competitiveness driven by supply-chain positioning, labor/skills upgrading, and investment climate within EU production and trade networks."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "巴尔干的欧元区新成员",
+          "en": "Balkan EU Member with a Hard-Money Tradition"
+        },
+        "desc": {
+          "zh": "以长期硬锚定传统及2026年起的欧元区成员身份被识别。",
+          "en": "Known for long-running currency anchoring and, since 2026, full euro-area membership."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "HRV": {
+    "name_cn": "克罗地亚",
+    "name_en": "Croatia",
+    "tier": 3,
+    "role": "regional_pillar",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "旅游主导的服务业出口经济",
+          "en": "Tourism-Led Services Economy"
+        },
+        "desc": {
+          "zh": "经济活动与外汇收入显著依赖旅游与沿海服务产业。",
+          "en": "Foreign income and domestic activity strongly supported by tourism and coastal service industries. "
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "亚得里亚海旅游国家",
+          "en": "Adriatic Tourism Nation"
+        },
+        "desc": {
+          "zh": "以海岸度假、航海旅游与地中海式服务业形象被全球认知。",
+          "en": "A globally recognized Mediterranean/Adriatic destination economy shaped by tourism services and coastal culture."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "PER": {
+    "name_cn": "秘鲁",
+    "name_en": "Peru",
+    "tier": 3,
+    "role": "regional_pillar",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Mining, macroeconomic buffers, and resource-led mixed economy",
+          "zh": "矿业、宏观缓冲与资源主导混合经济体"
+        },
+        "desc": {
+          "en": "Peru relies on copper and other minerals, while macroeconomic prudence and a broader internal base give it more resilience than a simple mining stereotype suggests.",
+          "zh": "秘鲁依靠铜和其他矿产运转，同时宏观审慎和更宽的内部基础让它比单纯矿业刻板印象更具韧性。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A resilient South American mining economy",
+          "zh": "一个具有韧性的南美矿业经济体"
+        },
+        "desc": {
+          "en": "Peru is one of South America's most important mineral economies, shaped by copper exports and stronger macroeconomic credibility than its politics often imply.",
+          "zh": "秘鲁是南美最重要的矿产经济体之一，其角色由铜出口以及比其政治形象更强的宏观可信度共同塑造。"
+        }
+      }
+    ],
+    "region": "south_america"
+  },
+  "BOL": {
+    "name_cn": "玻利维亚",
+    "name_en": "Bolivia",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Gas, mining, and state-heavy resource economy under stress",
+          "zh": "天然气、矿业与承压中的国家主导资源经济"
+        },
+        "desc": {
+          "en": "Bolivia's economy is built on hydrocarbon and mineral exports, with a large state role in the economy. The model that once delivered stability is now under increasing fiscal and external pressure.",
+          "zh": "玻利维亚经济建立在油气和矿产出口之上，国家在经济中扮演重要角色。曾经带来稳定的模式如今正承受越来越大的财政和外部压力。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A stressed state-led resource economy in South America",
+          "zh": "南美洲一个承压中的国家主导资源经济体"
+        },
+        "desc": {
+          "en": "Bolivia is best understood as a state-heavy South American resource economy where the fiscal and external foundations of the old model are weakening, raising adjustment pressures.",
+          "zh": "玻利维亚最准确的定位是一个南美国家主导资源经济体，旧模式的财政与外部基础正在弱化，调整压力不断上升。"
+        }
+      }
+    ]
+  },
+  "PRY": {
+    "name_cn": "巴拉圭",
+    "name_en": "Paraguay",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, electricity, and disciplined small South American economy",
+          "zh": "农业、电力与克制型南美小经济体"
+        },
+        "desc": {
+          "en": "Paraguay's economy is anchored in soybean agriculture, beef exports, and massive hydroelectric capacity. It has maintained disciplined fiscal and monetary policy, supporting a stable macroeconomic profile.",
+          "zh": "巴拉圭经济以大豆农业、牛肉出口和巨大水电能力为支柱，同时保持着克制的财政和货币政策，形成了稳定的宏观轮廓。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A stable agriculture-and-hydropower economy in South America",
+          "zh": "南美洲一个稳定的农业与水电经济体"
+        },
+        "desc": {
+          "en": "Paraguay is best understood as a small, stable South American economy built on agricultural exports and hydropower, with disciplined policy management and a low external profile.",
+          "zh": "巴拉圭最准确的定位是一个建立在农产品出口和水电之上的南美小型稳定经济体，政策管理克制，对外存在感低。"
+        }
+      }
+    ]
+  },
+  "PAN": {
+    "name_cn": "巴拿马",
+    "name_en": "Panama",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Canal, logistics, and gateway service economy",
+          "zh": "运河、物流与门户型服务经济体"
+        },
+        "desc": {
+          "en": "Panama relies on canal-related activity, logistics, trade services, and business intermediation, while the long-term challenge is broadening growth beyond location-based advantages.",
+          "zh": "巴拿马依靠运河相关活动、物流、贸易服务和商业中介运转，而长期挑战是在位置优势之外把增长进一步做宽。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "Central America's transit and gateway economy",
+          "zh": "中美洲的中转与门户经济体"
+        },
+        "desc": {
+          "en": "Panama is the clearest logistics-and-connectivity economy in Central America, shaped by the canal and its role in global trade flows.",
+          "zh": "巴拿马是中美洲最典型的物流与连接型经济体，其角色由运河以及它在全球贸易流中的位置共同塑造。"
+        }
+      }
+    ]
+  },
+  "ECU": {
+    "name_cn": "厄瓜多尔",
+    "name_en": "Ecuador",
+    "region": "south_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, dollarization, and reforming adjustment economy",
+          "zh": "石油、美元化与改革调整型经济"
+        },
+        "desc": {
+          "en": "Ecuador's economy combines oil exports with full dollarization and an IMF-supported reform program. Nonoil exports are growing in importance, and the current phase is defined by fiscal stabilization rather than expansion.",
+          "zh": "厄瓜多尔经济将石油出口与全面美元化、IMF支持的改革计划结合在一起。非油出口日益重要，当前阶段以财政稳定化而非扩张为主。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A dollarized oil economy in South America",
+          "zh": "南美洲一个美元化石油经济体"
+        },
+        "desc": {
+          "en": "Ecuador is best understood as a dollarized South American oil economy with growing nonoil exports, built on external adjustment and reform rather than on industrial scale or large-market depth.",
+          "zh": "厄瓜多尔最准确的定位是一个非油出口不断增长的美元化南美石油经济体，其经济建立在外部调整和改革之上，而非工业规模或大市场深度。"
+        }
+      }
+    ]
+  },
+  "GTM": {
+    "name_cn": "危地马拉",
+    "name_en": "Guatemala",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances, agriculture, and large low-investment economy",
+          "zh": "侨汇、农业与投资不足的大型经济体"
+        },
+        "desc": {
+          "en": "Guatemala relies on remittances, domestic demand, agriculture, and macroeconomic stability, while low investment remains its central long-term constraint.",
+          "zh": "危地马拉依靠侨汇、内需、农业和宏观稳定运转，而投资不足仍然是其最核心的长期约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large remittance-supported Central American economy",
+          "zh": "一个依靠侨汇支撑的大型中美洲经济体"
+        },
+        "desc": {
+          "en": "Guatemala is one of Central America's most important economies, shaped by migrant income, population scale, and stability without deep structural upgrading.",
+          "zh": "危地马拉是中美洲最重要的经济体之一，其角色由移民收入、人口体量以及稳定但尚未深度升级的结构共同塑造。"
+        }
+      }
+    ]
+  },
+  "DOM": {
+    "name_cn": "多米尼加共和国",
+    "name_en": "Dominican Republic",
+    "region": "caribbean",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, free-zone manufacturing, and broad Caribbean growth economy",
+          "zh": "旅游、自由区制造与宽基础加勒比增长经济体"
+        },
+        "desc": {
+          "en": "The Dominican Republic relies on tourism, services, construction, remittances, and free-zone industry, while the long-term challenge is turning strong growth into wider inclusion and higher productivity.",
+          "zh": "多米尼加共和国依靠旅游、服务业、建筑业、侨汇和自由区工业运转，而长期挑战是把强增长转化成更广的包容性和更高生产率。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "One of the Caribbean's most diversified growth economies",
+          "zh": "加勒比最多元的增长经济体之一"
+        },
+        "desc": {
+          "en": "The Dominican Republic is a leading Caribbean economy whose role is shaped by tourism, manufacturing, and domestic-market breadth rather than by a single narrow specialization.",
+          "zh": "多米尼加共和国是加勒比领先经济体之一，其角色由旅游、制造业和国内市场宽度共同塑造，而不是由狭窄单一定位决定。"
+        }
+      }
+    ]
+  },
+  "CUB": {
+    "name_cn": "古巴",
+    "name_en": "Cuba",
+    "region": "caribbean",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "State control, services, and constrained island economy",
+          "zh": "国家控制、服务业与受约束的岛屿经济体"
+        },
+        "desc": {
+          "en": "Cuba relies on state direction, services, and limited tourism, while shortages, weak external access, and low transparency continue to define the system.",
+          "zh": "古巴依靠国家主导、服务业和有限旅游维持运转，而短缺、外部接入不足和低透明度仍然定义着整个系统。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A highly constrained state-led Caribbean economy",
+          "zh": "一个高度受限的国家主导加勒比经济体"
+        },
+        "desc": {
+          "en": "Cuba is one of the Caribbean's most state-controlled economies, shaped more by centralized direction and external restriction than by open tourism-led growth.",
+          "zh": "古巴是加勒比最具国家主导色彩的经济体之一，其角色更多由集中控制和外部限制塑造，而不是由开放型旅游增长塑造。"
+        }
+      }
+    ]
+  },
+  "JAM": {
+    "name_cn": "牙买加",
+    "name_en": "Jamaica",
+    "region": "caribbean",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, remittances, and stable Caribbean service economy",
+          "zh": "旅游、侨汇与稳定型加勒比服务经济体"
+        },
+        "desc": {
+          "en": "Jamaica relies on tourism, remittances, and services, while its central long-term challenge is turning macroeconomic stability into stronger productivity and growth.",
+          "zh": "牙买加依靠旅游、侨汇和服务业运转，而长期核心挑战是把宏观稳定转化成更强的生产率和增长。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A resilient Caribbean tourism-and-services economy",
+          "zh": "一个有韧性的加勒比旅游与服务经济体"
+        },
+        "desc": {
+          "en": "Jamaica is a Caribbean service economy whose role is shaped by tourism, external income flows, and one of the region's strongest macroeconomic stabilization records.",
+          "zh": "牙买加是一个加勒比服务经济体，其角色由旅游、外部收入流和本区域最强的一批宏观稳定化表现共同塑造。"
+        }
+      }
+    ]
+  },
+  "TTO": {
+    "name_cn": "特立尼达和多巴哥",
+    "name_en": "Trinidad and Tobago",
+    "region": "caribbean",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, gas, petrochemicals, and industrial Caribbean energy economy",
+          "zh": "石油、天然气、石化与工业型加勒比能源经济体"
+        },
+        "desc": {
+          "en": "Trinidad and Tobago relies on hydrocarbons, energy-linked industry, and fiscal revenues from commodity cycles, while diversification remains its central structural challenge.",
+          "zh": "特立尼达和多巴哥依靠油气、能源相关工业和商品周期带来的财政收入运转，而多元化仍然是其核心结构挑战。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "The Caribbean's hydrocarbon economy",
+          "zh": "加勒比的油气经济体"
+        },
+        "desc": {
+          "en": "Trinidad and Tobago is the Caribbean's clearest energy-centered economy, shaped by oil, gas, and a stronger industrial base than most of the subregion.",
+          "zh": "特立尼达和多巴哥是加勒比最典型的能源中心型经济体，其角色由石油、天然气以及比本区域大多数国家更强的工业基础共同塑造。"
+        }
+      }
+    ]
+  },
+  "BHS": {
+    "name_cn": "巴哈马",
+    "name_en": "Bahamas",
+    "region": "caribbean",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, high income, and narrow small island economy",
+          "zh": "旅游、高收入与狭窄的小型岛屿经济体"
+        },
+        "desc": {
+          "en": "The Bahamas relies on high-end tourism and services, while fiscal space and climate vulnerability remain central structural constraints despite relatively high income levels.",
+          "zh": "巴哈马依靠高端旅游和服务业运转，而财政空间和气候脆弱性仍然是核心结构约束，尽管其收入水平相对较高。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A high-income Caribbean tourism-and-services economy",
+          "zh": "一个加勒比高收入旅游与服务经济体"
+        },
+        "desc": {
+          "en": "The Bahamas is a high-income Caribbean economy built on tourism, visitor demand, and external openness, but with a narrow domestic base and persistent exposure to climate shocks.",
+          "zh": "巴哈马是一个建立在旅游、游客需求和外部开放之上的加勒比高收入经济体，但国内基础偏窄，长期暴露在气候冲击之下。"
+        }
+      }
+    ]
+  },
+  "HTI": {
+    "name_cn": "海地",
+    "name_en": "Haiti",
+    "region": "caribbean",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "External support, survival activity, and fragile crisis economy",
+          "zh": "外部支持、生存型活动与脆弱危机经济体"
+        },
+        "desc": {
+          "en": "Haiti relies on external aid and limited domestic activity under extreme insecurity, while weak institutions and disrupted public order remain the defining structural constraints.",
+          "zh": "海地依靠外部援助和有限国内活动在极端不安全中维持运转，而制度薄弱和公共秩序受损仍然是最核心的结构约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "The Caribbean's most fragile crisis economy",
+          "zh": "加勒比最脆弱的危机型经济体"
+        },
+        "desc": {
+          "en": "Haiti is a deeply fragile Caribbean economy whose role is shaped more by insecurity, aid dependence, and institutional weakness than by normal island development patterns.",
+          "zh": "海地是一个高度脆弱的加勒比经济体，其角色更多由不安全、援助依赖和制度薄弱塑造，而不是由正常的岛屿发展模式塑造。"
+        }
+      }
+    ]
+  },
+  "CRI": {
+    "name_cn": "哥斯达黎加",
+    "name_en": "Costa Rica",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Services, high-value manufacturing, and strong institutional economy",
+          "zh": "服务业、高附加值制造与制度较强的经济体"
+        },
+        "desc": {
+          "en": "Costa Rica relies on services, tourism, higher-value manufacturing, and stronger institutions, while the long-term challenge is sustaining fiscal strength and continued upgrading.",
+          "zh": "哥斯达黎加依靠服务业、旅游业、高附加值制造和较强的制度环境运转，而长期挑战是维持财政强度和持续升级。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "Central America's upgraded services-and-manufacturing economy",
+          "zh": "中美洲升级程度最高的服务与制造经济体之一"
+        },
+        "desc": {
+          "en": "Costa Rica is one of Central America's strongest development performers, shaped by export sophistication, human capital, and relative institutional strength.",
+          "zh": "哥斯达黎加是中美洲发展表现最强的一批经济体之一，其角色由出口复杂度、人力资本和相对较强的制度环境共同塑造。"
+        }
+      }
+    ]
+  },
+  "SLV": {
+    "name_cn": "萨尔瓦多",
+    "name_en": "El Salvador",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances, dollarization, and reforming service economy",
+          "zh": "侨汇、美元化与改革中的服务经济体"
+        },
+        "desc": {
+          "en": "El Salvador relies on remittances, services, and a dollarized macro framework, while reserve rebuilding and confidence restoration remain central to its current model.",
+          "zh": "萨尔瓦多依靠侨汇、服务业和美元化宏观框架运转，而储备修复和信心重建仍然是其当前模型的核心。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A dollarized remittance economy in Central America",
+          "zh": "一个美元化的中美洲侨汇经济体"
+        },
+        "desc": {
+          "en": "El Salvador is a small Central American economy whose role is shaped by migrant income, monetary rigidity, and reform-led stabilization.",
+          "zh": "萨尔瓦多是一个中美洲小型经济体，其角色由移民收入、货币刚性和改革驱动的稳定化共同塑造。"
+        }
+      }
+    ]
+  },
+  "HND": {
+    "name_cn": "洪都拉斯",
+    "name_en": "Honduras",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances, light manufacturing, and agriculture-based economy",
+          "zh": "侨汇、轻制造与农业型经济体"
+        },
+        "desc": {
+          "en": "Honduras relies on remittances, maquila manufacturing, and agriculture, while limited productivity and narrow structural transformation remain long-term constraints.",
+          "zh": "洪都拉斯依靠侨汇、加工制造和农业运转，而生产率偏低和结构转型有限仍然是长期约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A remittance-and-maquila economy in Central America",
+          "zh": "一个中美洲侨汇与加工制造经济体"
+        },
+        "desc": {
+          "en": "Honduras is a large Central American economy whose role is shaped by migrant income, apparel-linked manufacturing, and a still under-upgraded domestic base.",
+          "zh": "洪都拉斯是一个较大的中美洲经济体，其角色由移民收入、服装相关制造和仍未完成升级的国内基础共同塑造。"
+        }
+      }
+    ]
+  },
+  "NIC": {
+    "name_cn": "尼加拉瓜",
+    "name_en": "Nicaragua",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances, exports, and narrow but resilient economy",
+          "zh": "侨汇、出口与狭窄但有韧性的经济体"
+        },
+        "desc": {
+          "en": "Nicaragua relies on remittances, agriculture, and export growth, while limited diversification and a narrow internal base still constrain long-term development.",
+          "zh": "尼加拉瓜依靠侨汇、农业和出口增长运转，而多元化不足和内部基础偏窄仍然限制着长期发展。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A resilient remittance-and-export economy in Central America",
+          "zh": "一个有韧性的中美洲侨汇与出口经济体"
+        },
+        "desc": {
+          "en": "Nicaragua is a Central American economy whose role is shaped by migrant income, agriculture, and stronger-than-expected macroeconomic resilience.",
+          "zh": "尼加拉瓜是一个中美洲经济体，其角色由移民收入、农业和超出很多人预期的宏观韧性共同塑造。"
+        }
+      }
+    ]
+  },
+  "BLZ": {
+    "name_cn": "伯利兹",
+    "name_en": "Belize",
+    "region": "central_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, services, and narrow small open economy",
+          "zh": "旅游、服务业与狭窄型小型开放经济体"
+        },
+        "desc": {
+          "en": "Belize relies on tourism, services, and a small open-economy model, while fiscal space and climate-related vulnerability remain central structural constraints.",
+          "zh": "伯利兹依靠旅游、服务业和小型开放经济模式运转，而财政空间和气候相关脆弱性仍然是核心结构约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A tourism-heavy Central American edge economy",
+          "zh": "一个旅游占比很高的中美洲边缘经济体"
+        },
+        "desc": {
+          "en": "Belize is a small economy on the edge of Central America whose role is shaped by visitor demand, services, and a more Caribbean-style external profile.",
+          "zh": "伯利兹是一个位于中美洲边缘的小型经济体，其角色由游客需求、服务业以及更偏加勒比式的外部轮廓共同塑造。"
+        }
+      }
+    ]
+  },
+  "AGO": {
+    "name_en": "Angola",
+    "name_cn": "安哥拉",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, reconstruction, and incomplete diversification economy",
+          "zh": "石油、重建与未完成多元化经济体"
+        },
+        "desc": {
+          "en": "Angola relies on oil-centered fiscal and external strength, while trying to build broader non-oil sectors out of a postwar reconstruction model.",
+          "zh": "安哥拉依靠石油维持财政和外部强度，同时试图在战后重建模式基础上建立更宽的非油部门。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large Southern African oil state searching for diversification",
+          "zh": "一个正在寻找多元化路径的大型南部非洲石油国家"
+        },
+        "desc": {
+          "en": "Angola is a major oil economy whose role is still shaped by hydrocarbons, even as it seeks a broader postwar development path.",
+          "zh": "安哥拉是一个重要的石油经济体，其角色至今仍由油气定义，尽管它正在寻求更宽的战后发展道路。"
+        }
+      }
+    ]
+  },
+  "ZMB": {
+    "name_en": "Zambia",
+    "name_cn": "赞比亚",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Copper, recovery, and inland mixed resource economy",
+          "zh": "铜、恢复与内陆混合型资源经济体"
+        },
+        "desc": {
+          "en": "Zambia relies on copper, agriculture, and a broader recovery in services, while energy and climate constraints continue to shape the economy.",
+          "zh": "赞比亚依靠铜、农业和服务业恢复运转，但能源和气候约束仍持续塑造着整个经济。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A key Southern African copper economy",
+          "zh": "一个关键的南部非洲铜矿经济体"
+        },
+        "desc": {
+          "en": "Zambia is one of Africa's most important copper economies, with its role shaped by mining strength and the challenge of building broader resilience around it.",
+          "zh": "赞比亚是非洲最重要的铜矿经济体之一，其角色由矿业强度以及围绕矿业建立更广韧性的挑战共同塑造。"
+        }
+      }
+    ]
+  },
+  "KEN": {
+    "name_en": "Kenya",
+    "name_cn": "肯尼亚",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Services, logistics, and regional hub economy",
+          "zh": "服务业、物流与区域枢纽经济体"
+        },
+        "desc": {
+          "en": "Kenya relies on finance, transport, trade, agriculture, and Nairobi's regional role to sustain its weight in East Africa.",
+          "zh": "肯尼亚依靠金融、运输、贸易、农业以及内罗毕的区域中心地位来维持其在东非的分量。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "East Africa's commercial and services hub",
+          "zh": "东非的商业与服务枢纽"
+        },
+        "desc": {
+          "en": "Kenya is one of East Africa's clearest organizing economies, with its role shaped by services, connectivity, and regional business concentration.",
+          "zh": "肯尼亚是东非最典型的组织型经济体之一，其角色由服务业、连接能力和区域商业集中度共同塑造。"
+        }
+      }
+    ]
+  },
+  "ETH": {
+    "name_en": "Ethiopia",
+    "name_cn": "埃塞俄比亚",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Scale, agriculture, and reforming state-led economy",
+          "zh": "体量、农业与改革中的国家主导经济体"
+        },
+        "desc": {
+          "en": "Ethiopia relies on domestic scale, agriculture, industrial ambition, and an ongoing reform process to reshape a long state-led development model.",
+          "zh": "埃塞俄比亚依靠国内规模、农业、工业化雄心以及正在推进的改革，来重塑其长期国家主导的发展模式。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large inland African economy in transition",
+          "zh": "一个处于转型中的大型非洲内陆经济体"
+        },
+        "desc": {
+          "en": "Ethiopia is one of Africa's most consequential inland economies, with its role shaped by scale, reform, and the attempt to convert state-led ambition into a broader economic system.",
+          "zh": "埃塞俄比亚是非洲最重要的内陆经济体之一，其角色由体量、改革，以及把国家主导雄心转化为更宽经济系统的尝试共同塑造。"
+        }
+      }
+    ]
+  },
+  "TZA": {
+    "name_en": "Tanzania",
+    "name_cn": "坦桑尼亚",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Ports, agriculture, tourism, and broad mixed economy",
+          "zh": "港口、农业、旅游与较宽的混合经济体"
+        },
+        "desc": {
+          "en": "Tanzania relies on coastal access, agriculture, tourism, mining, and a relatively balanced national economic base.",
+          "zh": "坦桑尼亚依靠沿海通道、农业、旅游、矿业以及一个相对均衡的国家经济基础运转。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A broad East African coastal gateway economy",
+          "zh": "一个基础较宽的东非沿海门户经济体"
+        },
+        "desc": {
+          "en": "Tanzania is a large mixed coastal economy whose role is shaped by ports, natural assets, and a wider domestic base than many of its regional peers.",
+          "zh": "坦桑尼亚是一个体量较大、结构较混合的沿海经济体，其角色由港口、自然资产以及比许多区域同类国家更宽的国内基础共同塑造。"
+        }
+      }
+    ]
+  },
+  "UGA": {
+    "name_en": "Uganda",
+    "name_cn": "乌干达",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, services, and regionally embedded inland economy",
+          "zh": "农业、服务业与区域嵌入型内陆经济体"
+        },
+        "desc": {
+          "en": "Uganda relies on agriculture, services, and East African trade integration, while oil remains more important to the future than to the current structure.",
+          "zh": "乌干达依靠农业、服务业和东非贸易整合运转，而石油对未来的重要性大于它对当前结构的定义作用。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A growth-oriented inland East African economy",
+          "zh": "一个增长导向的东非内陆经济体"
+        },
+        "desc": {
+          "en": "Uganda is a landlocked but regionally connected economy whose role is shaped by agriculture, services, and its deep embedding in East African markets.",
+          "zh": "乌干达是一个内陆但深度连接区域市场的经济体，其角色由农业、服务业以及其对东非市场的深度嵌入共同塑造。"
+        }
+      }
+    ]
+  },
+  "SEN": {
+    "name_en": "Senegal",
+    "name_cn": "塞内加尔",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Coastal services, logistics, and emerging hydrocarbons economy",
+          "zh": "沿海服务、物流与新兴油气经济体"
+        },
+        "desc": {
+          "en": "Senegal relies on ports, regional trade links, urban services, and a new oil-and-gas layer that is boosting growth without yet fully redefining the whole economy.",
+          "zh": "塞内加尔依靠港口、区域贸易联系、城市服务业，以及一个正在提振增长、但尚未完全改写整体结构的油气新层次。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A West African coastal commercial hub entering the hydrocarbon era",
+          "zh": "一个进入油气时代的西非沿海商业枢纽"
+        },
+        "desc": {
+          "en": "Senegal is one of West Africa's clearer coastal trade and services economies, now gaining additional weight from the start of oil and gas production.",
+          "zh": "塞内加尔是西非较典型的沿海贸易与服务型经济体之一，而油气投产正在为它增加新的分量。"
+        }
+      }
+    ]
+  },
+  "GHA": {
+    "name_en": "Ghana",
+    "name_cn": "加纳",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Export-oriented commodity and coastal economy",
+          "zh": "出口导向的商品与沿海经济体"
+        },
+        "desc": {
+          "en": "Ghana relies on gold, cocoa, oil, and coastal commercial activity, while recent policy efforts have focused on restoring macroeconomic stability.",
+          "zh": "加纳依靠黄金、可可、石油和沿海商业活动运转，而近年的政策重点则放在恢复宏观稳定上。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A more stable West African export economy",
+          "zh": "一个相对更稳定的西非出口型经济体"
+        },
+        "desc": {
+          "en": "Ghana is one of West Africa's clearest commodity-exporting coastal economies, with its role shaped by gold, cocoa, ports, and stabilization efforts.",
+          "zh": "加纳是西非最典型的商品出口型沿海经济体之一，其角色由黄金、可可、港口和稳定化努力共同塑造。"
+        }
+      }
+    ]
+  },
+  "SWE": {
+    "name_zh": "瑞典",
+    "name_en": "Sweden",
+    "role": "innovation_hub",
+    "tier": 2,
+    "color": "#8B1E1E",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "创新与风险投资生态",
+          "en": "Innovation and Venture Ecosystem"
+        },
+        "desc": {
+          "zh": "为科技企业与创业公司提供资金与制度支持的创新体系。",
+          "en": "Financial and institutional support for technology startups and global digital firms."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "北欧科技创新中心",
+          "en": "Nordic Technology Economy"
+        },
+        "desc": {
+          "zh": "以技术公司、数字创新与工程能力闻名的经济体。",
+          "en": "A global reputation for innovation, digital companies, and advanced engineering industries."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "GRC": {
+    "name_zh": "希腊",
+    "name_en": "Greece",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "高债务约束下的旅游与海运服务经济",
+          "en": "Tourism and Maritime Services under High-Debt Constraints"
+        },
+        "desc": {
+          "zh": "以服务业出口为核心，金融体系受欧元区制度、危机遗产与财政纪律长期塑形。",
+          "en": "A services-led economy whose financial system is shaped by euro-area institutions, crisis legacy, and ongoing fiscal discipline."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "地中海旅游与海运国家",
+          "en": "Mediterranean Tourism and Maritime Nation"
+        },
+        "desc": {
+          "zh": "全球直观印象以旅游与海运传统为主，现代金融身份则与危机后修复和高债务约束紧密相关。",
+          "en": "Globally recognized for tourism services and a strong maritime tradition, with a modern financial identity shaped by post-crisis adjustment."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "LUX": {
+    "name_zh": "卢森堡",
+    "name_en": "Luxembourg",
+    "role": "financial_hub",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "投资基金注册体系",
+          "en": "Investment Fund Domiciliation"
+        },
+        "desc": {
+          "zh": "为国际投资基金和跨境资产管理提供法律与监管基础设施。",
+          "en": "Legal and regulatory infrastructure supporting international investment funds and cross-border asset management."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "欧洲投资基金中心",
+          "en": "European Investment Fund Hub"
+        },
+        "desc": {
+          "zh": "全球资产管理与跨境投资基金的重要枢纽。",
+          "en": "A major center for global asset management and international investment funds."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "SVN": {
+    "name_zh": "斯洛文尼亚",
+    "name_en": "Slovenia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "亚得里亚通道型贸易与物流体系",
+          "en": "Adriatic Trade and Logistics Gateway"
+        },
+        "desc": {
+          "zh": "全以科佩尔港与陆路网络连接中东欧腹地的贸易通道经济。",
+          "en": "Port-and-corridor infrastructure connecting Central Europe via Slovenia."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "阿尔卑斯—亚得里亚门户",
+          "en": "Alpine–Adriatic Gateway"
+        },
+        "desc": {
+          "zh": "小国高整合度的欧盟通道节点，兼具自然与港口通道的辨识度。",
+          "en": "A small, highly EU-integrated connector economy with a distinctive corridor role."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "SRB": {
+    "name_zh": "塞尔维亚",
+    "name_en": "Serbia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "外资驱动制造 + 本币管理型金融体系",
+          "en": "FDI-Led Manufacturing and Managed-Currency Finance"
+        },
+        "desc": {
+          "zh": "银行主导融资，第纳尔在管理浮动框架下对欧元环境保持强关联，为可贸易品生产与通道型投资提供金融条件。",
+          "en": "A bank-centered system with dinar management anchored to euro conditions, supporting tradable production and corridor-style investment."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "西巴尔干连接型经济体",
+          "en": "Western Balkans Connector Economy"
+        },
+        "desc": {
+          "zh": "连接欧盟生产网络与多来源外部投资流的区域平台，其中中国FDI在西巴尔干的存量高度集中于塞尔维亚。",
+          "en": "A regional hub linking EU-oriented production with multi-source external investment flows, including unusually concentrated Chinese FDI in the region."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "MNE": {
+    "name_cn": "黑山",
+    "name_en": "Montenegro",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "旅游服务出口 + 事实欧元化宏观环境",
+          "en": "Tourism-Led Services + Euroized Macro Environment"
+        },
+        "desc": {
+          "zh": "以旅游外汇收入为核心，在\"欧元化\"的货币环境下运行，独立货币政策工具有限。",
+          "en": "A tourism-export economy operating with euroized domestic money conditions and limited independent monetary tools."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "亚得里亚海旅游型小经济体",
+          "en": "Adriatic Coastal Tourism Micro-Economy"
+        },
+        "desc": {
+          "zh": "以海岸度假与酒店服务为最核心的国家经济标签与外部认知。",
+          "en": "Known for coastal tourism and hospitality as the central engine of growth and foreign income."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "BIH": {
+    "name_zh": "波斯尼亚和黑塞哥维那",
+    "name_en": "Bosnia and Herzegovina",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "侨汇 + 欧盟邻接的贸易与服务经济",
+          "en": "Remittances + EU-Adjacent Trade and Services"
+        },
+        "desc": {
+          "zh": "以侨汇支撑消费与外汇流入，依托欧盟邻接的贸易联系；分层治理结构提高了政策协调与制度执行成本。",
+          "en": "A small open economy supported by diaspora inflows and cross-border trade links, operating under multi-layer governance that raises coordination costs."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "分层治理结构经济体（西巴尔干）",
+          "en": "Multi-Layer Governance Economy (Western Balkans)"
+        },
+        "desc": {
+          "zh": "战后形成的复杂制度安排显著影响经济整合与政策执行节奏。",
+          "en": "A country whose economic integration and policy execution are shaped by a uniquely complex post-1995 institutional structure."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "MDA": {
+    "name_cn": "摩尔多瓦",
+    "name_en": "Moldova",
+    "role": "regional_pillar",
+    "tier": 3,
+    "eu_layer": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "农业与食品出口底盘",
+          "en": "Agricultural and Food Export Base"
+        },
+        "desc": {
+          "zh": "以葡萄酒、水果和蔬菜为核心出口，农业是经济最主要的产出与就业部门。",
+          "en": "Wine, fruits, and vegetables are the core exports; agriculture is the dominant sector for output and employment."
+        }
+      },
+      {
+        "title": {
+          "zh": "侨汇依赖型小型开放经济",
+          "en": "Remittance-Dependent Small Open Economy"
+        },
+        "desc": {
+          "zh": "大量劳动力外出务工，侨汇收入是家庭消费与宏观收支的重要支撑。",
+          "en": "A large share of the workforce works abroad; remittances are a critical support for household consumption and the external balance."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "欧洲最贫困国家之一",
+          "en": "One of Europe's Poorest Countries"
+        },
+        "desc": {
+          "zh": "人均收入低，高度依赖侨汇与外部援助，近年积极推进欧盟入盟进程。",
+          "en": "Low per-capita income, high reliance on remittances and external assistance, with active EU accession efforts in recent years."
+        }
+      }
+    ],
+    "region": "post_soviet"
+  },
+  "CYP": {
+    "name_cn": "塞浦路斯",
+    "name_en": "Cyprus",
+    "role": "regional_pillar",
+    "tier": 3,
+    "eu_layer": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "跨境商业服务",
+          "en": "Cross-Border Business Services"
+        },
+        "desc": {
+          "zh": "以专业服务、跨境企业注册与旅游为核心，航运相关活动也是重要组成部分。",
+          "en": "Professional services, cross-border corporate registration, tourism, and shipping-related activities form the economic core."
+        }
+      },
+      {
+        "title": {
+          "zh": "欧元区制度稳定性",
+          "en": "Euro Area Institutional Stability"
+        },
+        "desc": {
+          "zh": "作为欧盟成员并使用欧元，在2012–2013年银行危机后重组金融体系，监管框架持续加强。",
+          "en": "EU member using the euro; restructured its financial system after the 2012–2013 banking crisis with strengthened regulatory oversight."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "地中海商业与服务岛屿经济",
+          "en": "Mediterranean Business and Services Island Economy"
+        },
+        "desc": {
+          "zh": "以国际商业服务、旅游与区域联通功能被识别。",
+          "en": "Known for international business services, tourism, and regional connectivity functions."
+        }
+      }
+    ]
+  },
+  "ISL": {
+    "name_cn": "冰岛",
+    "name_en": "Iceland",
+    "role": "regional_pillar",
+    "tier": 2,
+    "eu_layer": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "地热能源底盘",
+          "en": "Geothermal Energy Base"
+        },
+        "desc": {
+          "zh": "以大规模地热发电与供暖渗透率闻名，叠加水电，支撑高能源自给与能源密集型产业。",
+          "en": "Large-scale geothermal electricity and heating utilization, combined with hydropower, supports high energy self-sufficiency and energy-intensive industries."
+        }
+      },
+      {
+        "title": {
+          "zh": "危机后宏观金融重塑",
+          "en": "Post-Crisis Macro Discipline"
+        },
+        "desc": {
+          "zh": "2008年银行体系崩溃是现代金融身份的转折点，此后重建金融体系并强化政策韧性。",
+          "en": "The 2008 banking collapse was a defining turning point; Iceland rebuilt its financial system and policy framework with strengthened resilience."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "地热岛屿经济体",
+          "en": "Geothermal Island Economy"
+        },
+        "desc": {
+          "zh": "以地热能源与危机后小国宏观叙事被全球识别。",
+          "en": "Known for geothermal energy and a post-crisis small-state macro narrative."
+        }
+      }
+    ]
+  },
+  "UKR": {
+    "name_cn": "乌克兰",
+    "name_en": "Ukraine",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "黑海大宗出口 + 重建融资架构",
+          "en": "Black Sea Commodity Exports + Reconstruction Finance"
+        },
+        "desc": {
+          "zh": "出口依赖黑海物流；宏观稳定与复苏依赖大规模外部融资与重建资金安排。",
+          "en": "Export earnings depend on Black Sea logistics, while macro stability and recovery are anchored by large external financing and reconstruction needs."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "欧洲黑海粮仓（重建中的出口型经济）",
+          "en": "Europe's Black Sea Breadbasket under Reconstruction"
+        },
+        "desc": {
+          "zh": "以粮食/油籽出口与黑海通道的重要性被全球识别，并处在重建融资主导的宏观框架之中。",
+          "en": "Known for global food exports (grains/oilseeds) and a wartime-to-rebuilding economic structure centered on logistics and external support."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "post_soviet"
+  },
+  "GEO": {
+    "name_cn": "格鲁吉亚",
+    "name_en": "Georgia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "黑海通道 + 侨汇/服务支撑的外部平衡",
+          "en": "Black Sea Corridor + Inflow-Supported External Balance"
+        },
+        "desc": {
+          "zh": "以通道服务与侨汇等流入支撑开放经济的外部融资。",
+          "en": "A transit-and-services economy where remittances and services help finance external needs."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "高加索门户（黑海连接器）",
+          "en": "Caucasus Gateway (Black Sea Connector)"
+        },
+        "desc": {
+          "zh": "以\"连接里海—黑海—更广市场\"的通道属性被识别。",
+          "en": "Known as a strategic corridor linking the Caspian region to wider markets."
+        }
+      }
+    ],
+    "region": "caucasus"
+  },
+  "ARM": {
+    "name_cn": "亚美尼亚",
+    "name_en": "Armenia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "侨汇 + 服务/IT类可贸易部门",
+          "en": "Diaspora Remittances + Services/IT-Style Tradables"
+        },
+        "desc": {
+          "zh": "以侨民联系与服务出口支撑需求与外部稳定的结构。",
+          "en": "A capability-building model where inflows and services exports support demand and external stability."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "侨民链接的高加索经济体",
+          "en": "Diaspora-Linked Caucasus Economy"
+        },
+        "desc": {
+          "zh": "以侨民网络与侨汇循环的经济特征为主要外部认知。",
+          "en": "Known for strong diaspora connections shaping consumption and external financing."
+        }
+      }
+    ],
+    "region": "caucasus"
+  },
+  "AZE": {
+    "name_cn": "阿塞拜疆",
+    "name_en": "Azerbaijan",
+    "role": "resource_energy",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "油气财政 + 主权财富稳定器",
+          "en": "Oil & Gas Revenues + Sovereign Wealth Stabilization"
+        },
+        "desc": {
+          "zh": "以油气租金积累国家缓冲，支撑宏观金融稳定。",
+          "en": "Hydrocarbon rents fund the state and build buffers that stabilize macro-finance."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "里海能源出口国",
+          "en": "Caspian Energy Export State"
+        },
+        "desc": {
+          "zh": "以油气出口与战略管道通道被全球识别。",
+          "en": "Known for oil/gas exports and strategic pipeline corridors."
+        }
+      }
+    ],
+    "region": "caucasus"
+  },
+  "BLR": {
+    "name_cn": "白俄罗斯",
+    "name_en": "Belarus",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "国有主导工业 + 对俄外部链接集中",
+          "en": "State-Dominated Industry + Russia-Centered External Linkages"
+        },
+        "desc": {
+          "zh": "国企结构显著、对外贸易与通道向俄罗斯集中，并在制裁约束下调整外部连接方式。",
+          "en": "An SOE-heavy economy whose trade and transit have become increasingly Russia-linked under sanctions constraints."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "制裁约束下的对俄工业型经济体",
+          "en": "Sanctions-Constrained, Russia-Linked Industrial Economy"
+        },
+        "desc": {
+          "zh": "以国有工业底盘与对俄贸易通道集中化为主要外部识别特征。",
+          "en": "Known for a large state sector and a post-2020s shift toward Russia-centered trade corridors as EU links tightened."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "post_soviet"
+  },
+  "LTU": {
+    "name_cn": "立陶宛",
+    "name_en": "Lithuania",
+    "role": "global_hub",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "金融科技牌照平台 + 波罗的海门户物流",
+          "en": "Fintech Licensing Platform + Baltic Gateway Logistics"
+        },
+        "desc": {
+          "zh": "在欧元区货币条件下，以合规牌照与金融服务平台化能力叠加港口通道（克莱佩达）形成结构优势。",
+          "en": "A euro-area economy combining regulated fintech services with port-and-corridor logistics anchored by Klaipėda."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "欧盟 fintech 枢纽 + 克莱佩达港门户",
+          "en": "EU Fintech Hub + Klaipėda Baltic Gateway"
+        },
+        "desc": {
+          "zh": "以小国高密度的金融科技生态与波罗的海海运门户功能被外界识别。",
+          "en": "Known for fintech ecosystem scale relative to size and a strategic Baltic maritime gateway function."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "LVA": {
+    "name_cn": "拉脱维亚",
+    "name_en": "Latvia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "转运与物流服务 + 欧元区稳定环境",
+          "en": "Transit & Logistics Services + Euro-Area Stability"
+        },
+        "desc": {
+          "zh": "运输、转运与仓储部门结构重要，在欧元区货币条件下运行并服务区域通道功能。",
+          "en": "A gateway economy where transport, transit, and storage are structurally important, supported by euro-area monetary conditions."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "里加港的波罗的海门户",
+          "en": "Baltic Gateway via Riga"
+        },
+        "desc": {
+          "zh": "以波罗的海出海口与港口物流网络连接区域贸易路线与欧洲内陆市场。",
+          "en": "Known for Baltic Sea access and port-based logistics linking regional routes with inland Europe."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "EST": {
+    "name_cn": "爱沙尼亚",
+    "name_en": "Estonia",
+    "role": "global_hub",
+    "tier": 2,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "数字国家基础设施 + 欧元区稳定环境",
+          "en": "Digital-State Infrastructure + Euro-Area Stability"
+        },
+        "desc": {
+          "zh": "通过互操作的数字公共系统降低交易成本，并在欧元区货币条件下支撑数字服务与创新生态。",
+          "en": "Digital public systems (interoperability) reduce transaction costs and support tech-enabled services within euro-area monetary conditions."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "e-Estonia（数字政府与创业生态）",
+          "en": "e-Estonia (Digital Government & Startup Nation)"
+        },
+        "desc": {
+          "zh": "以数字公共服务、e-Residency 与跨境数字创业平台形象被全球识别。",
+          "en": "Known globally for digital public services, e-Residency, and a platform approach to cross-border entrepreneurship."
+        }
+      }
+    ],
+    "eu_layer": 2
+  },
+  "ALB": {
+    "name_cn": "阿尔巴尼亚",
+    "name_en": "Albania",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "旅游与侨汇外部流入 + 水电主导能源结构",
+          "en": "Tourism & Remittance Inflows + Hydropower-Based Energy System"
+        },
+        "desc": {
+          "zh": "外部流入支撑消费与外汇循环，而电力供给对水文条件（来水）更敏感。",
+          "en": "External inflows support consumption and FX liquidity, while electricity supply is structurally exposed to hydrology (water availability)."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "\"新兴\"的亚得里亚海旅游目的地",
+          "en": "\"New\" Adriatic Tourism Destination"
+        },
+        "desc": {
+          "zh": "西巴尔干中快速崛起的旅游市场，在本币体系下运行并沿欧盟候选国路径推进制度趋同。",
+          "en": "A rapidly rising Mediterranean-adjacent tourism market in the Western Balkans, operating with its own currency under EU-candidate convergence."
+        }
+      }
+    ],
+    "eu_layer": 3
+  },
+  "MKD": {
+    "name_cn": "北马其顿",
+    "name_en": "North Macedonia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "外资驱动的出口制造 + 本币第纳尔宏观金融",
+          "en": "FDI-Linked Export Manufacturing + Denar-Based Macro Finance"
+        },
+        "desc": {
+          "zh": "通过欧盟邻接的产业链与投资实现升级，在本币框架下管理通胀、利率与宏观稳定。",
+          "en": "A small open economy upgrading through EU-linked production and investment, operating under domestic-currency macro management."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "西巴尔干欧盟候选国制造节点",
+          "en": "Western Balkans EU-Candidate Manufacturing Node"
+        },
+        "desc": {
+          "zh": "以欧盟邻接的生产与服务承接、侨汇链接与制度趋同路径为主要外部识别。",
+          "en": "Known as an EU-adjacent production and services economy, supported by diaspora links and ongoing institutional convergence."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "XKX": {
+    "name_cn": "科索沃",
+    "name_en": "Kosovo",
+    "role": "regional_pillar",
+    "tier": 3,
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "事实欧元化 + 侨汇支撑的服务型经济",
+          "en": "Euroized Remittances + Services Economy"
+        },
+        "desc": {
+          "zh": "以侨汇支撑消费与外汇流入，在欧元化货币环境下运行，独立货币政策工具有限。",
+          "en": "Household demand and external financing are strongly supported by diaspora remittances, operating under a euroized monetary environment with limited independent monetary tools."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "西巴尔干侨汇驱动型小经济体",
+          "en": "Western Balkans Remittance-Driven Micro-Economy"
+        },
+        "desc": {
+          "zh": "以欧元使用、海外侨民联系与侨汇支撑消费循环为最核心的结构标签。",
+          "en": "A small economy known for euro usage, strong diaspora links, and consumption supported by remittance inflows."
+        }
+      }
+    ],
+    "eu_layer": 3,
+    "region": "yugoslavia"
+  },
+  "KWT": {
+    "name_cn": "科威特",
+    "name_en": "Kuwait",
+    "role": "regional_pillar",
+    "tier": 1,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "石油富裕的主权资产型国家",
+          "en": "Oil-rich sovereign asset state"
+        },
+        "desc": {
+          "zh": "大规模石油收入支撑国家运转，而长期主权储蓄和海外资产则让财政韧性不只依赖当期能源收入。",
+          "en": "Large oil income supports the state, while long-term sovereign savings and overseas assets provide fiscal resilience beyond current energy revenues."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "以石油财富和金融储备见长的海湾国家",
+          "en": "A Gulf state defined by oil wealth and financial reserves"
+        },
+        "desc": {
+          "zh": "科威特的外部形象，更多由主权财富、长期储蓄和财政缓冲所定义，而不是由贸易平台功能或快速转型来塑造。",
+          "en": "Kuwait's external profile is shaped more by sovereign wealth, long-term savings, and fiscal buffers than by trade-platform functions or rapid transformation."
+        }
+      }
+    ]
+  },
+  "QAT": {
+    "name_cn": "卡塔尔",
+    "name_en": "Qatar",
+    "role": "regional_pillar",
+    "tier": 1,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "以天然气为基础的海外资产型国家",
+          "en": "Gas-based external asset state"
+        },
+        "desc": {
+          "zh": "大规模液化天然气出口带来外部收入，海外资产配置再把这份收入转化为长期资本实力。",
+          "en": "Large-scale LNG exports generate external income, and overseas asset allocation turns that income into long-term capital strength."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "海湾重要的液化天然气强国",
+          "en": "A major LNG power in the Gulf"
+        },
+        "desc": {
+          "zh": "卡塔尔的外部角色，更多由天然气出口、主权投资和强大的海外资产负债表决定，而不是由综合贸易平台功能定义。",
+          "en": "Qatar's external role is shaped less by broad trade-platform functions and more by gas exports, sovereign investment, and one of the Gulf's strongest overseas balance sheets."
+        }
+      }
+    ]
+  },
+  "OMN": {
+    "name_cn": "阿曼",
+    "name_en": "Oman",
+    "role": "regional_pillar",
+    "tier": 2,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "渐进式多元化的油气经济体",
+          "en": "Gradually diversifying hydrocarbon economy"
+        },
+        "desc": {
+          "zh": "油气仍然支撑阿曼的财政和外部收支，而港口、物流和非油产业则被逐步培育为新的增长引擎。",
+          "en": "Oil and gas still anchor Oman's fiscal and external position, while ports, logistics, and nonhydrocarbon sectors are being built up as additional engines of growth."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "依托油气、港口与稳步改革的海湾国家",
+          "en": "A steadier Gulf state built on oil, ports, and reform"
+        },
+        "desc": {
+          "zh": "阿曼的外部角色，不是由激进转型或全球金融所主导，而更多来自油气稳定、战略港口和渐进式多元化路径。",
+          "en": "Oman's external role is shaped less by aggressive transformation or global finance, and more by hydrocarbon stability, strategic ports, and a gradual diversification path."
+        }
+      }
+    ]
+  },
+  "JOR": {
+    "name_cn": "约旦",
+    "name_en": "Jordan",
+    "role": "regional_pillar",
+    "tier": 3,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "资源不足的稳定—服务型经济体",
+          "en": "Resource-poor service-and-stability economy"
+        },
+        "desc": {
+          "zh": "约旦更多依靠旅游、侨汇、服务业和外部融资，而不是油气财富，因此宏观信誉和稳定性构成了其经济角色的核心。",
+          "en": "Jordan relies on tourism, remittances, services, and external financing rather than oil wealth, making macroeconomic credibility and stability central to its economic role."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "黎凡特地区小而重要的稳定型经济体",
+          "en": "A small but strategically valuable stable economy in the Levant"
+        },
+        "desc": {
+          "zh": "约旦的外部重要性，来自它在动荡地区中把相对稳定、服务收入和国际支持结合在一起。",
+          "en": "Jordan's external importance comes from combining relative stability with service inflows and international support in a turbulent region."
+        }
+      }
+    ]
+  },
+  "DZA": {
+    "name_cn": "阿尔及利亚",
+    "name_en": "Algeria",
+    "role": "resource_energy",
+    "tier": 2,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "面向欧洲的油气国家",
+          "en": "Europe-facing hydrocarbon state"
+        },
+        "desc": {
+          "zh": "石油和天然气主导着阿尔及利亚的出口与财政收入，而面向欧洲的天然气出口则赋予它在北非独特的外部角色。",
+          "en": "Oil and natural gas dominate Algeria's exports and fiscal revenues, while gas exports to Europe give the country a distinct external role in North Africa."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "北非面向欧洲的重要天然气供应国",
+          "en": "North Africa's major gas supplier to Europe"
+        },
+        "desc": {
+          "zh": "阿尔及利亚的外部形象，并不是由制造业或金融来定义，而更多来自它作为大型油气出口国、并与欧洲保持强能源联系的角色。",
+          "en": "Algeria's external identity is shaped less by manufacturing or finance and more by its role as a large hydrocarbon exporter with a strong Europe-facing energy link."
+        }
+      }
+    ]
+  },
+  "LBY": {
+    "name_cn": "利比亚",
+    "name_en": "Libya",
+    "role": "resource_energy",
+    "tier": 2,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "面向欧洲的石油依赖型经济体",
+          "en": "Europe-facing oil-dependent economy"
+        },
+        "desc": {
+          "zh": "利比亚的出口和国家财政仍然主要由油气支撑，而欧洲则是其原油最重要的外部市场。",
+          "en": "Libya's exports and state revenue are still dominated by hydrocarbons, while Europe remains the main external market for its crude oil."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "一个受碎片化影响的北非石油国家",
+          "en": "A North African oil state shaped by fragmentation"
+        },
+        "desc": {
+          "zh": "利比亚的外部角色，不只是由石油出口决定，也深受政治碎片化反复影响产量、财政稳定和改革推进所塑造。",
+          "en": "Libya's external role is defined not only by oil exports, but also by the way political fragmentation repeatedly affects production, fiscal stability, and reform."
+        }
+      }
+    ]
+  },
+  "TUN": {
+    "name_cn": "突尼斯",
+    "name_en": "Tunisia",
+    "role": "regional_pillar",
+    "tier": 3,
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "zh": "小型开放型制造业—旅游经济体",
+          "en": "Small open manufacturing-and-tourism economy"
+        },
+        "desc": {
+          "zh": "突尼斯把面向出口的制造业、旅游和矿产部门结合在一个对欧联系很深的地中海经济中，但始终受到融资和增长约束。",
+          "en": "Tunisia combines export-oriented manufacturing, tourism, and mineral sectors within a Europe-facing Mediterranean economy, but operates under tight financing and growth constraints."
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "zh": "北非面向欧洲的地中海经济体",
+          "en": "A Europe-facing Mediterranean economy in North Africa"
+        },
+        "desc": {
+          "zh": "突尼斯的外部角色，不是由石油规模来定义，而更多来自制造业、旅游业以及靠近欧洲市场的地理位置。",
+          "en": "Tunisia's external role is shaped less by oil scale and more by its mix of manufacturing, tourism, and proximity to European markets."
+        }
+      }
+    ]
+  },
+  "SDN": {
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Conflict-fractured agricultural economy",
+          "zh": "受战争撕裂的农业基础经济体"
+        },
+        "desc": {
+          "en": "Sudan's historical base in agriculture has been overwhelmed by war, making disruption, displacement, and collapse more central than any normal growth structure.",
+          "zh": "苏丹原有的农业基础已被战争严重压垮，如今更核心的不是正常增长结构，而是破坏、流离失所和经济崩塌。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A weakly connected Arab–Islamic economy under collapse",
+          "zh": "与阿拉伯—伊斯兰世界相连但联系较弱的崩塌型经济体"
+        },
+        "desc": {
+          "en": "Sudan remains linked to the Arab–Islamic world by history and identity, but its present economic profile is dominated by conflict and breakdown rather than a stable model.",
+          "zh": "苏丹在历史和身份上仍与阿拉伯—伊斯兰世界相连，但当前经济面貌主要由冲突和失序主导，而不是由一种稳定模式来定义。"
+        }
+      }
+    ],
+    "name_en": "Sudan",
+    "name_cn": "苏丹"
+  },
+  "MRT": {
+    "name_en": "Mauritania",
+    "name_cn": "毛里塔尼亚",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Iron ore and fisheries economy",
+          "zh": "铁矿石与渔业经济体"
+        },
+        "desc": {
+          "en": "Mauritania relies on a narrow export base dominated by iron ore and fish, with limited diversification and a relatively simple external structure.",
+          "zh": "毛里塔尼亚依靠以铁矿石和鱼类为主的狭窄出口基础运转，多元化有限，对外结构也相对简单。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A peripheral Arab–Islamic resource economy in West Africa",
+          "zh": "西非边缘的阿拉伯-伊斯兰资源型经济体"
+        },
+        "desc": {
+          "en": "Mauritania's external identity comes more from cultural and regional linkage to the Arab–Islamic world than from strong economic centrality within it.",
+          "zh": "毛里塔尼亚的外部身份更多地来源于与阿拉伯-伊斯兰世界的文化和区域联系，而不是其在该地区强大的经济中心地位。"
+        }
+      }
+    ]
+  },
+  "IRQ": {
+    "name_en": "Iraq",
+    "name_cn": "伊拉克",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil-dependent fiscal state",
+          "zh": "石油依赖型财政国家"
+        },
+        "desc": {
+          "en": "Iraq relies on hydrocarbons for exports and public finance, while weak non-oil revenues and financing constraints keep the economy structurally narrow.",
+          "zh": "伊拉克依靠油气支撑出口和公共财政，而非油收入偏弱和融资约束使其经济基础长期偏窄。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A major Middle Eastern oil state with a narrow non-oil base",
+          "zh": "一个非油基础偏窄的重要中东石油国家"
+        },
+        "desc": {
+          "en": "Iraq's external role is defined by hydrocarbons, while its internal challenge is building a broader economy beyond energy.",
+          "zh": "伊拉克的外部角色由油气定义，而其内部挑战则是如何在能源之外建立更广的经济基础。"
+        }
+      }
+    ]
+  },
+  "LBN": {
+    "name_en": "Lebanon",
+    "name_cn": "黎巴嫩",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Services-and-remittances economy under post-crisis strain",
+          "zh": "危机后承压的服务业—侨汇经济体"
+        },
+        "desc": {
+          "en": "Lebanon relies on tourism, services, and diaspora-linked income, while the legacy of financial collapse continues to shape the economy.",
+          "zh": "黎巴嫩依靠旅游、服务业和侨民相关收入维持运行，而金融崩塌留下的遗产仍在持续塑造经济。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A Levantine service economy reshaped by financial collapse",
+          "zh": "被金融崩塌重塑的黎凡特服务经济体"
+        },
+        "desc": {
+          "en": "Lebanon's external identity comes from services, tourism, and diaspora ties, but its current image is inseparable from prolonged financial crisis.",
+          "zh": "黎巴嫩的外部形象来自服务业、旅游和侨民联系，但其当前身份已无法与长期金融危机分开。"
+        }
+      }
+    ]
+  },
+  "SYR": {
+    "name_en": "Syria",
+    "name_cn": "叙利亚",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Conflict-damaged economy with reconstruction at the center",
+          "zh": "以重建为核心议题的冲突受损经济体"
+        },
+        "desc": {
+          "en": "Syria's economy is shaped by war damage, weak output, and massive rebuilding needs rather than by a stable export or growth model.",
+          "zh": "叙利亚经济更多由战争破坏、产出疲弱和巨大的重建需求塑造，而不是由稳定的出口或增长模式定义。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A war-damaged Middle Eastern economy facing long reconstruction",
+          "zh": "一个面临长期重建的战后中东经济体"
+        },
+        "desc": {
+          "en": "Syria's external identity is now tied less to sectoral structure and more to the scale of destruction and the difficulty of recovery.",
+          "zh": "叙利亚的外部形象，已经不再主要由产业结构决定，而更多由破坏规模和恢复难度所塑造。"
+        }
+      }
+    ]
+  },
+  "AFG": {
+    "name_en": "Afghanistan",
+    "name_cn": "阿富汗",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Fragile agrarian economy under aid and displacement pressure",
+          "zh": "受援助收缩与人口流动压迫的脆弱农业经济体"
+        },
+        "desc": {
+          "en": "Afghanistan relies heavily on agriculture and basic services, while aid reduction and large returnee inflows keep the economy under severe strain.",
+          "zh": "阿富汗高度依赖农业和基础服务，而外援减少与大规模返乡人口持续给经济带来严厉压力。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A survival economy shaped by aid decline and fragility",
+          "zh": "一个被援助下降与脆弱性塑造的生存型经济体"
+        },
+        "desc": {
+          "en": "Afghanistan's external identity is shaped less by export strength than by fragility, low income, and the struggle to sustain livelihoods under persistent shock.",
+          "zh": "阿富汗的外部形象，并不是由出口能力决定，而更多来自脆弱性、低收入，以及在持续冲击下维持生计的困难。"
+        }
+      }
+    ]
+  },
+  "YEM": {
+    "name_en": "Yemen",
+    "name_cn": "也门",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Conflict-fragmented import-dependent economy",
+          "zh": "冲突碎片化的进口依赖型经济体"
+        },
+        "desc": {
+          "en": "Yemen depends on ports, imports, and shrinking external support, while blocked oil exports and institutional division keep the economy in survival mode.",
+          "zh": "也门高度依赖港口、进口和不断缩小的外部支持，而受阻的石油出口和制度分裂让整个经济长期停留在生存状态。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A survival economy on the edge of the Arabian Peninsula",
+          "zh": "阿拉伯半岛边缘的生存型经济体"
+        },
+        "desc": {
+          "en": "Yemen's external identity is shaped less by normal sectoral strengths and more by conflict, oil-export disruption, port dependence, and humanitarian-economic fragility.",
+          "zh": "也门的外部形象，不是由正常产业优势定义，而更多来自冲突、石油出口受阻、港口依赖，以及人道与经济脆弱性的叠加。"
+        }
+      }
+    ]
+  },
+  "CIV": {
+    "name_en": "Côte d'Ivoire",
+    "name_cn": "科特迪瓦",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Coastal export and logistics economy",
+          "zh": "沿海出口和物流经济"
+        },
+        "desc": {
+          "en": "Côte d'Ivoire relies on export agriculture, port activity, regional trade links, and a relatively strong growth record to sustain its position in West Africa.",
+          "zh": "科特迪瓦依靠出口农业、港口活动、区域贸易联系以及相对强劲的经济增长记录来维持其在西非的地位。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A francophone West African commercial hub",
+          "zh": "法语西非商业中心"
+        },
+        "desc": {
+          "en": "Côte d'Ivoire is one of West Africa's key coastal trade and business nodes, with its role shaped by cocoa, logistics, and regional commercial connectivity.",
+          "zh": "科特迪瓦是西非重要的沿海贸易和商业枢纽之一，其地位由可可、物流和区域商业联系所塑造。"
+        }
+      }
+    ]
+  },
+  "BEN": {
+    "name_en": "Benin",
+    "name_cn": "贝宁",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Transit trade, port, and corridor economy",
+          "zh": "转运贸易、港口与走廊型经济体"
+        },
+        "desc": {
+          "en": "Benin relies on the Port of Cotonou, re-export and transit trade, and inland commercial links to generate growth and regional relevance.",
+          "zh": "贝宁依靠科托努港、再出口与转运贸易，以及通向内陆的商业联系来形成增长动力和区域意义。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small West African gateway economy",
+          "zh": "一个小型但重要的西非门户经济体"
+        },
+        "desc": {
+          "en": "Benin is a small but commercially important coastal state whose role is shaped by logistics, corridor trade, and its gateway position between the coast and inland markets.",
+          "zh": "贝宁是一个体量不大但商业功能突出的沿海国家，其角色由物流、走廊贸易以及连接海岸与内陆市场的门户位置共同塑造。"
+        }
+      }
+    ]
+  },
+  "TGO": {
+    "name_en": "Togo",
+    "name_cn": "多哥",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Port, logistics, and regional hub economy",
+          "zh": "港口、物流与区域枢纽型经济体"
+        },
+        "desc": {
+          "en": "Togo relies on the Port of Lomé, transit services, logistics, and regional trade intermediation to sustain its economic role.",
+          "zh": "多哥依靠洛美港、转运服务、物流和区域贸易中介功能来维持其经济角色。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small but strategic West African logistics hub",
+          "zh": "一个小而关键的西非物流枢纽"
+        },
+        "desc": {
+          "en": "Togo is a small coastal state whose importance comes from Lomé's role in connecting maritime trade with inland West African markets.",
+          "zh": "多哥是一个小型沿海国家，其重要性来自洛美如何把海运贸易与西非内陆市场连接起来。"
+        }
+      }
+    ]
+  },
+  "MLI": {
+    "name_en": "Mali",
+    "name_cn": "马里",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Landlocked gold and agriculture economy",
+          "zh": "内陆黄金与农业经济体"
+        },
+        "desc": {
+          "en": "Mali relies on gold exports, agriculture, and regional transport corridors, while insecurity and weak infrastructure continue to limit broader transformation.",
+          "zh": "马里依靠黄金出口、农业和区域运输走廊运转，但不安全与基础设施薄弱持续限制其更广泛的经济升级。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A pressured Sahelian inland economy",
+          "zh": "一个承压运行的萨赫勒内陆经济体"
+        },
+        "desc": {
+          "en": "Mali is a landlocked Sahelian economy whose role is shaped by gold, farming, and the vulnerabilities that come with insecurity and fragile regional connections.",
+          "zh": "马里是一个内陆萨赫勒经济体，其角色由黄金、农业，以及不安全和区域联系脆弱带来的压力共同塑造。"
+        }
+      }
+    ]
+  },
+  "BFA": {
+    "name_en": "Burkina Faso",
+    "name_cn": "布基纳法索",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Gold, agriculture, and state-led resilience economy",
+          "zh": "黄金、农业与国家主导韧性经济体"
+        },
+        "desc": {
+          "en": "Burkina Faso relies on gold, agriculture, and a more assertive state role to sustain growth in a security-constrained Sahelian environment.",
+          "zh": "布基纳法索依靠黄金、农业和更主动的国家角色，在受安全约束的萨赫勒环境中维持增长。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A security-constrained Sahelian mining economy",
+          "zh": "一个受安全约束的萨赫勒矿业经济体"
+        },
+        "desc": {
+          "en": "Burkina Faso is a gold-centered inland economy whose role is shaped by mining, rural production, and the challenge of maintaining national capacity under persistent insecurity.",
+          "zh": "布基纳法索是一个以黄金为中心的内陆经济体，其角色由矿业、农村生产以及在持续不安全中维持国家能力的挑战共同塑造。"
+        }
+      }
+    ]
+  },
+  "NER": {
+    "name_en": "Niger",
+    "name_cn": "尼日尔",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, uranium, and landlocked agriculture economy",
+          "zh": "石油、铀与内陆农业经济体"
+        },
+        "desc": {
+          "en": "Niger relies on oil exports, uranium, agriculture, and regional transport corridors, while insecurity and inland constraints continue to narrow its wider development path.",
+          "zh": "尼日尔依靠石油出口、铀、农业和区域运输走廊运转，但不安全与内陆约束持续压缩其更广泛的发展空间。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A narrow but strategically important Sahelian resource economy",
+          "zh": "一个基础狭窄但战略意义重要的萨赫勒资源经济体"
+        },
+        "desc": {
+          "en": "Niger is a landlocked Sahelian economy whose role is shaped by oil, uranium, and the challenge of turning external resource earnings into broader national resilience.",
+          "zh": "尼日尔是一个内陆萨赫勒经济体，其角色由石油、铀，以及如何把外部资源收入转化为更广泛国家韧性的挑战共同塑造。"
+        }
+      }
+    ]
+  },
+  "GIN": {
+    "name_en": "Guinea",
+    "name_cn": "几内亚",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Bauxite, mining, and concentrated export economy",
+          "zh": "铝土矿、矿业与集中型出口经济体"
+        },
+        "desc": {
+          "en": "Guinea relies on bauxite, mining investment, and extractive infrastructure, while broader diversification remains limited.",
+          "zh": "几内亚依靠铝土矿、矿业投资和采掘基础设施运转，但更广泛的经济多元化仍然有限。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A mining-heavy West African resource exporter",
+          "zh": "一个矿业色彩很重的西非资源出口国"
+        },
+        "desc": {
+          "en": "Guinea is one of West Africa's clearest mining-centered economies, with its global role shaped above all by bauxite exports.",
+          "zh": "几内亚是西非最典型的矿业中心型经济体之一，其全球角色首先由铝土矿出口塑造。"
+        }
+      }
+    ]
+  },
+  "SLE": {
+    "name_en": "Sierra Leone",
+    "name_cn": "塞拉利昂",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Mining, recovery, and narrow-base coastal economy",
+          "zh": "矿业、恢复与基础狭窄的沿海经济体"
+        },
+        "desc": {
+          "en": "Sierra Leone relies on mineral exports, agriculture, and services, while its small scale keeps the broader economy narrow and vulnerable.",
+          "zh": "塞拉利昂依靠矿产出口、农业和服务业运转，但其小体量使整体经济仍然狭窄且脆弱。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small recovering West African mining economy",
+          "zh": "一个正在恢复中的西非小型矿业经济体"
+        },
+        "desc": {
+          "en": "Sierra Leone is a small coastal economy whose role is shaped by mining and the continuing effort to turn stabilization into broader resilience.",
+          "zh": "塞拉利昂是一个小型沿海经济体，其角色由矿业以及把稳定化继续转化为更广韧性的努力共同塑造。"
+        }
+      }
+    ]
+  },
+  "LBR": {
+    "name_en": "Liberia",
+    "name_cn": "利比里亚",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Iron ore, rubber, and small open coastal economy",
+          "zh": "铁矿石、橡胶与小型开放沿海经济体"
+        },
+        "desc": {
+          "en": "Liberia relies on iron ore, rubber, and external trade links, while its narrow domestic base keeps the economy vulnerable to outside shocks.",
+          "zh": "利比里亚依靠铁矿石、橡胶和对外贸易联系运转，但其狭窄的国内基础使经济容易受到外部冲击。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small West African export economy tied to commodities and maritime openness",
+          "zh": "一个与大宗商品和海洋开放性紧密相连的西非小型出口经济体"
+        },
+        "desc": {
+          "en": "Liberia is a small coastal economy whose role is shaped by mineral exports, plantation agriculture, and a high degree of outward economic dependence.",
+          "zh": "利比里亚是一个小型沿海经济体，其角色由矿产出口、种植园农业以及较高的对外依赖度共同塑造。"
+        }
+      }
+    ]
+  },
+  "SOM": {
+    "name_en": "Somalia",
+    "name_cn": "索马里",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Trade, remittances, and fragile private-sector economy",
+          "zh": "贸易、侨汇与脆弱型私人部门经济体"
+        },
+        "desc": {
+          "en": "Somalia relies on trade, remittances, livestock, and private commercial resilience, while aid dependence and insecurity continue to narrow the wider economic base.",
+          "zh": "索马里依靠贸易、侨汇、牲畜出口和私人商业韧性运转，但援助依赖与不安全仍然压缩着更广的经济基础。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A fragile Horn of Africa trade-and-remittance economy",
+          "zh": "一个脆弱的非洲之角贸易与侨汇经济体"
+        },
+        "desc": {
+          "en": "Somalia is a commercially resilient but institutionally fragile economy whose role is shaped by remittances, ports, trade networks, and chronic vulnerability.",
+          "zh": "索马里是一个商业韧性较强但制度基础脆弱的经济体，其角色由侨汇、港口、贸易网络和长期脆弱性共同塑造。"
+        }
+      }
+    ]
+  },
+  "BDI": {
+    "name_en": "Burundi",
+    "name_cn": "布隆迪",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, limited services, and macro-strained inland economy",
+          "zh": "农业、有限服务业与宏观承压的内陆经济体"
+        },
+        "desc": {
+          "en": "Burundi relies on agriculture and a narrow services base, while inflation, fuel shortages, and external imbalances continue to weigh heavily on the economy.",
+          "zh": "布隆迪依靠农业和狭窄的服务业基础运转，但通胀、燃料短缺和外部失衡持续沉重压在经济之上。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A highly constrained inland East African agrarian economy",
+          "zh": "一个高度受约束的东非内陆农业经济体"
+        },
+        "desc": {
+          "en": "Burundi is a small inland economy whose role is shaped by agriculture, chronic macroeconomic pressure, and the difficulty of broadening a very narrow productive base.",
+          "zh": "布隆迪是一个小型内陆经济体，其角色由农业、长期宏观压力以及扩大极窄生产基础的困难共同塑造。"
+        }
+      }
+    ]
+  },
+  "SSD": {
+    "name_en": "South Sudan",
+    "name_cn": "南苏丹",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil-fiscal dependence and fragile inland state economy",
+          "zh": "石油财政依赖与脆弱型内陆国家经济"
+        },
+        "desc": {
+          "en": "South Sudan relies overwhelmingly on oil revenues, while weak institutions and repeated disruptions keep the broader economy narrow and unstable.",
+          "zh": "南苏丹高度依赖石油收入，而薄弱制度和反复中断持续使更广泛的经济基础保持狭窄且不稳定。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A fragile oil-dependent inland economy",
+          "zh": "一个脆弱的石油依赖型内陆经济体"
+        },
+        "desc": {
+          "en": "South Sudan is a landlocked economy whose role is shaped by oil, fiscal fragility, and the difficulty of building state capacity beyond a narrow extractive base.",
+          "zh": "南苏丹是一个内陆经济体，其角色由石油、财政脆弱性以及超越狭窄采掘基础去建立国家能力的困难共同塑造。"
+        }
+      }
+    ]
+  },
+  "CMR": {
+    "name_en": "Cameroon",
+    "name_cn": "喀麦隆",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, oil, and mixed anchor economy",
+          "zh": "农业、石油与混合型锚定经济体"
+        },
+        "desc": {
+          "en": "Cameroon relies on agriculture, services, and a still-relevant oil layer, giving it a broader and more balanced structure than many central African peers.",
+          "zh": "喀麦隆依靠农业、服务业以及仍有分量的石油层运转，这使它比许多中非邻国拥有更宽、更均衡的结构。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "One of central Africa's most mixed and organized economies",
+          "zh": "中非最具混合性和组织性的经济体之一"
+        },
+        "desc": {
+          "en": "Cameroon is a relatively diversified economy whose role is shaped by its broader base, regional importance, and stronger national economic organization.",
+          "zh": "喀麦隆是一个相对多元的经济体，其角色由更宽的基础、区域重要性以及较强的全国经济组织能力共同塑造。"
+        }
+      }
+    ]
+  },
+  "COD": {
+    "name_en": "DR Congo",
+    "name_cn": "刚果民主共和国",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Copper, cobalt, and fragmented giant resource economy",
+          "zh": "铜、钴与碎裂型巨大资源经济体"
+        },
+        "desc": {
+          "en": "The DRC relies on copper, cobalt, and large-scale mining, but conflict and weak national integration continue to limit broad-based development.",
+          "zh": "刚果（金）依靠铜、钴和大规模矿业运转，但冲突和国家整合薄弱持续限制着更广泛的发展。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A globally strategic but weakly integrated central African mining economy",
+          "zh": "一个具有全球战略意义但整合薄弱的中非矿业经济体"
+        },
+        "desc": {
+          "en": "The DRC is one of the world's most important mineral economies, but its role is shaped as much by fragmentation and conflict as by resource scale.",
+          "zh": "刚果（金）是全球最重要的矿产经济体之一，但它的角色不仅由资源体量决定，也深受断裂和冲突影响。"
+        }
+      }
+    ]
+  },
+  "COG": {
+    "name_en": "Congo",
+    "name_cn": "刚果共和国",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, narrow scale, and limited diversification economy",
+          "zh": "石油、狭窄体量与有限多元化经济体"
+        },
+        "desc": {
+          "en": "The Republic of the Congo relies on oil, while modest gains in agriculture and manufacturing have not yet produced a broad or job-rich economy.",
+          "zh": "刚果共和国依靠石油运转，而农业和制造业的有限改善还没有形成一个宽厚、能创造足够就业的经济。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small central African oil state searching for diversification",
+          "zh": "一个正在寻找多元化路径的中非小型石油国家"
+        },
+        "desc": {
+          "en": "The Republic of the Congo is a coastal oil economy whose role is still defined by hydrocarbons, even as it tries to widen its non-oil base.",
+          "zh": "刚果共和国是一个沿海石油经济体，其角色至今仍由油气定义，尽管它正在努力扩大非油基础。"
+        }
+      }
+    ]
+  },
+  "GAB": {
+    "name_en": "Gabon",
+    "name_cn": "加蓬",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, manganese, and weak-linkage urban resource economy",
+          "zh": "石油、锰与连接薄弱的城市化资源经济体"
+        },
+        "desc": {
+          "en": "Gabon relies on oil, manganese, and wood, but weak domestic linkages and limited job creation keep the broader economy thinner than its export wealth suggests.",
+          "zh": "加蓬依靠石油、锰和木材运转，但国内联系薄弱和就业创造不足，使整体经济比其出口财富所显示的更薄。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small but wealthy-looking central African commodity economy",
+          "zh": "一个看起来较富、但高度集中于商品出口的中非经济体"
+        },
+        "desc": {
+          "en": "Gabon is a resource-rich and highly urbanized economy whose role is shaped by export concentration rather than broad-based domestic dynamism.",
+          "zh": "加蓬是一个资源丰富、城市化程度高的经济体，其角色更多由出口集中度塑造，而不是由宽广的国内活力定义。"
+        }
+      }
+    ]
+  },
+  "CAF": {
+    "name_en": "Central African Republic",
+    "name_cn": "中非共和国",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, aid dependence, and fragile inland survival economy",
+          "zh": "农业、援助依赖与脆弱型内陆生存经济体"
+        },
+        "desc": {
+          "en": "The Central African Republic relies on agriculture and external support, while insecurity and extremely weak state capacity keep the broader economy narrow and fragile.",
+          "zh": "中非共和国依靠农业和外部支持运转，而不安全与极弱的国家能力使整体经济始终狭窄且脆弱。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "One of central Africa's most fragile inland economies",
+          "zh": "中非最脆弱的内陆经济体之一"
+        },
+        "desc": {
+          "en": "The Central African Republic is a landlocked economy whose role is shaped by survival, aid dependence, and the difficulty of building even a minimally stable productive base.",
+          "zh": "中非共和国是一个内陆经济体，其角色由生存压力、援助依赖以及建立最低限度稳定生产基础的困难共同塑造。"
+        }
+      }
+    ]
+  },
+  "TCD": {
+    "name_en": "Chad",
+    "name_cn": "乍得",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil-fiscal, agriculture, and Sahelian inland economy",
+          "zh": "石油财政、农业与萨赫勒内陆经济体"
+        },
+        "desc": {
+          "en": "Chad relies on oil for fiscal weight, but agriculture and pastoralism still underpin livelihoods while inland and Sahelian constraints keep development narrow.",
+          "zh": "乍得依靠石油维持财政分量，但农业和牧业仍然支撑着生计，而内陆与萨赫勒约束使发展空间始终偏窄。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A pressured Sahelian oil-fiscal state",
+          "zh": "一个承压运行的萨赫勒石油财政国家"
+        },
+        "desc": {
+          "en": "Chad is a landlocked economy whose role is shaped by oil revenues, rural fragility, and the difficulty of building wider capacity under severe structural pressure.",
+          "zh": "乍得是一个内陆经济体，其角色由石油收入、农村脆弱性以及在沉重结构压力下建立更广国家能力的困难共同塑造。"
+        }
+      }
+    ]
+  },
+  "MOZ": {
+    "name_en": "Mozambique",
+    "name_cn": "莫桑比克",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Ports, gas potential, and coastal corridor economy",
+          "zh": "港口、天然气潜力与沿海走廊经济体"
+        },
+        "desc": {
+          "en": "Mozambique relies on coastal access, corridor links, agriculture, and gas potential, while fiscal and political strains continue to hold back broader transformation.",
+          "zh": "莫桑比克依靠沿海通道、走廊联系、农业和天然气潜力运转，但财政和政治压力仍然拖住更广泛的升级。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A strategic Southern African coastal economy with unfinished gas promise",
+          "zh": "一个具有未完成天然气前景的战略性南部非洲沿海经济体"
+        },
+        "desc": {
+          "en": "Mozambique is a coastal gateway economy whose role is shaped by ports, geography, and major gas potential that remains important but not yet fully realized.",
+          "zh": "莫桑比克是一个沿海门户经济体，其角色由港口、地理位置和重要但尚未完全兑现的天然气潜力共同塑造。"
+        }
+      }
+    ]
+  },
+  "BWA": {
+    "name_en": "Botswana",
+    "name_cn": "博茨瓦纳",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Diamonds, fiscal prudence, and high-governance resource economy",
+          "zh": "钻石、财政审慎与高治理资源经济体"
+        },
+        "desc": {
+          "en": "Botswana relies on diamonds, strong fiscal management, and institutional stability, while diversification remains incomplete.",
+          "zh": "博茨瓦纳依靠钻石、较强的财政管理和制度稳定性运转，但多元化仍未完成。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A high-governance diamond economy under structural pressure",
+          "zh": "一个在结构压力下运行的高治理钻石经济体"
+        },
+        "desc": {
+          "en": "Botswana is a small resource-rich economy whose role is shaped by diamonds and strong institutions, but increasingly challenged by changes in the global diamond market.",
+          "zh": "博茨瓦纳是一个资源丰富的小型经济体，其角色由钻石和较强制度塑造，但正越来越受到全球钻石市场变化的挑战。"
+        }
+      }
+    ]
+  },
+  "NAM": {
+    "name_en": "Namibia",
+    "name_cn": "纳米比亚",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Minerals, ports, and stable small-scale resource economy",
+          "zh": "矿产、港口与稳定型小规模资源经济体"
+        },
+        "desc": {
+          "en": "Namibia relies on minerals, Atlantic access, tourism, and relative institutional stability, while unemployment and limited scale constrain broader transformation.",
+          "zh": "纳米比亚依靠矿产、大西洋通道、旅游和相对稳定的制度运转，但失业和体量有限限制了更广的升级。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A stable Southern African resource-and-port economy",
+          "zh": "一个稳定的南部非洲资源与港口经济体"
+        },
+        "desc": {
+          "en": "Namibia is a small but strategically positioned economy whose role is shaped by minerals, Walvis Bay, and institutional continuity.",
+          "zh": "纳米比亚是一个体量不大但位置具有战略性的经济体，其角色由矿产、沃尔维斯湾和制度连续性共同塑造。"
+        }
+      }
+    ]
+  },
+  "ZWE": {
+    "name_en": "Zimbabwe",
+    "name_cn": "津巴布韦",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, mining, and instability-constrained inland economy",
+          "zh": "农业、矿业与受不稳定约束的内陆经济体"
+        },
+        "desc": {
+          "en": "Zimbabwe relies on agriculture, mining, and a still-relevant industrial legacy, while macroeconomic instability continues to limit durable recovery.",
+          "zh": "津巴布韦依靠农业、矿业和仍有分量的工业遗产运转，但宏观不稳定持续限制着持久恢复。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A productive but unstable Southern African economy",
+          "zh": "一个有生产潜力但长期不稳定的南部非洲经济体"
+        },
+        "desc": {
+          "en": "Zimbabwe is an inland economy with real agricultural and mining strength, but its role is shaped just as much by repeated instability as by productive potential.",
+          "zh": "津巴布韦是一个拥有真实农业和矿业实力的内陆经济体，但其角色同样深受反复不稳定影响。"
+        }
+      }
+    ]
+  },
+  "MDG": {
+    "name_en": "Madagascar",
+    "name_cn": "马达加斯加",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Agriculture, mining, and island mixed economy",
+          "zh": "农业、矿业与岛屿混合经济体"
+        },
+        "desc": {
+          "en": "Madagascar relies on agriculture, mining, textiles, and tourism, but low productivity and climate vulnerability continue to limit broader transformation.",
+          "zh": "马达加斯加依靠农业、矿业、纺织和旅游运转，但低生产率和气候脆弱性仍然限制着更广泛的升级。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A large Indian Ocean island economy tied to Southern Africa",
+          "zh": "一个与南部非洲相连的大型印度洋岛屿经济体"
+        },
+        "desc": {
+          "en": "Madagascar is a large island economy whose role is shaped by agriculture, export commodities, and its SADC linkage rather than by mainland corridor geography.",
+          "zh": "马达加斯加是一个大型岛屿经济体，其角色由农业、出口商品和 SADC 联系塑造，而不是由大陆走廊地理决定。"
+        }
+      }
+    ]
+  },
+  "LSO": {
+    "name_en": "Lesotho",
+    "name_cn": "莱索托",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Dependence, textiles, water, and South Africa-linked economy",
+          "zh": "依赖型、纺织、水资源与南非嵌入型经济体"
+        },
+        "desc": {
+          "en": "Lesotho relies on textiles, services, remittances, water exports, and deep economic linkage with South Africa.",
+          "zh": "莱索托依靠纺织、服务业、侨汇、水资源出口以及与南非的深度经济联系运转。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small enclave economy embedded in South Africa's system",
+          "zh": "一个深度嵌入南非体系的小型飞地经济体"
+        },
+        "desc": {
+          "en": "Lesotho is a small mountainous economy whose role is shaped less by domestic scale than by its structural dependence on South Africa.",
+          "zh": "莱索托是一个小型山地经济体，其角色更多由对南非的结构性依赖塑造，而不是由自身市场规模决定。"
+        }
+      }
+    ]
+  },
+  "SWZ": {
+    "name_en": "Eswatini",
+    "name_cn": "斯威士兰",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Manufacturing, SACU revenue, and South Africa-linked small economy",
+          "zh": "制造业、SACU 收入与南非连接型小经济体"
+        },
+        "desc": {
+          "en": "Eswatini relies on manufacturing, services, agriculture, and revenue linkages tied closely to the regional customs and South African economic system.",
+          "zh": "斯威士兰依靠制造业、服务业、农业以及与区域关税体系和南非经济紧密相连的收入结构运转。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small Southern African economy inside the South African orbit",
+          "zh": "一个处在南非经济轨道内的小型南部非洲经济体"
+        },
+        "desc": {
+          "en": "Eswatini is a small but somewhat diversified economy whose role is shaped by its deep integration with South Africa and SACU rather than by independent scale.",
+          "zh": "斯威士兰是一个小型但比想象中更有一些多样性的经济体，其角色主要由对南非和 SACU 的深度嵌入塑造。"
+        }
+      }
+    ]
+  },
+  "ERI": {
+    "name_en": "Eritrea",
+    "name_cn": "厄立特里亚",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Mining, strategic location, and tightly controlled small economy",
+          "zh": "矿业、战略位置与高度管控的小型经济体"
+        },
+        "desc": {
+          "en": "Eritrea relies on mining and its Red Sea position, while strong state control and limited openness keep the broader economy narrow.",
+          "zh": "厄立特里亚依靠矿业和红海位置运转，但强国家控制和开放度有限使整体经济基础偏窄。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small strategic Horn of Africa economy",
+          "zh": "一个具有战略意义的非洲之角小型经济体"
+        },
+        "desc": {
+          "en": "Eritrea is a small economy whose role is shaped more by strategic location and state structure than by market scale.",
+          "zh": "厄立特里亚是一个小型经济体，其角色更多由战略位置和国家结构塑造，而不是由市场规模决定。"
+        }
+      }
+    ]
+  },
+  "GNQ": {
+    "name_en": "Equatorial Guinea",
+    "name_cn": "赤道几内亚",
+    "region": "africa_central",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, gas, and highly concentrated small resource economy",
+          "zh": "石油、天然气与高度集中的小型资源经济体"
+        },
+        "desc": {
+          "en": "Equatorial Guinea relies overwhelmingly on hydrocarbons, while diversification remains weak and the domestic economy remains thin.",
+          "zh": "赤道几内亚高度依赖油气，而多元化仍然薄弱，国内经济基础也依然偏薄。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small hydrocarbon-heavy Central African state",
+          "zh": "一个油气色彩极重的中非小型国家"
+        },
+        "desc": {
+          "en": "Equatorial Guinea is a resource-rich but highly concentrated economy whose role is still defined mainly by oil and gas.",
+          "zh": "赤道几内亚是一个资源丰富但高度集中的经济体，其角色至今仍主要由石油和天然气定义。"
+        }
+      }
+    ]
+  },
+  "GNB": {
+    "name_en": "Guinea-Bissau",
+    "name_cn": "几内亚比绍",
+    "region": "africa",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Cashew, agriculture, and fragile small export economy",
+          "zh": "腰果、农业与脆弱型小型出口经济体"
+        },
+        "desc": {
+          "en": "Guinea-Bissau relies heavily on cashew exports and agriculture, while diversification and institutional depth remain weak.",
+          "zh": "几内亚比绍高度依赖腰果出口和农业，而多元化和制度厚度仍然薄弱。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small West African cashew-export economy",
+          "zh": "一个小型的西非腰果出口经济体"
+        },
+        "desc": {
+          "en": "Guinea-Bissau is a small, low-income economy whose role is shaped by agricultural export concentration and political fragility.",
+          "zh": "几内亚比绍是一个低收入小经济体，其角色由农业出口集中度和政治脆弱性共同塑造。"
+        }
+      }
+    ]
+  },
+  "ESH": {
+    "name_en": "Western Sahara",
+    "name_cn": "西撒哈拉",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Phosphates, fisheries, and disputed-territory economy",
+          "zh": "磷酸盐、渔业与争议领土经济体"
+        },
+        "desc": {
+          "en": "Western Sahara's economic relevance is shaped mainly by phosphates, fisheries, and its disputed political status rather than by a broad domestic base.",
+          "zh": "西撒哈拉的经济意义主要由磷酸盐、渔业以及其争议性的政治地位塑造，而不是由宽广的国内经济基础决定。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A disputed resource territory in North-West Africa",
+          "zh": "一个位于西北非的争议型资源领土"
+        },
+        "desc": {
+          "en": "Western Sahara is best treated as a disputed political-economic space whose importance comes from territory, sovereignty, and a narrow resource base.",
+          "zh": "西撒哈拉更适合被理解为一个由领土、主权争议和狭窄资源基础共同定义的特殊政治经济空间。"
+        }
+      }
+    ]
+  },
+  "SOL": {
+    "name_en": "Somaliland",
+    "name_cn": "索马里兰",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Livestock, remittances, trade, and Berbera corridor economy",
+          "zh": "牲畜、侨汇、贸易与柏培拉走廊经济体"
+        },
+        "desc": {
+          "en": "Somaliland's economic role is built on livestock exports, remittances, trade networks, and Berbera's port significance.",
+          "zh": "索马里兰的经济角色建立在牲畜出口、侨汇、贸易网络以及柏培拉港的重要性之上。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A de facto Horn of Africa port-and-livestock economy",
+          "zh": "一个事实运作的非洲之角港口与牲畜经济体"
+        },
+        "desc": {
+          "en": "Somaliland is best treated as a commercially resilient but politically atypical Horn of Africa economic space.",
+          "zh": "索马里兰更适合被理解为一个商业韧性较强、但政治地位特殊的非洲之角经济空间。"
+        }
+      }
+    ]
+  },
+  "MUS": {
+    "name_en": "Mauritius",
+    "name_cn": "毛里求斯",
+    "region": "africa_south",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, finance, and island service economy",
+          "zh": "旅游、金融与岛屿服务经济体"
+        },
+        "desc": {
+          "en": "Mauritius relies on tourism, financial services, trade, and institutional stability rather than on raw commodity dependence.",
+          "zh": "毛里求斯依靠旅游、金融服务、贸易和制度稳定性运转，而不是依赖原始商品出口。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A high-performing Indian Ocean service economy",
+          "zh": "一个表现较强的印度洋服务型经济体"
+        },
+        "desc": {
+          "en": "Mauritius is a small but advanced island economy whose role is shaped by services, tourism, and financial depth.",
+          "zh": "毛里求斯是一个小型但较成熟的岛屿经济体，其角色由服务业、旅游和金融深度共同塑造。"
+        }
+      }
+    ]
+  },
+  "COM": {
+    "name_en": "Comoros",
+    "name_cn": "科摩罗",
+    "region": "africa_east",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances, consumption, and fragile island economy",
+          "zh": "侨汇、消费与脆弱型岛屿经济体"
+        },
+        "desc": {
+          "en": "Comoros relies on remittances, consumption, public investment, and a narrow island base, while diversification remains limited.",
+          "zh": "科摩罗依靠侨汇、消费、公共投资和狭窄的岛屿经济基础运转，而多元化仍然有限。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small fragile Indian Ocean island economy",
+          "zh": "一个小型而脆弱的印度洋岛屿经济体"
+        },
+        "desc": {
+          "en": "Comoros is a small island economy whose role is shaped by fragility, import dependence, and limited diversification more than by scale or strategic depth.",
+          "zh": "科摩罗是一个小型岛屿经济体，其角色更多由脆弱性、进口依赖和多元化不足塑造，而不是由规模或战略深度决定。"
+        }
+      }
+    ]
+  },
+  "UZB": {
+    "name_en": "Uzbekistan",
+    "name_cn": "乌兹别克斯坦",
+    "region": "post_soviet",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Reform, industry, and large domestic-market post-Soviet economy",
+          "zh": "改革、产业与大内需型后苏联经济体"
+        },
+        "desc": {
+          "en": "Uzbekistan relies on domestic scale, reform, industry, agriculture, and remittance-supported demand, while its market transition remains ongoing.",
+          "zh": "乌兹别克斯坦依靠国内市场体量、改革、工业、农业和侨汇支撑的需求运转，而其市场转型仍在进行中。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A reforming large-market economy in Central Asia",
+          "zh": "一个正在改革中的中亚大市场经济体"
+        },
+        "desc": {
+          "en": "Uzbekistan is one of Central Asia's most important transition economies, shaped by domestic scale, reform momentum, and a broader productive base than many of its neighbors.",
+          "zh": "乌兹别克斯坦是中亚最重要的转型经济体之一，其角色由国内体量、改革动能以及比许多邻国更宽的生产基础共同塑造。"
+        }
+      }
+    ]
+  },
+  "TKM": {
+    "name_en": "Turkmenistan",
+    "name_cn": "土库曼斯坦",
+    "region": "post_soviet",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Gas, state control, and closed post-Soviet hydrocarbon economy",
+          "zh": "天然气、国家控制与封闭型后苏联油气经济体"
+        },
+        "desc": {
+          "en": "Turkmenistan relies on natural gas and strong administrative control, while non-hydrocarbon sectors remain weak and openness limited.",
+          "zh": "土库曼斯坦依靠天然气和强行政控制运转，而非油气部门仍然偏弱、开放度也有限。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A closed Central Asian gas economy",
+          "zh": "一个封闭型中亚天然气经济体"
+        },
+        "desc": {
+          "en": "Turkmenistan is one of the most hydrocarbon-centered economies in Central Asia, with its role shaped by gas exports, state dominance, and limited diversification.",
+          "zh": "土库曼斯坦是中亚最典型的油气中心型经济体之一，其角色由天然气出口、国家主导和多元化不足共同塑造。"
+        }
+      }
+    ]
+  },
+  "KGZ": {
+    "name_en": "Kyrgyzstan",
+    "name_cn": "吉尔吉斯斯坦",
+    "region": "post_soviet",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Gold exports",
+          "zh": "黄金出口"
+        },
+        "desc": {
+          "en": "Gold dominates merchandise exports, making output and revenue highly dependent on global commodity prices.",
+          "zh": "黄金主导商品出口，产出与收入高度依赖国际大宗商品价格。"
+        }
+      },
+      {
+        "title": {
+          "en": "Remittances",
+          "zh": "侨汇收入"
+        },
+        "desc": {
+          "en": "Migrant remittances, mainly from Russia, form a major share of household income and support domestic consumption.",
+          "zh": "主要来自俄罗斯的移民侨汇构成家庭收入的重要来源，支撑国内消费。"
+        }
+      },
+      {
+        "title": {
+          "en": "Relatively open market structure",
+          "zh": "相对开放的市场结构"
+        },
+        "desc": {
+          "en": "Kyrgyzstan maintains a more open trade and market orientation than several regional peers, supporting cross-border commerce.",
+          "zh": "吉尔吉斯斯坦比区域内多数同类国家保持更开放的贸易和市场取向，支持跨境商业活动。"
+        }
+      },
+      {
+        "title": {
+          "en": "Limited scale and external dependence",
+          "zh": "体量有限与外部依赖"
+        },
+        "desc": {
+          "en": "As a small landlocked economy, Kyrgyzstan faces persistent constraints from narrow domestic capacity and dependence on external partners.",
+          "zh": "作为小型内陆经济体，吉尔吉斯斯坦长期面临国内能力有限和依赖外部伙伴的约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small Central Asian gold-and-remittance economy",
+          "zh": "一个小型中亚黄金与侨汇经济体"
+        },
+        "desc": {
+          "en": "Kyrgyzstan is a small inland post-Soviet economy whose role is shaped by mineral exports, migrant income, and a more market-oriented profile than some regional peers.",
+          "zh": "吉尔吉斯斯坦是一个小型内陆后苏联经济体，其角色由矿产出口、移民收入以及比部分区域同类国家更偏市场化的取向共同塑造。"
+        }
+      }
+    ]
+  },
+  "TJK": {
+    "name_en": "Tajikistan",
+    "name_cn": "塔吉克斯坦",
+    "region": "post_soviet",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances",
+          "zh": "侨汇收入"
+        },
+        "desc": {
+          "en": "Migrant remittances, primarily from Russia, are the largest source of household income and a key driver of domestic demand.",
+          "zh": "主要来自俄罗斯的移民侨汇是家庭收入的最大来源，也是国内需求的关键驱动力。"
+        }
+      },
+      {
+        "title": {
+          "en": "Hydropower investment",
+          "zh": "水电投资"
+        },
+        "desc": {
+          "en": "Tajikistan holds significant hydropower potential and pursues large infrastructure projects as a long-term economic strategy.",
+          "zh": "塔吉克斯坦拥有丰富的水电潜力，并将大型基础设施项目作为长期经济战略加以推进。"
+        }
+      },
+      {
+        "title": {
+          "en": "Agriculture",
+          "zh": "农业"
+        },
+        "desc": {
+          "en": "Agriculture remains important for employment and rural livelihoods, though productivity is constrained by geography and limited capital.",
+          "zh": "农业在就业和农村生计方面依然重要，但受地理条件和资本有限制约，生产率受限。"
+        }
+      },
+      {
+        "title": {
+          "en": "Narrow domestic capacity and external dependence",
+          "zh": "国内能力狭窄与外部依赖"
+        },
+        "desc": {
+          "en": "Tajikistan has one of the narrowest economic bases in the region, with persistent reliance on external income and support.",
+          "zh": "塔吉克斯坦拥有本区域最狭窄的经济基础之一，长期依赖外部收入和支持。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A remittance-dependent Central Asian economy with hydropower ambitions",
+          "zh": "一个依赖侨汇并押注水电的中亚经济体"
+        },
+        "desc": {
+          "en": "Tajikistan is a small post-Soviet economy whose role is shaped by migrant income, hydropower strategy, and one of the narrowest domestic economic bases in the region.",
+          "zh": "塔吉克斯坦是一个小型后苏联经济体，其角色由移民收入、水电战略以及本区域最狭窄的国内经济基础之一共同塑造。"
+        }
+      }
+    ]
+  },
+  "LAO": {
+    "name_en": "Laos",
+    "name_cn": "老挝",
+    "region": "sea",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Hydropower, mining, and project-driven inland economy",
+          "zh": "水电、矿业与项目驱动型内陆经济体"
+        },
+        "desc": {
+          "en": "Laos relies on electricity exports, mining, external financing, and regional connectivity, while debt pressure and a narrow domestic base remain major constraints.",
+          "zh": "老挝依靠电力出口、矿业、外部融资和区域连接运转，而债务压力和狭窄的国内基础仍然是主要约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small inland ASEAN energy-export economy",
+          "zh": "一个小型的东盟内陆能源出口经济体"
+        },
+        "desc": {
+          "en": "Laos is a small mainland Southeast Asian economy whose role is shaped by hydropower exports, external projects, and dependence on regional links.",
+          "zh": "老挝是一个东南亚大陆小型经济体，其角色由水电出口、外部项目和对区域联系的依赖共同塑造。"
+        }
+      }
+    ]
+  },
+  "BRN": {
+    "name_en": "Brunei",
+    "name_cn": "文莱",
+    "region": "sea",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Oil, gas, and small high-income hydrocarbon economy",
+          "zh": "石油、天然气与小型高收入油气经济体"
+        },
+        "desc": {
+          "en": "Brunei relies on hydrocarbons, fiscal buffers, and institutional stability, while diversification beyond oil and gas remains incomplete.",
+          "zh": "文莱依靠油气、财政缓冲和制度稳定性运转，但摆脱油气依赖的多元化仍未完成。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small high-income oil-and-gas state in Southeast Asia",
+          "zh": "一个东南亚小型高收入油气国家"
+        },
+        "desc": {
+          "en": "Brunei is a wealthy but narrow economy whose role is defined mainly by hydrocarbons and stability rather than by broad domestic economic depth.",
+          "zh": "文莱是一个富裕但狭窄的经济体，其角色主要由油气和稳定性定义，而不是由宽广的国内经济厚度定义。"
+        }
+      }
+    ]
+  },
+  "TLS": {
+    "name_en": "Timor-Leste",
+    "name_cn": "东帝汶",
+    "region": "sea",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Petroleum fund, public spending, and small undiversified economy",
+          "zh": "石油基金、公共支出与小型未充分多元化经济体"
+        },
+        "desc": {
+          "en": "Timor-Leste relies on petroleum wealth, public expenditure, and a still-narrow non-oil economy, while long-term diversification remains unresolved.",
+          "zh": "东帝汶依靠石油财富、公共支出和仍然狭窄的非油经济运转，而长期多元化问题尚未真正解决。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small post-conflict Southeast Asian economy seeking a non-oil future",
+          "zh": "一个正在寻找非油未来的小型后冲突东南亚经济体"
+        },
+        "desc": {
+          "en": "Timor-Leste is a small new ASEAN economy whose role is shaped by petroleum wealth, state-building, and the search for a broader post-oil development model.",
+          "zh": "东帝汶是一个新加入东盟的小型经济体，其角色由石油财富、国家建设以及对更宽后石油发展路径的探索共同塑造。"
+        }
+      }
+    ]
+  },
+  "MDV": {
+    "name_en": "Maldives",
+    "name_cn": "马尔代夫",
+    "region": "muslim",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Tourism, external inflows, and small island Muslim economy",
+          "zh": "旅游、外部流入与小型岛屿穆斯林经济体"
+        },
+        "desc": {
+          "en": "Maldives relies on tourism, related services, and external financing, while fiscal and debt pressures remain its main structural risks.",
+          "zh": "马尔代夫依靠旅游、相关服务和外部融资运转，而财政与债务压力仍然是它最主要的结构性风险。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A high-end tourism island economy in South Asia",
+          "zh": "一个高端旅游型南亚岛屿经济体"
+        },
+        "desc": {
+          "en": "Maldives is a small but globally visible island economy whose role is shaped by tourism, imported dependence, and macroeconomic fragility.",
+          "zh": "马尔代夫是一个体量不大但全球辨识度很高的岛屿经济体，其角色由旅游、进口依赖和宏观脆弱性共同塑造。"
+        }
+      }
+    ]
+  },
+  "NPL": {
+    "name_en": "Nepal",
+    "name_cn": "尼泊尔",
+    "region": "india",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Remittances, hydropower, and mountain landlocked economy",
+          "zh": "侨汇、水电与山地内陆经济体"
+        },
+        "desc": {
+          "en": "Nepal relies on remittances, agriculture, services, and hydropower expansion, while geography and limited domestic scale continue to constrain development.",
+          "zh": "尼泊尔依靠侨汇、农业、服务业和水电扩张运转，而地理条件和有限的国内体量仍然限制着发展。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A remittance-dependent Himalayan economy",
+          "zh": "一个依赖侨汇的喜马拉雅经济体"
+        },
+        "desc": {
+          "en": "Nepal is a small South Asian mountain economy whose role is shaped by migration income, hydropower ambitions, and difficult geography.",
+          "zh": "尼泊尔是一个小型南亚山地经济体，其角色由移民收入、水电雄心和困难地理条件共同塑造。"
+        }
+      }
+    ]
+  },
+  "BTN": {
+    "name_en": "Bhutan",
+    "name_cn": "不丹",
+    "region": "india",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Hydropower, public investment, and small Himalayan economy",
+          "zh": "水电、公共投资与小型喜马拉雅经济体"
+        },
+        "desc": {
+          "en": "Bhutan relies on hydropower, tourism, and state-guided public spending, while small scale and concentration remain major structural limits.",
+          "zh": "不丹依靠水电、旅游和国家引导的公共支出运转，而体量小和集中度高仍然是主要结构限制。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small hydropower-based Himalayan state",
+          "zh": "一个以水电为基础的小型喜马拉雅国家"
+        },
+        "desc": {
+          "en": "Bhutan is a small South Asian mountain economy whose role is shaped by electricity exports, careful state direction, and a narrow but relatively stable development model.",
+          "zh": "不丹是一个小型南亚山地经济体，其角色由电力出口、审慎的国家引导和较窄但相对稳定的发展模式共同塑造。"
+        }
+      }
+    ]
+  },
+  "HKG": {
+    "name_en": "Hong Kong",
+    "name_cn": "香港",
+    "region": "east_asia",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Finance, trade services, and global city gateway economy",
+          "zh": "金融、贸易服务与全球城市门户经济体"
+        },
+        "desc": {
+          "en": "Hong Kong relies on finance, business services, logistics, and gateway functions linking China with global capital and trade.",
+          "zh": "香港依靠金融、商业服务、物流以及连接中国与全球资本和贸易的门户功能运转。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "East Asia's financial gateway economy",
+          "zh": "东亚的金融门户经济体"
+        },
+        "desc": {
+          "en": "Hong Kong is one of Asia's most important financial and commercial nodes, shaped by service intensity and its intermediary role with mainland China.",
+          "zh": "香港是亚洲最重要的金融和商业节点之一，其角色由高度服务化以及与中国内地之间的中介功能共同塑造。"
+        }
+      }
+    ]
+  },
+  "MAC": {
+    "name_en": "Macao",
+    "name_cn": "澳门",
+    "region": "east_asia",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Gaming, tourism, and highly concentrated service economy",
+          "zh": "博彩、旅游与高度集中的服务经济体"
+        },
+        "desc": {
+          "en": "Macao relies on casino gaming, tourism, hospitality, and visitor-related services, while economic concentration remains its defining structural risk.",
+          "zh": "澳门依靠博彩、旅游、酒店和游客相关服务运转，而经济集中度过高仍然是它最核心的结构性风险。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "East Asia's gaming-and-tourism service economy",
+          "zh": "东亚的博彩与旅游服务经济体"
+        },
+        "desc": {
+          "en": "Macao is one of the clearest examples in East Asia of a wealthy service economy built on gaming, visitor flows, and highly concentrated tourism exports.",
+          "zh": "澳门是东亚最典型的高收入服务经济体之一，其角色由博彩、游客流量和高度集中的旅游出口共同塑造。"
+        }
+      }
+    ]
+  },
+  "PRK": {
+    "name_en": "North Korea",
+    "name_cn": "朝鲜",
+    "region": "steppe",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "State control, isolation, and highly constrained political economy",
+          "zh": "国家控制、孤立与高度受限的政治经济体"
+        },
+        "desc": {
+          "en": "North Korea relies on centralized state direction and limited internal market activity, while isolation and weak transparency define the system's deepest constraints.",
+          "zh": "朝鲜依靠高度集中的国家主导和有限的内部市场活动运转，而孤立和低透明度定义了这个系统最深层的约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A highly isolated East Asian special-case economy",
+          "zh": "一个高度孤立的东亚特殊案例经济体"
+        },
+        "desc": {
+          "en": "North Korea is a unique East Asian economic space whose role is shaped more by control and restricted external access than by normal market integration.",
+          "zh": "朝鲜是一个特殊的东亚经济空间，其角色更多由控制和受限的外部接触塑造，而不是由正常市场整合定义。"
+        }
+      }
+    ]
+  },
+  "PRI": {
+    "name_cn": "波多黎各",
+    "name_en": "Puerto Rico",
+    "region": "north_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Manufacturing, services, and U.S.-linked territorial economy",
+          "zh": "制造业、服务业与深度连向美国的属地经济体"
+        },
+        "desc": {
+          "en": "Puerto Rico relies on manufacturing, services, and federal integration with the United States, while demographic decline and fiscal dependence remain central long-term constraints.",
+          "zh": "波多黎各依靠制造业、服务业和与美国的联邦整合运转，而人口下降和财政依赖仍然是核心长期约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "An American territory in the Caribbean",
+          "zh": "加勒比海上的美国属地"
+        },
+        "desc": {
+          "en": "Puerto Rico is legally and economically tied to the United States, functioning as a Caribbean territory whose economic identity is defined by US institutional links, pharma exports, and ongoing fiscal adjustment.",
+          "zh": "波多黎各在法律和经济上与美国紧密相连，作为一个加勒比属地，其经济身份由美国制度联系、制药出口和持续财政调整共同定义。"
+        }
+      }
+    ]
+  },
+  "GRL": {
+    "name_en": "Greenland",
+    "name_cn": "格陵兰",
+    "region": "north_america",
+    "core_pillars": [
+      {
+        "title": {
+          "en": "Fisheries, public support, and emerging Arctic mineral economy",
+          "zh": "渔业、公共支持与新兴北极矿产经济体"
+        },
+        "desc": {
+          "en": "Greenland relies on fisheries, a large public sector, Danish fiscal support, and growing mineral ambitions, while remoteness and very small scale remain fundamental constraints.",
+          "zh": "格陵兰依靠渔业、庞大的公共部门、丹麦财政支持和不断上升的矿产开发雄心运转，而遥远性和极小体量仍然是根本约束。"
+        }
+      }
+    ],
+    "global_image": [
+      {
+        "title": {
+          "en": "A small Arctic North American economy under Danish sovereignty",
+          "zh": "一个处于丹麦王国主权之下的北美北极小型经济体"
+        },
+        "desc": {
+          "en": "Greenland is a geographically North American Arctic economy whose role is shaped by fisheries, strategic mineral potential, and political autonomy within the Kingdom of Denmark.",
+          "zh": "格陵兰是一个在经济地理上属于北美北极的小型经济体，其角色由渔业、战略性矿产潜力以及在丹麦王国内的自治地位共同塑造。"
+        }
+      }
+    ]
+  }
+}

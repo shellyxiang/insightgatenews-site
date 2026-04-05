@@ -1,413 +1,281 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - 金融知识平台</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ9EZ1GEJB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJ9EZ1GEJB');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于 · Insight Gate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── 导航 ── */
+    .site-nav {
+      background: #0a1628;
+      border-bottom: 1px solid #1e3a5f;
+      padding: 0.7rem 0;
+      flex-shrink: 0;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand {
+      color: #d4af37;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-right: auto;
+    }
+    .nav-links { display: flex; list-style: none; gap: 0.2rem; }
+    .nav-links a {
+      color: #8b949e;
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #e6edf3;
+      background: rgba(255,255,255,0.07);
+    }
+    .nav-login a {
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 5px 14px;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      transition: border-color 0.2s;
+    }
+    .nav-login a:hover { border-color: #8b949e; }
+
+    /* ── 主体 ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+    }
+
+    .about-wrap {
+      max-width: 640px;
+      width: 100%;
+    }
+
+    .quote {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: #8b949e;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #21262d;
+    }
+    .quote em {
+      font-style: normal;
+      color: #d4af37;
+    }
+    .quote .source {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      color: #4a5568;
+    }
+
+    .body-text {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #c9d1d9;
+      font-weight: 300;
+    }
+    .body-text p { margin-bottom: 1.4rem; }
+    .body-text p:last-child { margin-bottom: 0; }
+
+    .contact-line {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid #21262d;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+    .contact-line a {
+      color: #4da3ff;
+      text-decoration: none;
+    }
+    .contact-line a:hover { text-decoration: underline; }
+
+    /* ── 语言切换 ── */
+    .lang-btn {
+      background: transparent;
+      border: 1px solid #30363d;
+      color: #8b949e;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover { border-color: #8b949e; color: #e6edf3; }
+
+    /* ── 页脚 ── */
+    .site-footer {
+      background: #0a1628;
+      border-top: 1px solid #1e3a5f;
+      padding: 1.2rem 0;
+      text-align: center;
+      color: #8b949e;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      flex-shrink: 0;
+    }
+    .site-footer a { color: #8b949e; text-decoration: none; margin: 0 0.4rem; }
+    .site-footer a:hover { color: #e6edf3; }
+    .site-footer .sep { color: #30363d; }
+    .disclaimer {
+      max-width: 800px;
+      margin: 0.5rem auto 0;
+      font-size: 0.72rem;
+      color: #4a5568;
+    }
+  </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <h2>Insight Gate</h2>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">首页</a>
-                </li>
 
-                <li class="nav-item">
-                    <a href="daily-news.html" class="nav-link">知识专栏</a>
-                </li>
-                <li class="nav-item">
-                    <a href="research-reports.html" class="nav-link">研报专区</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link active">关于我们</a>
-                </li>
-                <li class="nav-item">
-                    <a href="login.html" class="nav-link">会员登录</a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a href="admin.html" class="nav-link" id="admin-link">👑 管理员</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Insight Gate</a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-map">全球地图</a></li>
+        <li><a href="contact.html" class="active" id="nav-about">关于我们</a></li>
+      </ul>
+      <div class="nav-login"><a href="login.html" id="nav-login">会员登录</a></div>
+      <button class="lang-btn" id="langBtn">EN</button>
+    </div>
+  </nav>
 
-    <!-- 页面标题 -->
-    <section class="page-header">
-        <div class="container">
-            <h1>About Insight Gate</h1>
-            <p>Bringing clarity to complexity in finance and economics</p>
-        </div>
-    </section>
+  <main>
+    <div class="about-wrap">
 
-    <!-- Our Mission -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Our Mission</h2>
-            <div class="content-text">
-                <p>Insight Gate was created to make knowledge—especially in economics and finance—accessible, clear, and free.</p>
-                <p>We believe high-quality information should not be limited to professionals. Our goal is to help readers quickly understand what is happening in markets and why it matters.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Do -->
-    <section class="content-section" style="background: var(--background-light);">
-        <div class="container">
-            <h2 class="section-title">What We Do</h2>
-            <div class="content-text">
-                <p>We provide a mix of free educational content and premium research summaries, designed for readers who want clarity without unnecessary complexity.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">📚</div>
-                    <h3>Free Content</h3>
-                    <ul>
-                        <li>Daily PDF digests summarizing global news and market developments</li>
-                        <li>Articles explaining financial concepts in a simple and intuitive way</li>
-                        <li>Educational resources covering macroeconomics, markets, and financial history</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">🔍</div>
-                    <h3>Premium Content</h3>
-                    <ul>
-                        <li>In-depth research reports</li>
-                        <li>Structured summaries of major institutional publications</li>
-                        <li>Long-form analysis based on publicly available data</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="content-text" style="text-align: center; margin-top: 2rem;">
-                <p><strong>All content is fully original, curated manually, and written for informational and educational purposes.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How We Create Our Content -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">How We Create Our Content</h2>
-            <div class="content-text">
-                <p>Our research process is built on transparency and discipline:</p>
-            </div>
-            
-            <div class="process-grid">
-                <div class="process-item">
-                    <h4>Sources</h4>
-                    <p>Sources include publicly available datasets, central bank releases, company filings, academic studies, and institutional reports</p>
-                </div>
-                <div class="process-item">
-                    <h4>Manual Curation</h4>
-                    <p>Every PDF and article is manually curated and summarized to ensure accuracy and readability</p>
-                </div>
-                <div class="process-item">
-                    <h4>No Promotions</h4>
-                    <p>We do not accept paid promotions, advertisements, sponsorships, or third-party recommendations</p>
-                </div>
-                <div class="process-item">
-                    <h4>Educational Focus</h4>
-                    <p>We do not recommend securities, provide trading signals, or offer investment services</p>
-                </div>
-            </div>
-            
-            <div class="content-text" style="text-align: center; margin-top: 2rem;">
-                <p><strong>Our sole objective is to deliver clear, structured knowledge to help readers make sense of a complex world.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Are Not -->
-    <section class="content-section" style="background: var(--background-light);">
-        <div class="container">
-            <h2 class="section-title">What We Are Not</h2>
-            <div class="content-text">
-                <p>To ensure clarity and compliance, we explicitly state:</p>
-            </div>
-            
-            <div class="disclaimer-grid">
-                <div class="disclaimer-item">
-                    <p>Insight Gate is not a financial advisor or financial service provider</p>
-                </div>
-                <div class="disclaimer-item">
-                    <p>We do not offer investment advice, investment management, or trading services</p>
-                </div>
-                <div class="disclaimer-item">
-                    <p>None of our content should be interpreted as a suggestion to buy, sell, or hold any financial asset</p>
-                </div>
-                <div class="disclaimer-item">
-                    <p>All materials are educational only</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Insight Gate Was Created -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Why Insight Gate Was Created</h2>
-            <div class="content-text">
-                <p>Insight Gate began as a personal project—a response to the overwhelming amount of information people face every day.</p>
-                <p>We wanted to build a place where knowledge feels clean, structured, and reliable.</p>
-                <p>A place where anyone can learn, regardless of background or professional experience.</p>
-                <p style="font-size: 1.2rem; font-weight: 600; color: var(--primary-dark-green); margin-top: 1.5rem;">
-                    Our purpose is simple: bring clarity to complexity.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact-section" style="background: var(--primary-dark-green); color: white;">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Contact</h2>
-            <div class="contact-info" style="text-align: center;">
-                <p style="font-size: 1.2rem; margin-bottom: 1rem;">For general inquiries or feedback, feel free to reach us at:</p>
-                <p style="font-size: 1.4rem; font-weight: 600;">support@insightgatenews.com</p>
-                <p style="margin-top: 0.5rem; opacity: 0.9;">We usually reply within 24 hours</p>
-            </div>
-        </div>
-    </section>
-
-<!-- 页脚 -->
-  <footer class="footer" style="background:#f6f6f6; padding:2rem 0; border-top:1px solid #e8e8e8;">
-    <div class="container">
-      <div style="text-align:center; color:#8590a6;">
-        <p>&copy; Insight Gate. 保留所有权利.</p>
-        <p style="font-size:0.9rem; margin-top:0.5rem;">专业金融知识平台</p>
-        <div style="margin-top:1rem;">
-          <a href="index.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">首页</a>
-          <span style="color:#ccc;">|</span>
-          <a href="privacy.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">隐私政策</a>
-          <span style="color:#ccc;">|</span>
-          <a href="terms.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">服务条款</a>
-          <span style="color:#ccc;">|</span>
-          <a href="contact.html" style="color:#8590a6; text-decoration:none; margin:0 0.5rem;">联系我们</a>
-        </div>
-        <p style="margin-top:1rem;">Email: support@insightgatenews.com</p>
-        <div style="margin-top:1rem; padding:1rem; background:rgba(0,0,0,0.05); border-radius:8px;">
-          <p style="font-size:0.8rem; line-height:1.4; margin:0;"><strong>免责声明：</strong>Insight Gate provides educational content for informational purposes only. We do not provide financial, investment, trading, or legal advice. All research reports and articles are general information and should not be considered as recommendations. Insight Gate is not a licensed financial service provider.Insight Gate 提供的所有内容仅用于教育与信息目的，不构成投资、交易或法律建议。我们不是持牌金融服务提供者。</p>
-        </div>
+      <div class="quote">
+        <em id="quote-text">给岁月以文明，而不是给文明以岁月。</em>
+        <span class="source" id="quote-source">—— 刘慈欣《三体》</span>
       </div>
+
+      <div class="body-text" id="body-text">
+        <p>经济和金融常常被认为是少数人的语言——留给专家、留给市场、留给那些已经在场的人。但我相信，理解世界运作的方式，是每一个普通人都值得拥有的能力。</p>
+        <p>做这个网站，只是把经济和金融的世界，用普通人能读懂的方式讲出来。让每个人都能读懂这个世界。</p>
+      </div>
+
+      <div class="contact-line">
+        <span id="contact-label">联系：</span>
+        <a href="mailto:support@insightgatenews.com">support@insightgatenews.com</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a href="index.html" id="footer-map">全球地图</a><span class="sep">|</span>
+      <a href="privacy.html" id="footer-privacy">隐私政策</a><span class="sep">|</span>
+      <a href="terms.html" id="footer-terms">服务条款</a><span class="sep">|</span>
+      <a href="contact.html" id="footer-contact">关于我们</a>
+    </div>
+    <div style="margin-top:0.4rem;">
+      Email: support@insightgatenews.com &nbsp;·&nbsp; <span id="footer-copy">© Insight Gate. 保留所有权利.</span>
+    </div>
+    <div class="disclaimer">
+      <strong id="disclaimer-label">免责声明：</strong><span id="disclaimer-text">Insight Gate 提供的所有内容仅用于教育与信息目的，不构成投资、交易或法律建议。我们不是持牌金融服务提供者。</span>
     </div>
   </footer>
 
-    <script src="script.js"></script>
+  <script>
+    const translations = {
+      zh: {
+        navMap: "全球地图", navAbout: "关于我们", navLogin: "会员登录",
+        langBtn: "EN",
+        quote: "给岁月以文明，而不是给文明以岁月。",
+        quoteSource: "—— 刘慈欣《三体》",
+        body: [
+          "经济和金融常常被认为是少数人的语言——留给专家、留给市场、留给那些已经在场的人。但我相信，理解世界运作的方式，是每一个普通人都值得拥有的能力。",
+          "做这个网站，只是把经济和金融的世界，用普通人能读懂的方式讲出来。让每个人都能读懂这个世界。"
+        ],
+        contactLabel: "联系：",
+        footerMap: "全球地图", footerPrivacy: "隐私政策", footerTerms: "服务条款", footerContact: "关于我们",
+        footerCopy: "© Insight Gate. 保留所有权利.",
+        disclaimerLabel: "免责声明：",
+        disclaimerText: "Insight Gate 提供的所有内容仅用于教育与信息目的，不构成投资、交易或法律建议。我们不是持牌金融服务提供者。"
+      },
+      en: {
+        navMap: "World Map", navAbout: "About", navLogin: "Login",
+        langBtn: "中文",
+        quote: "Give civilization to time, not time to civilization.",
+        quoteSource: "— Liu Cixin, The Three-Body Problem",
+        body: [
+          "Economics and finance are often seen as languages for the few — for experts, for markets, for those already at the table. But I believe that understanding how the world works is something every ordinary person deserves.",
+          "This website is a simple effort to explain the world of economics and finance in a way anyone can understand. So that everyone can be part of this world."
+        ],
+        contactLabel: "Contact: ",
+        footerMap: "World Map", footerPrivacy: "Privacy Policy", footerTerms: "Terms of Service", footerContact: "About",
+        footerCopy: "© Insight Gate. All rights reserved.",
+        disclaimerLabel: "Disclaimer: ",
+        disclaimerText: "All content on Insight Gate is for informational and educational purposes only. It does not constitute financial, investment, or legal advice. We are not a licensed financial service provider."
+      }
+    };
 
+    let lang = localStorage.getItem("lang") || "zh";
 
+    function applyLang() {
+      const t = translations[lang];
+      document.getElementById("nav-map").textContent = t.navMap;
+      document.getElementById("nav-about").textContent = t.navAbout;
+      document.getElementById("nav-login").textContent = t.navLogin;
+      document.getElementById("langBtn").textContent = t.langBtn;
+      document.getElementById("quote-text").textContent = t.quote;
+      document.getElementById("quote-source").textContent = t.quoteSource;
+      document.getElementById("body-text").innerHTML = t.body.map(p => `<p>${p}</p>`).join("");
+      document.getElementById("contact-label").textContent = t.contactLabel;
+      document.getElementById("footer-map").textContent = t.footerMap;
+      document.getElementById("footer-privacy").textContent = t.footerPrivacy;
+      document.getElementById("footer-terms").textContent = t.footerTerms;
+      document.getElementById("footer-contact").textContent = t.footerContact;
+      document.getElementById("footer-copy").textContent = t.footerCopy;
+      document.getElementById("disclaimer-label").textContent = t.disclaimerLabel;
+      document.getElementById("disclaimer-text").textContent = t.disclaimerText;
+    }
 
+    document.getElementById("langBtn").addEventListener("click", () => {
+      lang = lang === "zh" ? "en" : "zh";
+      localStorage.setItem("lang", lang);
+      applyLang();
+    });
 
+    applyLang();
+  </script>
 
-
-
-
-    <script>
-        // 联系我们页面功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contact-form');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // 获取表单数据
-                const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData);
-                
-                // 简单的表单验证
-                if (!data.name || !data.email || !data.subject || !data.message) {
-                    alert('请填写所有必填字段');
-                    return;
-                }
-                
-                // 模拟发送消息
-                const submitBtn = contactForm.querySelector('.submit-btn');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = '发送中...';
-                submitBtn.disabled = true;
-                
-                setTimeout(() => {
-                    alert('消息发送成功！我们会尽快回复您。');
-                    contactForm.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }, 2000);
-            });
-        });
-    </script>
-
-    <style>
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-dark-green), var(--primary-green));
-            color: var(--text-light);
-            padding: 120px 0 60px;
-            text-align: center;
-            margin-top: 70px;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--primary-dark-green);
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .content-text {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .content-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--accent-green);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-item h3 {
-            color: var(--primary-dark-green);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .service-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .service-item li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .service-item li:before {
-            content: "•";
-            color: var(--accent-green);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .process-item {
-            background: var(--background-light);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 3px solid var(--light-green);
-        }
-
-        .process-item h4 {
-            color: var(--primary-dark-green);
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-        }
-
-        .process-item p {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .disclaimer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .disclaimer-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .disclaimer-item p {
-            margin: 0;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .contact-section {
-            padding: 60px 0;
-        }
-
-        @media (max-width: 768px) {
-            .content-section {
-                padding: 60px 0;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .disclaimer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-item {
-                padding: 1.5rem;
-            }
-        }
-    </style>
 </body>
 </html>
