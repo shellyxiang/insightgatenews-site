@@ -339,6 +339,51 @@
       transition: max-height 300ms ease;
     }
     .sub-body.open{ max-height:800px; }
+
+    /* ── 手机端 ── */
+    @media (max-width: 768px) {
+      .map-viewport{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+      }
+      .resizer{ display: none; }
+      #mapWrap{ grid-row:1; grid-column:1; height: 100%; }
+
+      aside{
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        height: 70vh;
+        border-left: none;
+        border-top: 1px solid var(--stroke);
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        z-index: 200;
+        overflow-y: auto;
+      }
+      aside.mobile-open{ transform: translateY(0); }
+
+      .mobile-close{
+        display: flex;
+        justify-content: center;
+        padding: 8px 0 4px;
+        cursor: pointer;
+      }
+      .mobile-close::before{
+        content: '';
+        width: 40px; height: 4px;
+        background: var(--stroke);
+        border-radius: 2px;
+      }
+
+      .site-nav .nav-links,
+      .site-nav .nav-login{ display: none; }
+      .site-nav .nav-inner{ justify-content: space-between; }
+    }
+    @media (min-width: 769px){
+      .mobile-close{ display: none; }
+    }
   </style>
 </head>
 <body>
@@ -364,9 +409,11 @@
 
   <div class="resizer" id="resizer"></div>
 
-  <aside>
+  <aside id="aside">
+    <div class="mobile-close" id="mobileClose"></div>
     <div class="search">
       <input id="search" placeholder="搜索国家：例如 美国 / Malaysia / JPN" />
+      <button id="searchBtn">→</button>
       <button id="resetBtn">Reset</button>
       <button id="langToggleBtn">中文</button>
     </div>
@@ -1191,6 +1238,10 @@
       }
 
       document.querySelector("aside").scrollTop = 0;
+      // 手机端滑出 panel
+      if (window.innerWidth <= 768) {
+        document.getElementById("aside").classList.add("mobile-open");
+      }
     }
 
 
@@ -1296,21 +1347,21 @@
     
 
     // 搜索：Enter 触发
-    searchInput.addEventListener("keydown", (e) => {
-      if (e.key !== "Enter") return;
+    function doSearch() {
       const q = searchInput.value.trim().toLowerCase();
       if (!q) return;
-
       const isoHit = Object.keys(countryData || {}).find(k => k.toLowerCase().includes(q));
       if (isoHit) return setActive(isoHit);
-
       const hit = Object.entries(countryData || {}).find(([k,v]) => {
         const cn = (v.name_cn || v.name_zh || "").toLowerCase();
         const en = (v.name_en || "").toLowerCase();
         return cn.includes(q) || en.includes(q);
       });
       if (hit) return setActive(hit[0]);
-    });
+    }
+
+    searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") doSearch(); });
+    document.getElementById("searchBtn").addEventListener("click", doSearch);
 
     resetBtn.addEventListener('click', () => {
       activeISO = null;
@@ -1318,6 +1369,10 @@
       SVG.transition().duration(250).call(zoom.transform, d3.zoomIdentity);
       renderMap();
       renderDefaultPanel();
+    });
+
+    document.getElementById("mobileClose").addEventListener("click", () => {
+      document.getElementById("aside").classList.remove("mobile-open");
     });
 
     langToggleBtn.addEventListener("click", () => {
