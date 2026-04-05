@@ -248,6 +248,7 @@
     };
 
     let lang = localStorage.getItem("lang") || "en";
+    document.documentElement.style.visibility = "hidden";
 
     function applyLang() {
       const t = translations[lang];
@@ -275,6 +276,7 @@
     });
 
     applyLang();
+    document.documentElement.style.visibility = "";
   </script>
 
 </body>
