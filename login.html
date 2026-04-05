@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
   <!-- Google Analytics -->
+  <script>document.documentElement.style.visibility="hidden";</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ9EZ1GEJB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -260,7 +261,6 @@
     };
 
     let lang = localStorage.getItem("lang") || "en";
-    document.documentElement.style.visibility = "hidden";
 
     function applyLang() {
       const t = T[lang];

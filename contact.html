@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <script>document.documentElement.style.visibility="hidden";</script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ9EZ1GEJB"></script>
   <script>
@@ -248,7 +249,6 @@
     };
 
     let lang = localStorage.getItem("lang") || "en";
-    document.documentElement.style.visibility = "hidden";
 
     function applyLang() {
       const t = translations[lang];
