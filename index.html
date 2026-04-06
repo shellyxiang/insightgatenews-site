@@ -1372,6 +1372,7 @@
       SVG.transition().duration(250).call(zoom.transform, d3.zoomIdentity);
       renderMap();
       renderDefaultPanel();
+      document.getElementById("aside").classList.remove("mobile-open");
     });
 
     document.getElementById("mobileClose").addEventListener("click", () => {
