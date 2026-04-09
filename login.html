@@ -138,6 +138,11 @@
     .site-footer a:hover { color: #e6edf3; }
     .sep { color: #30363d; }
     .disclaimer { max-width: 800px; margin: 0.5rem auto 0; font-size: 0.72rem; color: #4a5568; }
+    @media (max-width: 768px) {
+      .nav-links, .nav-login { display: none; }
+      main { padding: 40px 16px; }
+      .auth-wrap { max-width: 100%; }
+    }
   </style>
 </head>
 <body>
