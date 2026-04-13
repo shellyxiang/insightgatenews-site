@@ -1,151 +1,101 @@
-# 金融知识平台 - 每日资讯模块
+# Insight Gate
 
-## 项目概述
+> **Give civilization to time, not time to civilization.**
+> *— Liu Cixin, The Three-Body Problem*
 
-本项目是一个专业的金融数据展示平台，重点实现了"每日资讯"模块的100%真实数据升级。平台从半模拟状态全面升级为使用真实API数据源的专业金融数据展示系统。
-
-## 主要功能特性
-
-### 📈 实时市场数据
-- **股票指数**: 上证指数、深证成指、创业板指等A股指数实时数据
-- **港股指数**: 恒生指数等港股市场数据
-- **美股指数**: 道琼斯、纳斯达克、标普500等美股指数
-- **加密货币**: 比特币、以太坊等主流加密货币实时价格
-- **商品与通胀**: 原油、黄金、商品指数等大宗商品数据
-
-### 📊 智能数据更新
-- **智能更新机制**: 根据交易时间自动调整更新频率
-- **数据缓存**: 5分钟缓存机制减少API调用
-- **错误重试**: 最多3次重试机制确保数据可靠性
-- **备选数据源**: 多源数据保障服务稳定性
-
-### 📱 专业用户界面
-- **响应式设计**: 完美适配桌面端和移动端
-- **趋势图表**: 支持分时图、日K、周K、月K线图
-- **分类导航**: 股票指数、波动指数、货币流通性等分类
-- **实时新闻**: 分类热点新闻和财经要闻
-
-## 技术实现
-
-### API数据源
-- **新浪财经API**: A股、港股指数数据
-- **币安API**: 加密货币实时价格
-- **CoinGecko API**: 加密货币备选数据源
-- **腾讯财经**: 国际新闻和财经资讯
-
-### 性能优化
-- **数据缓存**: 内存缓存减少重复API调用
-- **智能更新**: 交易时间判断优化更新频率
-- **并行加载**: 多数据源并行获取提升效率
-- **错误处理**: 完善的异常捕获和用户提示
-
-### 前端技术
-- **原生JavaScript**: 无依赖框架，轻量高效
-- **Chart.js**: 专业图表展示
-- **CSS3动画**: 流畅的用户交互体验
-- **响应式布局**: 移动端友好设计
-
-## 项目结构
-
-```
-finance-platform/
-├── daily-news.html          # 每日资讯主页面
-├── index.html               # 首页
-├── finance-basics.html      # 金融基础页面
-├── research-reports.html    # 每日研报页面
-├── contact.html             # 联系我们页面
-├── styles.css               # 全局样式文件
-├── script.js                # 通用JavaScript功能
-└── package.json            # 项目配置
-```
-
-## 安装和运行
-
-### 本地开发
-1. 克隆项目到本地
-2. 安装依赖：`npm install`
-3. 启动开发服务器：`npm run dev`
-4. 访问 http://localhost:3000/daily-news.html
-
-### 直接运行
-直接使用浏览器打开 `daily-news.html` 文件即可预览
-
-## 特色功能详解
-
-### 1. 智能数据更新机制
-- **交易时间判断**: 自动识别A股交易时间(9:30-11:30, 13:00-15:00)
-- **差异化更新频率**: 
-  - 加密货币: 15秒更新（24小时交易）
-  - 股票指数: 30秒更新（交易时间）
-  - 其他数据: 45秒-1分钟更新
-- **关键时间点更新**: 开盘、收盘等重要时间点全量更新
-
-### 2. 多源数据保障
-- **主备数据源**: 币安API + CoinGecko API双重保障
-- **错误重试**: 3次重试机制，指数级延迟
-- **数据缓存**: 5分钟内存缓存，减少API调用
-- **优雅降级**: API失败时显示模拟数据保持可用性
-
-### 3. 专业图表功能
-- **多种图表类型**: 分时图、日K线、周K线、月K线
-- **时间范围选择**: 今日、5日、1月、3月、1年
-- **实时数据更新**: 图表与数据同步更新
-- **响应式图表**: 适配不同屏幕尺寸
-
-## 技术亮点
-
-### 性能优化
-- **缓存策略**: 智能缓存减少网络请求
-- **并行处理**: 多数据源并行获取
-- **懒加载**: 按需加载分类数据
-- **内存管理**: 及时清理无用数据
-
-### 错误处理
-- **网络异常**: 自动重试和备选方案
-- **数据解析**: 健壮的数据处理逻辑
-- **用户提示**: 友好的错误信息展示
-- **服务降级**: 保证基本功能可用
-
-### 用户体验
-- **加载状态**: 清晰的加载进度提示
-- **交互反馈**: 及时的按钮响应
-- **数据新鲜度**: 明确的数据更新时间
-- **离线友好**: 缓存数据离线查看
-
-## 浏览器兼容性
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## 部署说明
-
-### 静态部署
-直接上传所有HTML、CSS、JS文件到Web服务器即可
-
-### CDN部署
-建议将Chart.js等外部资源配置CDN加速
-
-### 安全考虑
-- 使用HTTPS部署
-- 配置CSP安全策略
-- API调用添加Referer验证
-
-## 后续优化方向
-
-1. **数据源扩展**: 集成更多金融数据API
-2. **历史数据**: 添加历史数据查询功能
-3. **用户个性化**: 自定义关注列表
-4. **推送通知**: 价格预警和新闻推送
-5. **移动应用**: 开发原生移动应用
-
-## 许可证
-
-本项目采用MIT许可证，详见LICENSE文件。
+> **给岁月以文明，而不是给文明以岁月。**
+> *—— 刘慈欣《三体》*
 
 ---
 
-**项目状态**: ✅ 已完成100%真实数据升级
-**最后更新**: 2024年1月15日
-**技术栈**: HTML5 + CSS3 + JavaScript + Chart.js
+## About / 关于
+
+**EN:** Insight Gate is a free educational website dedicated to making economics and finance accessible to everyone. No paywalls, no jargon walls — just honest knowledge for curious minds. Built by an economics researcher who believes understanding how the world works is something every ordinary person deserves.
+
+**中文：** Insight Gate 是一个免费的经济金融科普网站。我们相信，理解世界运作的方式，是每一个普通人都值得拥有的能力。没有付费墙，没有门槛，只是把经济和金融的世界，用普通人能读懂的方式讲出来。
+
+🌐 **Live site:** [insightgatenews.com](https://www.insightgatenews.com)
+
+---
+
+## Features / 功能特色
+
+| Feature | 功能 |
+|---|---|
+| 🗺️ Interactive world economic role map | 全球经济角色互动地图 |
+| 🌐 Full bilingual switching (EN / 中文) | 中英文全站切换 |
+| 📱 Mobile responsive with slide-up panel | 手机端适配，底部抽屉面板 |
+| 🌙 Dark theme, easy on the eyes | 深色主题 |
+| 📖 Per-country bilingual articles | 每个国家配有中英文文章 |
+
+Click any country on the map to explore its structural role in the global economy — trade relationships, economic model, key industries, and more.
+
+点击地图上任意国家，了解其在全球经济体系中的结构性角色——贸易关系、经济模式、主要产业等。
+
+---
+
+## Tech Stack / 技术栈
+
+- **Pure HTML / CSS / JavaScript** — no framework, no build step
+- **[D3.js v7](https://d3js.org/)** — SVG world map rendering with NaturalEarth projection
+- **[marked.js](https://marked.js.org/)** — Markdown article rendering for country pages
+- **Google Analytics** — traffic tracking
+- **GitHub Pages** — static site hosting
+
+---
+
+## Project Structure / 项目结构
+
+```
+insightgatenews-site/
+├── index.html          # World map homepage / 地图首页
+├── contact.html        # About page / 关于页
+├── login.html          # Join Us page / 加入我们
+├── country.html        # Country article viewer / 国家文章页
+├── privacy.html        # Privacy policy / 隐私政策
+├── terms.html          # Terms of service / 服务条款
+├── styles.css          # Shared styles
+├── data/
+│   ├── world.geojson           # World map geodata / 世界地图数据
+│   └── countries-core.json     # Country economic role data / 国家经济角色数据
+└── articles/
+    ├── USA.en.md       # Country articles, bilingual
+    ├── USA.zh.md       # 国家文章，中英双语
+    └── ...
+```
+
+---
+
+## Deployment / 部署
+
+This is a fully static site hosted on GitHub Pages with a custom domain.
+
+这是一个纯静态网站，通过 GitHub Pages 托管，绑定自定义域名。
+
+No server, no database, no build process required. Just push and it's live.
+
+无需服务器、数据库或构建工具，推送即上线。
+
+---
+
+## Contact / 联系
+
+Email: support@insightgatenews.com
+
+---
+
+## Disclaimer / 免责声明
+
+**EN:** All content on Insight Gate is for informational and educational purposes only. It does not constitute financial, investment, or legal advice. We are not a licensed financial service provider.
+
+**中文：** Insight Gate 提供的所有内容仅用于教育与信息目的，不构成投资、交易或法律建议。我们不是持牌金融服务提供者。
+
+---
+
+## License / 许可
+
+Content is free to read for personal and educational use. Please do not reproduce for commercial purposes without permission.
+
+内容免费供个人及教育用途阅读。未经许可，请勿用于商业目的。
+
+© Insight Gate. All rights reserved.
