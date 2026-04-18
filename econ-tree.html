@@ -188,18 +188,40 @@
       font-size: 11px; color: #6e7681; z-index: 10;
     }
 
-    /* Mobile */
+    /* Mobile bottom drawer */
     @media (max-width: 640px) {
+      body { display: block; }
+      #tree-area { width: 100%; height: 100%; display: block; }
+      #side-panel {
+        position: fixed; bottom: 0; left: 0; right: 0;
+        width: 100% !important; min-width: 0 !important;
+        height: 70vh;
+        border-left: none; border-top: 1px solid #30363d;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+        overflow-y: auto;
+      }
       #side-panel.open {
-        position: fixed; top: 0; left: 0;
-        width: 100vw !important; min-width: 0 !important;
-        height: 100%; z-index: 100;
-        border-left: none;
+        transform: translateY(0);
+        width: 100% !important; min-width: 0 !important;
+      }
+      #mobile-pill {
+        display: flex; justify-content: center;
+        padding: 10px 0 4px; cursor: pointer;
+      }
+      #mobile-pill::before {
+        content: ''; width: 40px; height: 4px;
+        background: #30363d; border-radius: 2px;
       }
       #resizer { display: none !important; }
       #panel-inner { min-width: 0; }
-      #header { max-width: calc(100vw - 120px); padding: 10px 14px; }
+      #panel-close { display: none; }
+      #header { max-width: calc(100vw - 36px); padding: 10px 14px; }
       #header h1 { font-size: 12px; }
+      #header p { display: none; }
+      #controls { top: auto; bottom: 18px; right: 18px; }
       #hint { display: none; }
     }
   </style>
@@ -230,6 +252,7 @@
 
 <div id="resizer"></div>
 <div id="side-panel">
+  <div id="mobile-pill"></div>
   <button id="panel-close">✕</button>
   <div id="panel-inner">
     <div id="panel-title"></div>
@@ -684,10 +707,12 @@ const panelReadmore = document.getElementById("panel-readmore");
 
 const resizer = document.getElementById("resizer");
 
-document.getElementById("panel-close").addEventListener("click", () => {
+function closePanel() {
   sidePanel.classList.remove("open");
   resizer.style.display = "none";
-});
+}
+document.getElementById("panel-close").addEventListener("click", closePanel);
+document.getElementById("mobile-pill").addEventListener("click", closePanel);
 
 // Resizable panel
 (function () {
