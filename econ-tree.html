@@ -114,6 +114,11 @@
     }
 
     .node-card { cursor: pointer; }
+    .node-group {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
     .node-group:hover .node-card {
       filter: drop-shadow(0 0 14px rgba(88,166,255,0.55));
     }
@@ -201,7 +206,7 @@
       #panel-inner { min-width: 0; }
       #header { max-width: calc(100vw - 36px); padding: 10px 14px; }
       #header h1 { font-size: 12px; }
-      #header p { display: none; }
+      #header p { display: block; font-size: 10px; }
       #controls { top: auto; bottom: 18px; right: 18px; }
       #hint { display: none; }
     }
@@ -257,9 +262,12 @@ function t(en, zh) { return lang === "zh" ? zh : en; }
 function applyLang() {
   document.getElementById("hdr-title").textContent =
     t("The Making of the Modern Economy and Financial System", "现代经济与金融体系的形成");
-  document.getElementById("hdr-sub").textContent =
-    t("Click to expand · Drag to pan · Scroll to zoom",
-      "点击节点展开/收起 · 拖动移动 · 滚轮缩放");
+  const isMobile = window.innerWidth <= 640;
+  document.getElementById("hdr-sub").textContent = isMobile
+    ? t("Tap to expand · Long press to read · Pinch to zoom",
+        "点击展开 · 长按阅读内容 · 双指缩放")
+    : t("Click to expand · Drag to pan · Scroll to zoom",
+        "点击节点展开/收起 · 拖动移动 · 滚轮缩放");
   document.getElementById("hint").textContent =
     t("Click any node to expand / collapse", "点击节点展开或收起");
   document.getElementById("btn-back").textContent =
@@ -655,7 +663,8 @@ function update(source) {
   all.on("touchstart.lp", (event, d) => {
     lpTimer = setTimeout(() => { lpTimer = null; openPanel(d); }, 500);
   }, { passive: true })
-  .on("touchend.lp touchmove.lp", () => { clearTimeout(lpTimer); lpTimer = null; });
+  .on("touchend.lp touchmove.lp", () => { clearTimeout(lpTimer); lpTimer = null; })
+  .on("contextmenu", event => event.preventDefault());
 
   all.select(".node-label").call(setNodeLabel);
   all.select(".collapsed-ring").attr("display", d => d._children ? null : "none");
