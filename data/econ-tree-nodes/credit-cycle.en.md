@@ -1,0 +1,7 @@
+## Credit Cycle
+
+A credit cycle is the repeated expansion and contraction of borrowing, lending, and balance-sheet growth over time. Credit does not move in a straight line. In periods of optimism, lower perceived risk and easier funding conditions can encourage banks to lend more, firms to borrow more, and asset prices to rise. In periods of stress, this process can reverse: lenders become cautious, borrowers lose access to funding, asset prices weaken, and balance sheets come under pressure.
+
+This dynamic matters because credit is not only a tool of growth. It is also a source of amplification. When credit expands, it can support investment, spending, and rising asset values. But the same process may also increase leverage, reduce caution, and create fragility. Once confidence weakens, the contraction of credit can intensify downturns by reducing financing, weakening demand, and forcing deleveraging across the economy.
+
+The credit cycle is one of the clearest examples of why finance must be understood dynamically rather than statically. A banking system may appear healthy at one point in time, while the broader credit environment is becoming increasingly fragile. Conversely, a period of tight credit can reshape the entire macroeconomic environment. This is why credit cycles sit at the center of modern macro-financial analysis: they connect banks, borrowers, asset prices, expectations, and financial stability in a self-reinforcing process.

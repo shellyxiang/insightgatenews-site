@@ -1,0 +1,7 @@
+## Reserve Currencies
+
+A reserve currency is a currency that is widely held by foreign governments, central banks, and international investors as part of official reserves and private portfolios. It is also often used in trade invoicing, international borrowing, global banking, and financial transactions more broadly. Reserve currencies therefore occupy a special position in the international monetary and financial system.
+
+Their importance lies in the fact that global finance is not symmetric. Not all currencies play the same role. Some currencies are trusted more widely, used more deeply, and accepted more easily across borders. This gives reserve-currency issuers advantages, including deeper financial markets, stronger demand for their public debt, and greater international monetary influence. At the same time, it also means that global financial conditions often depend heavily on policy and liquidity conditions in the countries issuing those currencies.
+
+In modern finance, reserve currencies matter because they shape the structure of borrowing, saving, and international adjustment. Countries often borrow, invoice trade, or hold reserves in reserve currencies even when those currencies are not their own. This can reduce transaction costs and improve market access, but it can also create dependence on external monetary conditions. In this sense, reserve currencies are not just widely used monies. They are one of the key pillars of the global financial order.

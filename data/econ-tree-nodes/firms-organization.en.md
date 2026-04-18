@@ -1,0 +1,7 @@
+## Firms and Industrial Organization
+
+As economies became more complex, production could no longer be understood only at the level of households, craftsmen, or simple market exchange. Firms emerged as organized units of production that coordinate labour, capital, technology, and management on a larger scale. Instead of relying only on individual transactions, firms bring many activities under a more stable internal structure.
+
+This is important because markets do not organize everything directly. In many cases, economic activity is carried out inside firms, where decisions about production, hiring, investment, and expansion are made in a coordinated way. Firms therefore sit between the market and the production process. They respond to prices and competition, but they also shape the economy through strategy, scale, and organization.
+
+Industrial organization goes one step further by asking how firms interact within markets. It looks at how industries are structured, how competition works, why some markets are dominated by a few large firms, and how technology, entry barriers, and scale affect economic outcomes. This matters because modern economies are not just collections of buyers and sellers. They are also shaped by the structure of firms and industries, which influences productivity, innovation, pricing, and growth.

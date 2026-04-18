@@ -1,0 +1,7 @@
+## Interest Differentials and Capital Allocation
+
+Interest differentials are differences in interest rates across countries, and they play an important role in directing capital across borders. Investors compare returns available in different currencies and markets, adjusting for risk, expected exchange-rate changes, and liquidity conditions. When one country offers relatively higher returns, capital may flow toward it; when expected returns weaken or risk rises, capital may move elsewhere.
+
+This matters because capital does not simply remain where it is generated. In an open financial system, funds are constantly reallocated across countries, sectors, and asset classes. Monetary tightening in one country may attract capital inflows and strengthen the currency. Easier conditions elsewhere may lead investors to search for higher yields in more risky or peripheral markets. In this way, interest differentials become one of the key forces linking domestic policy to international capital movements.
+
+The significance of this process lies in its broader consequences. Capital allocation across borders affects exchange rates, borrowing conditions, asset prices, and the availability of finance. It also means that a country’s domestic financial environment may be influenced not only by its own policy decisions, but by yield conditions and portfolio choices in the wider world. This is why global finance often works through relative attractiveness, not through absolute conditions alone.

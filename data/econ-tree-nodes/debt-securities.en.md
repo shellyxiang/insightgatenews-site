@@ -1,0 +1,7 @@
+## Debt Securities
+
+Debt securities are financial instruments that represent borrowed money. When an issuer sells a debt security, it is raising funds in exchange for a promise to repay investors according to agreed terms. These terms usually include repayment of principal and, in many cases, regular interest payments. Bonds are the most familiar example of debt securities.
+
+Their importance lies in the fact that they make borrowing more standardized and more scalable. Instead of relying only on a bank loan or a direct private lender, a government or firm can raise funds from a much broader group of investors. This widens access to finance and allows borrowing to take place on a larger and more organized scale.
+
+Debt securities are central to modern finance because they sit at the intersection of funding, risk, and pricing. They allow issuers to finance spending or investment, while giving investors claims that are usually more predictable than equity. At the same time, they are continuously priced according to interest rates, inflation expectations, credit risk, maturity, and liquidity. This is why debt securities are not only borrowing instruments. They are also key objects through which financial markets judge time, safety, and credibility.

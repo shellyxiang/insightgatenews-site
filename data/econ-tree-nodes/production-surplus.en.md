@@ -1,0 +1,7 @@
+## Production and Surplus
+
+Production is the starting point of economic life because no society can exchange, specialize, or trade without first producing goods and services. In early societies, most production was directed toward immediate subsistence: food, shelter, tools, and basic survival. But once production became more stable and productive, some societies were able to generate **surplus** — output beyond what was immediately needed for direct consumption.
+
+This was a major turning point. Surplus made it possible for some people to spend less time producing for themselves and more time performing other tasks. It supported specialization, urban life, administration, trade, and later more complex forms of economic organization. In this sense, surplus was not just “extra output.” It created the room for societies to become more differentiated and more interconnected.
+
+The importance of production and surplus lies in the fact that they make wider economic coordination possible. Without surplus, most people must remain close to self-sufficiency. With surplus, societies can support artisans, merchants, officials, soldiers, and later industrial workers and firms. This is why the growth of production is not only about quantity. It changes the structure of the economy itself.

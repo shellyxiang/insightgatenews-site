@@ -1,0 +1,7 @@
+## Banking System
+
+A banking system is the network of banks and related institutions through which deposits are held, payments are processed, credit is extended, and liquidity is managed across the economy. Individual banks matter, but the system matters even more. Modern finance does not operate through isolated lenders. It works through a connected structure in which banks depend on one another for funding, settlement, and confidence.
+
+Historically, banking developed because growing economies needed more reliable ways to store money, move payments, and expand credit beyond direct personal lending. Earlier credit relations were often local and personal. Banks changed this by creating institutions that could gather funds from many savers, extend loans on a larger scale, and support more regular forms of payment and settlement. In this sense, banking was not simply a convenience. It was a major step in turning scattered credit relations into an organized financial system.
+
+In modern economies, banks do more than accept deposits and make loans. They help transmit monetary policy, manage liquidity, support payment systems, and connect households, firms, governments, and financial markets. Because of this, the banking system sits at the center of the relationship between money, credit, and economic activity. It supports growth, but it can also transmit stress. This is why banking is central not only to finance, but also to financial stability.

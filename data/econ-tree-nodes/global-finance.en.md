@@ -1,0 +1,9 @@
+## Global Finance
+
+Global finance refers to the cross-border movement of capital, credit, financial claims, and risk across the international economy. It extends finance beyond any single national system and connects governments, banks, firms, investors, and markets across currencies and jurisdictions. If domestic finance links savers and borrowers within one country, global finance links them across the world.
+
+This matters because modern economies are not financially closed. Governments borrow from foreign investors, firms raise funds in international markets, banks operate across borders, and asset prices are shaped by global liquidity conditions. Capital can move internationally in search of safety, yield, diversification, or strategic positioning. As a result, financial conditions in one country are often influenced by decisions, shocks, and market sentiment originating elsewhere.
+
+Historically, global finance developed alongside trade, empire, international banking, and monetary standardization. But in the modern era, finance has become far more mobile and far more capable of transmitting pressure across borders. Exchange-rate systems, reserve currencies, global banks, sovereign debt markets, and cross-border investors now form part of a deeply interconnected financial structure. This creates opportunity, but also fragility.
+
+Global finance is therefore one of the defining features of the modern economy and financial system. It widens access to capital, expands the reach of markets, and allows financial claims to move across borders at scale. At the same time, it makes countries more exposed to external shocks, changing funding conditions, and financial contagion. To understand modern finance fully, one must understand not only how domestic systems work, but also how they are embedded in a global financial order.

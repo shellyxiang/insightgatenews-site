@@ -1,0 +1,7 @@
+## Secondary Debt Market
+
+The secondary debt market is where existing debt securities are bought and sold after they have already been issued. No new borrowing takes place at this stage. Instead, investors trade claims among themselves. Even so, this market is extremely important because it gives debt securities liquidity and market prices.
+
+Its importance lies in the fact that investors are often more willing to buy a new bond in the primary market if they know they can later sell it in an active secondary market. This makes the secondary market a crucial support for the primary market, even though it does not directly provide new funding to the issuer. By allowing securities to be traded after issuance, the market makes debt more attractive, more flexible, and more widely held.
+
+In modern finance, the secondary debt market is also where yields and credit conditions become visible in real time. Bond prices move in response to interest rates, inflation expectations, liquidity conditions, and perceptions of credit risk. This means the secondary debt market is not just a place for trading. It is one of the main channels through which financial markets evaluate governments, firms, and the broader macroeconomic environment.

@@ -1,0 +1,7 @@
+## External Funding Conditions
+
+External funding conditions refer to the terms on which a country, its banks, and its firms can obtain financing from abroad. These conditions depend not only on domestic fundamentals, but also on global interest rates, risk appetite, reserve-currency liquidity, market sentiment, and the willingness of international investors to provide funds. In this sense, external funding conditions are one of the key channels through which global financial cycles enter national economies.
+
+This matters because many economies rely, to varying degrees, on foreign financing. Governments may issue debt to international investors. Banks may borrow in foreign currency or rely on global wholesale funding. Firms may access international bond markets or cross-border loans. When external funding is abundant and cheap, borrowing may expand and financial conditions may appear supportive. When global conditions tighten, refinancing becomes harder and more expensive.
+
+In modern financial systems, external funding conditions can change quickly even when domestic economic conditions have not shifted much. A rise in global risk aversion, a tightening by major central banks, or stress in international banking can all make financing harder to obtain. This is why countries with open financial systems are often exposed not only to their own policy choices, but to global funding environments over which they have limited control.

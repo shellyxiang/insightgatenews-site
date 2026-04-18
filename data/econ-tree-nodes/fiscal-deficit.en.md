@@ -1,0 +1,7 @@
+## Fiscal Deficit
+
+A fiscal deficit occurs when government spending exceeds government revenue over a given period. In other words, the state is spending more than it is collecting in taxes and other income. This does not necessarily mean that the state is insolvent or irresponsible. It means that, for that period, it must finance the gap through borrowing, asset sales, money creation, or some combination of these.
+
+The historical and economic significance of a fiscal deficit depends on context. In some cases, deficits reflect war, crisis, recession, or large investment programs. In other cases, they may reflect structural fiscal weakness, weak revenue systems, or persistent political pressures. For this reason, a fiscal deficit is not simply a moral or accounting problem. It is a fiscal condition that must be interpreted in relation to growth, interest rates, debt structure, and the state’s broader financing capacity.
+
+In modern economies, fiscal deficits are important because they connect government budgets to financial markets and macroeconomic policy. Deficits can stabilize demand during downturns, fund public investment, or sustain social protection. But persistent deficits may also raise questions about debt sustainability, inflation financing, and sovereign credibility. This is why deficits are central not only to budgeting, but also to the wider interaction between the state, financial markets, and the economy.

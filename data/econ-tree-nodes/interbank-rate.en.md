@@ -1,0 +1,7 @@
+## Interbank Rate
+
+The interbank rate is the interest rate at which banks lend to and borrow from one another in the interbank market. It is one of the most important short-term prices in the financial system because it reflects both liquidity conditions and the perceived risk of lending within the banking network.
+
+In normal times, the interbank rate tends to move closely with the broader short-term monetary conditions shaped by the central bank. But it is not simply a policy number. It is also a market price. It can rise when liquidity becomes scarce, when banks become more cautious about each other’s solvency, or when stress increases in funding markets. In this way, the interbank rate sits at the intersection of policy, liquidity, and confidence.
+
+Its significance goes beyond the interbank market itself. Because banks rely on short-term funding conditions when managing their balance sheets, the interbank rate influences broader funding costs and helps shape how monetary policy is transmitted. When interbank rates move sharply away from policy intentions, it often signals that the banking system is under strain. For this reason, the interbank rate is one of the key indicators of how smoothly the financial system is functioning.

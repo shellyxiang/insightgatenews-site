@@ -1,0 +1,7 @@
+## Credit Risk
+
+Credit risk is the risk that a borrower may fail to make promised payments in full and on time. It is one of the most fundamental risks in finance because so many financial relationships depend on future repayment. Whenever a government issues debt, a firm borrows, a household takes a loan, or a bank extends credit, there is some possibility that the borrower may not meet the obligation as expected.
+
+This type of risk is especially important in debt markets, banking, and sovereign finance. Investors who buy bonds, banks that make loans, and institutions that hold debt securities must all evaluate the likelihood of repayment. If a borrower appears more risky, lenders will usually demand higher yields or stricter terms as compensation. In this way, credit risk becomes directly embedded in pricing.
+
+Credit risk also has a broader role in modern financial systems because it affects confidence and market access. When markets begin to doubt a borrower’s ability or willingness to repay, the cost of funding can rise sharply. This can happen to firms, households, banks, or governments. As a result, credit risk is not just an individual financial problem. It can become a source of wider stress if many institutions are exposed to the same doubts at the same time.

@@ -1,0 +1,7 @@
+## Recovery and Repair
+
+The end of panic does not mean the financial system has recovered. Recovery and repair refer to the longer process through which balance sheets are rebuilt, confidence returns, credit channels are restored, and the wider economy adjusts after a crisis. This stage can be slow and uneven because the system is often trying to reduce debt, absorb losses, and restore stability at the same time.
+
+This matters because post-crisis weakness is often driven by more than immediate financial panic. Banks may remain cautious, borrowers may still be overleveraged, asset prices may recover only gradually, and investors may continue to demand higher risk premiums. Governments may also face the fiscal consequences of crisis interventions, weaker growth, and increased debt burdens. For these reasons, recovery can be much slower than the initial collapse.
+
+In modern macro-finance, recovery and repair are essential to understanding why crises leave long-lasting effects. A crisis does not simply interrupt the system; it can reshape how credit is supplied, how risks are priced, and how policy is conducted for years afterward. This is why recovery is not only about returning to previous conditions. It is also about rebuilding the foundations on which financial stability depends.

@@ -1,0 +1,7 @@
+## Funding Cost
+
+Funding cost is the cost a bank pays to obtain the resources it uses to finance its assets. These resources can come from deposits, interbank borrowing, wholesale funding, bond issuance, or other liabilities. Since banks earn income partly by lending and investing, their profitability and lending behavior depend heavily on how expensive their funding is.
+
+This matters because banks do not lend in a vacuum. They lend through a balance-sheet structure that has costs on the liability side. If funding becomes more expensive, banks may raise lending rates, tighten credit standards, reduce risk-taking, or change the composition of their assets. In this way, funding cost is one of the main links between money-market conditions and the real economy.
+
+In modern finance, funding costs are influenced by many factors: policy rates, interbank conditions, market confidence, perceived bank risk, and competition for deposits. This makes funding cost a crucial transmission channel. It helps explain why changes in monetary conditions do not affect the economy directly, but instead pass through financial institutions whose own costs and constraints shape how much credit they are willing to provide.

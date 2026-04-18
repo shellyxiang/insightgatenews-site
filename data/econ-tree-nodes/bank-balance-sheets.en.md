@@ -1,0 +1,7 @@
+## Bank Balance Sheets
+
+A bank balance sheet shows how a bank is structured financially: what it owns, what it owes, and the capital buffer that stands between them. On the asset side, banks typically hold loans, securities, reserves, and other claims. On the liability side, they fund themselves through deposits, interbank borrowing, bonds, and other sources of finance. Equity or capital represents the residual claim after liabilities are subtracted from assets.
+
+This balance-sheet structure is essential to understanding banking because nearly every major banking issue flows through it. Liquidity pressure, funding cost, lending capacity, interest-rate sensitivity, and solvency risk are all balance-sheet questions. A bank’s decisions are never just about making loans in isolation. They are also about how those loans are funded, how liquid the bank remains, and how much capital it has to absorb losses.
+
+In modern financial systems, bank balance sheets are central to both growth and fragility. They allow banks to transform short-term funding into longer-term credit, which supports investment and economic activity. But they also make banks vulnerable to runs, market stress, and asset deterioration. This is why regulators, investors, and central banks pay such close attention to capital ratios, asset quality, funding structures, and liquidity bufafers. To understand the banking system, one must understand the balance sheet that holds it together.

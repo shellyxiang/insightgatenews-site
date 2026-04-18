@@ -1,0 +1,7 @@
+## Taxation
+
+Taxation is the main way states obtain regular resources from society. It allows governments to finance administration, public goods, infrastructure, social spending, defense, and many other forms of collective activity. Without taxation, a modern state would struggle to operate in a stable and sustained way.
+
+Historically, taxation marked a major shift from irregular extraction toward organized fiscal systems. Earlier political authorities often depended on tribute, land revenues, customs, or ad hoc demands. More developed states created tax systems that were broader, more predictable, and more deeply integrated into economic life. This made government finance more stable, but it also required administrative capacity, legal authority, and some degree of political legitimacy.
+
+Taxation matters not only because it raises money, but because it helps define the relationship between the state and the economy. It shapes incentives, affects income distribution, and determines how much public action can be financed without excessive borrowing. In modern finance, taxation also matters because credible revenue systems support sovereign borrowing and reduce fiscal fragility. A state that can tax effectively is usually in a stronger position to spend, borrow, and respond to shocks than one that cannot.

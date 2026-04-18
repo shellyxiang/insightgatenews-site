@@ -1,0 +1,5 @@
+## Coinage
+
+Coinage marks a major development in monetary history because it standardizes money into recognized units with stated authority behind them. Instead of relying only on the weight or quality of raw metal, societies began using coins that were stamped, measured, and backed by political power. This made transactions more efficient because people no longer had to test value from scratch in every exchange.
+
+The significance of coinage goes beyond convenience. It linked money more closely to authority, law, and fiscal power. Once states or rulers controlled minting, money became part of a wider institutional order involving taxation, military expenditure, public credibility, and political rule. Coinage therefore represents both a monetary innovation and a shift in the relationship between economic exchange and public authority.

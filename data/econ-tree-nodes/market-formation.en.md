@@ -1,0 +1,5 @@
+# Market Formation
+
+Market formation refers to the process by which exchange becomes more regular, wider in scope, and less dependent on purely personal relationships. A market is not simply a place where goods are traded. It is a system in which products can be compared, prices can emerge, and exchange becomes more predictable and repeatable. This requires some degree of trust, information, social rules, and often institutional support.
+
+As markets form, economic coordination becomes less local and more impersonal. Producers increasingly respond not only to immediate needs, but also to expected demand and relative prices. This marks an important shift in economic order: production and exchange begin to operate within a wider framework of comparison, competition, and organized circulation, rather than only through household custom or direct personal ties.

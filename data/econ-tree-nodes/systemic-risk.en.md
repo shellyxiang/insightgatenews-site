@@ -1,0 +1,7 @@
+## Systemic Risk
+
+Systemic risk is the risk that problems in one part of the financial system will spread widely enough to threaten the stability of the system as a whole. This is different from the risk of loss on a single asset or at a single institution. Systemic risk matters when interconnections, confidence effects, and common exposures turn local trouble into broad financial disruption.
+
+This is especially important in modern finance because financial systems are deeply interconnected. Banks lend to each other, hold similar assets, depend on common funding markets, and interact with governments, households, and global investors. Securities are widely held across institutions, and asset prices often move together under stress. This means that weakness in one area can quickly transmit to others, not only through direct losses, but also through panic, liquidity shortages, margin calls, and collapsing confidence.
+
+Historically, financial crises have shown that the greatest danger in finance often comes not from isolated failure, but from contagion and amplification. Systemic risk therefore plays a central role in understanding central banking, prudential regulation, liquidity support, and financial stability policy. In modern financial systems, it is one of the clearest reminders that markets do not merely price individual assets. They also connect institutions and expectations in ways that can make the entire system more vulnerable under stress.

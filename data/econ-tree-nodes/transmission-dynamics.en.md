@@ -1,0 +1,9 @@
+## Transmission and Dynamics
+
+A modern economy and financial system cannot be understood only by listing its institutions, markets, and instruments. It must also be understood through the ways in which changes in one part of the system are transmitted to others over time. This is the role of transmission and dynamics. It explains how policy decisions, market conditions, expectations, and financial stress move through banks, asset prices, exchange rates, public finance, and the wider economy.
+
+This matters because financial and macroeconomic systems are not static. Interest rates influence funding costs, funding costs affect lending, lending shapes spending and investment, and those changes feed back into inflation, asset prices, and confidence. In the same way, changes in fiscal policy, capital flows, or global market sentiment can alter domestic financial conditions and reshape the entire economic environment. Modern finance is therefore not just a set of separate components. It is a network of interacting mechanisms.
+
+The term “transmission” refers to the channels through which changes spread. The term “dynamics” refers to the fact that these effects evolve over time, often with delays, feedback loops, and amplification. A policy change may work gradually; a credit expansion may reinforce itself; a loss of confidence may trigger wider stress through several channels at once. This is why understanding the structure of the system is not enough. One must also understand how the system moves.
+
+In this sense, transmission and dynamics form the connective layer of the modern economy and financial system. They show how monetary policy reaches the economy, how inflation and expectations interact, how credit booms and contractions develop, how exchange rates and capital flows transmit external pressure, how fiscal and monetary forces interact, and how local problems can become system-wide crises.

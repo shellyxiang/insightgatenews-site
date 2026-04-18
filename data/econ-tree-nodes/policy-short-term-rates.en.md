@@ -1,0 +1,7 @@
+## Policy Rate and Short-Term Rates
+
+The policy rate is the central bank’s main operating signal for monetary policy. It is the rate that expresses whether policy is becoming tighter or looser. But the policy rate does not directly determine every other rate in the economy. Its first and most immediate influence is usually on short-term rates in money markets, where banks and financial institutions fund themselves and manage liquidity.
+
+This distinction is important because the policy rate is a policy instrument, while short-term market rates are prices formed within the financial system. When the central bank changes its policy stance, short-term rates such as money-market and interbank rates tend to adjust in response. These rates are closer to the daily funding conditions of the banking system and therefore act as the first stage through which policy enters financial markets.
+
+In modern monetary systems, this relationship between the policy rate and short-term rates is one of the key foundations of monetary control. If short-term market rates do not move in line with policy intentions, then transmission becomes weaker or distorted. This is why central banks pay close attention not only to the announced policy rate, but also to how that rate is reflected in actual market conditions.

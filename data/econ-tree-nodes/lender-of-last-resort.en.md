@@ -1,0 +1,7 @@
+## Lender of Last Resort
+
+A lender of last resort is the role a central bank plays when the financial system comes under severe stress and private sources of liquidity are no longer sufficient. In such moments, banks or financial institutions may still hold valuable assets, but they may be unable to obtain short-term funding because confidence has collapsed or markets have frozen. The central bank steps in as the institution that can provide emergency liquidity when no one else is willing or able to do so.
+
+This role is historically important because modern banking systems are inherently vulnerable to liquidity shocks. Banks transform short-term liabilities into longer-term assets, which makes them useful but also fragile. If too many institutions suddenly need cash at the same time, even fundamentally solvent banks can come under extreme pressure. Without a lender of last resort, such stress can trigger bank runs, payment breakdowns, and wider financial panic.
+
+In modern financial systems, the lender-of-last-resort function is one of the clearest ways in which central banks support systemic stability. It does not mean central banks eliminate risk or rescue every institution. Rather, it means they act to prevent temporary liquidity crises from becoming full-scale collapses of the banking and payment system. In this sense, central banking is not only about guiding normal monetary conditions. It is also about preserving the continuity of the financial system in times of fear and disorder.

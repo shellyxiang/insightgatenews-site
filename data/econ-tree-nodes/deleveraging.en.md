@@ -1,0 +1,7 @@
+## Deleveraging
+
+Deleveraging is the process through which borrowers reduce debt, shrink balance sheets, or try to restore financial resilience after a period of excessive leverage. It often begins when asset prices fall, funding conditions tighten, confidence weakens, or losses become more visible. In such conditions, borrowers may try to repay debt, sell assets, cut spending, or reduce new borrowing.
+
+This process is important because it can be individually rational but collectively painful. A firm may cut borrowing to protect itself. A household may reduce spending to repair its balance sheet. A bank may tighten lending to preserve capital. But when many actors do this at the same time, the effect can be contractionary for the whole economy. Spending weakens, asset prices may fall further, and the process can reinforce itself.
+
+In modern financial systems, deleveraging is often one of the most difficult phases of the credit cycle. It explains why the end of a boom can produce a prolonged period of weak demand, tighter financial conditions, and slower growth. Once balance-sheet repair begins, recovery may be slow because the system is trying to reduce debt at the same time that it needs confidence and spending to stabilize.

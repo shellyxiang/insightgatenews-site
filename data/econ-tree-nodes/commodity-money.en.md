@@ -1,0 +1,5 @@
+## Commodity Money
+
+Commodity money refers to goods that are used as money while also having value outside their monetary role. Examples in different societies have included salt, grain, shells, cattle, and precious metals. These goods could serve as media of exchange because people already valued them, recognized them, and were willing to accept them in transactions.
+
+Its historical importance lies in the transition it represents. Commodity money helped move economic life beyond purely direct exchange by making transactions easier and more comparable. At the same time, it still carried the limitations of the underlying commodity. It could be bulky, difficult to divide, inconsistent in quality, or costly to transport. This is why commodity money was an important step in monetary development, but not the final one. It made exchange more workable, yet also created pressures for more standardized and durable forms of money.

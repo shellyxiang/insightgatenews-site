@@ -1,0 +1,7 @@
+## From Personal Credit to Institutional Credit
+
+In early forms of economic life, credit was often personal. It depended on direct knowledge, local trust, family ties, or established relationships between merchants, landlords, and borrowers. Such credit could work well within small or familiar communities, but it was difficult to scale. It relied heavily on reputation, memory, and social pressure.
+
+Over time, however, credit became more institutionalized. Records improved, contracts became more formal, laws became more important, and specialized institutions began to mediate lending and borrowing. This shift allowed credit to move beyond immediate personal relationships. A loan no longer had to depend only on one lender directly trusting one borrower. It could increasingly depend on recognized instruments, enforceable claims, and institutional structures.
+
+This transition is one of the key steps in the making of modern finance. It helps explain how economies moved from local and personal credit arrangements toward banking systems, securities markets, and large-scale financial intermediation. Modern finance depends on this transformation. Without it, credit remains fragmented and limited. With it, financial systems gain the capacity to support much larger and more complex forms of economic organization.

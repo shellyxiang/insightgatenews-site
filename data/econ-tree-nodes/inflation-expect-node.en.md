@@ -1,0 +1,7 @@
+## Inflation Expectations
+
+Inflation expectations are beliefs about how prices are likely to behave in the future. These expectations matter because people do not make decisions only on the basis of current conditions. Workers bargain over wages partly according to what they expect future living costs to be. Firms set prices partly according to what they think their future costs will be. Investors evaluate nominal returns partly according to how much inflation they expect to erode those returns over time.
+
+This means expectations are not passive forecasts. They can shape real economic behavior. If households and firms believe inflation will remain low and stable, they may act in ways that help preserve that stability. If they begin to expect persistent inflation, they may demand higher wages, raise prices more aggressively, or shift financial decisions in ways that reinforce inflationary pressure. In this sense, expectations can become part of the inflation process itself.
+
+Modern central banking places great importance on inflation expectations for this reason. It is often easier to control inflation when expectations remain stable than when they become unsettled. Once expectations move sharply, policymakers may need stronger or more prolonged actions to restore confidence. This is why inflation expectations are one of the most important links between current policy, future pricing behavior, and long-term economic stability.

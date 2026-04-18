@@ -1,0 +1,7 @@
+## Crisis Management and Backstops
+
+When a financial crisis intensifies, ordinary market mechanisms may no longer be enough to contain the damage. Crisis management refers to the set of actions used to stabilize the system once serious stress has emerged. Backstops are the institutions and policy tools that stand behind the system when private funding, confidence, or liquidity begin to fail.
+
+These backstops can take many forms. Central banks may act as lenders of last resort, supplying liquidity to banks and markets under stress. Governments may provide guarantees, recapitalize institutions, protect depositors, or support key parts of the financial system through fiscal measures. Supervisors and regulators may intervene to restructure or resolve weak institutions. These actions are not designed to eliminate all losses, but to prevent dysfunction from spreading so widely that the financial system itself stops operating.
+
+The importance of crisis management lies in the fact that modern finance depends heavily on confidence. Once that confidence collapses, even fundamentally useful institutions may fail to function. Backstops help preserve continuity long enough for panic to subside and adjustment to begin. At the same time, they raise difficult questions about moral hazard, public cost, and which institutions should be supported. This is why crisis management is not merely a technical task. It is one of the most politically and economically consequential parts of financial governance.

@@ -1,0 +1,7 @@
+## Secondary Equity Market
+
+The secondary equity market is where existing shares are traded among investors after they have been issued. Like the secondary debt market, it does not directly provide new funds to the original issuer. But it is still essential to the functioning of modern finance.
+
+Its importance lies in liquidity, price discovery, and investor participation. Investors are much more willing to buy shares in the first place if they know those shares can later be sold in a relatively liquid market. This helps support the primary market indirectly. At the same time, the secondary market produces continuously updated share prices, which reflect changing expectations about profits, growth, interest rates, risk, and broader economic conditions.
+
+In modern economies, the secondary equity market matters far beyond stock trading itself. Share prices influence the cost of capital, shape business valuation, affect investor wealth, and sometimes influence corporate decisions. They also play a role in confidence and macroeconomic transmission, since large market movements can affect spending, investment, and financial sentiment. In this sense, the secondary equity market is not merely a place where investors exchange shares. It is one of the main arenas in which the market values the future of firms and the economy.

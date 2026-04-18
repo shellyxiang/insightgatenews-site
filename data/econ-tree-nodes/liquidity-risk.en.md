@@ -1,0 +1,7 @@
+## Liquidity Risk
+
+Liquidity risk is the risk that an asset cannot be sold quickly enough, or sold at a reasonable price, when funds are needed. In other words, an asset may still have value, but it may be difficult to convert that value into usable cash without incurring a significant loss. This is especially important in finance because investors, banks, and other institutions often depend on being able to adjust positions, meet obligations, or raise cash at short notice.
+
+This type of risk matters because market value and practical usability are not always the same. An asset may appear valuable on paper, but if there are too few buyers, or if markets become stressed, it may only be sellable at a steep discount. In normal conditions, many securities seem liquid. In stressed conditions, liquidity can disappear quickly. This is why liquidity risk is often underestimated until markets come under pressure.
+
+In modern finance, liquidity risk plays a major role in bond markets, banking, and broader financial stability. It affects how investors price assets, how banks manage their balance sheets, and how shocks spread through the system. Assets that are harder to trade often need to offer higher expected returns to attract investors. At the same time, sudden losses of liquidity can amplify stress far beyond the assets where the problem first appears. In this way, liquidity risk connects market structure to financial fragility.

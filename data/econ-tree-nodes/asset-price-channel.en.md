@@ -1,0 +1,7 @@
+## Asset Price Channel
+
+The asset price channel refers to the way monetary policy affects the economy by changing the prices of financial and real assets. When interest rates move, discount rates change, and this can alter the present value of future cash flows. Bond prices, equity valuations, and sometimes property prices may all respond. These changes affect investor wealth, the cost of capital, and broader financial conditions.
+
+This channel matters because modern economies are influenced not only by bank lending, but also by financial markets. If lower interest rates raise the prices of bonds and stocks, borrowing conditions may improve, firms may find it cheaper to raise capital, and households may feel wealthier and more willing to spend. If asset prices fall sharply, the opposite may happen: financial conditions tighten, confidence weakens, and economic activity may slow.
+
+The asset price channel is especially important in market-based financial systems, but it also matters in bank-centered systems because financial valuations influence collateral values, business confidence, and overall risk appetite. In this sense, monetary policy affects the economy not only through direct borrowing costs, but also through the revaluation of assets that shape wealth, financing, and expectations.

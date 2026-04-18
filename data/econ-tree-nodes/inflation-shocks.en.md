@@ -1,0 +1,7 @@
+## Inflation Shocks and Persistence
+
+Inflation often begins with shocks, but not all shocks lead to lasting inflation. Some price increases are temporary, caused by events such as energy disruptions, supply bottlenecks, tax changes, or exchange-rate movements. These shocks can raise prices quickly, but their long-term significance depends on whether they fade or become embedded in expectations, wages, and broader pricing behavior.
+
+Persistence is what makes inflation especially difficult. A transitory shock may pass with limited lasting damage if expectations remain stable and second-round effects are weak. But if households, firms, and investors begin to treat the shock as the start of a new inflation environment, then price increases may continue even after the original shock weakens. In this way, the economy can shift from experiencing an inflation shock to living with persistent inflation.
+
+This distinction is central to modern policy and financial markets. Policymakers must judge whether inflationary pressure is likely to fade or endure, and markets must do the same when pricing bonds, currencies, and other assets. If inflation is believed to be temporary, policy responses may be more cautious. If it is believed to be persistent, stronger action may be expected. This is why inflation dynamics depend not only on what caused prices to rise, but on whether that rise becomes self-sustaining over time.

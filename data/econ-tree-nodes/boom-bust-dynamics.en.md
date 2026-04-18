@@ -1,0 +1,7 @@
+## Boom-Bust Dynamics
+
+Boom-bust dynamics describe the broader pattern through which credit-fueled expansions can turn into financial reversals and economic downturns. In the boom phase, optimism, easier credit, rising leverage, and stronger asset prices often reinforce one another. Economic conditions may appear strong, defaults may remain low, and both lenders and borrowers may come to believe that risks are under control.
+
+But these conditions can create hidden fragility. If credit grows too quickly, leverage becomes too high, or asset prices become disconnected from fundamentals, the system may be vulnerable to a reversal. That reversal can begin with higher interest rates, weaker profits, lower asset prices, tighter funding conditions, or a loss of confidence. Once the process turns, the mechanisms that supported the boom can begin to amplify the downturn instead.
+
+This is why boom-bust dynamics are central to modern macro-financial analysis. They show that financial systems do not only allocate resources efficiently in a smooth and continuous way. They can also move through self-reinforcing cycles of expansion and contraction. Understanding these dynamics is essential for understanding why growth can become fragile, why crises often follow periods of optimism, and why financial stability is about more than preventing isolated failures.

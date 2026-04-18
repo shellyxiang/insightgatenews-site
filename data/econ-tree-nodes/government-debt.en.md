@@ -1,0 +1,7 @@
+## Government Debt
+
+Government debt is the stock of accumulated obligations that results when a state borrows to finance spending beyond its current revenues. If a fiscal deficit is a flow over a period of time, government debt is the outstanding stock that remains to be serviced, rolled over, or repaid. It represents claims on the future resources of the state.
+
+Historically, government debt became a defining feature of modern fiscal systems once states developed the ability to borrow on a sustained basis rather than relying only on taxes or one-off extractions. Borrowing allowed governments to finance wars, infrastructure, administration, and crisis responses without raising all necessary resources immediately. In this sense, government debt gave states greater financial flexibility, but it also tied them more closely to creditors, markets, and future fiscal obligations.
+
+In modern financial systems, government debt plays several roles at once. It is a fiscal tool, a macroeconomic instrument, and a major category of financial asset. Government bonds are often treated as benchmark instruments in financial markets, helping to shape yield curves, collateral systems, and broader pricing conditions. At the same time, too much debt or poorly managed debt can increase refinancing pressure, raise sovereign borrowing costs, and weaken policy flexibility. This is why government debt is both a source of capacity and a potential source of constraint.

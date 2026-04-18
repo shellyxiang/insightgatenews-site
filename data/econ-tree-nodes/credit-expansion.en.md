@@ -1,0 +1,7 @@
+## Credit Expansion
+
+Credit expansion refers to the process by which borrowing and lending become more widespread, more regular, and more deeply embedded in economic life. In a simple economy, credit may exist only in limited personal relationships. In a more developed economy, credit becomes a central mechanism through which households, firms, merchants, and governments obtain resources before they have fully earned or accumulated them.
+
+This expansion is historically important because it increases the scale and flexibility of economic activity. Credit can support trade before goods are sold, production before profits are realized, and investment before savings are fully accumulated. It allows resources to be moved forward in time, making the economy more dynamic and more capable of growth.
+
+At the same time, credit expansion also creates fragility. As more activity depends on borrowing and repayment, the system becomes more exposed to default, liquidity stress, and loss of confidence. This is why credit expansion has always had a dual character. It is a source of economic possibility, but also a source of financial vulnerability. In modern economies, the expansion of credit is one of the main ways in which finance both supports growth and amplifies instability.

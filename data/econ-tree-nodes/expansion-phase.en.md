@@ -1,0 +1,7 @@
+## Credit Expansion Phase
+
+Credit expansion is the phase in which borrowing and lending become more widespread, more regular, and more deeply embedded in economic activity. Banks may lend more, firms may borrow more for investment, households may take on more debt for consumption or housing, and investors may become more willing to finance risk. This often happens when funding is plentiful, confidence is high, and default risk appears manageable.
+
+This process can be highly productive. Credit expansion allows spending and investment to move ahead of current income, helping firms grow, households smooth consumption, and governments finance projects or deficits. In this sense, credit expansion is one of the main ways finance supports economic development.
+
+At the same time, expansion can become self-reinforcing. When credit is easy to obtain, asset prices may rise, collateral values may improve, and borrowers may appear stronger than they really are. This can encourage even more lending and borrowing. For this reason, credit expansion is not only a sign of confidence. It can also be the beginning of vulnerability if risk is underestimated and debt grows faster than the underlying capacity to repay.

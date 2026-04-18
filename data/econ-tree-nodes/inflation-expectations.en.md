@@ -1,0 +1,7 @@
+## Inflation and Expectations
+
+Inflation is not only a matter of current prices rising. In modern macro-financial systems, it is also deeply shaped by expectations about the future. Households, firms, investors, and workers all make decisions based not only on present conditions, but on what they believe inflation will be in the future. These expectations influence wage demands, price-setting behavior, contract design, saving choices, and investment plans.
+
+This is why expectations are central to economic dynamics. If people expect inflation to remain moderate and stable, then price and wage behavior may remain relatively anchored. If they expect inflation to rise persistently, they may behave in ways that help push inflation higher. In this sense, expectations can reinforce stability or amplify instability. They are not just passive beliefs; they can become active forces in the economy.
+
+For central banks, this makes inflation control partly a problem of credibility. Policy does not only affect actual interest rates or liquidity conditions. It also shapes beliefs about future monetary conditions and the future purchasing power of money. This is why modern inflation management is tied not only to current policy actions, but also to communication, trust, and the perceived commitment of the monetary authority. In dynamic terms, inflation is therefore both an outcome and a process influenced by forward-looking behavior.

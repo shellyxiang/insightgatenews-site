@@ -1,0 +1,7 @@
+## Exchange Rate Pass-Through
+
+Exchange rate pass-through refers to the process by which changes in the value of a currency affect domestic prices. When a currency depreciates, imported goods and imported inputs usually become more expensive in local currency terms. When a currency appreciates, the opposite may happen. The extent to which these cost changes are transmitted into consumer prices, producer prices, and broader inflation depends on market structure, pricing behavior, and policy credibility.
+
+This matters because exchange rates are not only about external trade or investor sentiment. They also affect domestic inflation dynamics. If imported fuel, food, machinery, or intermediate goods become more expensive after a currency depreciation, firms may pass some of those costs on to consumers. In this way, exchange-rate movements can influence inflation even without a large change in domestic demand.
+
+The degree of pass-through is not always the same. In some economies, exchange-rate changes feed into prices quickly and visibly. In others, firms absorb more of the shock in margins, competition is stronger, or expectations remain stable enough to limit the broader effect. This is why exchange-rate pass-through is such an important part of transmission. It links external financial conditions directly to domestic prices and monetary policy challenges.

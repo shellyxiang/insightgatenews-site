@@ -1,0 +1,7 @@
+## Risk and Return
+
+Risk and return are closely linked because investors usually require compensation for bearing uncertainty. In finance, a higher expected return does not come for free. It is usually associated with greater risk, meaning a greater chance that outcomes may differ from what is expected or that losses may occur. This does not mean that every risky asset will always deliver a higher return, but it does mean that investors generally demand some form of reward for taking on more uncertainty.
+
+This relationship matters because it helps explain why financial markets offer different returns across different assets. A safe government bond, a speculative corporate bond, and a growth stock do not promise the same kind of future. They differ in the likelihood, timing, and stability of the cash flows they may generate. As a result, they are priced differently. Investors compare not only how much they may earn, but also what kinds of risks they must bear in order to earn it.
+
+Historically, this idea became central as financial systems deepened and markets widened. Once investors could choose among many different assets, the problem was no longer simply whether to save or lend. It became a question of which risks were worth taking and what return was sufficient to justify them. In this sense, the relation between risk and return is one of the basic organizing principles of modern finance.

@@ -1,0 +1,7 @@
+## Cross-Border Capital Flows
+
+Cross-border capital flows are movements of money and financial investment from one country to another. These flows can take many forms, including purchases of bonds and stocks, cross-border bank lending, direct investment, and other financial claims. They are one of the basic channels through which global finance links national economies.
+
+Their importance lies in the fact that capital does not always remain where it is generated. Investors may move funds across borders in search of higher returns, greater safety, diversification, or strategic opportunities. Governments and firms may seek financing from foreign investors when domestic saving is not enough or when global markets offer better terms. This means that financial conditions in a country are often shaped not only by domestic factors, but also by the willingness of global capital to enter or leave.
+
+In modern finance, cross-border capital flows can support development, deepen markets, and lower financing costs. But they can also create vulnerability. Large inflows may fuel asset booms, credit expansion, or exchange-rate pressures, while sudden outflows can destabilize markets, weaken currencies, and tighten financing conditions. This is why capital flows are not simply signs of openness. They are also key sources of both opportunity and risk in the global financial system.

@@ -1,0 +1,7 @@
+## Central Banking
+
+Central banking refers to the institutional core of the modern monetary system. A central bank does not simply issue money or announce policy decisions. It stands at the center of monetary authority, banking-system liquidity, and financial stability. In modern economies, central banks help shape short-term funding conditions, support payment and settlement, influence broader financial conditions, and act as key institutions in times of crisis.
+
+Historically, central banking emerged because growing economies and financial systems could no longer rely only on scattered banks, metallic money, or local credit arrangements. As banking systems expanded and payment networks became more interconnected, economies needed an institution capable of managing reserves, stabilizing liquidity, and providing a more coherent monetary framework. Over time, central banks took on broader responsibilities, including policy setting, market operations, inflation management, and crisis response.
+
+This is why central banking is not only about interest rates. It is about the architecture through which money, banks, policy, and confidence are connected. A modern central bank influences the economy indirectly, through financial conditions and institutional credibility, but its role is fundamental. It helps determine how monetary order is maintained in normal times and how financial stability is defended in periods of stress.

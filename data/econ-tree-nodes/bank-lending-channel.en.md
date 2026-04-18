@@ -1,0 +1,7 @@
+## Bank Lending Channel
+
+The bank lending channel is the process through which monetary policy affects the supply and cost of bank credit. Since banks are major intermediaries between savers and borrowers, changes in policy and funding conditions often influence the economy through their effect on bank lending behavior. When policy becomes tighter, banks may face higher funding costs, stricter liquidity conditions, or weaker balance-sheet positions, all of which can reduce their willingness or ability to extend credit. When policy becomes looser, the opposite may occur.
+
+This channel matters because many households and firms do not borrow directly from capital markets. They borrow from banks. As a result, the effect of monetary policy depends partly on whether banks transmit tighter or looser financial conditions into changes in actual lending rates, loan availability, and credit standards. A policy move that changes money-market conditions but leaves bank lending behavior largely unchanged may have only limited effects on the broader economy.
+
+In modern financial systems, the bank lending channel is especially important when banking remains central to business finance, household borrowing, and liquidity creation. It also explains why monetary policy can work differently in different environments. A healthy and well-capitalized banking system may transmit policy changes more effectively, while a weak or stressed banking system may interrupt the process. In this sense, monetary policy does not bypass banks. It often works through them.

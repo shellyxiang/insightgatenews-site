@@ -1,0 +1,7 @@
+## Monetary Transmission
+
+Monetary transmission is the process through which central-bank actions influence the wider economy. This process is indirect. A central bank does not control spending, borrowing, investment, or inflation by command. Instead, it changes the financial environment in which banks, firms, households, and investors make decisions. Those changes then work their way through the economy over time.
+
+In a banking-centered system, this transmission often begins with policy rates and liquidity conditions. These affect short-term market rates, bank funding costs, lending conditions, and the willingness of financial institutions to extend credit. From there, households and firms may respond by adjusting borrowing, spending, hiring, or investment. Asset prices and exchange rates may also react, further shaping broader economic conditions.
+
+The importance of monetary transmission lies in the fact that central banking only works if financial signals are able to move through institutions and markets. When the banking system is healthy and market functioning is stable, central-bank decisions may transmit more effectively. When the system is impaired by weak balance sheets, poor confidence, or financial stress, policy can lose traction. This is why central banking is always tied not only to official decisions, but also to the condition of the financial system through which those decisions must pass.

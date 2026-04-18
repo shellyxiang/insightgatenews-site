@@ -1,0 +1,7 @@
+## Wage-Price Dynamics
+
+Wage-price dynamics refer to the interaction between wages and prices over time. In a period of rising prices, workers may demand higher wages to protect their purchasing power. Firms facing higher wage costs may then raise prices further in order to preserve profitability. This process can create a feedback loop in which wages and prices begin to push each other upward.
+
+This dynamic is important because it helps explain how inflation can become persistent. A one-time shock, such as a rise in energy prices or a currency depreciation, does not automatically produce long-lasting inflation. But if that shock begins to influence wage bargaining and pricing behavior more broadly, it can spread through the economy and become harder to reverse. Inflation then becomes not only a matter of external shocks, but also a matter of internal economic behavior.
+
+In modern economies, wage-price dynamics do not always take the same form, and they are shaped by labor-market conditions, bargaining institutions, productivity trends, and policy credibility. Still, the core logic remains important: if workers and firms begin adapting systematically to expected inflation, then inflation may become more deeply embedded in the system. This is one reason why policymakers pay attention not only to headline prices, but also to wage growth and broader behavioral responses.

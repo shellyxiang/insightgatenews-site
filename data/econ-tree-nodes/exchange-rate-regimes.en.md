@@ -1,0 +1,7 @@
+## Exchange Rate Regimes
+
+An exchange rate regime is the system a country uses to manage the value of its currency relative to other currencies. Some countries allow their exchange rates to float more freely in the market. Others fix their currencies to another currency or manage them within a controlled range. These choices shape how domestic monetary and financial conditions interact with the global economy.
+
+This matters because exchange rates influence trade competitiveness, capital flows, inflation pressures, and monetary policy autonomy. A fixed exchange rate may provide stability and predictability for trade and investment, but it can also reduce policy flexibility. A floating exchange rate may allow more adjustment to external shocks, but it can also expose the economy to greater currency volatility. In either case, the exchange-rate regime affects how a country absorbs global financial pressures.
+
+In modern global finance, exchange-rate regimes are central because they help determine the relationship between domestic policy and external conditions. They influence how interest-rate changes affect capital movements, how external imbalances are managed, and how financial stress is transmitted across borders. An exchange rate is not only a price. Under different regimes, it becomes part of the institutional framework through which a country positions itself within the global financial system.

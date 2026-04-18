@@ -1,0 +1,7 @@
+## Interest Rates and Monetary Transmission
+
+Interest rates are one of the main ways in which monetary policy affects the economy, but their influence is not direct or mechanical. A central bank may change its policy rate, yet that decision only matters if it is transmitted through financial markets, banks, borrowing conditions, asset prices, and eventually the spending and investment decisions of firms and households. This broader process is known as monetary transmission.
+
+The transmission usually begins with short-term funding conditions. When policy rates rise or fall, money-market rates and bank funding costs tend to adjust. Banks then change the rates at which they lend, the terms on which they extend credit, or the extent to which they are willing to take risk. Investors also revalue financial assets as discount rates and relative returns change. Through these channels, monetary policy influences credit, investment, consumption, and ultimately demand in the wider economy.
+
+This process is important because it explains why monetary policy works through intermediaries rather than by direct command. Interest rates affect the economy not simply because borrowing becomes cheaper or more expensive, but because the entire financial environment changes. The strength of this transmission depends on many factors, including the condition of bank balance sheets, market liquidity, confidence, and the responsiveness of borrowers. This is why the same policy move can have different effects across countries, sectors, and moments in time.

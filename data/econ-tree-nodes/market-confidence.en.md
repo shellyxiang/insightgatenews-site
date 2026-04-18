@@ -1,0 +1,7 @@
+## Market Confidence and Policy Credibility
+
+Fiscal and monetary interaction depends not only on policies themselves, but also on how those policies are perceived. Market confidence refers to the willingness of investors and financial institutions to trust the sustainability of public finances and the stability of the monetary framework. Policy credibility refers to whether the government and the central bank are believed to be able and willing to do what they say they will do.
+
+This matters because financial markets are forward-looking. Investors do not wait for a crisis to become obvious before repricing risk. If they begin to doubt a government’s fiscal discipline, or a central bank’s commitment to controlling inflation, borrowing costs may rise and pressure can spread across the system. Confidence can weaken even when no formal default or policy breakdown has yet occurred. In this sense, credibility is not a cosmetic issue. It is part of how policy works in practice.
+
+In modern macro-financial systems, credibility links fiscal and monetary policy through expectations. A credible fiscal framework can support sovereign borrowing at lower cost. A credible central bank can help anchor inflation expectations and stabilize financial conditions. If either side loses trust, the other may come under strain. This is why market confidence and policy credibility are central to the interaction between public finance and monetary authority.

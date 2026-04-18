@@ -1,0 +1,7 @@
+## Exchange Rate Channel
+
+The exchange rate channel refers to the way monetary policy affects the economy through changes in the external value of the currency. Interest-rate changes can influence capital flows, and capital flows can affect exchange rates. A higher domestic interest rate may attract foreign capital and strengthen the currency, while lower rates may reduce inflows or encourage outflows, weakening the currency. These exchange-rate movements then affect import prices, export competitiveness, inflation, and the broader financial environment.
+
+This matters because most modern economies are open to some degree. Exchange rates influence how domestic prices relate to global prices and how international investors view local assets. A stronger currency may reduce imported inflation but weaken export competitiveness. A weaker currency may improve trade competitiveness but also raise the domestic cost of imported goods and foreign-currency obligations. In this way, the exchange rate channel links domestic monetary policy to the global financial system.
+
+Its importance varies across countries. In highly open economies, exchange-rate movements may be a major part of transmission. In less open or more controlled systems, the channel may be weaker. But in all cases, it shows that monetary transmission is not purely domestic. It operates through an international environment in which currencies, capital flows, and expectations are closely connected.

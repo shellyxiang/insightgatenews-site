@@ -1,0 +1,7 @@
+## Fiscal Deficits and Monetary Conditions
+
+Fiscal deficits affect monetary and financial conditions because they increase the government’s need for financing. When a state spends more than it collects in revenue, the gap must be financed somehow, usually through borrowing. This additional borrowing enters financial markets and can influence liquidity conditions, the supply of government debt, and the broader environment in which monetary policy operates.
+
+This matters because fiscal deficits are not only budget outcomes. They can change the macro-financial landscape. Larger borrowing needs may increase the amount of government securities in the market, alter investor demand, and affect the interaction between the treasury, banks, and central bank. In some cases, deficits support demand and stabilize the economy. In others, they may create pressure if markets doubt how they will be financed or sustained.
+
+The key point is that fiscal decisions do not remain inside government accounts. They spill into money markets, bond markets, and policy conditions more broadly. This is why deficits are part of fiscal-monetary interaction: they influence the financial setting in which monetary policy must operate.

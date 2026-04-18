@@ -1,0 +1,7 @@
+## What Is Inflation?
+
+Inflation is a sustained rise in the general level of prices across the economy. It does not mean that every single price rises at the same time, nor does it mean that the price of one product moving higher is automatically inflation. What makes inflation important is that it reflects a broader and more persistent increase in prices that affects the purchasing power of money itself.
+
+This distinction matters because modern economies are always experiencing relative price changes. Oil prices may rise while electronics prices fall. Food prices may move because of weather, while rents may rise because of housing shortages. These are important economic changes, but they are not all the same as inflation. Inflation refers to a wider process in which price increases become more generalized and more persistent.
+
+In modern finance and macroeconomic policy, inflation is central because it influences interest rates, wages, contracts, bond yields, exchange rates, and expectations about the future. When inflation rises, the real value of money falls, and both policymakers and financial markets must adjust. This is why inflation is not just a household concern about the cost of living. It is also one of the main variables through which monetary policy, asset pricing, and economic stability are understood.

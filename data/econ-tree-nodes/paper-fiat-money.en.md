@@ -1,0 +1,5 @@
+## Paper Money and Fiat
+
+Paper money emerged as a way to make exchange lighter, more flexible, and less dependent on the physical movement of metal. At first, paper claims often represented an entitlement to some underlying value, such as precious metal or trusted reserves. Over time, however, many monetary systems moved toward fiat money, in which currency holds value not because it is directly redeemable for a commodity, but because it is legally recognized, institutionally supported, and widely accepted in payment.
+
+This is a major turning point in the history of economic order. It means that money becomes increasingly based on confidence, state authority, and monetary institutions rather than on intrinsic material content. Fiat money allows much greater flexibility in managing the economy, but it also places more weight on trust, credibility, and policy discipline. In that sense, the transition to paper and fiat money shows how modern monetary systems depend not only on objects, but on institutions.

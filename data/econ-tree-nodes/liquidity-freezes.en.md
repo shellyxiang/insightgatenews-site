@@ -1,0 +1,7 @@
+## Liquidity Freezes and Funding Stress
+
+A financial system can come under severe pressure when liquidity becomes hard to obtain and normal funding channels stop functioning smoothly. Liquidity freezes occur when institutions that usually lend, roll over funding, or support market trading become unwilling or unable to do so. Funding stress emerges when borrowers face sharply rising costs, shortened maturities, or outright difficulty obtaining financing at all.
+
+This matters because many financial institutions, especially banks and highly leveraged borrowers, depend on continuous access to funding. They may hold assets that are sound over the long term but still need short-term liquidity to meet withdrawals, settle payments, or refinance existing positions. If funding dries up, even solvent institutions can come under immediate pressure.
+
+This is one of the most dangerous dynamics in a crisis. Once liquidity becomes scarce, institutions may be forced to sell assets, cut lending, or withdraw from markets. Those responses can push prices lower and create even more stress. In this way, a liquidity problem can quickly spread through the system. This is why modern crisis analysis pays so much attention to money markets, interbank conditions, collateral quality, and the availability of emergency liquidity support.

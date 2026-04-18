@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Economic & Financial System — Insight Gate</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%; height: 100%; overflow: hidden;
+      background: #0d1117;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #e6edf3;
+      display: flex;
+    }
+
+    #tree-area {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Side Panel */
+    #side-panel {
+      width: 0;
+      min-width: 0;
+      background: #0d1117;
+      border-left: 1px solid #30363d;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: width 0.3s ease, min-width 0.3s ease;
+      position: relative;
+      flex-shrink: 0;
+    }
+    #side-panel.open {
+      width: var(--panel-w, 360px);
+      min-width: var(--panel-w, 360px);
+    }
+    #resizer {
+      width: 6px; flex-shrink: 0;
+      cursor: col-resize;
+      background: #30363d;
+      transition: background 0.15s;
+      display: none;
+    }
+    #resizer:hover, #resizer.dragging { background: #58a6ff; }
+    #panel-inner {
+      padding: 22px 20px 40px;
+      min-width: 360px;
+    }
+    #panel-close {
+      position: absolute; top: 14px; right: 14px;
+      background: #21262d; border: 1px solid #30363d;
+      border-radius: 8px; padding: 4px 10px;
+      font-size: 13px; color: #9da7b3; cursor: pointer;
+      font-family: inherit;
+    }
+    #panel-close:hover { color: #e6edf3; border-color: #58a6ff; }
+    #panel-title {
+      font-size: 17px; font-weight: 700; color: #e6edf3;
+      margin-bottom: 4px; padding-right: 40px; line-height: 1.4;
+    }
+    #panel-subtitle {
+      font-size: 12px; color: #6e7681; margin-bottom: 18px;
+    }
+    #panel-body { font-size: 13px; line-height: 1.8; color: #9da7b3; }
+    #panel-body h1,#panel-body h2,#panel-body h3 {
+      color: #e6edf3; margin: 18px 0 8px; font-size: 14px;
+    }
+    #panel-body p { margin-bottom: 12px; }
+    #panel-body ul,#panel-body ol { padding-left: 18px; margin-bottom: 12px; }
+    #panel-body li { margin-bottom: 4px; }
+    #panel-body strong { color: #e6edf3; }
+    #panel-body a { color: #58a6ff; }
+    #panel-links {
+      margin-top: 20px; padding-top: 16px;
+      border-top: 1px solid #21262d;
+    }
+    #panel-links .pl-label {
+      font-size: 10px; font-weight: 600; color: #58a6ff;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    #panel-links .pl-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    #panel-links .pl-tag {
+      background: #161b22; border: 1px solid #30363d;
+      border-radius: 8px; padding: 3px 10px;
+      font-size: 12px; color: #8b949e;
+    }
+    #panel-empty {
+      color: #484f58; font-style: italic; font-size: 13px;
+      margin-top: 8px;
+    }
+    #panel-readmore {
+      display: inline-block; margin-top: 18px;
+      padding: 7px 16px; border-radius: 8px;
+      background: #1e3a5f; border: 1px solid #58a6ff;
+      color: #58a6ff; font-size: 13px; text-decoration: none;
+    }
+    #panel-readmore:hover { background: #58a6ff; color: #0d1117; }
+
+    svg { display: block; width: 100%; height: 100%; cursor: grab; }
+    svg:active { cursor: grabbing; }
+
+    .link {
+      fill: none;
+      stroke-width: 2px;
+      stroke-linecap: round;
+    }
+
+    .node-card { cursor: pointer; }
+    .node-group:hover .node-card {
+      filter: drop-shadow(0 0 14px rgba(88,166,255,0.55));
+    }
+    .node-label {
+      font-size: 12px; font-weight: 600; fill: #fff;
+      pointer-events: none;
+      dominant-baseline: middle; text-anchor: middle;
+    }
+    .collapsed-ring {
+      fill: none;
+      stroke: rgba(255,255,255,0.55);
+      stroke-width: 1.5;
+      stroke-dasharray: 3 2;
+    }
+
+    /* Tooltip */
+    #tooltip {
+      position: absolute; width: 290px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+      pointer-events: none;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 180ms, transform 180ms;
+      z-index: 20;
+    }
+    #tooltip.show { opacity: 1; transform: translateY(0); }
+    #tooltip .tt-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #e6edf3; }
+    #tooltip .tt-body  { font-size: 12px; line-height: 1.7; color: #9da7b3; }
+    #tooltip .tt-section { margin-top: 8px; padding-top: 8px; border-top: 1px solid #21262d; }
+    #tooltip .tt-label { display: block; font-size: 10px; font-weight: 600; color: #58a6ff; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px; }
+    #tooltip .tt-links-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+    #tooltip .tt-link-tag { background: #21262d; border: 1px solid #30363d; border-radius: 6px; padding: 2px 7px; font-size: 11px; color: #8b949e; }
+    #tooltip .tt-placeholder { color: #484f58; font-style: italic; }
+
+    /* Header */
+    #header {
+      position: absolute; top: 18px; left: 18px;
+      background: rgba(22,27,34,0.92);
+      border: 1px solid #30363d; border-radius: 14px;
+      padding: 14px 18px; z-index: 10;
+      backdrop-filter: blur(8px);
+      max-width: 320px;
+    }
+    #header h1 { font-size: 14px; font-weight: 700; color: #e6edf3; line-height: 1.4; }
+    #header p  { font-size: 11px; color: #6e7681; margin-top: 5px; }
+
+    /* Top-right controls */
+    #controls {
+      position: absolute; top: 18px; right: 18px;
+      display: flex; gap: 8px; z-index: 10;
+    }
+    .ctrl-btn {
+      background: rgba(22,27,34,0.92);
+      border: 1px solid #30363d; border-radius: 10px;
+      padding: 8px 14px;
+      font-size: 13px; color: #9da7b3;
+      text-decoration: none; cursor: pointer;
+      font-family: inherit;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .ctrl-btn:hover { color: #e6edf3; border-color: #58a6ff; }
+
+    /* Hint */
+    #hint {
+      position: absolute; bottom: 18px; left: 18px;
+      background: rgba(22,27,34,0.85);
+      border: 1px solid #30363d; border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 11px; color: #6e7681; z-index: 10;
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #side-panel.open {
+        position: fixed; top: 0; left: 0;
+        width: 100vw !important; min-width: 0 !important;
+        height: 100%; z-index: 100;
+        border-left: none;
+      }
+      #resizer { display: none !important; }
+      #panel-inner { min-width: 0; }
+      #header { max-width: calc(100vw - 120px); padding: 10px 14px; }
+      #header h1 { font-size: 12px; }
+      #hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="tree-area">
+<div id="header">
+  <h1 id="hdr-title">The Making of the Modern Economy and Financial System</h1>
+  <p id="hdr-sub">Click to expand · Drag to pan · Scroll to zoom</p>
+</div>
+
+<div id="controls">
+  <a class="ctrl-btn" href="index.html" id="btn-back">← Map</a>
+  <button class="ctrl-btn" id="recenterBtn">⊙</button>
+  <button class="ctrl-btn" id="langBtn">中文</button>
+</div>
+
+<div id="hint" id="hint-text">Click any node to expand / collapse</div>
+
+<div id="tooltip">
+  <div class="tt-title" id="tt-title"></div>
+  <div class="tt-body"  id="tt-body"></div>
+</div>
+
+<svg id="tree"></svg>
+</div><!-- /tree-area -->
+
+<div id="resizer"></div>
+<div id="side-panel">
+  <button id="panel-close">✕</button>
+  <div id="panel-inner">
+    <div id="panel-title"></div>
+    <div id="panel-subtitle"></div>
+    <div id="panel-body"></div>
+    <a id="panel-readmore" href="#" style="display:none"></a>
+    <div id="panel-links" style="display:none">
+      <div class="pl-label"></div>
+      <div class="pl-tags"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── Language ────────────────────────────────────────────────────────────────
+let lang = localStorage.getItem("lang") || "en";
+const langBtn = document.getElementById("langBtn");
+
+function t(en, zh) { return lang === "zh" ? zh : en; }
+
+function applyLang() {
+  document.getElementById("hdr-title").textContent =
+    t("The Making of the Modern Economy and Financial System", "现代经济与金融体系的形成");
+  document.getElementById("hdr-sub").textContent =
+    t("Click to expand · Drag to pan · Scroll to zoom",
+      "点击节点展开/收起 · 拖动移动 · 滚轮缩放");
+  document.getElementById("hint").textContent =
+    t("Click any node to expand / collapse", "点击节点展开或收起");
+  document.getElementById("btn-back").textContent =
+    t("← Map", "← 地图");
+  langBtn.textContent = lang === "zh" ? "EN" : "中文";
+  // Re-render node labels
+  if (root) {
+    d3.selectAll(".node-label").call(setNodeLabel);
+    hideTip();
+  }
+}
+
+langBtn.addEventListener("click", () => {
+  lang = lang === "en" ? "zh" : "en";
+  localStorage.setItem("lang", lang);
+  applyLang();
+});
+
+// ─── Tree Data ───────────────────────────────────────────────────────────────
+// Fields per node:
+//   key                     — filename slug, loads data/econ-tree-nodes/{key}.zh.md / {key}.en.md
+//   name / name_en          — display label
+//   linksTo                 — array of related node names (cross-branch)
+//   note / note_en          — cross-branch relation explanation
+const TREE_DATA = {
+  key: "root",
+  name: "现代经济与金融体系的形成", name_en: "The Making of the Modern Economy and Financial System",
+  label: "现代经济与金融", label_en: "Modern Economy & Finance",
+  linksTo: [], note: "", note_en: "",
+  children: [
+    {
+      key: "economic-organization",
+      name: "经济组织", name_en: "Economic Organization",
+      linksTo: [], note: "", note_en: "",
+      children: [
+        { key: "production-surplus",  name: "生产与剩余",     name_en: "Production and Surplus",           linksTo: [], note: "", note_en: "" },
+        { key: "division-of-labor",   name: "分工",           name_en: "Division of Labour",               linksTo: [], note: "", note_en: "" },
+        { key: "exchange",            name: "交换",           name_en: "Exchange",                         linksTo: [], note: "", note_en: "" },
+        { key: "market-formation",    name: "市场形成",       name_en: "Market Formation",                 linksTo: [], note: "", note_en: "" },
+        { key: "trade-networks",      name: "贸易网络",       name_en: "Trade Networks",                   linksTo: [], note: "", note_en: "" },
+        { key: "international-trade", name: "国际贸易",       name_en: "International Trade",              linksTo: [], note: "", note_en: "" },
+        { key: "firms-organization",  name: "企业与产业组织", name_en: "Firms and Industrial Organization",linksTo: [], note: "", note_en: "" }
+      ]
+    },
+    {
+      key: "modern-financial-system",
+      name: "现代金融体系", name_en: "Modern Financial System",
+      linksTo: [], note: "", note_en: "",
+      children: [
+        { key: "credit-debt", name: "信用与债务", name_en: "Credit and Debt", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "obligation-deferred-payment",    name: "义务与延迟支付",     name_en: "Obligation and Deferred Payment",          linksTo: [], note: "", note_en: "" },
+            { key: "record-keeping-accounting",      name: "记账与会计",         name_en: "Record-Keeping and Accounting",            linksTo: [], note: "", note_en: "" },
+            { key: "debt-relations",                 name: "债务关系",           name_en: "Debt Relations",                           linksTo: [], note: "", note_en: "" },
+            { key: "interest-pricing-time",          name: "利息与时间定价",     name_en: "Interest and the Pricing of Time",         linksTo: [], note: "", note_en: "" },
+            { key: "credit-expansion",               name: "信贷扩张",           name_en: "Credit Expansion",                         linksTo: [], note: "", note_en: "" },
+            { key: "personal-to-institutional",      name: "从个人信用到机构信用", name_en: "From Personal Credit to Institutional Credit", linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "money-payment", name: "货币与支付", name_en: "Money and Payment", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "functions-of-money",     name: "货币的功能",   name_en: "Functions of Money",     linksTo: [], note: "", note_en: "" },
+            { key: "forms-of-money", name: "货币的形式", name_en: "Forms of Money", linksTo: [], note: "", note_en: "",
+              children: [
+                { key: "commodity-money",  name: "商品货币",   name_en: "Commodity Money",      linksTo: [], note: "", note_en: "" },
+                { key: "coinage",          name: "铸币",       name_en: "Coinage",              linksTo: [], note: "", note_en: "" },
+                { key: "paper-fiat-money", name: "纸币与法币", name_en: "Paper Money and Fiat", linksTo: [], note: "", note_en: "" }
+              ]
+            },
+            { key: "payment-systems-node",   name: "支付系统",     name_en: "Payment Systems",        linksTo: [], note: "", note_en: "" },
+            { key: "settlement-liquidity",   name: "清算与流动性", name_en: "Settlement and Liquidity",linksTo: [], note: "", note_en: "" },
+            { key: "monetary-authority",     name: "货币当局",     name_en: "Monetary Authority",     linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "banking-system", name: "银行体系", name_en: "Banking System", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "interbank-market",    name: "同业市场", name_en: "Interbank Market",   linksTo: [], note: "", note_en: "",
+              children: [
+                { key: "interbank-rate",  name: "同业利率", name_en: "Interbank Rate",     linksTo: [], note: "", note_en: "" }
+              ]
+            },
+            { key: "banking-liquidity",   name: "流动性",   name_en: "Liquidity",          linksTo: [], note: "", note_en: "" },
+            { key: "funding-cost",        name: "融资成本", name_en: "Funding Cost",       linksTo: [], note: "", note_en: "" },
+            { key: "policy-transmission", name: "政策传导", name_en: "Policy Transmission",linksTo: [], note: "", note_en: "" },
+            { key: "bank-balance-sheets", name: "银行资产负债表", name_en: "Bank Balance Sheets", linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "central-banking", name: "中央银行", name_en: "Central Banking", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "policy-rate",             name: "政策利率",       name_en: "Policy Rate",                      linksTo: [], note: "", note_en: "" },
+            { key: "open-market-operations",  name: "公开市场操作",   name_en: "Open Market Operations",           linksTo: [], note: "", note_en: "" },
+            { key: "reserves-liquidity",      name: "准备金与流动性管理", name_en: "Reserves and Liquidity Management", linksTo: [], note: "", note_en: "" },
+            { key: "monetary-transmission",   name: "货币传导",       name_en: "Monetary Transmission",            linksTo: [], note: "", note_en: "" },
+            { key: "lender-of-last-resort",   name: "最后贷款人",     name_en: "Lender of Last Resort",            linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "public-finance",    name: "公共财政",   name_en: "Public Finance",     linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "taxation",        name: "税收",       name_en: "Taxation",          linksTo: [], note: "", note_en: "" },
+            { key: "fiscal-deficit",  name: "财政赤字",   name_en: "Fiscal Deficit",    linksTo: [], note: "", note_en: "" },
+            { key: "government-debt", name: "政府债务",   name_en: "Government Debt",   linksTo: [], note: "", note_en: "" },
+            { key: "sovereign-risk",  name: "主权风险",   name_en: "Sovereign Risk",    linksTo: [], note: "", note_en: "" },
+            { key: "fiscal-capacity", name: "财政能力",   name_en: "Fiscal Capacity",   linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "securities", name: "证券", name_en: "Securities", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "what-is-a-security", name: "什么是证券", name_en: "What Is a Security?", linksTo: [], note: "", note_en: "" },
+            { key: "debt-securities", name: "债务证券", name_en: "Debt Securities", linksTo: [], note: "", note_en: "",
+              children: [
+                { key: "primary-debt-market", name: "一级债务市场", name_en: "Primary Debt Market", linksTo: [], note: "", note_en: "" },
+                { key: "secondary-debt-market", name: "二级债务市场", name_en: "Secondary Debt Market", linksTo: [], note: "", note_en: "" }
+              ]
+            },
+            { key: "equity-securities", name: "股权证券", name_en: "Equity Securities", linksTo: [], note: "", note_en: "",
+              children: [
+                { key: "primary-equity-market", name: "一级股权市场", name_en: "Primary Equity Market", linksTo: [], note: "", note_en: "" },
+                { key: "secondary-equity-market", name: "二级股权市场", name_en: "Secondary Equity Market", linksTo: [], note: "", note_en: "" }
+              ]
+            }
+          ]
+        },
+        { key: "risk-asset-pricing", name: "风险与资产定价", name_en: "Risk and Asset Pricing", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "risk-and-return",        name: "风险与回报",   name_en: "Risk and Return",           linksTo: [], note: "", note_en: "" },
+            { key: "discount-rates",         name: "折现率与估值", name_en: "Discount Rates and Valuation",linksTo: [], note: "", note_en: "" },
+            { key: "credit-risk",            name: "信用风险",     name_en: "Credit Risk",               linksTo: [], note: "", note_en: "" },
+            { key: "market-risk",            name: "市场风险",     name_en: "Market Risk",               linksTo: [], note: "", note_en: "" },
+            { key: "liquidity-risk",         name: "流动性风险",   name_en: "Liquidity Risk",            linksTo: [], note: "", note_en: "" },
+            { key: "systemic-risk",          name: "系统性风险",   name_en: "Systemic Risk",             linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "global-finance", name: "全球金融", name_en: "Global Finance", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "cross-border-capital",    name: "跨境资本流动",       name_en: "Cross-Border Capital Flows",          linksTo: [], note: "", note_en: "" },
+            { key: "exchange-rate-regimes",   name: "汇率制度",           name_en: "Exchange Rate Regimes",               linksTo: [], note: "", note_en: "" },
+            { key: "reserve-currencies",      name: "储备货币",           name_en: "Reserve Currencies",                  linksTo: [], note: "", note_en: "" },
+            { key: "global-banking",          name: "全球银行业",         name_en: "Global Banking",                      linksTo: [], note: "", note_en: "" },
+            { key: "sovereign-borrowing",     name: "全球市场主权借贷",   name_en: "Sovereign Borrowing in Global Markets",linksTo: [], note: "", note_en: "" },
+            { key: "financial-contagion",     name: "金融传染",           name_en: "Financial Contagion",                 linksTo: [], note: "", note_en: "" }
+          ]
+        }
+      ]
+    },
+    {
+      key: "transmission-dynamics",
+      name: "传导与动态", name_en: "Transmission and Dynamics",
+      linksTo: [], note: "", note_en: "",
+      children: [
+        { key: "interest-rates-transmission", name: "利率与货币传导", name_en: "Interest Rates and Monetary Transmission", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "policy-short-term-rates", name: "政策利率与短期利率", name_en: "Policy Rate and Short-Term Rates", linksTo: [], note: "", note_en: "" },
+            { key: "bank-lending-channel",    name: "银行贷款渠道",       name_en: "Bank Lending Channel",           linksTo: [], note: "", note_en: "" },
+            { key: "asset-price-channel",     name: "资产价格渠道",       name_en: "Asset Price Channel",            linksTo: [], note: "", note_en: "" },
+            { key: "exchange-rate-channel",   name: "汇率渠道",           name_en: "Exchange Rate Channel",          linksTo: [], note: "", note_en: "" },
+            { key: "transmission-lags",       name: "传导滞后与局限",     name_en: "Transmission Lags and Limits",   linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "inflation-expectations", name: "通胀与预期", name_en: "Inflation and Expectations", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "what-is-inflation",       name: "什么是通胀",     name_en: "What Is Inflation?",            linksTo: [], note: "", note_en: "" },
+            { key: "inflation-expect-node",   name: "通胀预期",       name_en: "Inflation Expectations",        linksTo: [], note: "", note_en: "" },
+            { key: "anchoring-credibility",   name: "锚定与可信度",   name_en: "Anchoring and Credibility",     linksTo: [], note: "", note_en: "" },
+            { key: "wage-price-dynamics",     name: "工资价格动态",   name_en: "Wage-Price Dynamics",           linksTo: [], note: "", note_en: "" },
+            { key: "inflation-shocks",        name: "通胀冲击与持续性",name_en: "Inflation Shocks and Persistence",linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "credit-cycle", name: "信贷周期", name_en: "Credit Cycle", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "expansion-phase",        name: "扩张阶段",         name_en: "The Expansion Phase",           linksTo: [], note: "", note_en: "" },
+            { key: "leverage-balance-sheet", name: "杠杆与资产负债表增长", name_en: "Leverage and Balance Sheet Growth", linksTo: [], note: "", note_en: "" },
+            { key: "asset-prices-collateral",name: "资产价格与抵押品", name_en: "Asset Prices and Collateral",    linksTo: [], note: "", note_en: "" },
+            { key: "deleveraging",           name: "去杠杆",           name_en: "Deleveraging",                  linksTo: [], note: "", note_en: "" },
+            { key: "boom-bust-dynamics",     name: "繁荣-萧条动态",    name_en: "Boom-Bust Dynamics",            linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "exchange-capital", name: "汇率与资本流动", name_en: "Exchange Rate and Capital Flows", linksTo: [], note: "", note_en: "", hasArticle: true,
+          children: [
+            { key: "currency-adjustment",      name: "货币调整",         name_en: "Currency Adjustment",                        linksTo: [], note: "", note_en: "" },
+            { key: "interest-differentials",   name: "利差与资本配置",   name_en: "Interest Differentials and Capital Allocation",linksTo: [], note: "", note_en: "" },
+            { key: "external-funding",         name: "外部融资条件",     name_en: "External Funding Conditions",                linksTo: [], note: "", note_en: "" },
+            { key: "exchange-rate-passthrough",name: "汇率传导",         name_en: "Exchange Rate Pass-Through",                 linksTo: [], note: "", note_en: "" },
+            { key: "sudden-stops",             name: "突然停止与逆转",   name_en: "Sudden Stops and Reversals",                 linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "fiscal-monetary", name: "财政货币互动", name_en: "Fiscal-Monetary Interaction", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "fiscal-deficits-monetary", name: "财政赤字与货币条件", name_en: "Fiscal Deficits and Monetary Conditions",      linksTo: [], note: "", note_en: "" },
+            { key: "debt-servicing-rates",     name: "债务偿还与利率",     name_en: "Debt Servicing and Interest Rates",           linksTo: [], note: "", note_en: "" },
+            { key: "monetary-financing",       name: "货币融资与财政主导", name_en: "Monetary Financing and Fiscal Dominance",     linksTo: [], note: "", note_en: "" },
+            { key: "market-confidence",        name: "市场信心与政策可信度",name_en: "Market Confidence and Policy Credibility",   linksTo: [], note: "", note_en: "" },
+            { key: "coordination-tension",     name: "协调与张力",         name_en: "Coordination and Tension",                   linksTo: [], note: "", note_en: "" }
+          ]
+        },
+        { key: "financial-stability", name: "金融稳定与危机", name_en: "Financial Stability and Crisis", linksTo: [], note: "", note_en: "",
+          children: [
+            { key: "fragility-balance-sheet",  name: "脆弱性与资产负债表压力", name_en: "Fragility and Balance Sheet Stress",       linksTo: [], note: "", note_en: "" },
+            { key: "liquidity-freezes",        name: "流动性冻结与融资压力",   name_en: "Liquidity Freezes and Funding Stress",    linksTo: [], note: "", note_en: "" },
+            { key: "contagion-spillovers",     name: "传染与溢出效应",         name_en: "Contagion and Spillovers",                linksTo: [], note: "", note_en: "" },
+            { key: "crisis-management",        name: "危机管理与救助机制",     name_en: "Crisis Management and Backstops",         linksTo: [], note: "", note_en: "" },
+            { key: "recovery-repair",          name: "复苏与修复",             name_en: "Recovery and Repair",                     linksTo: [], note: "", note_en: "" }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// ─── Colors by depth ─────────────────────────────────────────────────────────
+const DEPTH_COLORS = [
+  { fill: "#92400e", stroke: "#fbbf24" },
+  { fill: "#1e3a8a", stroke: "#60a5fa" },
+  { fill: "#064e3b", stroke: "#34d399" },
+  { fill: "#4c1d95", stroke: "#a78bfa" },
+  { fill: "#7f1d1d", stroke: "#f87171" },
+];
+function dc(depth) { return DEPTH_COLORS[Math.min(depth, DEPTH_COLORS.length - 1)]; }
+
+// ─── Layout ──────────────────────────────────────────────────────────────────
+const NODE_W = 118, NODE_H = 44, H_GAP = 170, V_GAP = 85;
+
+const svg  = d3.select("#tree");
+const g    = svg.append("g");
+
+const zoom = d3.zoom()
+  .scaleExtent([0.15, 3])
+  .wheelDelta(e => -e.deltaY * (e.deltaMode === 1 ? 0.03 : e.deltaMode ? 0.8 : 0.001))
+  .on("zoom", e => g.attr("transform", e.transform));
+svg.call(zoom);
+
+document.addEventListener("wheel", e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
+
+const tooltip = document.getElementById("tooltip");
+const ttTitle = document.getElementById("tt-title");
+const ttBody  = document.getElementById("tt-body");
+
+function esc(str) {
+  return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+function showTip(event, d) {
+  const zh = lang === "zh";
+  ttTitle.textContent = zh
+    ? d.data.name + (d.data.name_en ? ` · ${d.data.name_en}` : "")
+    : (d.data.name_en || d.data.name) + (d.data.name ? ` · ${d.data.name}` : "");
+
+  const desc  = (zh ? d.data.desc  : d.data.desc_en)  || "";
+  const why   = (zh ? d.data.why   : d.data.why_en)   || "";
+  const links = d.data.linksTo || [];
+  const note  = (zh ? d.data.note  : d.data.note_en)  || "";
+
+  let html = "";
+  if (desc)  html += `<p>${esc(desc)}</p>`;
+  if (why)   html += `<p class="tt-section"><span class="tt-label">${zh ? "为何重要" : "Why it matters"}</span>${esc(why)}</p>`;
+  if (links.length) {
+    const tags = links.map(l => `<span class="tt-link-tag">${esc(l)}</span>`).join("");
+    html += `<p class="tt-section"><span class="tt-label">${zh ? "关联节点" : "Related"}</span><span class="tt-links-list">${tags}</span></p>`;
+  }
+  if (note)  html += `<p class="tt-section">${esc(note)}</p>`;
+  if (!html) html  = `<span class="tt-placeholder">${zh ? "内容待填写" : "Content coming soon"}</span>`;
+
+  ttBody.innerHTML = html;
+  let x = event.pageX + 14, y = event.pageY + 14;
+  if (x + 306 > window.innerWidth)  x = event.pageX - 306 - 14;
+  if (y + 160 > window.innerHeight) y = event.pageY - 160 - 14;
+  tooltip.style.left = x + "px";
+  tooltip.style.top  = y + "px";
+  tooltip.classList.add("show");
+}
+function hideTip() { tooltip.classList.remove("show"); }
+svg.on("click", e => { if (e.target.tagName === "svg") hideTip(); });
+
+const treeLayout = d3.tree().nodeSize([V_GAP, H_GAP + NODE_W]);
+let uid = 0, root;
+
+function nodeLabel(data) {
+  if (lang === "zh") return data.label || data.name;
+  return data.label_en || data.name_en || data.name;
+}
+
+// Split label into ≤2 lines at the space nearest the midpoint
+function splitLabel(label) {
+  if (label.length <= 13) return [label];
+  const mid = Math.floor(label.length / 2);
+  let i = mid;
+  while (i >= 0 && label[i] !== " ") i--;
+  if (i < 1) {
+    let j = mid;
+    while (j < label.length && label[j] !== " ") j++;
+    i = j;
+  }
+  if (i < 1 || i >= label.length) return [label];
+  return [label.slice(0, i), label.slice(i + 1)];
+}
+
+function setNodeLabel(sel) {
+  sel.each(function(d) {
+    const el = d3.select(this);
+    const lines = splitLabel(nodeLabel(d.data));
+    el.text("");
+    if (lines.length === 1) {
+      el.append("tspan").attr("x", NODE_W / 2).attr("y", NODE_H / 2).text(lines[0]);
+    } else {
+      el.append("tspan").attr("x", NODE_W / 2).attr("y", NODE_H / 2 - 7).text(lines[0]);
+      el.append("tspan").attr("x", NODE_W / 2).attr("dy", "1.25em").text(lines[1]);
+    }
+  });
+}
+
+function update(source) {
+  treeLayout(root);
+  const nodes = root.descendants();
+  const links = root.links();
+
+  // Links
+  const link = g.selectAll("path.link").data(links, d => d.target.id);
+
+  const linkEnter = link.enter().append("path")
+    .attr("class", "link")
+    .attr("stroke", d => dc(d.target.depth).stroke)
+    .attr("stroke-opacity", 0.4)
+    .attr("d", () => bezier(
+      { x: source.x0, y: source.y0 + NODE_W / 2 },
+      { x: source.x0, y: source.y0 + NODE_W / 2 }
+    ));
+
+  link.merge(linkEnter)
+    .transition().duration(420)
+    .attr("d", d => bezier(
+      { x: d.source.x, y: d.source.y + NODE_W / 2 },
+      { x: d.target.x, y: d.target.y - NODE_W / 2 }
+    ));
+
+  link.exit().transition().duration(420)
+    .attr("d", () => bezier(
+      { x: source.x, y: source.y + NODE_W / 2 },
+      { x: source.x, y: source.y + NODE_W / 2 }
+    )).remove();
+
+  // Nodes
+  const node = g.selectAll("g.node-group").data(nodes, d => d.id);
+
+  const ne = node.enter().append("g")
+    .attr("class", "node-group")
+    .attr("transform", `translate(${source.y0 - NODE_W/2},${source.x0 - NODE_H/2})`)
+    .style("opacity", 0)
+    .on("click", (event, d) => {
+      event.stopPropagation();
+      openPanel(d);
+      if (d.children) {
+        d._children = d.children; d.children = null;
+      } else if (d._children) {
+        d.children = d._children; d._children = null;
+        // Collapse grandchildren so only one level expands at a time
+        d.children.forEach(child => {
+          if (child.children) { child._children = child.children; child.children = null; }
+        });
+      }
+      update(d);
+    });
+
+  ne.append("rect")
+    .attr("class", "node-card")
+    .attr("width", NODE_W).attr("height", NODE_H)
+    .attr("rx", 9).attr("ry", 9)
+    .attr("fill",   d => dc(d.depth).fill)
+    .attr("stroke", d => dc(d.depth).stroke)
+    .attr("stroke-width", 1.5);
+
+  ne.append("text")
+    .attr("class", "node-label")
+    .call(setNodeLabel);
+
+  ne.append("circle")
+    .attr("class", "collapsed-ring")
+    .attr("cx", NODE_W).attr("cy", NODE_H / 2).attr("r", 5);
+
+  const all = node.merge(ne);
+
+  all.transition().duration(420)
+    .attr("transform", d => `translate(${d.y - NODE_W/2},${d.x - NODE_H/2})`)
+    .style("opacity", 1);
+
+  all.select(".node-label").call(setNodeLabel);
+  all.select(".collapsed-ring").attr("display", d => d._children ? null : "none");
+  all.select(".node-card")
+    .attr("fill",   d => dc(d.depth).fill)
+    .attr("stroke", d => dc(d.depth).stroke);
+
+  node.exit().transition().duration(420)
+    .attr("transform", `translate(${source.y - NODE_W/2},${source.x - NODE_H/2})`)
+    .style("opacity", 0).remove();
+
+  root.eachBefore(d => { d.x0 = d.x; d.y0 = d.y; });
+}
+
+function recenter() {
+  const desc = root.descendants();
+  const minY = d3.min(desc, d => d.y) - NODE_W / 2;
+  const maxY = d3.max(desc, d => d.y) + NODE_W / 2;
+  const minX = d3.min(desc, d => d.x) - NODE_H / 2;
+  const maxX = d3.max(desc, d => d.x) + NODE_H / 2;
+  const bw = maxY - minY, bh = maxX - minX;
+  const sw = document.getElementById("tree-area").clientWidth, sh = window.innerHeight;
+  const sc = Math.min(0.85, Math.min(sw / (bw + 100), sh / (bh + 100)));
+  const tx = 48 - sc * minY;
+  const ty = sh / 2 - sc * (minX + bh / 2);
+  svg.transition().duration(500)
+    .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(sc));
+}
+
+document.getElementById("recenterBtn").addEventListener("click", recenter);
+
+function bezier(s, t) {
+  const mx = (s.y + t.y) / 2;
+  return `M${s.y},${s.x} C${mx},${s.x} ${mx},${t.x} ${t.y},${t.x}`;
+}
+
+// ─── Side Panel ──────────────────────────────────────────────────────────────
+const sidePanel   = document.getElementById("side-panel");
+const panelTitle  = document.getElementById("panel-title");
+const panelSub    = document.getElementById("panel-subtitle");
+const panelBody   = document.getElementById("panel-body");
+const panelLinks    = document.getElementById("panel-links");
+const panelReadmore = document.getElementById("panel-readmore");
+
+const resizer = document.getElementById("resizer");
+
+document.getElementById("panel-close").addEventListener("click", () => {
+  sidePanel.classList.remove("open");
+  resizer.style.display = "none";
+});
+
+// Resizable panel
+(function () {
+  const MIN_W = 260, MAX_W = 700;
+  let dragging = false;
+  resizer.addEventListener("mousedown", e => {
+    dragging = true;
+    resizer.classList.add("dragging");
+    document.body.style.cursor = "col-resize";
+    document.body.style.userSelect = "none";
+    e.preventDefault();
+  });
+  document.addEventListener("mousemove", e => {
+    if (!dragging) return;
+    const w = Math.min(MAX_W, Math.max(MIN_W, window.innerWidth - e.clientX));
+    document.body.style.setProperty("--panel-w", w + "px");
+  });
+  document.addEventListener("mouseup", () => {
+    if (!dragging) return;
+    dragging = false;
+    resizer.classList.remove("dragging");
+    document.body.style.cursor = "";
+    document.body.style.userSelect = "";
+  });
+})();
+
+function renderPanel(d, mdText) {
+  const zh = lang === "zh";
+  const name    = zh ? d.data.name    : (d.data.name_en || d.data.name);
+  const subname = zh ? d.data.name_en : d.data.name;
+  const links   = d.data.linksTo || [];
+  const note    = (zh ? d.data.note : d.data.note_en) || "";
+
+  panelTitle.textContent = name;
+  panelSub.textContent   = subname || "";
+
+  panelBody.innerHTML = mdText
+    ? marked.parse(mdText)
+    : `<p id="panel-empty">${zh ? "内容待填写" : "Content coming soon"}</p>`;
+
+  // clear any previous note paragraph
+  const oldNote = panelLinks.querySelector(".pl-note");
+  if (oldNote) oldNote.remove();
+
+  if (links.length || note) {
+    panelLinks.style.display = "";
+    panelLinks.querySelector(".pl-label").textContent = zh ? "关联节点" : "Related";
+    panelLinks.querySelector(".pl-tags").innerHTML =
+      links.map(l => `<span class="pl-tag">${esc(l)}</span>`).join("");
+    if (note) {
+      const p = document.createElement("p");
+      p.className = "pl-note";
+      p.style.cssText = "font-size:12px;color:#6e7681;margin-top:8px";
+      p.textContent = note;
+      panelLinks.appendChild(p);
+    }
+  } else {
+    panelLinks.style.display = "none";
+  }
+
+  // Read more button — only shown when hasArticle: true
+  if (d.data.hasArticle) {
+    panelReadmore.href = `econ-article.html?key=${d.data.key}`;
+    panelReadmore.textContent = zh ? "阅读全文 →" : "Read more →";
+    panelReadmore.style.display = "";
+  } else {
+    panelReadmore.style.display = "none";
+  }
+
+  sidePanel.classList.add("open");
+  resizer.style.display = "block";
+}
+
+function openPanel(d) {
+  const zh  = lang === "zh";
+  const key = d.data.key;
+  if (!key) { renderPanel(d, ""); return; }
+
+  const url = `data/econ-tree-nodes/${key}.${zh ? "zh" : "en"}.md`;
+  fetch(url)
+    .then(r => r.ok ? r.text() : "")
+    .catch(() => "")
+    .then(md => renderPanel(d, md));
+}
+
+// ─── Init
+root = d3.hierarchy(TREE_DATA);
+root.descendants().forEach(d => {
+  d.id = ++uid; d.x0 = 0; d.y0 = 0;
+  if (d.depth >= 1 && d.children) { d._children = d.children; d.children = null; }
+});
+update(root);
+
+setTimeout(() => {
+  const desc = root.descendants();
+  const minY = d3.min(desc, d => d.y) - NODE_W / 2;
+  const maxY = d3.max(desc, d => d.y) + NODE_W / 2;
+  const minX = d3.min(desc, d => d.x) - NODE_H / 2;
+  const maxX = d3.max(desc, d => d.x) + NODE_H / 2;
+  const bw = maxY - minY, bh = maxX - minX;
+  const sw = document.getElementById("tree-area").clientWidth, sh = window.innerHeight;
+  const sc = Math.min(0.85, Math.min(sw / (bw + 100), sh / (bh + 100)));
+  const tx = 48 - sc * minY;
+  const ty = sh / 2 - sc * (minX + bh / 2);
+  svg.transition().duration(700)
+    .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(sc));
+}, 60);
+
+// Apply initial lang
+applyLang();
+</script>
+</body>
+</html>

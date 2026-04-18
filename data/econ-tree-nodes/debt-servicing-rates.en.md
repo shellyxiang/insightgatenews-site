@@ -1,0 +1,7 @@
+## Debt Servicing and Interest Rates
+
+Debt servicing refers to the payments a government must make to cover interest and principal on its outstanding debt. Interest rates matter because they influence how expensive this servicing becomes, especially when debt must be rolled over or refinanced regularly. When rates rise, the fiscal burden of debt can increase, sometimes significantly.
+
+This matters because interest rates are not only tools of monetary policy or signals from financial markets. They also directly affect the government’s budget position. Higher borrowing costs can widen deficits, reduce fiscal space, and increase the share of public resources devoted to debt service rather than other priorities. For highly indebted governments, this connection can become especially important.
+
+In modern economies, this relationship ties monetary conditions to fiscal sustainability. A central bank may tighten policy to contain inflation, but that tightening can also raise public debt-servicing costs. At the same time, concerns about government debt may push market yields higher, even beyond the direct effect of central-bank policy. This is why debt servicing and interest rates are one of the clearest points where fiscal and monetary realities meet.

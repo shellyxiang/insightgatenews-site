@@ -1,0 +1,7 @@
+## Interbank Market
+
+The interbank market is the part of the financial system in which banks lend to and borrow from one another, usually over short periods of time. This market exists because banks do not all receive deposits, process payments, or face withdrawals in perfectly balanced ways. Some banks end the day with surplus funds, while others need additional funds to meet payment obligations, reserve needs, or short-term liquidity pressures.
+
+This market is crucial because a banking system is not simply a collection of separate institutions. It is a network. Banks are constantly connected through payments, settlement, funding, and confidence. The interbank market allows liquidity to move within that network, helping banks manage temporary mismatches without having to shrink lending or sell assets immediately.
+
+Historically, interbank markets became more important as banking systems grew larger, payment networks became denser, and central banks took on more active roles in liquidity management. In modern finance, the interbank market is one of the places where monetary policy, market confidence, and banking-system stress become visible. When this market functions smoothly, liquidity circulates across institutions. When it becomes strained, stress can spread quickly through the wider financial system.

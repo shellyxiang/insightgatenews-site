@@ -1,0 +1,7 @@
+## Primary Debt Market
+
+The primary debt market is where new debt securities are issued for the first time. This is the stage at which governments, firms, or other issuers actually raise funds from investors. In other words, the primary debt market is where borrowing happens directly.
+
+This market matters because it connects issuers that need funding with investors willing to provide it. Governments may issue bonds to finance deficits, refinance maturing obligations, or fund long-term projects. Firms may issue debt to support expansion, investment, or working-capital needs. The key feature of the primary market is that the money raised goes to the issuer itself, not to another investor.
+
+In modern financial systems, the primary debt market plays a foundational role in public finance and corporate finance. It determines who can borrow, on what terms, for how long, and at what cost. It also reflects market confidence in issuers. Strong demand usually allows borrowing on more favorable terms, while weak demand forces issuers to pay higher yields or reduce issuance. In this sense, the primary debt market is where financial claims are first created and where creditworthiness is tested in practical form.

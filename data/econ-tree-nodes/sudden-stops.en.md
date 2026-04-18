@@ -1,0 +1,7 @@
+## Sudden Stops and Reversals
+
+Sudden stops and reversals refer to abrupt changes in the direction of capital flows. A country that has been receiving large inflows may suddenly experience a sharp reduction in external financing, or even a rapid shift toward outflows. These episodes are often associated with falling confidence, tighter global liquidity, rising risk aversion, or doubts about domestic policy and financial stability.
+
+This matters because financial openness can create dependence on continued access to foreign capital. As long as inflows are steady, borrowing may appear easy, asset prices may remain strong, and domestic liquidity may feel abundant. But if those inflows suddenly stop or reverse, exchange rates can weaken sharply, refinancing can become more difficult, and financial stress can spread quickly through banks, firms, and public finances.
+
+In modern financial systems, sudden stops and reversals are among the clearest examples of how international finance can amplify vulnerability. They show that capital inflows are not always stable sources of support. Under changing global conditions, they can turn into powerful sources of pressure. This is why countries exposed to global finance must think not only about attracting capital, but also about how resilient they are if that capital suddenly leaves.

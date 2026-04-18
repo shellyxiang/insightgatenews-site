@@ -1,0 +1,7 @@
+## Interest and the Pricing of Time
+
+Once repayment is delayed, a new question appears: should repayment be exactly equal to what was received, or should there be an additional amount? This is the beginning of interest. Interest is one of the clearest signs that time itself has entered economic calculation. It reflects the idea that receiving value now and repaying later may not be an equivalent exchange unless delay, risk, or opportunity cost are taken into account.
+
+Historically, interest emerged in many settings, including grain loans, silver loans, merchant credit, and later more formal lending arrangements. But interest was never just a mathematical device. It was often shaped by bargaining power, local custom, political authority, and moral debate. Many societies questioned whether charging interest was legitimate, under what conditions it was acceptable, and when it became exploitative.
+
+Its deeper significance lies in what it reveals about finance. Interest turns delayed payment into something that can be priced. It connects debt not only to obligation, but also to risk, time, and expected return. In modern financial systems, this logic becomes even more important, because interest rates influence not only individual loans, but also banking, bond markets, monetary policy, and asset valuation more broadly.

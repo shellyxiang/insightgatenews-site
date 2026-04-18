@@ -1,0 +1,7 @@
+## Sovereign Risk
+
+Sovereign risk is the risk that a government may fail, in one way or another, to meet its financial obligations or maintain confidence in its fiscal and monetary commitments. This can include outright default, restructuring, inflationary erosion of debt, currency weakness, or political instability that undermines repayment credibility. In modern markets, sovereign risk is one of the key ways financial investors evaluate the state itself as a borrower.
+
+Its importance lies in the fact that governments are not judged only by what they owe, but by how credible they are. Two countries may have similar debt levels but face very different borrowing conditions if markets view one as more stable, institutionally capable, or politically credible than the other. This is why sovereign risk is shaped not only by debt size, but also by tax capacity, growth prospects, inflation credibility, debt structure, currency denomination, and the broader political and institutional environment.
+
+In modern finance, sovereign risk matters because it affects interest rates, market access, exchange rates, capital flows, and the stability of the broader financial system. When sovereign risk rises, government borrowing costs increase, banks holding government bonds may come under pressure, and confidence can weaken across the economy. In this sense, sovereign risk is not just a problem for the treasury. It can become a system-wide financial issue.

@@ -1,0 +1,7 @@
+## Policy Rate
+
+The policy rate is the interest rate that a central bank uses as a primary signal and operating target for monetary policy. It is one of the clearest ways in which a central bank communicates its policy stance. When the central bank raises or lowers this rate, it is trying to influence the broader conditions under which money, credit, and funding circulate through the economy.
+
+Its importance lies in the fact that it serves as an anchor for short-term financial conditions. The policy rate is not the same as every interest rate in the economy, nor does it directly determine what households or firms will pay on loans. Instead, it influences the structure of market rates through the banking system and money markets. In this sense, it is best understood as an upstream rate — a key policy signal that affects other rates indirectly rather than mechanically.
+
+Historically, the use of policy rates became more important as monetary systems shifted away from simple metallic standards and toward managed financial systems centered on banking and central-bank authority. In modern economies, the policy rate is one of the main tools through which central banks try to influence borrowing conditions, aggregate demand, and inflation over time.

@@ -1,0 +1,7 @@
+## Exchange Rate and Capital Flows
+
+Exchange rates and capital flows are key channels through which domestic economies interact with the global financial system. Exchange rates affect the relative price of currencies, and capital flows reflect the cross-border movement of funds in search of safety, return, or strategic positioning. Together, they help determine how global financial conditions enter domestic markets.
+
+This relationship is dynamic because changes in one can quickly affect the other. Higher domestic interest rates may attract foreign capital and strengthen the currency. A loss of confidence may lead to capital outflows and exchange-rate depreciation. Expectations about future policy, inflation, or global risk conditions can shift both flows and currency values even before any major change in domestic fundamentals takes place. In this sense, exchange rates and capital flows do not simply reflect the economy; they actively transmit pressure through it.
+
+Their importance lies in the fact that modern economies are rarely insulated from external conditions. Exchange-rate changes affect inflation, trade competitiveness, the local currency value of foreign debt, and investor sentiment. Capital inflows can ease financing conditions and support credit growth, while sudden outflows can tighten liquidity and create instability. This is why exchange rates and capital flows form one of the major international transmission mechanisms in the modern economy and financial system.

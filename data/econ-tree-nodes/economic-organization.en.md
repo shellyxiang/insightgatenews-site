@@ -1,0 +1,5 @@
+## Economic Organization
+
+Modern economies are not held together by a single market or a single institution. They are built through the organization of production, specialization, exchange, firms, and trade across different scales. This branch explains how economic life moved beyond local survival and became a wider system of coordination, in which households, firms, regions, and countries depend on one another through markets and networks.
+
+The key historical shift was not simply that people began to trade. It was that production became more specialized, exchange became more regular, and economic activity increasingly depended on organized relationships rather than isolated transactions. Over time, this produced markets, trade networks, firms, and larger systems of economic interdependence. In this sense, economic organization is the real-economy side of modern development: it shows how goods, labour, and productive activity are structured before finance enters as a more complex supporting and coordinating layer.

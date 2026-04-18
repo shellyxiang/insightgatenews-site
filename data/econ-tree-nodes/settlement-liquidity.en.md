@@ -1,0 +1,7 @@
+## Settlement and Liquidity
+
+Payment does not end when one party agrees to pay another. A financial system also needs a way to complete transactions in final form. This is the role of settlement. Settlement refers to the process through which payment obligations are actually discharged and ownership of funds is definitively transferred. In simple settings, settlement may happen immediately through the handover of coins or cash. In more advanced systems, it may involve clearing houses, bank balances, reserve accounts, and institutional procedures that determine when a payment is truly complete.
+
+Liquidity is closely connected to this process. A system can only settle payments smoothly if participants have access to usable funds at the right time. In modern financial systems, liquidity therefore matters not only for investment or market trading, but also for the daily functioning of payments themselves. Banks need liquidity to meet transfers, settle claims, and maintain confidence. When liquidity becomes scarce, payment frictions can spread quickly through the wider system.
+
+This is why settlement and liquidity are more than technical details. They form part of the hidden infrastructure of modern finance. A monetary system may appear stable at the level of currency and law, but if settlement mechanisms fail or liquidity dries up, the system can become fragile very quickly. In this sense, the study of money and payment must also include the practical conditions under which obligations are finally settled and funds can continue to circulate.

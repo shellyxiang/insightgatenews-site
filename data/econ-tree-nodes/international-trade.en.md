@@ -1,0 +1,5 @@
+# International Trade
+
+International trade extends exchange beyond local and regional settings into relations across political boundaries, currencies, and legal systems. Once trade reaches this scale, economic coordination becomes much more complex. Goods move across long distances, regions specialize more deeply, and economies become increasingly connected through flows of commodities, payments, and information.
+
+Its importance lies in how it widens both opportunity and dependence. International trade allows societies to access goods, resources, and markets beyond their own borders, but it also creates new challenges involving transport, settlement, currency differences, and political authority. This is why international trade is a key point where the exchange branch begins to connect strongly with money, payment systems, state institutions, and later finance.

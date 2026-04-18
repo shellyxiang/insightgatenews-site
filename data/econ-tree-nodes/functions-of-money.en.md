@@ -1,0 +1,7 @@
+## Functions of Money
+
+Money is important not simply because it exists, but because it performs several essential functions in economic life. First, it acts as a **unit of account**, giving societies a common way to measure and compare value. Second, it serves as a **medium of exchange**, allowing transactions to take place without requiring direct barter. Third, it functions as a **store of value**, enabling people to preserve purchasing power across time, at least to some degree.
+
+These functions help explain why money becomes so central as economies grow more complex. Without a unit of account, prices are difficult to compare. Without a medium of exchange, trade becomes cumbersome and limited. Without a store of value, economic life is harder to extend across time, especially when saving, investment, and deferred payment become more important.
+
+The key point is that money should not be understood only as a physical object. It is better understood as a set of social and economic functions that can be carried by different forms. This is why the history of money is not simply about changing materials, but about how societies solve recurring problems of coordination, valuation, and exchange.

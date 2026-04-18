@@ -1,0 +1,7 @@
+## Coordination and Tension
+
+Fiscal and monetary authorities do not always pursue the same immediate objective, but they operate within the same economy and financial system. Coordination refers to situations in which fiscal and monetary policy work in compatible ways, whether to support stabilization, respond to crisis, or maintain confidence. Tension arises when their goals or effects pull in different directions.
+
+This is important because the interaction between the two is often context-dependent. During a deep downturn, fiscal expansion and monetary easing may complement each other. In an inflationary environment, however, fiscal stimulus may complicate the central bank’s effort to slow demand. A government may want cheaper financing, while the central bank may need tighter conditions to preserve price stability. In such cases, the relationship becomes more difficult and politically sensitive.
+
+This is why fiscal-monetary interaction should not be understood as either automatic harmony or permanent conflict. It is a relationship shaped by institutions, market conditions, debt levels, inflation pressures, and policy priorities. In modern economies, one of the central challenges is to manage this relationship in ways that preserve both macroeconomic stability and long-term policy credibility.

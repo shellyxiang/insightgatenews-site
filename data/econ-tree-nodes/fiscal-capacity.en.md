@@ -1,0 +1,7 @@
+## Fiscal Capacity
+
+Fiscal capacity refers to the long-term ability of the state to raise revenue, manage expenditures, sustain borrowing, and translate financial resources into effective public action. It is deeper than a single tax rate, deficit number, or debt ratio. It reflects the underlying strength of the fiscal system as a whole.
+
+Historically, fiscal capacity has been one of the central foundations of state-building. States that developed durable tax systems, effective administration, and credible borrowing institutions were generally able to build stronger armies, maintain infrastructure, support public administration, and respond more effectively to crises. States with weak fiscal capacity, by contrast, often struggled to collect revenue, relied on unstable extraction, and faced more fragile financial positions.
+
+Its importance in modern economies goes beyond public budgeting. Fiscal capacity affects sovereign risk, policy space, crisis response, and the government’s ability to support long-term development. A state with strong fiscal capacity can borrow more credibly, spend more effectively, and stabilize the economy when shocks occur. A state with weak fiscal capacity may be forced into austerity, inflation financing, external dependence, or repeated fiscal stress. This is why fiscal capacity is one of the deepest concepts in public finance: it captures not just what the state does today, but what it is structurally able to do over time.

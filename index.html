@@ -427,6 +427,7 @@
       <a href="index.html" class="brand">Insight Gate</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">World Map</a></li>
+        <li><a href="econ-tree.html">Econ Tree</a></li>
         <li><a href="contact.html">About</a></li>
       </ul>
       <div class="nav-login"><a href="login.html" id="nav-join-link">Join Us</a></div>
@@ -501,7 +502,7 @@
       langToggleBtn.textContent = zh ? "EN" : "中文";
       searchInput.placeholder = zh ? "搜索国家：例如 美国 / Malaysia / JPN" : "Search: e.g. USA / 中国 / JPN";
       const navLinks = document.querySelectorAll(".site-nav .nav-links a");
-      const navTexts = zh ? ["全球地图", "关于我们"] : ["World Map", "About"];
+      const navTexts = zh ? ["全球地图", "经济树", "关于我们"] : ["World Map", "Econ Tree", "About"];
       navLinks.forEach((a, i) => { if (navTexts[i]) a.textContent = navTexts[i]; });
       document.querySelector(".site-nav .nav-login a").textContent = zh ? "加入我们" : "Join Us";
     })();
@@ -957,8 +958,8 @@
       document.querySelector(".site-nav .brand").textContent = "Insight Gate";
       const navLinks = document.querySelectorAll(".site-nav .nav-links a");
       const navTexts = zh
-        ? ["全球地图", "关于我们"]
-        : ["World Map", "About"];
+        ? ["全球地图", "经济树", "关于我们"]
+        : ["World Map", "Econ Tree", "About"];
       navLinks.forEach((a, i) => { if (navTexts[i]) a.textContent = navTexts[i]; });
       document.querySelector(".site-nav .nav-login a").textContent = zh ? "加入我们" : "Join Us";
 

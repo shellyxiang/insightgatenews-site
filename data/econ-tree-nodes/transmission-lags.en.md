@@ -1,0 +1,7 @@
+## Transmission Lags and Limits
+
+Monetary transmission does not happen all at once. Even when financial markets react quickly to policy changes, the broader economy usually responds with delays. This is why economists often speak of transmission lags. Households and firms take time to adjust borrowing and spending decisions. Banks may take time to reprice loans or change lending standards. Asset-price changes may influence behavior gradually rather than immediately.
+
+These delays matter because they make policy both uncertain and difficult to calibrate. A central bank may tighten policy today, but the full effect on credit, demand, and inflation may not appear for many months. By the time the effect becomes visible, economic conditions may already be changing again. This is one reason why monetary policy is often described as operating under uncertainty and with incomplete control.
+
+Transmission also has limits. Policy may lose strength if banks are weak, if borrowers are overextended, if markets are under stress, or if expectations are not responsive. In some situations, lower rates do little to stimulate lending because confidence is too low. In others, higher rates fail to cool activity quickly because balance sheets remain strong or external conditions offset domestic tightening. This is why interest-rate policy should not be understood as a simple mechanical tool. Its power depends on the condition of the financial system and the wider economy through which it must pass.

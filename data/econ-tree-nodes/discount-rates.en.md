@@ -1,0 +1,7 @@
+## Discount Rates and Valuation
+
+Asset prices depend not only on how much cash an asset may generate in the future, but also on how those future payments are valued in the present. This is where discount rates become important. A discount rate is the rate used to translate future cash flows into present value. The higher the discount rate, the less future income is worth today. The lower the discount rate, the more valuable those future payments appear.
+
+This matters because modern finance is full of assets whose value depends on future income: bonds promise future interest and principal payments, stocks are valued partly on expectations of future profits, and many investments are judged according to the discounted value of expected returns. If discount rates change, valuations can change even if the underlying asset has not changed physically at all. This is one reason why interest rates, policy shifts, and changing perceptions of risk can move asset prices so strongly.
+
+Historically, this logic became increasingly important as finance moved away from simple immediate exchange and toward markets for long-term claims. In modern financial systems, valuation is one of the most powerful ways in which time enters prices. Asset values reflect not only present conditions, but the market’s attempt to compare different futures and bring them into current prices. This is why discount rates are central to both asset pricing and macro-financial transmission.

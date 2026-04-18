@@ -1,0 +1,7 @@
+## Policy Transmission
+
+Policy transmission refers to the process through which central bank actions influence broader financial conditions and, eventually, the real economy. In a banking-centered system, this process often works through the banking system itself. When the central bank changes policy rates or liquidity conditions, those changes affect money-market rates, bank funding costs, lending conditions, and the availability of credit.
+
+The key point is that this process is indirect. A central bank does not simply command the entire economy to change. Instead, it influences the financial environment in which banks operate. Banks then respond through their balance sheets, funding decisions, lending behavior, and risk tolerance. Households and firms respond in turn through borrowing, spending, and investment decisions. This is how policy moves from the financial system into the wider economy.
+
+This is why banks remain central even in modern economies with large capital markets. They are one of the main channels through which monetary policy is transmitted. When the banking system is healthy and responsive, policy changes may pass through more effectively. When the banking system is weak, stressed, or unwilling to lend, policy transmission can become impaired. In this sense, the banking system is not only a source of credit. It is also a mechanism through which macroeconomic policy reaches the economy.

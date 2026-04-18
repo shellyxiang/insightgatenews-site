@@ -1,0 +1,9 @@
+## Risk and Asset Pricing
+
+Modern finance is not only about creating and trading financial claims. It is also about deciding what those claims are worth and how uncertainty should be reflected in their prices. This is the domain of risk and asset pricing. If banking explains how credit is organized, and securities explain how claims become tradable, risk and asset pricing explain why one asset offers a different return from another and why market values constantly change.
+
+At the most basic level, asset pricing is about the relationship between future cash flows and present value. Investors care not only about how much an asset may pay, but also about when it pays, how uncertain those payments are, how liquid the asset is, and how that asset behaves under broader market stress. For this reason, prices in financial markets are not just records of current conditions. They are forward-looking judgments about time, uncertainty, and the credibility of future income.
+
+Historically, risk has always existed in finance. Borrowers could fail, harvests could collapse, governments could weaken, and markets could panic. What changed in modern finance was not the existence of risk, but the way it became measured, priced, and distributed through markets. Today, debt markets, equity markets, banks, and global capital flows all depend on continuous judgments about risk and return.
+
+This is why risk and asset pricing are central to modern financial systems. They shape borrowing costs, investment decisions, portfolio choices, market valuations, and financial stability itself. To understand modern finance, it is not enough to know what banks, bonds, or stocks are. One must also understand how markets place values on uncertain futures.

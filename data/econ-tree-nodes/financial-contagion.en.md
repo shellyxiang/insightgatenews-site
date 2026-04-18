@@ -1,0 +1,7 @@
+## Financial Contagion
+
+Financial contagion is the spread of financial stress from one country, market, or institution to others. It occurs when a shock that begins in one area triggers wider losses, tighter funding conditions, falling asset prices, or collapsing confidence elsewhere. In a globally connected system, financial problems do not always remain local. They can travel quickly across borders through markets, banks, investors, and expectations.
+
+This matters because modern finance is deeply interconnected. Countries may hold similar assets, depend on the same funding sources, or face common investor behavior. If confidence weakens in one market, investors may pull back from others they see as related. If large institutions face pressure, funding conditions may tighten far beyond the original source of stress. As a result, contagion often spreads not only through direct losses, but also through fear, liquidity withdrawal, and the repricing of risk.
+
+In modern global finance, contagion is one of the clearest reasons why cross-border integration creates fragility as well as opportunity. It shows that financial markets do not simply allocate capital internationally; they also transmit instability internationally. This is why global finance must be understood not only in terms of flows and access, but also in terms of channels through which crises can spread and become system-wide.

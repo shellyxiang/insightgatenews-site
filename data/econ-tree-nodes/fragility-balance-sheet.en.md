@@ -1,0 +1,7 @@
+## Fragility and Balance Sheet Stress
+
+Financial systems often become unstable not because they are obviously weak, but because they are more fragile than they appear. Fragility refers to the underlying vulnerability created by leverage, maturity mismatch, concentrated exposures, weak capital buffers, or excessive dependence on continued refinancing. These weaknesses may remain hidden during periods of growth and confidence, but they become dangerous when conditions change.
+
+Balance-sheet stress is one of the main ways this fragility becomes visible. If asset values fall, losses rise, or collateral weakens, banks, firms, households, and governments may all face pressure at once. A balance sheet that looked sustainable during a boom can become strained when funding becomes more expensive or when income and asset values decline. This is why crises often begin as balance-sheet problems before they appear as broader macroeconomic problems.
+
+The importance of this mechanism lies in the fact that modern finance is built on interlinked balance sheets. One institution’s assets are often another institution’s liabilities. When stress enters those relationships, the problem is rarely confined to one place. Fragility therefore matters not because every shock produces a crisis, but because it determines how easily stress can turn into systemic instability.

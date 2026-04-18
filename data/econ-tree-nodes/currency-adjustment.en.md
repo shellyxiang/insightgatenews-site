@@ -1,0 +1,7 @@
+## Currency Adjustment
+
+Currency adjustment refers to changes in the value of a country’s currency relative to others as economic and financial conditions change. A currency may appreciate when demand for it rises, or depreciate when demand weakens. These movements can reflect trade conditions, interest-rate changes, capital flows, inflation expectations, policy credibility, or shifts in global risk sentiment.
+
+This matters because exchange rates are not only prices in financial markets. They are also adjustment mechanisms in the wider economy. A weaker currency may improve export competitiveness and make imports more expensive. A stronger currency may reduce imported inflation but weaken external demand for domestic goods. In this way, currency movements help redistribute pressure across trade, inflation, and financial conditions.
+
+In modern financial systems, currency adjustment is especially important because exchange rates often respond quickly to policy and market signals. They can absorb shocks, but they can also amplify them. A depreciation may support exports while worsening the burden of foreign-currency debt. An appreciation may improve price stability while tightening conditions for trade-exposed sectors. This is why exchange-rate adjustment is one of the main ways external financial forces are transmitted into the domestic economy.

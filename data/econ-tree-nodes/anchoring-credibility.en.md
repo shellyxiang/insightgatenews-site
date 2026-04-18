@@ -1,0 +1,7 @@
+## Anchoring and Credibility
+
+Anchoring refers to the degree to which inflation expectations remain stable and aligned with the belief that inflation will stay under control over time. When expectations are well anchored, people may still observe short-term price shocks, but they do not assume that those shocks will continue indefinitely. Credibility refers to the extent to which the central bank or policymaking framework is trusted to maintain price stability.
+
+These two ideas are closely connected. A credible central bank is more likely to keep expectations anchored. If households, firms, and markets believe the monetary authority will respond effectively to inflationary pressure, they are less likely to behave in ways that amplify that pressure. If credibility weakens, however, expectations can shift more easily, and inflation can become more persistent even without a dramatic change in current conditions.
+
+This is why modern inflation control depends not only on policy tools, but also on trust. Communication, consistency, and institutional reputation all matter. A policy action that would have strong effects in a credible regime may have weaker effects in a system where confidence has eroded. In this sense, inflation management is not only about interest rates. It is also about whether the public believes the monetary authority can and will preserve the value of money.

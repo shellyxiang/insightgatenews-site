@@ -1,0 +1,7 @@
+## Market Risk
+
+Market risk is the risk that the value of an asset will change because of movements in market prices. Unlike credit risk, which focuses on whether a borrower repays, market risk concerns fluctuations in the prices of securities themselves. Bond prices may fall when interest rates rise. Stock prices may decline because of weaker earnings expectations or broader shifts in investor sentiment. Exchange rates, commodity prices, and other market variables can also move in ways that create gains or losses.
+
+This matters because an investor or financial institution can face losses even when no one defaults. A bond may still be repaid in full, but its market value can decline significantly before maturity. A stock may continue to represent ownership in a viable firm, but its price can fluctuate sharply as expectations change. In this sense, market risk reflects the fact that financial claims are continuously revalued, not held at fixed and unquestioned prices.
+
+In modern financial systems, market risk is central because finance is built around tradable assets. Once claims are actively bought and sold, their prices become sensitive to changing information, expectations, policy conditions, and collective behavior. This is why market risk is one of the core forms of uncertainty in modern finance: it captures the instability of prices even when the underlying instruments themselves remain in place.

@@ -1,0 +1,9 @@
+## Public Finance
+
+Public finance is the part of the modern economic and financial system that deals with how governments raise resources, allocate spending, manage deficits, and sustain their financial credibility over time. It includes taxation, government expenditure, fiscal deficits, public debt, and the broader institutional capacity of the state to convert resources into public action.
+
+This branch is important because modern states do not simply govern through law and authority. They also govern through finance. They must be able to collect revenue, fund administration, provide public goods, support social systems, respond to crises, and, when necessary, borrow from financial markets. Public finance is therefore not an external issue alongside the economy. It is one of the central mechanisms through which modern economies are organized and stabilized.
+
+Historically, the development of public finance marked a major transformation in state capacity. Earlier rulers often relied on tribute, land income, or irregular extraction. As states became larger and more complex, they needed more systematic taxation, more predictable revenues, and more organized forms of borrowing. Over time, fiscal systems became increasingly tied to markets, banking systems, and sovereign credibility.
+
+In modern economies, public finance plays a dual role. It is both a tool of governance and a financial structure that markets continuously evaluate. Governments tax, spend, borrow, and refinance under the scrutiny of investors, rating agencies, institutions, and the public. This is why public finance sits at the intersection of economics, politics, and finance. It is not only about budgets. It is about the long-term ability of the state to raise resources, sustain confidence, and act effectively.

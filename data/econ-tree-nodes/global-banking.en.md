@@ -1,0 +1,7 @@
+## Global Banking
+
+Global banking refers to banking activity that operates across national borders. This includes cross-border lending, foreign-currency funding, multinational banking groups, offshore financial centers, and the international movement of liquidity through banking networks. In a globalized financial system, banks do not operate only within domestic boundaries. They are part of wider international structures of funding, payment, and credit.
+
+This matters because banks are among the main channels through which global financial conditions enter national economies. A bank may borrow in one currency, lend in another, operate in several jurisdictions, and depend on wholesale funding from international markets. This creates opportunities for expanding credit and connecting markets, but it also creates exposure to exchange-rate risk, funding stress, and global shifts in liquidity.
+
+In modern finance, global banking plays a major role in the transmission of shocks. Tightening in one major financial center can affect funding conditions elsewhere. Stress in one banking system can spread through interbank exposures, confidence effects, and shared reliance on global funding markets. This is why global banking is not simply an international version of domestic banking. It is a mechanism through which financial systems become more integrated, but also more vulnerable to cross-border instability.

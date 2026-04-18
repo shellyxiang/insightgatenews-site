@@ -1,0 +1,7 @@
+## Monetary Financing and Fiscal Dominance
+
+Monetary financing occurs when government spending is effectively supported through the creation of money or through central-bank actions that ease direct fiscal financing pressures. In modern systems, this is usually more complex than simply printing money. It may involve central-bank purchases of government debt, sustained accommodation of fiscal deficits, or policy settings that make public financing easier than market conditions alone would allow.
+
+This matters because there is an important distinction between monetary policy serving macroeconomic goals and monetary policy becoming subordinate to fiscal needs. Fiscal dominance refers to a situation in which the government’s financing requirements become so pressing that they begin to constrain or shape monetary policy decisions. In such a case, the central bank may find it harder to focus fully on inflation control or financial stability because public debt dynamics exert strong pressure on policy choices.
+
+Historically and analytically, this is one of the most sensitive areas in macro-finance. It raises questions about inflation, institutional independence, debt sustainability, and policy credibility. If markets believe monetary policy is being driven mainly by the need to keep government financing manageable, confidence in long-term price stability may weaken. This is why monetary financing and fiscal dominance are central to understanding the deeper tensions between state finance and monetary authority.

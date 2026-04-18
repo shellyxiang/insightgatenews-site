@@ -1,0 +1,7 @@
+## Reserves and Liquidity Management
+
+Reserves are the balances that commercial banks hold at the central bank, and they play a crucial role in settlement, liquidity management, and the implementation of monetary policy. A banking system needs reserves because banks make payments to one another constantly, and these payments must be settled in a final and trusted form. Reserves therefore sit at the center of the link between central banking and the banking system.
+
+Liquidity management refers to the way the central bank influences the availability and circulation of these usable funds within the financial system. This is important because banks do not all experience inflows and outflows in the same pattern. Some may face temporary funding needs, while others hold excess liquidity. The central bank helps manage these conditions so that the payment system continues to function smoothly and short-term funding stress does not spread unnecessarily.
+
+In modern economies, reserves and liquidity management are essential because monetary systems depend not only on money in the abstract, but on the smooth functioning of the settlement and funding infrastructure. Central banks therefore do not simply set policy from a distance. They also manage the conditions under which banks can meet obligations, maintain confidence, and continue operating without disruptive shortages of liquidity.

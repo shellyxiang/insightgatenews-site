@@ -1,0 +1,7 @@
+## Open Market Operations
+
+Open market operations are the routine transactions through which a central bank buys or sells financial assets, usually in order to influence liquidity and short-term interest-rate conditions in the banking system. These operations are one of the main ways central banks implement policy in practice. Rather than merely announcing a desired stance, the central bank uses market operations to shape the actual conditions in which banks and financial institutions operate.
+
+Historically, this was a major development in the evolution of modern monetary systems. It marked the shift from a world in which monetary order depended heavily on metal circulation or rigid convertibility rules to one in which central banks could actively manage market liquidity. By entering financial markets directly, the central bank gained a practical mechanism for keeping short-term rates near its policy objective and for stabilizing the supply of reserves in the system.
+
+In modern finance, open market operations are important because they connect monetary policy to the day-to-day functioning of money markets. They influence reserves, shape short-term funding conditions, and help maintain orderly transmission from central-bank decisions to the broader financial system. In times of stress, they may also become more aggressive, reflecting the central bank’s role in stabilizing markets rather than simply steering routine policy conditions.

@@ -1,0 +1,7 @@
+## Liquidity
+
+Liquidity refers to the ability of banks to meet payment obligations, withdrawals, and funding needs without having to incur disruptive losses. In simple terms, a bank is liquid when it can obtain usable funds quickly enough to continue operating smoothly. This may involve cash, reserves, highly liquid assets, or reliable access to short-term funding markets.
+
+Liquidity matters because banks perform maturity transformation. They often fund themselves with short-term liabilities, such as deposits or short-term borrowing, while holding longer-term assets, such as loans. This makes banking economically useful, but also inherently fragile. Even a bank with sound long-term assets can come under pressure if it cannot obtain liquidity when needed.
+
+In modern financial systems, liquidity is not only a bank-level issue but also a system-wide one. Payment networks, interbank markets, and central bank facilities all affect whether liquidity can circulate effectively. When liquidity is abundant and trusted, payments clear smoothly and banks continue lending. When liquidity dries up, even healthy institutions can become vulnerable. This is why liquidity is one of the central concepts in banking, crisis management, and monetary operations.

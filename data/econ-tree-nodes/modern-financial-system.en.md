@@ -1,0 +1,7 @@
+## Modern Financial System
+
+A modern financial system is the set of institutions, markets, instruments, and rules through which money, credit, savings, investment, and risk are organized at scale. It does more than simply move cash from one place to another. It connects households, firms, banks, governments, and investors across time by turning savings into loans, claims into tradable assets, and future income into present financing.
+
+Historically, finance did not begin with stock exchanges or central banks. It began much earlier with debt, credit, money, and systems of payment. But as economies grew more complex, these earlier arrangements developed into a wider financial architecture. Banking systems pooled deposits and extended credit. Public finance linked the fiscal needs of the state to taxation and borrowing. Securities made financial claims tradable. Debt and equity markets allowed governments and firms to raise funds from a broader set of investors. Risk itself became something that could be priced, transferred, and managed through markets.
+
+In this sense, the modern financial system is not separate from the economy. It is part of the structure through which modern economies operate. It channels savings into investment, supports trade and production, finances governments, shapes monetary transmission, and determines how risk and return are distributed across society. To understand modern capitalism, one must understand not only production and exchange, but also the financial system that sustains, amplifies, and sometimes destabilizes them.

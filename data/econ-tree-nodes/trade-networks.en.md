@@ -1,0 +1,7 @@
+## Trade Networks
+
+Trade networks refer to the routes, relationships, and institutions through which goods move across regions over sustained periods of time. Unlike simple local exchange, trade networks connect multiple communities, cities, or civilizations into larger systems of circulation. These networks may involve merchants, transport routes, intermediaries, ports, caravan systems, and political authorities that help protect or regulate trade.
+
+Their historical importance lies in scale and continuity. Trade networks make exchange wider, more regular, and more organized. They allow regions to specialize more deeply because producers can rely on access to goods and markets beyond their immediate surroundings. They also spread knowledge, technologies, and commercial practices alongside physical goods.
+
+Trade networks should not be understood only as early versions of modern international trade. They belong to an earlier stage of economic organization in which long-distance exchange already mattered, but the institutional setting was often shaped by empires, caravan routes, port cities, merchant communities, and negotiated authority rather than by modern national trade systems. In this sense, trade networks form a bridge between local markets and the modern world of international trade.

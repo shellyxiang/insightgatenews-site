@@ -1,0 +1,7 @@
+## Contagion and Spillovers
+
+Contagion occurs when stress in one part of the financial system spreads to others. Spillovers are the broader effects that move across institutions, markets, sectors, or countries as a result of that stress. In a modern financial system, no major institution or market is completely isolated. This means that losses, fear, or funding pressure in one area can trigger reactions elsewhere, even when there is no direct connection at first glance.
+
+This matters because the most serious crises are rarely local. A problem in one bank can affect other banks through interbank exposure, shared asset holdings, or confidence effects. A sovereign debt problem can weaken domestic banks that hold government bonds. A fall in one market can lead investors to sell assets in other markets to raise cash or reduce risk. Through these channels, stress can move far beyond its original source.
+
+Contagion and spillovers are central to the logic of modern crises because they show how tightly connected the system has become. They also explain why policymakers are concerned not only with the health of individual institutions, but with the links between them. Financial stability is not just about preventing isolated failure. It is about preventing a chain reaction in which one shock becomes many.

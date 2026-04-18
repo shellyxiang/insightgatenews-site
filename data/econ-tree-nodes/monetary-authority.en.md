@@ -1,0 +1,7 @@
+## Monetary Authority
+
+Money does not function only because people happen to use it. In larger and more complex societies, money also depends on authority. Monetary authority refers to the institutions and legal structures that define what counts as money, regulate its issuance, support its acceptance, and help maintain trust in the monetary system. In early periods, this authority often rested with rulers who minted coins or declared official values. In modern economies, it is more closely associated with states, central banks, and legal tender systems.
+
+This authority matters because money is ultimately a social institution. People accept it not only because of habit, but because they expect others to accept it, because obligations such as taxes can be paid with it, and because institutions stand behind its use. The transition from commodity money to fiat money makes this especially clear. Once money is no longer valued mainly for its material content, credibility and institutional support become even more important.
+
+Monetary authority therefore sits at the intersection of law, politics, and finance. It shapes monetary stability, supports the payment system, and underpins confidence in the broader economy. This is one reason modern monetary systems cannot be understood only through markets or exchange. They must also be understood through the public authority that defines and sustains the monetary order itself.
