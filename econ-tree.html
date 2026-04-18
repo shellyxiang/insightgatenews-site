@@ -695,6 +695,15 @@ function closePanel() {
 document.getElementById("panel-close").addEventListener("click", closePanel);
 document.getElementById("mobile-pill").addEventListener("click", closePanel);
 
+// Swipe down to close on mobile
+(function () {
+  let startY = 0;
+  sidePanel.addEventListener("touchstart", e => { startY = e.touches[0].clientY; }, { passive: true });
+  sidePanel.addEventListener("touchend", e => {
+    if (e.changedTouches[0].clientY - startY > 80) closePanel();
+  }, { passive: true });
+})();
+
 // Resizable panel
 (function () {
   const MIN_W = 260, MAX_W = 700;
