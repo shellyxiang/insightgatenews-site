@@ -608,17 +608,24 @@ function update(source) {
     .style("opacity", 0)
     .on("click", (event, d) => {
       event.stopPropagation();
-      openPanel(d);
-      if (d.children) {
-        d._children = d.children; d.children = null;
-      } else if (d._children) {
-        d.children = d._children; d._children = null;
-        // Collapse grandchildren so only one level expands at a time
-        d.children.forEach(child => {
-          if (child.children) { child._children = child.children; child.children = null; }
-        });
+      const isLeaf = !d.children && !d._children;
+      if (isLeaf) {
+        openPanel(d);
+      } else {
+        if (d.children) {
+          d._children = d.children; d.children = null;
+        } else if (d._children) {
+          d.children = d._children; d._children = null;
+          d.children.forEach(child => {
+            if (child.children) { child._children = child.children; child.children = null; }
+          });
+        }
+        update(d);
       }
-      update(d);
+    })
+    .on("dblclick", (event, d) => {
+      event.stopPropagation();
+      openPanel(d);
     });
 
   ne.append("rect")
@@ -642,6 +649,13 @@ function update(source) {
   all.transition().duration(420)
     .attr("transform", d => `translate(${d.y - NODE_W/2},${d.x - NODE_H/2})`)
     .style("opacity", 1);
+
+  // Long press to open panel (mobile branch nodes)
+  let lpTimer = null;
+  all.on("touchstart.lp", (event, d) => {
+    lpTimer = setTimeout(() => { lpTimer = null; openPanel(d); }, 500);
+  }, { passive: true })
+  .on("touchend.lp touchmove.lp", () => { clearTimeout(lpTimer); lpTimer = null; });
 
   all.select(".node-label").call(setNodeLabel);
   all.select(".collapsed-ring").attr("display", d => d._children ? null : "none");
