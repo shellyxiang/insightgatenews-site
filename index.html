@@ -440,6 +440,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <button class="close-menu" id="closeMenu">✕</button>
     <a href="index.html" id="mm-map">World Map</a>
+    <a href="econ-tree.html" id="mm-econ">Econ Tree</a>
     <a href="contact.html" id="mm-about">About</a>
     <a href="login.html" id="mm-join">Join Us</a>
   </div>
@@ -962,6 +963,12 @@
         : ["World Map", "Econ Tree", "About"];
       navLinks.forEach((a, i) => { if (navTexts[i]) a.textContent = navTexts[i]; });
       document.querySelector(".site-nav .nav-login a").textContent = zh ? "加入我们" : "Join Us";
+
+      // 手机菜单
+      document.getElementById("mm-map").textContent  = zh ? "全球地图" : "World Map";
+      document.getElementById("mm-econ").textContent = zh ? "经济树"   : "Econ Tree";
+      document.getElementById("mm-about").textContent= zh ? "关于我们" : "About";
+      document.getElementById("mm-join").textContent = zh ? "加入我们" : "Join Us";
 
       // 页脚
       const footerLinks = document.querySelectorAll(".site-footer a");
