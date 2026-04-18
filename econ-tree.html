@@ -496,7 +496,7 @@ const zoom = d3.zoom()
   .scaleExtent([0.15, 3])
   .wheelDelta(e => -e.deltaY * (e.deltaMode === 1 ? 0.03 : e.deltaMode ? 0.8 : 0.001))
   .on("zoom", e => g.attr("transform", e.transform));
-svg.call(zoom);
+svg.call(zoom).on("dblclick.zoom", null);
 
 document.addEventListener("wheel", e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
 
