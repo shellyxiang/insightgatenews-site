@@ -482,7 +482,7 @@ const LEAF_FILL   = ["#1c2e10","#162610","#122010","#0f1c0e","#0d1a0c"];
 const LEAF_STROKE = ["#d4a843","#b88c30","#9a7428","#7a5e20","#6a5020"];
 const BRANCH_W    = [10, 5, 2.5, 1.5, 1];
 const LEAF_RX     = [58, 46, 36, 28, 24];
-const LEAF_RY     = [21, 17, 13, 11, 10];
+const LEAF_RY     = [24, 20, 16, 14, 12];
 
 // ─── Layout ──────────────────────────────────────────────────────────────────
 // Bottom-up tree: d.x = horizontal spread, d.y = depth (we render as -d.y)
@@ -550,19 +550,35 @@ function nodeLabel(data) {
   return data.label_en || data.name_en || data.name;
 }
 
-// Split label into ≤2 lines at the space nearest the midpoint
+// Split label into ≤3 lines
 function splitLabel(label) {
-  if (label.length <= 13) return [label];
-  const mid = Math.floor(label.length / 2);
-  let i = mid;
-  while (i >= 0 && label[i] !== " ") i--;
-  if (i < 1) {
-    let j = mid;
-    while (j < label.length && label[j] !== " ") j++;
-    i = j;
+  if (label.length <= 12) return [label];
+  // Find best split points by targeting equal-length thirds or halves
+  const words = label.split(" ");
+  if (words.length === 1) return [label];
+
+  // Try 2 lines first; if either line > 14 chars, try 3 lines
+  function bestSplit(str) {
+    const mid = Math.floor(str.length / 2);
+    let i = mid;
+    while (i >= 0 && str[i] !== " ") i--;
+    if (i < 1) { i = mid; while (i < str.length && str[i] !== " ") i++; }
+    if (i < 1 || i >= str.length) return [str];
+    return [str.slice(0, i), str.slice(i + 1)];
   }
-  if (i < 1 || i >= label.length) return [label];
-  return [label.slice(0, i), label.slice(i + 1)];
+
+  const two = bestSplit(label);
+  if (two.length === 1) return two;
+  if (two[0].length <= 14 && two[1].length <= 14) return two;
+
+  // Try 3 lines: split the longer half again
+  const longIdx = two[0].length >= two[1].length ? 0 : 1;
+  const sub = bestSplit(two[longIdx]);
+  if (sub.length === 1) return two;
+  const three = longIdx === 0
+    ? [...sub, two[1]]
+    : [two[0], ...sub];
+  return three;
 }
 
 function setNodeLabel(sel) {
