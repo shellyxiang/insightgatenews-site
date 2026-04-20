@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: radial-gradient(ellipse at 50% 110%, #111a08 0%, #050708 70%);
+      overflow: hidden; width: 100vw; height: 100vh;
+    }
+    svg { display: block; }
+    .leaf-group { cursor: pointer; }
+    .leaf-group:hover .leaf-body {
+      filter: drop-shadow(0 0 10px rgba(180,140,60,0.7));
+    }
+    .leaf-label {
+      font-family: Georgia, serif;
+      fill: #e8d4a0;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none;
+      font-size: 11px;
+    }
+    .root-label { font-size: 13px; }
+    #hint {
+      position: fixed; bottom: 20px; left: 50%;
+      transform: translateX(-50%);
+      color: #4a5a3a; font-size: 11px;
+      font-family: Georgia, serif; letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+<svg id="tree"></svg>
+<div id="hint">visual demo — not final</div>
+<script>
+const DATA = {
+  name: "Modern Economy\n& Finance",
+  children: [
+    { name: "Economic\nOrganization", children: [
+      { name: "Markets" }, { name: "Money" }, { name: "Firms" }
+    ]},
+    { name: "Financial\nSystem", children: [
+      { name: "Banking" }, { name: "Securities" }, { name: "Central Bank" }
+    ]},
+    { name: "Dynamics\n& Cycles", children: [
+      { name: "Business\nCycle" }, { name: "Credit\nCycle" }
+    ]},
+    { name: "Global\nFinance", children: [
+      { name: "Exchange\nRates" }, { name: "Capital\nFlows" }
+    ]},
+  ]
+};
+
+const W = window.innerWidth, H = window.innerHeight;
+const svg = d3.select("#tree").attr("width", W).attr("height", H);
+
+// ── Defs: glow filter ───────────────────────────────────────
+const defs = svg.append("defs");
+const glow = defs.append("filter").attr("id", "glow").attr("x", "-50%").attr("y", "-50%").attr("width", "200%").attr("height", "200%");
+glow.append("feGaussianBlur").attr("stdDeviation", "5").attr("result", "blur");
+const merge = glow.append("feMerge");
+merge.append("feMergeNode").attr("in", "blur");
+merge.append("feMergeNode").attr("in", "SourceGraphic");
+
+const g = svg.append("g");
+
+// ── Layout ──────────────────────────────────────────────────
+const layout = d3.tree().nodeSize([95, 190]);
+const root = d3.hierarchy(DATA);
+layout(root);
+const nodes = root.descendants();
+const minY = d3.min(nodes, d => d.y), maxY = d3.max(nodes, d => d.y);
+
+const GROUND_Y = H - 60;
+const ROOT_Y   = H * 0.68;   // root node sits 68% down
+const TOP_Y    = 70;
+
+function px(d) { return W / 2 + d.x; }
+function py(d) {
+  if (d.depth === 0) return ROOT_Y;
+  return ROOT_Y - ((d.y - minY) / (maxY - minY || 1)) * (ROOT_Y - TOP_Y);
+}
+
+// ── Ground & grass ──────────────────────────────────────────
+const ground = g.append("g");
+// soft ground glow
+ground.append("ellipse")
+  .attr("cx", W/2).attr("cy", GROUND_Y + 10)
+  .attr("rx", 220).attr("ry", 18)
+  .attr("fill", "#1a2e0a").attr("opacity", 0.55);
+// grass blades
+for (let i = 0; i < 80; i++) {
+  const cx = W/2 + (Math.random()-0.5)*400;
+  const h  = 6 + Math.random()*10;
+  const lean = (Math.random()-0.5)*5;
+  ground.append("line")
+    .attr("x1", cx).attr("y1", GROUND_Y)
+    .attr("x2", cx + lean).attr("y2", GROUND_Y - h)
+    .attr("stroke", d3.interpolate("#2a4a15","#4a7a25")(Math.random()))
+    .attr("stroke-width", 1 + Math.random()*0.8)
+    .attr("opacity", 0.4 + Math.random()*0.4);
+}
+
+// ── Trunk (filled tapered shape) ────────────────────────────
+// Trunk goes from ground up to root node
+// Draw as a filled path so it tapers naturally
+const trunkW_base = 22, trunkW_top = 9;
+const trunkX = W/2, trunkY1 = GROUND_Y, trunkY2 = ROOT_Y + 2;
+// slight S-curve lean
+const trunkPath = `
+  M ${trunkX - trunkW_base}, ${trunkY1}
+  C ${trunkX - trunkW_base + 4}, ${(trunkY1+trunkY2)/2}
+    ${trunkX - trunkW_top - 2}, ${(trunkY1+trunkY2)/2}
+    ${trunkX - trunkW_top}, ${trunkY2}
+  L ${trunkX + trunkW_top}, ${trunkY2}
+  C ${trunkX + trunkW_top + 2}, ${(trunkY1+trunkY2)/2}
+    ${trunkX + trunkW_base - 4}, ${(trunkY1+trunkY2)/2}
+    ${trunkX + trunkW_base}, ${trunkY1}
+  Z
+`;
+const trunk = g.append("path")
+  .attr("d", trunkPath)
+  .attr("fill", "#3a2412")
+  .attr("opacity", 0);
+
+// Bark texture lines on trunk
+const barkLines = g.append("g").attr("opacity", 0);
+for (let i = 0; i < 8; i++) {
+  const t = 0.15 + i * 0.1;
+  const y = trunkY1 + (trunkY2 - trunkY1) * t;
+  const halfW = trunkW_base + (trunkW_top - trunkW_base) * t;
+  const len = halfW * (0.5 + Math.random()*0.4);
+  const side = Math.random() > 0.5 ? 1 : -1;
+  barkLines.append("line")
+    .attr("x1", trunkX + side * (halfW - len) * 0.3)
+    .attr("y1", y + (Math.random()-0.5)*4)
+    .attr("x2", trunkX + side * halfW * 0.85)
+    .attr("y2", y + (Math.random()-0.5)*6)
+    .attr("stroke", "#2a1a0c").attr("stroke-width", 0.8).attr("opacity", 0.6);
+}
+
+trunk.transition().duration(500).attr("opacity", 1);
+barkLines.transition().delay(300).duration(400).attr("opacity", 1);
+
+// Trunk root-flare (buttress at base)
+[-14,-7,7,14].forEach(offset => {
+  g.append("path")
+    .attr("d", `M ${trunkX+offset},${trunkY1} Q ${trunkX+offset*1.8},${trunkY1-18} ${trunkX+offset*0.8},${trunkY1-40}`)
+    .attr("fill","none").attr("stroke","#3a2412").attr("stroke-width", 3).attr("opacity",0)
+    .transition().delay(200).duration(400).attr("opacity",0.6);
+});
+
+// ── Branch paths ────────────────────────────────────────────
+const BRANCH_STROKE = ["#5c3a1e","#8a5828","#a87840","#c09050"];
+const BRANCH_WIDTH  = [9, 4, 2, 1.3];
+
+root.links().sort((a,b) => a.source.depth - b.source.depth)
+  .forEach((link, i) => {
+    const d0 = link.source.depth;
+    const path = g.append("path")
+      .attr("fill", "none")
+      .attr("stroke", BRANCH_STROKE[d0] || "#b08040")
+      .attr("stroke-width", BRANCH_WIDTH[d0] || 1.3)
+      .attr("stroke-linecap", "round")
+      .attr("d", branchCurve(link));
+
+    const len = path.node().getTotalLength();
+    path.attr("stroke-dasharray", len).attr("stroke-dashoffset", len)
+      .transition()
+      .delay(300 + d0 * 350 + (i % 5) * 55)
+      .duration(650).ease(d3.easeCubicOut)
+      .attr("stroke-dashoffset", 0);
+  });
+
+// ── Leaf nodes ──────────────────────────────────────────────
+const FILLS   = ["#1c3010","#162810","#122010","#0f1c0e"];
+const STROKES = ["#d4a843","#b88c30","#9a7428","#806020"];
+const SIZES   = [[58,22],[44,18],[32,13]];
+
+nodes.forEach(d => {
+  const delay = 300 + d.depth * 350 + 400;
+  const [rx, ry] = SIZES[Math.min(d.depth, 2)];
+  const isRoot = d.depth === 0;
+
+  const grp = g.append("g")
+    .attr("class", "leaf-group")
+    .attr("transform", `translate(${px(d)},${py(d)})`);
+
+  // Gold glow ring for root
+  if (isRoot) {
+    grp.append("ellipse")
+      .attr("rx", rx+12).attr("ry", ry+12)
+      .attr("fill","none").attr("stroke","#d4a843").attr("stroke-width",1)
+      .attr("filter","url(#glow)").attr("opacity",0)
+      .transition().delay(delay+100).duration(600).attr("opacity",0.3);
+  }
+
+  // Leaf body
+  grp.append("ellipse")
+    .attr("class","leaf-body")
+    .attr("rx", rx).attr("ry", ry)
+    .attr("fill", FILLS[Math.min(d.depth,3)])
+    .attr("stroke", STROKES[Math.min(d.depth,3)])
+    .attr("stroke-width", isRoot ? 2 : 1.5)
+    .style("opacity",0)
+    .transition().delay(delay).duration(400).style("opacity",1);
+
+  // Midrib line (leaf vein) for non-root
+  if (!isRoot) {
+    grp.append("line")
+      .attr("x1",-rx*0.6).attr("y1",0).attr("x2",rx*0.6).attr("y2",0)
+      .attr("stroke", STROKES[Math.min(d.depth,3)])
+      .attr("stroke-width", 0.5).attr("opacity",0)
+      .transition().delay(delay+150).duration(300).attr("opacity",0.4);
+  }
+
+  // Label
+  const lines = d.data.name.split("\n");
+  const fs = isRoot ? 13 : (d.depth === 1 ? 11 : 10);
+  lines.forEach((line, li) => {
+    grp.append("text")
+      .attr("class", isRoot ? "leaf-label root-label" : "leaf-label")
+      .attr("font-size", fs)
+      .attr("y", (li-(lines.length-1)/2) * (fs+2))
+      .style("opacity",0).text(line)
+      .transition().delay(delay+150).duration(400).style("opacity",1);
+  });
+});
+
+// ── Branch curve ────────────────────────────────────────────
+function branchCurve(link) {
+  const x1=px(link.source), y1=py(link.source);
+  const x2=px(link.target), y2=py(link.target);
+  // control points: rise first, then sweep to target
+  const dy = y2 - y1;
+  const dx = x2 - x1;
+  return `M${x1},${y1} C${x1+dx*0.1},${y1+dy*0.35} ${x2-dx*0.05},${y2-dy*0.3} ${x2},${y2}`;
+}
+</script>
+</body>
+</html>

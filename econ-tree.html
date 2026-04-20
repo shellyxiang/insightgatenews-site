@@ -11,7 +11,7 @@
 
     html, body {
       width: 100%; height: 100%; overflow: hidden;
-      background: #0d1117;
+      background: radial-gradient(ellipse at 50% 115%, #0f1a09 0%, #060809 65%);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
       color: #e6edf3;
       display: flex;
@@ -109,30 +109,31 @@
 
     .link {
       fill: none;
-      stroke-width: 2px;
       stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .node-card { cursor: pointer; }
     .node-group {
+      cursor: pointer;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       user-select: none;
     }
-    .node-group:hover .node-card {
-      filter: drop-shadow(0 0 14px rgba(88,166,255,0.55));
+    .node-group:hover .node-leaf {
+      filter: drop-shadow(0 0 12px rgba(212,168,67,0.65));
     }
+    .node-leaf { transition: filter 0.2s; }
     .node-label {
-      font-size: 12px; font-weight: 600; fill: #fff;
+      font-size: 11px; font-weight: 600; fill: #e8d4a0;
       pointer-events: none;
       dominant-baseline: middle; text-anchor: middle;
+      font-family: Georgia, serif;
     }
-    .collapsed-ring {
-      fill: none;
-      stroke: rgba(255,255,255,0.55);
-      stroke-width: 1.5;
-      stroke-dasharray: 3 2;
+    .collapsed-bud {
+      fill: rgba(212,168,67,0.7);
+      stroke: none;
     }
+    .trunk { pointer-events: none; }
 
     /* Tooltip */
     #tooltip {
@@ -477,17 +478,16 @@ const TREE_DATA = {
 };
 
 // ─── Colors by depth ─────────────────────────────────────────────────────────
-const DEPTH_COLORS = [
-  { fill: "#92400e", stroke: "#fbbf24" },
-  { fill: "#1e3a8a", stroke: "#60a5fa" },
-  { fill: "#064e3b", stroke: "#34d399" },
-  { fill: "#4c1d95", stroke: "#a78bfa" },
-  { fill: "#7f1d1d", stroke: "#f87171" },
-];
-function dc(depth) { return DEPTH_COLORS[Math.min(depth, DEPTH_COLORS.length - 1)]; }
+const LEAF_FILL   = ["#1c2e10","#162610","#122010","#0f1c0e","#0d1a0c"];
+const LEAF_STROKE = ["#d4a843","#b88c30","#9a7428","#7a5e20","#6a5020"];
+const BRANCH_W    = [10, 5, 2.5, 1.5, 1];
+const LEAF_RX     = [58, 46, 36, 28, 24];
+const LEAF_RY     = [21, 17, 13, 11, 10];
 
 // ─── Layout ──────────────────────────────────────────────────────────────────
-const NODE_W = 118, NODE_H = 44, H_GAP = 170, V_GAP = 85;
+// Bottom-up tree: d.x = horizontal spread, d.y = depth (we render as -d.y)
+const NODE_W = 118, NODE_H = 44; // kept for compat; actual size from LEAF_RX/RY
+const LEVEL_H = 155, SIBLING_W = 125;
 
 const svg  = d3.select("#tree");
 const g    = svg.append("g");
@@ -540,7 +540,7 @@ function showTip(event, d) {
 function hideTip() { tooltip.classList.remove("show"); }
 svg.on("click", e => { if (e.target.tagName === "svg") hideTip(); });
 
-const treeLayout = d3.tree().nodeSize([V_GAP, H_GAP + NODE_W]);
+const treeLayout = d3.tree().nodeSize([SIBLING_W, LEVEL_H]);
 let uid = 0, root;
 
 function nodeLabel(data) {
@@ -568,12 +568,13 @@ function setNodeLabel(sel) {
     const el = d3.select(this);
     const lines = splitLabel(nodeLabel(d.data));
     el.text("");
-    if (lines.length === 1) {
-      el.append("tspan").attr("x", NODE_W / 2).attr("y", NODE_H / 2).text(lines[0]);
-    } else {
-      el.append("tspan").attr("x", NODE_W / 2).attr("y", NODE_H / 2 - 7).text(lines[0]);
-      el.append("tspan").attr("x", NODE_W / 2).attr("dy", "1.25em").text(lines[1]);
-    }
+    const lh = 13;
+    lines.forEach((line, i) => {
+      el.append("tspan")
+        .attr("x", 0)
+        .attr("dy", i === 0 ? `${-(lines.length - 1) * lh / 2}px` : `${lh}px`)
+        .text(line);
+    });
   });
 }
 
@@ -582,37 +583,32 @@ function update(source) {
   const nodes = root.descendants();
   const links = root.links();
 
-  // Links
+  // Links (bottom-up: source below target)
   const link = g.selectAll("path.link").data(links, d => d.target.id);
 
   const linkEnter = link.enter().append("path")
     .attr("class", "link")
-    .attr("stroke", d => dc(d.target.depth).stroke)
-    .attr("stroke-opacity", 0.4)
-    .attr("d", () => bezier(
-      { x: source.x0, y: source.y0 + NODE_W / 2 },
-      { x: source.x0, y: source.y0 + NODE_W / 2 }
-    ));
+    .attr("stroke", d => LEAF_STROKE[Math.min(d.source.depth, 4)])
+    .attr("stroke-width", d => BRANCH_W[Math.min(d.source.depth, 4)])
+    .attr("stroke-opacity", 0)
+    .attr("d", () => vertBezier(source.x0, -source.y0, source.x0, -source.y0));
 
-  link.merge(linkEnter)
-    .transition().duration(420)
-    .attr("d", d => bezier(
-      { x: d.source.x, y: d.source.y + NODE_W / 2 },
-      { x: d.target.x, y: d.target.y - NODE_W / 2 }
-    ));
+  link.merge(linkEnter).transition().duration(480)
+    .attr("d", d => vertBezier(d.source.x, -d.source.y, d.target.x, -d.target.y))
+    .attr("stroke", d => LEAF_STROKE[Math.min(d.source.depth, 4)])
+    .attr("stroke-width", d => BRANCH_W[Math.min(d.source.depth, 4)])
+    .attr("stroke-opacity", 0.75);
 
   link.exit().transition().duration(420)
-    .attr("d", () => bezier(
-      { x: source.x, y: source.y + NODE_W / 2 },
-      { x: source.x, y: source.y + NODE_W / 2 }
-    )).remove();
+    .attr("d", () => vertBezier(source.x, -source.y, source.x, -source.y))
+    .attr("stroke-opacity", 0).remove();
 
   // Nodes
   const node = g.selectAll("g.node-group").data(nodes, d => d.id);
 
   const ne = node.enter().append("g")
     .attr("class", "node-group")
-    .attr("transform", `translate(${source.y0 - NODE_W/2},${source.x0 - NODE_H/2})`)
+    .attr("transform", `translate(${source.x0},${-source.y0})`)
     .style("opacity", 0)
     .on("click", (event, d) => {
       event.stopPropagation();
@@ -636,29 +632,42 @@ function update(source) {
       openPanel(d);
     });
 
-  ne.append("rect")
-    .attr("class", "node-card")
-    .attr("width", NODE_W).attr("height", NODE_H)
-    .attr("rx", 9).attr("ry", 9)
-    .attr("fill",   d => dc(d.depth).fill)
-    .attr("stroke", d => dc(d.depth).stroke)
-    .attr("stroke-width", 1.5);
+  // Ellipse leaf body
+  ne.append("ellipse")
+    .attr("class", "node-leaf")
+    .attr("rx", d => LEAF_RX[Math.min(d.depth, 4)])
+    .attr("ry", d => LEAF_RY[Math.min(d.depth, 4)])
+    .attr("fill",   d => LEAF_FILL[Math.min(d.depth, 4)])
+    .attr("stroke", d => LEAF_STROKE[Math.min(d.depth, 4)])
+    .attr("stroke-width", d => d.depth === 0 ? 2 : 1.5);
+
+  // Midrib vein line (non-root)
+  ne.filter(d => d.depth > 0).append("line")
+    .attr("class", "midrib")
+    .attr("x1", d => -LEAF_RX[Math.min(d.depth, 4)] * 0.55)
+    .attr("x2", d =>  LEAF_RX[Math.min(d.depth, 4)] * 0.55)
+    .attr("y1", 0).attr("y2", 0)
+    .attr("stroke", d => LEAF_STROKE[Math.min(d.depth, 4)])
+    .attr("stroke-width", 0.5).attr("opacity", 0.35);
 
   ne.append("text")
     .attr("class", "node-label")
     .call(setNodeLabel);
 
+  // Collapsed bud dot (shows hidden children)
   ne.append("circle")
-    .attr("class", "collapsed-ring")
-    .attr("cx", NODE_W).attr("cy", NODE_H / 2).attr("r", 5);
+    .attr("class", "collapsed-bud")
+    .attr("cx", 0)
+    .attr("cy", d => -LEAF_RY[Math.min(d.depth, 4)] - 5)
+    .attr("r", 3);
 
   const all = node.merge(ne);
 
-  all.transition().duration(420)
-    .attr("transform", d => `translate(${d.y - NODE_W/2},${d.x - NODE_H/2})`)
+  all.transition().duration(480)
+    .attr("transform", d => `translate(${d.x},${-d.y})`)
     .style("opacity", 1);
 
-  // Long press to open panel (mobile branch nodes)
+  // Long press to open panel (mobile)
   let lpTimer = null;
   all.on("touchstart.lp", (event, d) => {
     lpTimer = setTimeout(() => { lpTimer = null; openPanel(d); }, 500);
@@ -667,13 +676,17 @@ function update(source) {
   .on("contextmenu", event => event.preventDefault());
 
   all.select(".node-label").call(setNodeLabel);
-  all.select(".collapsed-ring").attr("display", d => d._children ? null : "none");
-  all.select(".node-card")
-    .attr("fill",   d => dc(d.depth).fill)
-    .attr("stroke", d => dc(d.depth).stroke);
+  all.select(".node-leaf")
+    .attr("fill",   d => LEAF_FILL[Math.min(d.depth, 4)])
+    .attr("stroke", d => LEAF_STROKE[Math.min(d.depth, 4)])
+    .attr("rx", d => LEAF_RX[Math.min(d.depth, 4)])
+    .attr("ry", d => LEAF_RY[Math.min(d.depth, 4)]);
+  all.select(".collapsed-bud")
+    .attr("display", d => d._children ? null : "none")
+    .attr("cy", d => -LEAF_RY[Math.min(d.depth, 4)] - 5);
 
   node.exit().transition().duration(420)
-    .attr("transform", `translate(${source.y - NODE_W/2},${source.x - NODE_H/2})`)
+    .attr("transform", `translate(${source.x},${-source.y})`)
     .style("opacity", 0).remove();
 
   root.eachBefore(d => { d.x0 = d.x; d.y0 = d.y; });
@@ -681,24 +694,26 @@ function update(source) {
 
 function recenter() {
   const desc = root.descendants();
-  const minY = d3.min(desc, d => d.y) - NODE_W / 2;
-  const maxY = d3.max(desc, d => d.y) + NODE_W / 2;
-  const minX = d3.min(desc, d => d.x) - NODE_H / 2;
-  const maxX = d3.max(desc, d => d.x) + NODE_H / 2;
-  const bw = maxY - minY, bh = maxX - minX;
+  // In screen coords: x = d.x, y = -d.y
+  const minX = d3.min(desc, d => d.x) - 70;
+  const maxX = d3.max(desc, d => d.x) + 70;
+  const minSY = d3.min(desc, d => -d.y) - 30; // top of tree
+  const maxSY = d3.max(desc, d => -d.y) + 30; // bottom (root)
+  const tw = maxX - minX, th = maxSY - minSY;
   const sw = document.getElementById("tree-area").clientWidth, sh = window.innerHeight;
-  const sc = Math.min(0.85, Math.min(sw / (bw + 100), sh / (bh + 100)));
-  const tx = 48 - sc * minY;
-  const ty = sh / 2 - sc * (minX + bh / 2);
+  const sc = Math.min(1.1, Math.min(sw / (tw + 80), (sh * 0.85) / (th + 80)));
+  const tx = sw / 2 - sc * (minX + maxX) / 2;
+  const ty = sh * 0.82 - sc * maxSY; // root near bottom
   svg.transition().duration(500)
     .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(sc));
 }
 
 document.getElementById("recenterBtn").addEventListener("click", recenter);
 
-function bezier(s, t) {
-  const mx = (s.y + t.y) / 2;
-  return `M${s.y},${s.x} C${mx},${s.x} ${mx},${t.x} ${t.y},${t.x}`;
+function vertBezier(sx, sy, tx, ty) {
+  const cy = (sy + ty) / 2;
+  const lean = (tx - sx) * 0.12;
+  return `M${sx},${sy} C${sx+lean},${cy} ${tx-lean},${cy} ${tx},${ty}`;
 }
 
 // ─── Side Panel ──────────────────────────────────────────────────────────────
@@ -811,6 +826,42 @@ function openPanel(d) {
     .then(md => renderPanel(d, md));
 }
 
+// ─── Trunk (drawn once, inside g, behind everything)
+const TRUNK_LEN = 130;
+(function drawTrunk() {
+  const trunkG = g.insert("g", ":first-child").attr("class", "trunk");
+  // Filled tapered trunk shape
+  trunkG.append("path")
+    .attr("d", `M -16,${TRUNK_LEN} C -14,${TRUNK_LEN*0.55} -8,10 0,0 C 8,10 14,${TRUNK_LEN*0.55} 16,${TRUNK_LEN} Z`)
+    .attr("fill", "#3a2412");
+  // Bark lines
+  [[0.2,-1,0.85],[0.32,1,0.75],[0.45,-1,0.7],[0.58,1,0.65],[0.7,-1,0.6],[0.83,1,0.55]]
+    .forEach(([t, side, op]) => {
+      const y = t * TRUNK_LEN;
+      const hw = 16 - t * 9;
+      trunkG.append("line")
+        .attr("x1", side * hw * 0.15).attr("y1", y)
+        .attr("x2", side * hw * 0.88).attr("y2", y + 3 + Math.random()*3)
+        .attr("stroke","#2a1a0c").attr("stroke-width",0.9).attr("opacity", op * 0.55);
+    });
+  // Root flare
+  [-12, 12].forEach(ox => {
+    trunkG.append("path")
+      .attr("d", `M ${ox},${TRUNK_LEN} Q ${ox*1.7},${TRUNK_LEN-16} ${ox*0.7},${TRUNK_LEN-42}`)
+      .attr("fill","none").attr("stroke","#3a2412").attr("stroke-width",3.5).attr("opacity",0.6);
+  });
+  // Grass
+  for (let i = 0; i < 160; i++) {
+    const gx = (Math.random()-0.5)*600, gh = 8+Math.random()*18;
+    const lean = (Math.random()-0.5)*6;
+    trunkG.append("line")
+      .attr("x1", gx).attr("y1", TRUNK_LEN)
+      .attr("x2", gx+lean).attr("y2", TRUNK_LEN-gh)
+      .attr("stroke", d3.interpolate("#2a5015","#5a9030")(Math.random()))
+      .attr("stroke-width", 1+Math.random()*1.2).attr("opacity",0.55+Math.random()*0.4);
+  }
+})();
+
 // ─── Init
 root = d3.hierarchy(TREE_DATA);
 root.descendants().forEach(d => {
@@ -820,18 +871,9 @@ root.descendants().forEach(d => {
 update(root);
 
 setTimeout(() => {
-  const desc = root.descendants();
-  const minY = d3.min(desc, d => d.y) - NODE_W / 2;
-  const maxY = d3.max(desc, d => d.y) + NODE_W / 2;
-  const minX = d3.min(desc, d => d.x) - NODE_H / 2;
-  const maxX = d3.max(desc, d => d.x) + NODE_H / 2;
-  const bw = maxY - minY, bh = maxX - minX;
   const sw = document.getElementById("tree-area").clientWidth, sh = window.innerHeight;
-  const sc = Math.min(0.85, Math.min(sw / (bw + 100), sh / (bh + 100)));
-  const tx = 48 - sc * minY;
-  const ty = sh / 2 - sc * (minX + bh / 2);
   svg.transition().duration(700)
-    .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(sc));
+    .call(zoom.transform, d3.zoomIdentity.translate(sw/2, sh * 0.82));
 }, 60);
 
 // Apply initial lang
