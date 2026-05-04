@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.style.visibility="hidden";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ9EZ1GEJB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJ9EZ1GEJB');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports · Insight Gate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    .site-nav {
+      background: #0a1628;
+      border-bottom: 1px solid #1e3a5f;
+      padding: 0.7rem 0;
+      flex-shrink: 0;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand { color: #d4af37; font-weight: 700; font-size: 1.1rem; text-decoration: none; margin-right: auto; }
+    .nav-links { display: flex; list-style: none; gap: 0.2rem; }
+    .nav-links a {
+      color: #8b949e; text-decoration: none; font-size: 0.85rem;
+      padding: 5px 10px; border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #e6edf3; background: rgba(255,255,255,0.07); }
+    .nav-login a {
+      color: #e6edf3; text-decoration: none; font-size: 0.85rem;
+      padding: 5px 14px; border: 1px solid #30363d; border-radius: 6px;
+      transition: border-color 0.2s;
+    }
+    .nav-login a:hover { border-color: #8b949e; }
+    .lang-btn {
+      background: transparent; border: 1px solid #30363d; color: #8b949e;
+      padding: 4px 12px; border-radius: 6px; font-size: 0.8rem;
+      cursor: pointer; font-family: inherit; transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-btn:hover { color: #e6edf3; border-color: #8b949e; }
+
+    /* ── Main ── */
+    main { flex: 1; padding: 60px 24px 80px; }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+
+    /* ── Two-column layout ── */
+    .page-body {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 32px;
+      align-items: start;
+    }
+    .col-right {
+      position: sticky;
+      top: 24px;
+    }
+    .demo-card {
+      background: #0d1117;
+      border: 1px solid #21262d;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .demo-card-header {
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid #21262d;
+    }
+    .demo-card-header h2 { font-size: 0.95rem; font-weight: 600; color: #c9d1d9; margin-bottom: 4px; }
+    .demo-card-header p  { font-size: 0.78rem; color: #484f58; line-height: 1.6; }
+    .demo-frame {
+      width: 100%; height: 580px;
+      border: none;
+      display: block;
+    }
+
+    /* ── Intro ── */
+    .intro {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #21262d;
+    }
+    .intro h1 { font-size: 1.6rem; font-weight: 600; color: #e6edf3; margin-bottom: 12px; }
+    .intro p  { font-size: 0.95rem; color: #8b949e; line-height: 1.8; max-width: 620px; }
+
+    /* ── Category ── */
+    .category { margin-bottom: 40px; }
+    .category-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px; cursor: pointer; user-select: none;
+    }
+    .category-header h2 { font-size: 1rem; font-weight: 600; color: #c9d1d9; }
+    .category-tag {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #d4af37;
+      background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.25);
+      padding: 2px 8px; border-radius: 4px;
+    }
+    .chevron {
+      margin-left: auto; color: #484f58; font-size: 12px;
+      transition: transform 0.25s;
+    }
+    .category.open .chevron { transform: rotate(90deg); }
+
+    /* ── Subcategory ── */
+    .subcategory-list { display: none; padding-left: 0; }
+    .category.open .subcategory-list { display: block; }
+
+    .subcategory {
+      background: #0d1f12;
+      border: 1px solid #1a3320;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .sub-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 18px; cursor: pointer; user-select: none;
+    }
+    .sub-icon { font-size: 16px; }
+    .sub-header h3 { font-size: 0.9rem; font-weight: 600; color: #c9d1d9; }
+    .sub-count { margin-left: auto; font-size: 0.75rem; color: #484f58; }
+    .sub-chevron { color: #484f58; font-size: 11px; transition: transform 0.25s; }
+    .subcategory.open .sub-chevron { transform: rotate(90deg); }
+
+    .file-list { display: none; border-top: 1px solid #1a3320; }
+    .subcategory.open .file-list { display: block; }
+
+    .file-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 13px 18px;
+      border-bottom: 1px solid #121f18;
+      transition: background 0.15s;
+    }
+    .file-item:last-child { border-bottom: none; }
+    .file-item:hover { background: rgba(255,255,255,0.03); }
+
+    .file-icon { font-size: 20px; flex-shrink: 0; }
+    .file-info { flex: 1; min-width: 0; }
+    .file-name {
+      font-size: 0.875rem; color: #c9d1d9; font-weight: 500;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .file-meta { font-size: 0.75rem; color: #484f58; margin-top: 2px; }
+
+    .dl-btn {
+      flex-shrink: 0;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 7px;
+      background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.3);
+      color: #d4af37; font-size: 0.78rem; font-weight: 500;
+      text-decoration: none; font-family: inherit;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .dl-btn:hover { background: rgba(212,175,55,0.18); border-color: #d4af37; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #0a1628; border-top: 1px solid #1e3a5f;
+      padding: 20px 24px; text-align: center;
+      font-size: 0.78rem; color: #4a5568;
+    }
+    .site-footer a { color: #4a5568; text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: #8b949e; }
+
+    /* ── Mobile ── */
+    @media (max-width: 800px) {
+      .page-body { grid-template-columns: 1fr; }
+      .col-right { position: static; }
+      .demo-frame { height: 500px; }
+    }
+    @media (max-width: 600px) {
+      .nav-links, .nav-login { display: none; }
+      .file-meta { display: none; }
+      .dl-btn span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Insight Gate</a>
+    <ul class="nav-links">
+      <li><a href="index.html"     id="nav-map">World Map</a></li>
+      <li><a href="econ-tree.html" id="nav-tree">Econ Tree</a></li>
+      <li><a href="reports.html"   id="nav-reports" class="active">Reports</a></li>
+      <li><a href="contact.html"   id="nav-about">About</a></li>
+    </ul>
+    <div class="nav-login"><a href="login.html" id="nav-join">Join Us</a></div>
+    <button class="lang-btn" id="langBtn">中文</button>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <!-- Intro -->
+    <div class="intro">
+      <h1 id="intro-title">Research Reports</h1>
+      <p id="intro-desc">A collection of in-depth analysis reports and datasets covering commodity markets and global trade dynamics. Click any file to download.</p>
+    </div>
+
+    <div class="page-body">
+
+      <!-- Left: Reports -->
+      <div class="col-left">
+        <div class="category open" id="cat-commodities">
+          <div class="category-header" onclick="toggleCategory('cat-commodities')">
+            <span class="category-tag" id="tag-commodities">Commodities</span>
+            <h2 id="cat-title-commodities">Commodities Trading</h2>
+            <span class="chevron">▶</span>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory open" id="sub-lithium">
+              <div class="sub-header" onclick="toggleSub('sub-lithium')">
+                <span class="sub-icon">⛏</span>
+                <h3 id="sub-title-lithium">Lithium</h3>
+                <span class="sub-count" id="sub-count-lithium"></span>
+                <span class="sub-chevron">▶</span>
+              </div>
+              <div class="file-list" id="file-list-lithium"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: LLM Demo -->
+      <div class="col-right">
+        <div class="demo-card">
+          <div class="demo-card-header">
+            <h2 id="demo-title">Toy Language Model Demo</h2>
+            <p id="demo-desc">A character-level Transformer trained from scratch with PyTorch. Type a prompt and generate text.</p>
+          </div>
+          <iframe
+            class="demo-frame"
+            src="https://shellyxiang-insightgate-llm.hf.space"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <a href="index.html" id="footer-map">World Map</a>
+  <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
+  <a href="terms.html" id="footer-terms">Terms of Service</a>
+  <a href="contact.html" id="footer-contact">Contact</a>
+  <div style="margin-top:8px" id="footer-copy">© Insight Gate. All rights reserved.</div>
+</footer>
+
+<script>
+// ── File registry — add your files here ─────────────────────
+// type: "pdf" | "excel" | "word"
+// date: optional, shown as metadata
+const FILES = {
+  lithium: [
+    { name: "Lithium_Carbonate_Market_Report_20260501.pdf",    type: "pdf",   date: "2026-05" },
+    { name: "Lithium_Mine_Supply_Report_20260501.pdf",         type: "pdf",   date: "2026-05" },
+    { name: "Lithium_Price_Assessment_LinkedIn_20260501.pdf",  type: "pdf",   date: "2026-05" },
+    { name: "Lithium_Mine_Supply_Analysis_20260501.xlsx",      type: "excel", date: "2026-05" },
+  ]
+};
+
+const FILE_ICONS = { pdf: "📄", excel: "📊", word: "📝" };
+const BASE_PATHS = { lithium: "reports/commodities/lithium/" };
+
+function renderFiles(subId, files) {
+  const list = document.getElementById("file-list-" + subId);
+  const count = document.getElementById("sub-count-" + subId);
+  if (!list) return;
+  count.textContent = files.length + (lang === "zh" ? " 份" : " files");
+  if (files.length === 0) {
+    list.innerHTML = `<div style="padding:16px 18px;font-size:0.82rem;color:#484f58">${lang === "zh" ? "暂无文件" : "No files yet"}</div>`;
+    return;
+  }
+  list.innerHTML = files.map(f => {
+    const icon = FILE_ICONS[f.type] || "📄";
+    const path = BASE_PATHS[subId] + encodeURIComponent(f.name);
+    const meta = f.date || "";
+    return `
+      <div class="file-item">
+        <span class="file-icon">${icon}</span>
+        <div class="file-info">
+          <div class="file-name">${f.name}</div>
+          ${meta ? `<div class="file-meta">${meta}</div>` : ""}
+        </div>
+        <a class="dl-btn" href="${path}" download="${f.name}">
+          <span>↓</span><span>${lang === "zh" ? "下载" : "Download"}</span>
+        </a>
+      </div>`;
+  }).join("");
+}
+
+function toggleCategory(id) {
+  document.getElementById(id).classList.toggle("open");
+}
+function toggleSub(id) {
+  document.getElementById(id).classList.toggle("open");
+}
+
+// ── i18n ────────────────────────────────────────────────────
+let lang = localStorage.getItem("lang") || "en";
+const langBtn = document.getElementById("langBtn");
+
+const TEXTS = {
+  en: {
+    title: "Reports · Insight Gate",
+    introTitle: "Research Reports",
+    introDesc: "A collection of in-depth analysis reports and datasets covering commodity markets and global trade dynamics. Click any file to download.",
+    navMap: "World Map", navTree: "Econ Tree", navReports: "Reports", navAbout: "About", navJoin: "Join Us",
+    catCommodities: "Commodities Trading",
+    subLithium: "Lithium",
+    footerMap: "World Map", footerPrivacy: "Privacy Policy", footerTerms: "Terms of Service",
+    footerContact: "Contact", footerCopy: "© Insight Gate. All rights reserved.",
+    demoTitle: "Interactive Demo — Toy Language Model",
+    demoDesc: "A character-level Transformer trained from scratch using PyTorch. Type a prompt and watch it generate text — a portfolio demonstration of building an LLM from the ground up.",
+  },
+  zh: {
+    title: "报告 · Insight Gate",
+    introTitle: "研究报告",
+    introDesc: "涵盖大宗商品市场与全球贸易动态的深度分析报告与数据集，点击文件即可下载。",
+    navMap: "全球地图", navTree: "经济树", navReports: "报告", navAbout: "关于我们", navJoin: "加入我们",
+    catCommodities: "大宗商品交易",
+    subLithium: "锂",
+    footerMap: "全球地图", footerPrivacy: "隐私政策", footerTerms: "服务条款",
+    footerContact: "联系我们", footerCopy: "© Insight Gate. 保留所有权利.",
+    demoTitle: "互动演示 — 玩具语言模型",
+    demoDesc: "使用 PyTorch 从零训练的字符级 Transformer。输入提示词，看它生成文字——展示从头构建 LLM 的 portfolio 项目。",
+  }
+};
+
+function applyLang() {
+  const t = TEXTS[lang];
+  document.title = t.title;
+  langBtn.textContent = lang === "zh" ? "EN" : "中文";
+  document.getElementById("intro-title").textContent = t.introTitle;
+  document.getElementById("intro-desc").textContent  = t.introDesc;
+  document.getElementById("nav-map").textContent     = t.navMap;
+  document.getElementById("nav-tree").textContent    = t.navTree;
+  document.getElementById("nav-reports").textContent = t.navReports;
+  document.getElementById("nav-about").textContent   = t.navAbout;
+  document.getElementById("nav-join").textContent    = t.navJoin;
+  document.getElementById("cat-title-commodities").textContent = t.catCommodities;
+  document.getElementById("sub-title-lithium").textContent     = t.subLithium;
+  document.getElementById("footer-map").textContent     = t.footerMap;
+  document.getElementById("footer-privacy").textContent = t.footerPrivacy;
+  document.getElementById("footer-terms").textContent   = t.footerTerms;
+  document.getElementById("footer-contact").textContent = t.footerContact;
+  document.getElementById("footer-copy").textContent    = t.footerCopy;
+  document.getElementById("demo-title").textContent     = t.demoTitle;
+  document.getElementById("demo-desc").textContent      = t.demoDesc;
+  Object.keys(FILES).forEach(id => renderFiles(id, FILES[id]));
+}
+
+langBtn.addEventListener("click", () => {
+  lang = lang === "en" ? "zh" : "en";
+  localStorage.setItem("lang", lang);
+  applyLang();
+});
+
+applyLang();
+document.documentElement.style.visibility = "";
+</script>
+</body>
+</html>
