@@ -223,6 +223,7 @@
 
 <div id="controls">
   <a class="ctrl-btn" href="index.html" id="btn-back">← Map</a>
+  <a class="ctrl-btn" href="reports.html" id="btn-reports">Reports</a>
   <button class="ctrl-btn" id="recenterBtn">⊙</button>
   <button class="ctrl-btn" id="langBtn">中文</button>
 </div>
@@ -271,8 +272,8 @@ function applyLang() {
         "点击展开/收起 · 双击阅读内容 · 拖动移动 · 滚轮缩放");
   document.getElementById("hint").textContent =
     t("Click any node to expand / collapse", "点击节点展开或收起");
-  document.getElementById("btn-back").textContent =
-    t("← Map", "← 地图");
+  document.getElementById("btn-back").textContent = t("← Map", "← 地图");
+  document.getElementById("btn-reports").textContent = t("Reports", "报告");
   langBtn.textContent = lang === "zh" ? "EN" : "中文";
   // Re-render node labels
   if (root) {
