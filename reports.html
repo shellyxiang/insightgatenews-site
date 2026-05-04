@@ -68,30 +68,90 @@
     /* ── Two-column layout ── */
     .page-body {
       display: grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: 1fr 400px;
       gap: 32px;
       align-items: start;
     }
-    .col-right {
-      position: sticky;
-      top: 24px;
-    }
-    .demo-card {
-      background: #0d1117;
-      border: 1px solid #21262d;
-      border-radius: 14px;
+    .col-right { position: sticky; top: 24px; }
+
+    /* ── LLM Card ── */
+    .llm-card {
+      background: #0a0e16;
+      border: 1px solid #1e2a3a;
+      border-radius: 16px;
       overflow: hidden;
     }
-    .demo-card-header {
-      padding: 16px 18px 12px;
-      border-bottom: 1px solid #21262d;
+    .llm-header {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid #1e2a3a;
+      background: linear-gradient(135deg, #0d1520 0%, #0a1628 100%);
     }
-    .demo-card-header h2 { font-size: 0.95rem; font-weight: 600; color: #c9d1d9; margin-bottom: 4px; }
-    .demo-card-header p  { font-size: 0.78rem; color: #484f58; line-height: 1.6; }
-    .demo-frame {
-      width: 100%; height: 580px;
-      border: none;
-      display: block;
+    .llm-header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+    .llm-badge {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #4a9eff;
+      background: rgba(74,158,255,0.1); border: 1px solid rgba(74,158,255,0.25);
+      padding: 2px 8px; border-radius: 4px;
+    }
+    .llm-header h2 { font-size: 0.95rem; font-weight: 600; color: #e6edf3; }
+    .llm-header p  { font-size: 0.75rem; color: #484f58; line-height: 1.5; }
+
+    .llm-body { padding: 18px 20px; display: flex; flex-direction: column; gap: 14px; }
+
+    .llm-label { font-size: 0.72rem; font-weight: 600; color: #6e7681; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; }
+
+    .llm-textarea {
+      width: 100%; background: #060a10; border: 1px solid #1e2a3a;
+      border-radius: 8px; padding: 10px 12px;
+      font-size: 0.82rem; color: #c9d1d9; font-family: 'Inter', monospace;
+      resize: none; outline: none; line-height: 1.6;
+      transition: border-color 0.2s;
+    }
+    .llm-textarea:focus { border-color: #2a4a6a; }
+    .llm-textarea::placeholder { color: #2a3a4a; }
+
+    .llm-controls { display: flex; gap: 10px; }
+    .llm-control { flex: 1; }
+    .llm-range {
+      width: 100%; accent-color: #4a9eff;
+      height: 4px; border-radius: 2px;
+    }
+    .llm-range-val { font-size: 0.72rem; color: #484f58; text-align: right; margin-top: 2px; }
+
+    .llm-generate {
+      width: 100%; padding: 10px;
+      background: linear-gradient(135deg, #1a3a5c, #0f2540);
+      border: 1px solid #2a5a8c;
+      border-radius: 8px; color: #4a9eff;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; font-family: inherit;
+      transition: all 0.2s; letter-spacing: 0.03em;
+    }
+    .llm-generate:hover { background: linear-gradient(135deg, #1e4a74, #142d50); border-color: #4a9eff; }
+    .llm-generate:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .llm-output-wrap { position: relative; }
+    .llm-output {
+      width: 100%; min-height: 140px; background: #060a10;
+      border: 1px solid #1e2a3a; border-radius: 8px;
+      padding: 12px; font-size: 0.78rem; color: #8b949e;
+      font-family: 'Courier New', monospace; line-height: 1.7;
+      white-space: pre-wrap; word-break: break-word;
+      box-sizing: border-box;
+    }
+    .llm-output.loading { color: #2a4a6a; }
+    .llm-cursor {
+      display: inline-block; width: 7px; height: 13px;
+      background: #4a9eff; vertical-align: text-bottom;
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .llm-footer {
+      padding: 10px 20px;
+      border-top: 1px solid #1e2a3a;
+      font-size: 0.68rem; color: #2a3a4a;
+      line-height: 1.5;
     }
 
     /* ── Intro ── */
@@ -248,17 +308,38 @@
 
       <!-- Right: LLM Demo -->
       <div class="col-right">
-        <div class="demo-card">
-          <div class="demo-card-header">
-            <h2 id="demo-title">Toy Language Model Demo</h2>
-            <p id="demo-desc">A character-level Transformer trained from scratch with PyTorch. Type a prompt and generate text.</p>
+        <div class="llm-card">
+          <div class="llm-header">
+            <div class="llm-header-top">
+              <span class="llm-badge">Live Model</span>
+            </div>
+            <h2 id="demo-title">Transformer — Built from Scratch</h2>
+            <p id="demo-desc">Character-level language model trained with PyTorch. Type a seed phrase or leave blank.</p>
           </div>
-          <iframe
-            class="demo-frame"
-            src="https://shellyxiang-insightgate-llm.hf.space"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-          ></iframe>
+          <div class="llm-body">
+            <div>
+              <div class="llm-label" id="lbl-prompt">Prompt</div>
+              <textarea class="llm-textarea" id="llm-prompt" rows="2" placeholder="e.g. lithium price..."></textarea>
+            </div>
+            <div class="llm-controls">
+              <div class="llm-control">
+                <div class="llm-label" id="lbl-length">Length</div>
+                <input type="range" class="llm-range" id="llm-length" min="50" max="400" step="10" value="200">
+                <div class="llm-range-val"><span id="llm-length-val">200</span> chars</div>
+              </div>
+              <div class="llm-control">
+                <div class="llm-label" id="lbl-temp">Temperature</div>
+                <input type="range" class="llm-range" id="llm-temp" min="0.5" max="1.5" step="0.05" value="1.0">
+                <div class="llm-range-val"><span id="llm-temp-val">1.0</span></div>
+              </div>
+            </div>
+            <button class="llm-generate" id="llm-btn">Generate →</button>
+            <div class="llm-output-wrap">
+              <div class="llm-label" id="lbl-output">Output</div>
+              <div class="llm-output" id="llm-output"><span style="color:#2a3a4a">Output will appear here...</span></div>
+            </div>
+          </div>
+          <div class="llm-footer">4-layer Transformer · 4 heads · 128-dim · character-level · PyTorch</div>
         </div>
       </div>
 
@@ -386,6 +467,78 @@ langBtn.addEventListener("click", () => {
 
 applyLang();
 document.documentElement.style.visibility = "";
+
+// ── LLM Demo ─────────────────────────────────────────────────
+const HF_API = "https://shellyxiang-insightgate-llm.hf.space/call/generate";
+
+const llmBtn    = document.getElementById("llm-btn");
+const llmOutput = document.getElementById("llm-output");
+const llmLength = document.getElementById("llm-length");
+const llmTemp   = document.getElementById("llm-temp");
+
+llmLength.addEventListener("input", () => document.getElementById("llm-length-val").textContent = llmLength.value);
+llmTemp.addEventListener("input",   () => document.getElementById("llm-temp-val").textContent   = parseFloat(llmTemp.value).toFixed(2));
+
+llmBtn.addEventListener("click", async () => {
+  const prompt   = document.getElementById("llm-prompt").value.trim();
+  const maxToks  = parseInt(llmLength.value);
+  const temp     = parseFloat(llmTemp.value);
+
+  llmBtn.disabled = true;
+  llmBtn.textContent = "Generating...";
+  llmOutput.className = "llm-output loading";
+  llmOutput.textContent = "";
+
+  try {
+    // Step 1: submit job
+    const r = await fetch(HF_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ data: [prompt, maxToks, temp] })
+    });
+    if (!r.ok) throw new Error("API error " + r.status);
+    const { event_id } = await r.json();
+
+    // Step 2: stream result via SSE
+    const es = new EventSource(`${HF_API}/${event_id}`);
+    es.addEventListener("complete", e => {
+      const data = JSON.parse(e.data);
+      llmOutput.className = "llm-output";
+      typewriter(llmOutput, data[0] || "");
+      es.close();
+      llmBtn.disabled = false;
+      llmBtn.textContent = "Generate →";
+    });
+    es.addEventListener("error", () => {
+      llmOutput.className = "llm-output";
+      llmOutput.textContent = "⚠️ Error — the model may be sleeping. Try again in a moment.";
+      es.close();
+      llmBtn.disabled = false;
+      llmBtn.textContent = "Generate →";
+    });
+  } catch (err) {
+    llmOutput.className = "llm-output";
+    llmOutput.textContent = "⚠️ Could not reach model: " + err.message;
+    llmBtn.disabled = false;
+    llmBtn.textContent = "Generate →";
+  }
+});
+
+function typewriter(el, text) {
+  el.textContent = "";
+  let i = 0;
+  const cursor = document.createElement("span");
+  cursor.className = "llm-cursor";
+  el.appendChild(cursor);
+  const interval = setInterval(() => {
+    if (i < text.length) {
+      el.insertBefore(document.createTextNode(text[i++]), cursor);
+    } else {
+      clearInterval(interval);
+      cursor.remove();
+    }
+  }, 18);
+}
 </script>
 </body>
 </html>
